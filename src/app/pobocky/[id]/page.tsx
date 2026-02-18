@@ -3,7 +3,6 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { locations } from "@/lib/data";
 import { IconCircle } from "@/components/IconCircle";
-import { GoogleReviewBadge } from "@/components/sections/GoogleReviewBadge";
 import { CareerAcademy } from "@/components/sections/CareerAcademy";
 import { Vouchers } from "@/components/sections/Vouchers";
 import { Contact } from "@/components/sections/Contact";
@@ -58,9 +57,6 @@ export default async function LocationPage({ params }: Props) {
           <h1 className="mb-6 font-[family-name:var(--font-playfair)] text-[28px] font-bold leading-tight">
             {displayName}
           </h1>
-
-          {/* Google Review Badge */}
-          <GoogleReviewBadge location={location} />
 
           {/* Meta info cards */}
           <div className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-3">

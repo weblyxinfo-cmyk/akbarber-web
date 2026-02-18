@@ -151,7 +151,7 @@ export const locations: Location[] = [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
     ],
-    type: "walk-in + reservation",
+    type: "walk-in",
     eshopUrl: "https://booqme.cz/cs/eshop/ak-barbers-kraluv-dvur6",
     services: [
       { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },

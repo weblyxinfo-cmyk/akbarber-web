@@ -47,11 +47,7 @@ function LocationCard({ location }: { location: Location }) {
 }
 
 export function Accordion() {
-  const [openCities, setOpenCities] = useState<Set<string>>(() => {
-    const all = new Set<string>();
-    locations.forEach((loc) => all.add(loc.city));
-    return all;
-  });
+  const [openCities, setOpenCities] = useState<Set<string>>(new Set());
 
   const citiesMap = useMemo(() => {
     const map = new Map<string, Location[]>();
