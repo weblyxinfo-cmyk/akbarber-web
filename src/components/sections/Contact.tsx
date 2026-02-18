@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { IconCircle } from "@/components/IconCircle";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
@@ -41,12 +42,15 @@ export function Contact() {
               Napište nám
             </h2>
             <p className="mb-5 text-[13px] leading-[1.7] text-gray">
-              Tento formulář slouží pro dotazy ohledně kariéry v AK Barbers,
-              akademie nebo spolupráce. Pro rezervaci termínu navštivte konkrétní
-              pobočku nebo využijte online rezervaci.
+              Všechny naše pobočky fungují jako walk-in barbershopy, takže se
+              nemusíte objednávat dopředu. Stačí k nám dorazit a svěřit se do
+              rukou našich profesionálních barberů pod vedením majitele sítě
+              Adriana Křižana.
             </p>
-            <p className="text-[13px] font-semibold text-white">
-              Zajišťujeme tu nejlepší možnou péči o Vaše vlasy a vousy.
+            <p className="text-[13px] font-semibold italic text-white">
+              Zajišťujeme tu nejlepší možnou
+              <br />
+              péči o Vaše vlasy a vousy.
             </p>
           </div>
 
@@ -116,11 +120,7 @@ export function Contact() {
                 className="inline-flex items-center gap-2 self-start text-sm font-semibold text-white disabled:opacity-50"
               >
                 {status === "loading" ? "Odesílání..." : "Odeslat"}
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white transition-transform hover:scale-110">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="3" className="h-3.5 w-3.5">
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
-                </span>
+                <IconCircle />
               </button>
             </form>
           )}

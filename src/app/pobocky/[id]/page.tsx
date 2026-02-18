@@ -1,14 +1,12 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { locations, siteConfig } from "@/lib/data";
+import { locations } from "@/lib/data";
 import { IconCircle } from "@/components/IconCircle";
-import { GoogleReviewBadge } from "@/components/sections/GoogleReviewBadge";
-import { GentlemanBanner } from "@/components/sections/GentlemanBanner";
 import { About } from "@/components/sections/About";
 import { CareerAcademy } from "@/components/sections/CareerAcademy";
 import { Vouchers } from "@/components/sections/Vouchers";
-import { BarberPole } from "@/components/sections/BarberPole";
+import { Contact } from "@/components/sections/Contact";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -23,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const location = locations.find((l) => l.id === id);
   if (!location) return {};
   return {
-    title: `${location.name}`,
+    title: `AK BARBERS – ${location.city}`,
     description: `${location.name} – ${location.address}. ${
       location.type === "walk-in"
         ? "Přijďte bez objednání."
@@ -36,6 +34,8 @@ export default async function LocationPage({ params }: Props) {
   const { id } = await params;
   const location = locations.find((l) => l.id === id);
   if (!location) notFound();
+
+  const displayName = `AK BARBERS – ${location.city}${location.id === "beroun-2" ? " 2" : ""}`;
 
   return (
     <>
@@ -55,11 +55,9 @@ export default async function LocationPage({ params }: Props) {
       {/* Location Info */}
       <section className="pt-8">
         <div className="container">
-          <h1 className="mb-5 text-[28px] font-bold">{location.name}</h1>
+          <h1 className="mb-5 text-[28px] font-bold">{displayName}</h1>
 
-          <GoogleReviewBadge location={location} />
-
-          {/* Meta info: Address | Contact | Hours */}
+          {/* Meta info: Adresa | Mobil | Otevírací doba */}
           <div className="mb-12 flex flex-wrap gap-12 max-md:gap-6">
             <div>
               <div className="mb-1 text-[11px] font-medium uppercase tracking-wider text-gray-light">
@@ -69,7 +67,7 @@ export default async function LocationPage({ params }: Props) {
             </div>
             <div>
               <div className="mb-1 text-[11px] font-medium uppercase tracking-wider text-gray-light">
-                Kontakt
+                Mobil
               </div>
               <div className="text-[13px]">
                 <a href={`tel:${location.phone}`} className="text-white underline underline-offset-2">
@@ -83,7 +81,7 @@ export default async function LocationPage({ params }: Props) {
               </div>
               {location.openingHours.map((h) => (
                 <div key={h.days} className="text-[13px] text-[#999]">
-                  {h.days} {h.hours}
+                  {h.days}&ensp;{h.hours}
                 </div>
               ))}
             </div>
@@ -110,82 +108,31 @@ export default async function LocationPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Google Map */}
-      <section className="py-10">
+      {/* About */}
+      <section className="py-12">
         <div className="container">
-          <h2 className="mb-6 font-[family-name:var(--font-playfair)] text-2xl font-bold">
-            Kde nás najdete
+          <h2 className="mb-4 max-w-[480px] font-[family-name:var(--font-playfair)] text-[32px] font-bold leading-[1.2]">
+            Záleží nám na&nbsp;tom, abyste se u&nbsp;nás cítili dobře
           </h2>
-          <div className="overflow-hidden rounded-xl border border-border">
-            <iframe
-              src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || "YOUR_API_KEY"}&q=${location.mapQuery}&zoom=16`}
-              width="100%"
-              height="300"
-              style={{
-                border: 0,
-                filter: "grayscale(1) invert(1) contrast(.85) brightness(1.1)",
-              }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title={`Mapa ${location.name}`}
-            />
-          </div>
-          <div className="mt-4 flex flex-wrap gap-6">
-            <a
-              href={`https://www.google.com/maps/search/?api=1&query=${location.mapQuery}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[13px] font-medium text-white"
-            >
-              Otevřít v Google Maps
-              <IconCircle />
-            </a>
-            <a
-              href={location.googleMapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[13px] font-medium text-white"
-            >
-              Recenze na Google
-              <IconCircle />
-            </a>
-          </div>
+          <p className="mb-4 max-w-[480px] text-sm leading-[1.7] text-gray">
+            Stačí k nám dorazit a svěřit se do rukou našich profesionálních
+            barberů, pod vedením majitele sítě Adriana Křižana, který všechny nové
+            příchozí nejprve zaučí, než je pustí do provozu a tím pro Vás
+            zajišťujeme tu nejlepší možnou péči o Vaše vlasy a vousy.
+          </p>
+          <a
+            href="/#kontakt"
+            className="inline-flex items-center gap-1.5 text-[13px] font-medium text-white"
+          >
+            Kontakt
+            <IconCircle />
+          </a>
         </div>
       </section>
 
-      {/* CTA Row */}
-      <section className="py-16">
-        <div className="container flex flex-col gap-6 md:flex-row md:gap-12">
-          <div className="flex-1">
-            <h2 className="font-[family-name:var(--font-playfair)] text-[32px] font-bold leading-[1.2]">
-              Přijďte bez objednání nebo se objednejte online
-            </h2>
-          </div>
-          <div className="flex-1 text-sm leading-[1.7] text-gray">
-            <p>
-              Všechny naše pobočky fungují jako walk-in barbershopy, takže se
-              nemusíte objednávat dopředu. Stačí k nám dorazit a svěřit se do
-              rukou našich profesionálních barberů.
-            </p>
-            <a
-              href={siteConfig.booking}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-medium text-white"
-            >
-              Rezervace
-              <IconCircle />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <GentlemanBanner />
-      <About />
       <CareerAcademy />
       <Vouchers />
-      <BarberPole />
+      <Contact />
     </>
   );
 }

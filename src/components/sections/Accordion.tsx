@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { locations } from "@/lib/data";
+import { IconCircle } from "@/components/IconCircle";
 import type { Location } from "@/types";
 
 function LocationCard({ location }: { location: Location }) {
@@ -22,22 +23,23 @@ function LocationCard({ location }: { location: Location }) {
       <h3 className="text-sm font-bold">{location.name}</h3>
       <p className="mb-2 text-[11px] text-[#666]">{location.address}</p>
       <div className="flex items-center justify-between">
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {location.type === "walk-in" && (
-            <span className="text-[11px] text-[#888]">Walk-ins</span>
+            <span className="text-[11px] text-[#888]">Pouze bez objednání</span>
           )}
           {location.type === "reservation" && (
-            <span className="text-[11px] text-[#888]">Rezervace</span>
+            <span className="text-[11px] text-[#888]">Pouze reservace VIP club</span>
           )}
           {location.type === "walk-in + reservation" && (
             <>
-              <span className="text-[11px] text-[#888]">Walk-ins</span>
-              <span className="text-[11px] text-[#888]">Rezervace</span>
+              <span className="text-[11px] text-[#888]">Bez objednání</span>
+              <span className="text-[11px] text-white underline underline-offset-2">Reservace online</span>
             </>
           )}
         </div>
-        <span className="text-[11px] text-white underline underline-offset-2">
+        <span className="inline-flex items-center gap-1 text-[11px] text-white">
           Zobrazit
+          <IconCircle />
         </span>
       </div>
     </Link>
