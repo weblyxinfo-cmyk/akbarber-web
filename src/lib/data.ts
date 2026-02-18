@@ -34,11 +34,10 @@ export const locations: Location[] = [
     address: "Havlíčkova 128, 266 01 Beroun-centrum",
     phone: "+420 775 502 831",
     openingHours: [
-      { days: "Po – Pá", hours: "9:00 – 18:00" },
-      { days: "So – Ne", hours: "9:00 – 14:00" },
+      { days: "Po – Pá", hours: "9:00 – 19:30" },
+      { days: "So", hours: "9:00 – 14:00" },
     ],
-    type: "walk-in + reservation",
-    bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-beroun-10",
+    type: "walk-in",
     eshopUrl: "https://booqme.cz/cs/eshop/ak-barbers-beroun-10",
     services: [
       { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
@@ -63,8 +62,7 @@ export const locations: Location[] = [
     address: "Plzeňská 145/49, 266 01 Beroun-Město",
     phone: "+420 775 502 831",
     openingHours: [
-      { days: "Po – Pá", hours: "9:00 – 18:00" },
-      { days: "So – Ne", hours: "9:00 – 14:00" },
+      { days: "Po – Pá", hours: "10:00 – 21:00" },
     ],
     type: "reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-beroun",
@@ -93,8 +91,8 @@ export const locations: Location[] = [
     address: "Bělohorská 1393/44, 169 00 Praha 6",
     phone: "+420 775 502 831",
     openingHours: [
-      { days: "Po – Pá", hours: "9:00 – 18:00" },
-      { days: "So – Ne", hours: "9:00 – 14:00" },
+      { days: "Po – Pá", hours: "10:00 – 19:00" },
+      { days: "So", hours: "9:00 – 12:00" },
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barber-praha",
@@ -121,8 +119,7 @@ export const locations: Location[] = [
     address: "Národní 949/19, 110 00 Staré Město",
     phone: "+420 775 502 831",
     openingHours: [
-      { days: "Po – Pá", hours: "9:00 – 18:00" },
-      { days: "So – Ne", hours: "9:00 – 14:00" },
+      { days: "Po – Ne", hours: "10:00 – 19:00" },
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-1-stare-mesto4",
@@ -149,7 +146,7 @@ export const locations: Location[] = [
     address: "Plzeňská 396, 267 01 Králův Dvůr",
     phone: "+420 775 502 831",
     openingHours: [
-      { days: "Po – Pá", hours: "9:00 – 18:00" },
+      { days: "Po – Pá", hours: "9:00 – 19:30" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
     ],
     type: "walk-in",
@@ -177,7 +174,7 @@ export const locations: Location[] = [
     address: "Gerská 2030/23, 323 00 Plzeň 1-Bolevec",
     phone: "+420 775 502 831",
     openingHours: [
-      { days: "Po – Pá", hours: "9:00 – 18:00" },
+      { days: "Po – Pá", hours: "9:30 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
     ],
     type: "walk-in",
@@ -205,7 +202,7 @@ export const locations: Location[] = [
     address: "Fügnerova 374/1, 268 01 Hořovice",
     phone: "+420 775 502 831",
     openingHours: [
-      { days: "Po – Pá", hours: "9:00 – 18:00" },
+      { days: "Po – Pá", hours: "8:30 – 19:30" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
     ],
     type: "walk-in + reservation",
@@ -234,7 +231,7 @@ export const locations: Location[] = [
     address: "Třebízského 182, 274 01 Slaný",
     phone: "+420 775 502 831",
     openingHours: [
-      { days: "Po – Pá", hours: "9:00 – 18:00" },
+      { days: "Po – Pá", hours: "9:00 – 19:30" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
     ],
     type: "walk-in",
@@ -262,8 +259,7 @@ export const locations: Location[] = [
     address: "Máj 632/36, 370 02 České Budějovice",
     phone: "+420 775 502 831",
     openingHours: [
-      { days: "Po – Pá", hours: "9:00 – 18:00" },
-      { days: "So – Ne", hours: "9:00 – 14:00" },
+      { days: "Po – Ne", hours: "9:00 – 21:00" },
     ],
     type: "walk-in",
     services: [
@@ -289,8 +285,7 @@ export const locations: Location[] = [
     address: "OC AK Mall, Diaľničná trieda 30/31, 949 01 Nitra",
     phone: "+421 948 442 413",
     openingHours: [
-      { days: "Po – Pi", hours: "9:00 – 18:00" },
-      { days: "So – Ne", hours: "9:00 – 14:00" },
+      { days: "Po – Ne", hours: "9:00 – 21:00" },
     ],
     type: "walk-in",
     eshopUrl: "https://booqme.sk/sk/eshop/ak-barbers-nitra2",
