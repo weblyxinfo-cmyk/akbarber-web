@@ -6,16 +6,16 @@ export function Vouchers() {
     <section className="py-12" id="vouchers">
       <div className="container">
         <div className="relative overflow-hidden rounded-2xl bg-bg-card">
-          <div className="flex items-center">
+          <div className="flex min-h-[280px] items-center">
             {/* Left: Text content */}
-            <div className="flex-1 px-8 py-14 sm:px-12 sm:py-16">
-              <h2 className="mb-4 font-[family-name:var(--font-playfair)] text-[28px] font-bold uppercase leading-[1.2] sm:text-[32px]">
+            <div className="relative z-10 flex-1 px-8 py-14 sm:px-12 sm:py-16">
+              <h2 className="mb-3 font-[family-name:var(--font-playfair)] text-[28px] font-bold uppercase leading-[1.15] sm:text-[32px]">
                 Dárkové
                 <br />
                 poukázky
               </h2>
               <p className="mb-6 max-w-[320px] text-[13px] leading-[1.7] text-gray">
-                Potěšte přítele nebo někoho blízkého. Můžete zakoupit u nás
+                Potěšte přítele nebo někoho blízkého. Můžete zakoupit u&nbsp;nás
                 v&nbsp;salonu nebo online.
               </p>
               <a
@@ -28,20 +28,20 @@ export function Vouchers() {
               </a>
             </div>
 
-            {/* Right: Barber pole image with fade */}
-            <div className="relative hidden shrink-0 sm:block" style={{ width: 160, height: 240 }}>
+            {/* Right: Barber pole image with smooth fade */}
+            <div className="absolute bottom-0 right-0 top-0 hidden w-[220px] sm:block">
               <div
                 className="absolute inset-0 z-10"
                 style={{
-                  background: "linear-gradient(to right, #151515 0%, transparent 40%), linear-gradient(to top, #151515 0%, transparent 30%), linear-gradient(to bottom, #151515 0%, transparent 30%)",
+                  background: "linear-gradient(to right, #151515 0%, rgba(21,21,21,0.6) 30%, transparent 60%)",
                 }}
               />
               <Image
                 src="/images/barber-pole.png"
                 alt="Dárkové poukázky"
-                width={160}
-                height={320}
-                className="h-full w-full object-contain"
+                width={220}
+                height={400}
+                className="h-full w-full object-contain object-right-bottom"
               />
             </div>
           </div>
