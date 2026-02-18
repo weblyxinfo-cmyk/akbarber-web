@@ -12,7 +12,8 @@ export function WalkIn() {
             Všechny naše pobočky fungují jako walk-in barbershopy, takže se
             nemusíte objednávat dopředu. Stačí k nám dorazit a svěřit se do
             rukou našich profesionálních barberů, pod vedením majitele sítě
-            Adriana Křižana.
+            Adriana Křižana. Na některých pobočkách je možná také online
+            rezervace.
           </p>
         </div>
       </div>

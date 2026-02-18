@@ -20,12 +20,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const location = locations.find((l) => l.id === id);
   if (!location) return {};
 
+  const isSlovak = location.id === "nitra";
   const title = `AK BARBERS – ${location.city} | Barbershop ${location.city}`;
-  const description = `${location.name} – ${location.address}. ${
-    location.type === "walk-in"
-      ? "Přijďte bez objednání."
-      : "Rezervujte si termín online."
-  } Pánské stříhání od 449 Kč, úprava vousů, skin fade. Otevřeno Po–Pá 9–18, So–Ne 9–14.`;
+  const description = isSlovak
+    ? `${location.name} – ${location.address}. ${
+        location.type === "walk-in"
+          ? "Príďte bez objednania."
+          : "Rezervujte si termín online."
+      } Pánske strihanie od 12 €, úprava brady, skin fade. Otvorené Po–Pi 9–18, So–Ne 9–14.`
+    : `${location.name} – ${location.address}. ${
+        location.type === "walk-in"
+          ? "Přijďte bez objednání."
+          : "Rezervujte si termín online."
+      } Pánské stříhání od 449 Kč, úprava vousů, skin fade. Otevřeno Po–Pá 9–18, So–Ne 9–14.`;
 
   const ogImage = `/images/og/og-${location.id}.png`;
 
@@ -37,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: `https://www.akbarber.com/pobocky/${location.id}`,
       siteName: "AK BARBERS",
-      locale: "cs_CZ",
+      locale: isSlovak ? "sk_SK" : "cs_CZ",
       type: "website",
       images: [
         {
@@ -64,6 +71,7 @@ export default async function LocationPage({ params }: Props) {
   const location = locations.find((l) => l.id === id);
   if (!location) notFound();
 
+  const isSlovak = location.id === "nitra";
   const displayName = `AK BARBERS – ${location.city}${location.id === "beroun-2" ? " 2" : ""}`;
 
   // JSON-LD: BarberShop (LocalBusiness) schema
@@ -96,7 +104,7 @@ export default async function LocationPage({ params }: Props) {
         closes: "14:00",
       },
     ],
-    priceRange: "299 Kč – 799 Kč",
+    priceRange: isSlovak ? "12 € – 27 €" : "299 Kč – 799 Kč",
     currenciesAccepted: location.id === "nitra" ? "EUR" : "CZK",
     paymentAccepted: "Cash, Credit Card",
     hasOfferCatalog: {
@@ -149,7 +157,7 @@ export default async function LocationPage({ params }: Props) {
       {
         "@type": "ListItem",
         position: 1,
-        name: "Provozovny",
+        name: isSlovak ? "Prevádzky" : "Provozovny",
         item: "https://www.akbarber.com",
       },
       {
@@ -195,18 +203,33 @@ export default async function LocationPage({ params }: Props) {
         <div className="container">
           <h1 className="mb-5 text-[28px] font-bold">{displayName}</h1>
 
-          {location.bookingUrl ? (
+          {location.type === "reservation" ? (
             <a
               href={location.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mb-8 inline-flex items-center gap-1.5 text-[13px] font-medium text-white"
+              className="mb-8 inline-flex items-center gap-2 text-[20px] font-bold text-white"
             >
-              Rezervovat online
+              Pouze na rezervaci
               <IconCircle />
             </a>
+          ) : location.type === "walk-in + reservation" ? (
+            <div className="mb-8 flex flex-col gap-2">
+              <p className="text-[20px] font-bold text-[#888]">Bez objednání</p>
+              <a
+                href={location.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[20px] font-bold text-white"
+              >
+                {isSlovak ? "Rezervovať online" : "Rezervovat online"}
+                <IconCircle />
+              </a>
+            </div>
           ) : (
-            <p className="mb-8 text-[13px] text-[#888]">Pouze bez objednání</p>
+            <p className="mb-8 text-[20px] font-bold text-[#888]">
+              {isSlovak ? "Iba bez objednania" : "Bez objednání"}
+            </p>
           )}
 
           {/* Meta info: Adresa | Mobil | Otevírací doba */}
@@ -237,7 +260,7 @@ export default async function LocationPage({ params }: Props) {
             </div>
             <div>
               <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
-                Otevírací doba
+                {isSlovak ? "Otváracie hodiny" : "Otevírací doba"}
               </div>
               {location.openingHours.map((h) => (
                 <div key={h.days} className="text-[13px]">
@@ -276,13 +299,14 @@ export default async function LocationPage({ params }: Props) {
       <section className="py-12">
         <div className="container">
           <h2 className="mb-4 max-w-[480px] font-[family-name:var(--font-roboto-slab)] text-[32px] font-bold leading-[1.2]">
-            Záleží nám na&nbsp;tom, abyste se u&nbsp;nás cítili dobře
+            {isSlovak
+              ? "Záleží nám na\u00a0tom, aby ste sa u\u00a0nás cítili dobre"
+              : "Záleží nám na\u00a0tom, abyste se u\u00a0nás cítili dobře"}
           </h2>
           <p className="mb-4 max-w-[480px] text-sm leading-[1.7] text-gray">
-            Stačí k nám dorazit a svěřit se do rukou našich profesionálních
-            barberů, pod vedením majitele sítě Adriana Křižana, který všechny nové
-            příchozí nejprve zaučí, než je pustí do provozu a tím pro Vás
-            zajišťujeme tu nejlepší možnou péči o Vaše vlasy a vousy.
+            {isSlovak
+              ? "Stačí k nám prísť a zveriť sa do rúk našich profesionálnych barberov, pod vedením majiteľa siete Adriana Križana, ktorý všetkých nových prichádzajúcich najprv zaučí, než ich pustí do prevádzky, a tým pre Vás zabezpečujeme tú najlepšiu možnú starostlivosť o Vaše vlasy a bradu."
+              : "Stačí k nám dorazit a svěřit se do rukou našich profesionálních barberů, pod vedením majitele sítě Adriana Křižana, který všechny nové příchozí nejprve zaučí, než je pustí do provozu a tím pro Vás zajišťujeme tu nejlepší možnou péči o Vaše vlasy a vousy."}
           </p>
           <a
             href="/#kontakt"
