@@ -122,6 +122,36 @@ export default async function LocationPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Google Map */}
+      <section className="py-8">
+        <div className="container">
+          <h2 className="mb-4 font-[family-name:var(--font-playfair)] text-[24px] font-bold">
+            Kde nás najdete
+          </h2>
+          <div className="overflow-hidden rounded-xl border border-border">
+            <iframe
+              src={`https://www.google.com/maps?q=${location.mapQuery}&output=embed&z=15`}
+              width="100%"
+              height="300"
+              style={{ border: 0, filter: "grayscale(1) invert(1) contrast(.85) brightness(1.1)" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={`Mapa – ${location.name}`}
+            />
+          </div>
+          <a
+            href={location.googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-medium text-[#999] transition-colors hover:text-[#fff]"
+          >
+            Otevřít v Google Maps
+            <IconCircle />
+          </a>
+        </div>
+      </section>
+
       {/* About */}
       <section className="py-12">
         <div className="container">
