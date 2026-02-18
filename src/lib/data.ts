@@ -289,7 +289,7 @@ export const locations: Location[] = [
     name: "AK BARBERS Nitra",
     city: "Nitra",
     address: "OC AK Mall, Diaľničná trieda 30/31, 949 01 Nitra",
-    phone: "+421 XXX XXX XXX",
+    phone: "+421 948 442 413",
     openingHours: [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
