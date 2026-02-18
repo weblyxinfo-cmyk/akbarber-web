@@ -2,14 +2,15 @@
 
 @theme inline {
   --color-bg: #000000;
-  --color-bg-card: #141414;
+  --color-bg-card: #151515;
   --color-bg-form: #1a1a1a;
   --color-white: #ffffff;
-  --color-gray: #999999;
-  --color-gray-light: #666666;
+  --color-gray: #777777;
+  --color-gray-light: #555555;
   --color-gray-dark: #333333;
-  --color-border: #2a2a2a;
-  --font-sans: var(--font-inter);
+  --color-border: #1a1a1a;
+  --font-sans: var(--font-dm-sans);
+  --font-heading: var(--font-playfair);
 }
 
 html {
@@ -31,9 +32,16 @@ a {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

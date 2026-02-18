@@ -4,51 +4,43 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { locations } from "@/lib/data";
-import { IconCircle } from "@/components/IconCircle";
 import type { Location } from "@/types";
 
 function LocationCard({ location }: { location: Location }) {
   return (
-    <div>
-      <Image
-        src={location.image}
-        alt={location.name}
-        width={600}
-        height={300}
-        className="mb-4 aspect-video w-full rounded-xl object-cover grayscale"
-        sizes="(max-width: 768px) 100vw, 50vw"
-      />
-      <div className="text-sm font-bold">{location.name}</div>
-      <div className="mt-1 text-xs text-gray">{location.address}</div>
-      <div className="mt-3 text-xs text-gray-light">
-        {location.type === "walk-in" && "Přijďte bez objednání"}
-        {location.type === "reservation" && "Pouze rezervace online"}
-        {location.type === "walk-in + reservation" && (
-          <>
-            Přijďte bez objednání
-            {location.bookingUrl && (
-              <>
-                {" "}&bull;{" "}
-                <a href={location.bookingUrl} target="_blank" rel="noopener noreferrer" className="text-white hover:underline">
-                  Rezervace online
-                </a>
-              </>
-            )}
-          </>
-        )}
+    <div className="min-w-[250px] flex-1">
+      <div className="mb-3 h-[180px] overflow-hidden rounded-[10px] bg-bg-card">
+        <Image
+          src={location.image}
+          alt={location.name}
+          width={600}
+          height={300}
+          className="h-full w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
       </div>
-      <div className="mt-3 flex items-center gap-4">
-        {location.type === "reservation" && location.bookingUrl && (
-          <a href={location.bookingUrl} target="_blank" rel="noopener noreferrer" className="text-[13px] font-medium text-gray transition-colors hover:text-white">
-            Rezervace online
-          </a>
-        )}
+      <h3 className="text-base font-bold">{location.name}</h3>
+      <p className="mb-3 text-xs text-[#666]">{location.address}</p>
+      <div className="flex items-center justify-between">
+        <div className="flex flex-wrap gap-2">
+          {location.type === "walk-in" && (
+            <span className="text-xs text-[#888]">Walk-ins</span>
+          )}
+          {location.type === "reservation" && (
+            <span className="text-xs text-[#888]">Rezervace</span>
+          )}
+          {location.type === "walk-in + reservation" && (
+            <>
+              <span className="text-xs text-[#888]">Walk-ins</span>
+              <span className="text-xs text-[#888]">Rezervace</span>
+            </>
+          )}
+        </div>
         <Link
           href={`/pobocky/${location.id}`}
-          className="flex items-center gap-1.5 text-[13px] font-semibold text-white"
+          className="text-xs text-white underline underline-offset-2"
         >
           Zobrazit
-          <IconCircle />
         </Link>
       </div>
     </div>
@@ -69,7 +61,7 @@ export function Accordion() {
   }, []);
 
   return (
-    <section className="pb-16">
+    <section className="pb-6">
       <div className="container">
         {Array.from(citiesMap.entries()).map(([city, locs]) => {
           const isOpen = openCity === city;
@@ -78,34 +70,28 @@ export function Accordion() {
             <div key={city} className="border-b border-border">
               <button
                 onClick={() => setOpenCity(isOpen ? null : city)}
-                className="flex w-full items-center justify-between py-6 text-left"
+                className="flex w-full items-center justify-between py-[22px] text-left transition-opacity hover:opacity-70"
               >
-                <span className="text-xl font-semibold">{city}</span>
+                <h2 className="text-[22px] font-bold">{city}</h2>
                 <span
-                  className={`flex h-8 w-8 items-center justify-center rounded-full border border-gray-dark transition-all duration-300 ${
-                    isOpen ? "bg-white" : ""
+                  className={`flex h-10 w-10 items-center justify-center rounded-full border-[1.5px] transition-all duration-300 ${
+                    isOpen
+                      ? "border-white bg-white text-black"
+                      : "border-[#444] bg-transparent text-white"
                   }`}
                 >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke={isOpen ? "black" : "white"}
-                    strokeWidth="2"
-                    className={`h-3.5 w-3.5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-                  >
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
+                  <span className="text-lg">{isOpen ? "▴" : "▾"}</span>
                 </span>
               </button>
 
               <div
-                className="grid transition-all duration-400 ease-in-out"
+                className="overflow-hidden transition-all duration-500 ease-in-out"
                 style={{
-                  gridTemplateRows: isOpen ? "1fr" : "0fr",
+                  maxHeight: isOpen ? "3000px" : "0",
                 }}
               >
-                <div className="overflow-hidden">
-                  <div className="grid gap-6 pb-8 sm:grid-cols-2">
+                <div className="pb-6">
+                  <div className="mt-4 flex flex-wrap gap-5 max-md:flex-col">
                     {locs.map((loc) => (
                       <LocationCard key={loc.id} location={loc} />
                     ))}

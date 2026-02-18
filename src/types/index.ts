@@ -23,6 +23,11 @@ export interface Location {
   rating?: string;
   note?: string;
   currency: "CZK" | "EUR";
+  googleMapsUrl: string;
+  reviewRating: number;
+  reviewCount: string;
+  rankText: string;
+  mapQuery: string;
 }
 
 export interface VoucherBranch {

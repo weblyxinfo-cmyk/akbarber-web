@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { IconCircle } from "@/components/IconCircle";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
@@ -32,22 +31,21 @@ export function Contact() {
   }
 
   return (
-    <section className="py-20" id="kontakt">
+    <section className="py-10" id="kontakt">
       <div className="container">
-        <div className="grid gap-16 rounded-2xl bg-bg-card p-10 sm:p-[60px] lg:grid-cols-2">
+        <div className="grid gap-12 rounded-2xl bg-bg-card p-8 sm:p-12 md:grid-cols-2">
           <div>
-            <h2 className="text-4xl font-bold leading-tight">
+            <h2 className="mb-4 font-[family-name:var(--font-playfair)] text-[28px] font-bold leading-[1.2]">
               Máte dotazy?
               <br />
               Napište nám
             </h2>
-            <p className="mt-6 text-sm leading-relaxed text-gray">
-              Všechny naše pobočky fungují jako walk-in barbershopy, takže se
-              nemusíte objednávat dopředu. Stačí k nám dorazit a svěřit se do
-              rukou našich profesionálních barberů pod vedením majitele sítě
-              Adriana Křižana.
+            <p className="mb-5 text-[13px] leading-[1.7] text-gray">
+              Tento formulář slouží pro dotazy ohledně kariéry v AK Barbers,
+              akademie nebo spolupráce. Pro rezervaci termínu navštivte konkrétní
+              pobočku nebo využijte online rezervaci.
             </p>
-            <p className="mt-5 text-sm font-semibold italic text-white">
+            <p className="text-[13px] font-semibold text-white">
               Zajišťujeme tu nejlepší možnou péči o Vaše vlasy a vousy.
             </p>
           </div>
@@ -59,40 +57,40 @@ export function Contact() {
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-[18px]">
               <input
                 type="text"
                 name="name"
                 placeholder="Jméno, příjmení *"
                 required
-                className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-white outline-none placeholder:text-gray-light transition-colors focus:border-white"
+                className="w-full border-b border-[#2a2a2a] bg-transparent py-3 text-sm text-white outline-none placeholder:text-gray-light transition-colors focus:border-white"
               />
               <input
                 type="email"
                 name="email"
                 placeholder="Email *"
                 required
-                className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-white outline-none placeholder:text-gray-light transition-colors focus:border-white"
+                className="w-full border-b border-[#2a2a2a] bg-transparent py-3 text-sm text-white outline-none placeholder:text-gray-light transition-colors focus:border-white"
               />
               <input
                 type="tel"
                 name="phone"
                 placeholder="Telefon"
-                className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-white outline-none placeholder:text-gray-light transition-colors focus:border-white"
+                className="w-full border-b border-[#2a2a2a] bg-transparent py-3 text-sm text-white outline-none placeholder:text-gray-light transition-colors focus:border-white"
               />
               <textarea
                 name="message"
                 placeholder="Zpráva *"
                 required
-                rows={3}
-                className="w-full resize-y border-b border-gray-dark bg-transparent py-3 text-sm text-white outline-none placeholder:text-gray-light transition-colors focus:border-white"
+                rows={2}
+                className="min-h-[60px] w-full resize-y border-b border-[#2a2a2a] bg-transparent py-3 text-sm text-white outline-none placeholder:text-gray-light transition-colors focus:border-white"
               />
-              <label className="flex cursor-pointer items-start gap-2.5 text-xs text-gray">
+              <label className="flex cursor-pointer items-start gap-2 text-xs text-gray-light">
                 <input
                   type="checkbox"
                   name="consent"
                   required
-                  className="mt-0.5 h-4 w-4 shrink-0 accent-white"
+                  className="mt-[3px] accent-white"
                 />
                 <span>
                   Souhlasím se{" "}
@@ -100,7 +98,7 @@ export function Contact() {
                     href="https://www.akbarber.com/prohlaseni-o-ochrane-osobnich-udaju/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline"
+                    className="text-white underline"
                   >
                     zpracováním osobních údajů
                   </a>
@@ -115,10 +113,14 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="mt-2 inline-flex items-center gap-2 self-start text-sm font-semibold text-white disabled:opacity-50"
+                className="inline-flex items-center gap-2 self-start text-sm font-semibold text-white disabled:opacity-50"
               >
                 {status === "loading" ? "Odesílání..." : "Odeslat"}
-                <IconCircle />
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white transition-transform hover:scale-110">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="3" className="h-3.5 w-3.5">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </span>
               </button>
             </form>
           )}

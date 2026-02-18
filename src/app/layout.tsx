@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin", "latin-ext"],
   display: "swap",
 });
@@ -43,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs" className={inter.variable}>
+    <html lang="cs" className={`${playfair.variable} ${dmSans.variable}`}>
       <body className="antialiased">
         <Header />
         <main>{children}</main>
