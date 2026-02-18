@@ -39,23 +39,22 @@ export function Footer() {
 
         <p className="mb-4 text-[13px] text-gray-light">&copy; 2026 AK.BARBERS</p>
 
-        <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex flex-wrap gap-6">
-            <CookieSettingsLink />
-            <a href="/cookies" className="text-xs text-gray-light transition-colors hover:text-[#888]">
-              Zásady používání souborů cookie
-            </a>
-            <a href="/ochrana-osobnich-udaju" className="text-xs text-gray-light transition-colors hover:text-[#888]">
-              Prohlášení o ochraně osobních údajů
-            </a>
-          </div>
-          <p className="text-xs text-gray-dark">
-            Naprogramoval{" "}
-            <a href="https://weblyx.cz" target="_blank" rel="noopener noreferrer" className="text-gray-light transition-colors hover:text-[#00bcd4]">
-              Weblyx.cz
-            </a>
-          </p>
+        <div className="mb-3 flex flex-wrap gap-6">
+          <CookieSettingsLink />
+          <a href="/cookies" className="text-xs text-gray-light transition-colors hover:text-[#888]">
+            Zásady používání souborů cookie
+          </a>
+          <a href="/ochrana-osobnich-udaju" className="text-xs text-gray-light transition-colors hover:text-[#888]">
+            Prohlášení o ochraně osobních údajů
+          </a>
         </div>
+
+        <p className="text-[10px] text-gray-dark">
+          Web vytvořil{" "}
+          <a href="https://weblyx.cz" target="_blank" rel="noopener noreferrer" className="text-gray-light/50 transition-colors hover:text-white">
+            Weblyx.cz
+          </a>
+        </p>
       </div>
     </footer>
   );

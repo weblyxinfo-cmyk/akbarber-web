@@ -27,6 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : "Rezervujte si termín online."
   } Pánské stříhání od 449 Kč, úprava vousů, skin fade. Otevřeno Po–Pá 9–18, So–Ne 9–14.`;
 
+  const ogImage = `/images/og/og-${location.id}.png`;
+
   return {
     title,
     description,
@@ -39,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: "https://www.akbarber.com/wp-content/uploads/2023/06/social-image-1.jpg",
+          url: ogImage,
           width: 1200,
           height: 630,
         },
@@ -49,6 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
+      images: [ogImage],
     },
     alternates: {
       canonical: `https://www.akbarber.com/pobocky/${location.id}`,

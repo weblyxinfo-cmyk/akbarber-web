@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.akbarber.com/wp-content/uploads/2023/06/social-image-1.jpg",
+        url: "/images/og/og-index.png",
         width: 1200,
         height: 630,
       },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "AK BARBERS - Vyberte si z našich provozoven",
     description:
       "Síť prémiových barbershopů v České republice a na Slovensku.",
-    images: ["https://www.akbarber.com/wp-content/uploads/2023/06/social-image-1.jpg"],
+    images: ["/images/og/og-index.png"],
   },
   robots: { index: true, follow: true },
   alternates: {
