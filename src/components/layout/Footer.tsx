@@ -46,10 +46,21 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
-        <p className="mb-6 text-[12px] text-[#444]">
-          &copy; 2026 AK BARBERS
-        </p>
+        {/* Copyright + Weblyx */}
+        <div className="mb-6 flex items-center gap-4">
+          <p className="text-[12px] text-[#444]">
+            &copy; 2026 AK BARBERS
+          </p>
+          <a
+            href="https://weblyx.cz"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-md border border-[#333] bg-white/[0.03] px-2.5 py-1 text-[10px] tracking-wider text-[#444] transition-colors hover:border-[#555] hover:text-[#777]"
+          >
+            <span>&lt;&gt;</span>
+            WEBLYX
+          </a>
+        </div>
 
         {/* Legal links */}
         <div className="flex flex-wrap gap-x-6 gap-y-2">
