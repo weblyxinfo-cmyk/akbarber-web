@@ -37,7 +37,8 @@ export const locations: Location[] = [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
     ],
-    type: "walk-in",
+    type: "walk-in + reservation",
+    bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-beroun-10",
     eshopUrl: "https://booqme.cz/cs/eshop/ak-barbers-beroun-10",
     services: [
       { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
@@ -179,8 +180,7 @@ export const locations: Location[] = [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
     ],
-    type: "walk-in + reservation",
-    bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-plzen1",
+    type: "walk-in",
     eshopUrl: "https://booqme.cz/cs/eshop/ak-barbers-plzen1",
     services: [
       { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
@@ -237,8 +237,7 @@ export const locations: Location[] = [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
     ],
-    type: "walk-in + reservation",
-    bookingUrl: "https://booqme.sk/sk/rezervacia/ak-barbers-slany1",
+    type: "walk-in",
     eshopUrl: "https://booqme.sk/sk/eshop/ak-barbers-slany1",
     services: [
       { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
@@ -266,8 +265,7 @@ export const locations: Location[] = [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
     ],
-    type: "walk-in + reservation",
-    bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-19",
+    type: "walk-in",
     services: [
       { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
       { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", description: "Skin Fade – konzultace, čistý/střední/vousový fade, střih strojem od 0 mm, použití shaveru, precizní přechody, úprava a konečný styling." },

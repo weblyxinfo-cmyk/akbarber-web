@@ -195,6 +195,20 @@ export default async function LocationPage({ params }: Props) {
         <div className="container">
           <h1 className="mb-5 text-[28px] font-bold">{displayName}</h1>
 
+          {location.bookingUrl ? (
+            <a
+              href={location.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-8 inline-flex items-center gap-1.5 text-[13px] font-medium text-white"
+            >
+              Rezervovat online
+              <IconCircle />
+            </a>
+          ) : (
+            <p className="mb-8 text-[13px] text-[#888]">Pouze bez objednání</p>
+          )}
+
           {/* Meta info: Adresa | Mobil | Otevírací doba */}
           <div className="mb-12 flex flex-wrap gap-12 max-md:gap-6">
             <div>

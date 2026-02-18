@@ -1,4 +1,3 @@
-import { siteConfig } from "@/lib/data";
 import { IconCircle } from "@/components/IconCircle";
 
 export function About() {
@@ -15,12 +14,10 @@ export function About() {
           zajišťujeme tu nejlepší možnou péči o Vaše vlasy a vousy.
         </p>
         <a
-          href={siteConfig.booking}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/#kontakt"
           className="inline-flex items-center gap-1.5 text-[13px] font-medium text-white"
         >
-          Rezervace
+          Kontakt
           <IconCircle />
         </a>
       </div>
