@@ -40,13 +40,10 @@ export function Footer() {
 
         <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
           <div className="flex flex-wrap gap-6">
-            <a href={siteConfig.legal.cookies} target="_blank" rel="noopener noreferrer" className="text-xs text-gray-light underline underline-offset-2 transition-colors hover:text-[#888]">
-              Spravovat souhlas s cookies
-            </a>
-            <a href={siteConfig.legal.cookies} target="_blank" rel="noopener noreferrer" className="text-xs text-gray-light underline underline-offset-2 transition-colors hover:text-[#888]">
+            <a href="/cookies" className="text-xs text-gray-light underline underline-offset-2 transition-colors hover:text-[#888]">
               Zásady používání souborů cookie
             </a>
-            <a href={siteConfig.legal.privacy} target="_blank" rel="noopener noreferrer" className="text-xs text-gray-light underline underline-offset-2 transition-colors hover:text-[#888]">
+            <a href="/ochrana-osobnich-udaju" className="text-xs text-gray-light underline underline-offset-2 transition-colors hover:text-[#888]">
               Prohlášení o ochraně osobních údajů
             </a>
           </div>

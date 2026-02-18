@@ -64,12 +64,22 @@ export default async function LocationPage({ params }: Props) {
 
           {/* Meta info cards */}
           <div className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <div className="rounded-xl border border-border bg-bg-card px-5 py-4">
-              <div className="mb-2 text-[11px] font-medium uppercase tracking-[0.15em] text-gray-light">
-                Adresa
+            <a
+              href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location.address)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-xl border border-border bg-bg-card px-5 py-4 transition-colors hover:border-[#333]"
+            >
+              <div className="mb-2 flex items-center justify-between">
+                <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-gray-light">
+                  Adresa
+                </span>
+                <span className="text-[10px] text-[#555] transition-colors group-hover:text-[#999]">
+                  Navigovat &rarr;
+                </span>
               </div>
-              <div className="text-[13px] leading-[1.5] text-[#bbb]">{location.address}</div>
-            </div>
+              <div className="text-[13px] leading-[1.5] text-[#bbb] group-hover:text-[#fff]">{location.address}</div>
+            </a>
             <div className="rounded-xl border border-border bg-bg-card px-5 py-4">
               <div className="mb-2 text-[11px] font-medium uppercase tracking-[0.15em] text-gray-light">
                 Mobil
