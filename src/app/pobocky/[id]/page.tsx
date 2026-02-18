@@ -295,7 +295,7 @@ export default async function LocationPage({ params }: Props) {
       </section>
 
       <CareerAcademy />
-      <Vouchers />
+      <Vouchers eshopUrl={location.eshopUrl} />
       <Contact />
     </>
   );
