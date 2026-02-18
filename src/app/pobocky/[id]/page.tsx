@@ -198,35 +198,36 @@ export default async function LocationPage({ params }: Props) {
           {/* Meta info: Adresa | Mobil | Otevírací doba */}
           <div className="mb-12 flex flex-wrap gap-12 max-md:gap-6">
             <div>
-              <div className="mb-1 text-[11px] font-medium uppercase tracking-wider text-gray-light">
+              <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
                 Adresa
               </div>
               <a
                 href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location.address)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[13px] font-bold transition-colors hover:text-white"
+                className="text-[13px] text-[#999] transition-colors hover:text-white"
               >
                 {location.address}
               </a>
             </div>
             <div>
-              <div className="mb-1 text-[11px] font-medium uppercase tracking-wider text-gray-light">
+              <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
                 Mobil
               </div>
-              <div className="text-[13px]">
-                <a href={`tel:${location.phone}`} className="font-bold text-white underline underline-offset-2">
-                  {location.phone}
-                </a>
-              </div>
+              <a
+                href={`tel:${location.phone}`}
+                className="text-[13px] text-white underline underline-offset-2"
+              >
+                {location.phone}
+              </a>
             </div>
             <div>
-              <div className="mb-1 text-[11px] font-medium uppercase tracking-wider text-gray-light">
+              <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
                 Otevírací doba
               </div>
               {location.openingHours.map((h) => (
                 <div key={h.days} className="text-[13px]">
-                  <span className="font-bold text-white">{h.days}</span>
+                  <span className="font-semibold">{h.days}</span>
                   <span className="ml-3 text-[#999]">{h.hours}</span>
                 </div>
               ))}
