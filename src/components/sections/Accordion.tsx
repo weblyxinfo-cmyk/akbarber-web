@@ -9,7 +9,7 @@ import type { Location } from "@/types";
 
 function LocationCard({ location }: { location: Location }) {
   return (
-    <Link href={`/pobocky/${location.id}`} className="group block min-w-[200px] flex-1">
+    <Link href={`/pobocky/${location.id}`} className="group block min-w-[200px] max-w-[calc(50%-8px)] flex-1 max-md:max-w-full">
       <div className="mb-2 h-[120px] overflow-hidden rounded-[10px] bg-bg-card">
         <Image
           src={location.image}
