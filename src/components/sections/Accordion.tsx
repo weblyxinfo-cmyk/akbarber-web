@@ -25,15 +25,15 @@ function LocationCard({ location }: { location: Location }) {
       <div className="flex items-center justify-between">
         <div className="flex flex-wrap items-center gap-2">
           {location.type === "walk-in" && (
-            <span className="text-[11px] text-[#888]">Pouze bez objednání</span>
+            <span className="text-sm font-semibold text-[#888]">Bez objednání</span>
           )}
           {location.type === "reservation" && (
-            <span className="text-[11px] text-[#888]">Pouze reservace VIP club</span>
+            <span className="text-sm font-semibold text-[#888]">Pouze rezervace VIP club</span>
           )}
           {location.type === "walk-in + reservation" && (
             <>
-              <span className="text-[11px] text-[#888]">Bez objednání</span>
-              <span className="text-[11px] text-white underline underline-offset-2">Reservace online</span>
+              <span className="text-sm font-semibold text-[#888]">Bez objednání</span>
+              <span className="text-sm font-semibold text-white underline underline-offset-2">Rezervace online</span>
             </>
           )}
         </div>
