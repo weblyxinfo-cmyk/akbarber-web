@@ -22,21 +22,26 @@ export function Vouchers() {
                 href={siteConfig.booking}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block border border-white px-6 py-3 text-[13px] font-bold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-black"
-                style={{ color: "#fff" }}
+                className="btn-outline inline-block border border-white px-6 py-3 text-[13px] font-bold uppercase tracking-wider transition-colors"
               >
                 Koupit online
               </a>
             </div>
 
-            {/* Right: Barber pole image */}
-            <div className="hidden shrink-0 pr-8 sm:block">
+            {/* Right: Barber pole image with fade */}
+            <div className="relative hidden shrink-0 sm:block" style={{ width: 160, height: 240 }}>
+              <div
+                className="absolute inset-0 z-10"
+                style={{
+                  background: "linear-gradient(to right, #151515 0%, transparent 40%), linear-gradient(to top, #151515 0%, transparent 30%), linear-gradient(to bottom, #151515 0%, transparent 30%)",
+                }}
+              />
               <Image
                 src="/images/barber-pole.png"
                 alt="Dárkové poukázky"
                 width={160}
                 height={320}
-                className="h-auto w-[140px]"
+                className="h-full w-full object-contain"
               />
             </div>
           </div>

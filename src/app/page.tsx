@@ -4,6 +4,7 @@ import { GentlemanBanner } from "@/components/sections/GentlemanBanner";
 import { About } from "@/components/sections/About";
 import { CareerAcademy } from "@/components/sections/CareerAcademy";
 import { Vouchers } from "@/components/sections/Vouchers";
+import { FAQ } from "@/components/sections/FAQ";
 import { Contact } from "@/components/sections/Contact";
 
 export default function HomePage() {
@@ -32,6 +33,7 @@ export default function HomePage() {
       <About />
       <CareerAcademy />
       <Vouchers />
+      <FAQ />
       <Contact />
     </>
   );

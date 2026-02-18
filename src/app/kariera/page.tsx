@@ -4,9 +4,20 @@ import { IconCircle } from "@/components/IconCircle";
 import { Contact } from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
-  title: "Kariéra | AK BARBERS",
+  title: "Kariéra v AK BARBERS | Práce barber Česko & Slovensko",
   description:
-    "Připoj se k týmu AK Barbers. Hledáme zkušené barbery i začátečníky.",
+    "Připoj se k týmu AK Barbers. Hledáme zkušené barbery i začátečníky do poboček v Berouně, Praze, Plzni, Hořovicích, Slaném, Českých Budějovicích a Nitře. Férové podmínky, profesionální zázemí.",
+  openGraph: {
+    title: "Kariéra v AK BARBERS",
+    description: "Hledáme zkušené barbery i začátečníky. Přidej se k nám!",
+    url: "https://www.akbarber.com/kariera",
+    siteName: "AK BARBERS",
+    locale: "cs_CZ",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://www.akbarber.com/kariera",
+  },
 };
 
 const benefitIcons: Record<string, React.ReactNode> = {
@@ -51,8 +62,54 @@ const benefitIcons: Record<string, React.ReactNode> = {
 };
 
 export default function KarieraPage() {
+  const jobPostingSchema = jobPositions.map((job) => ({
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: job.title,
+    description: job.description,
+    datePosted: "2025-01-01",
+    validThrough: "2026-12-31",
+    employmentType: job.type === "Plný úvazek" ? "FULL_TIME" : "PART_TIME",
+    jobLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: job.location,
+        addressCountry: "CZ",
+      },
+    },
+    hiringOrganization: {
+      "@type": "Organization",
+      name: "AK BARBERS",
+      sameAs: "https://www.akbarber.com",
+      logo: "https://www.akbarber.com/wp-content/uploads/2023/06/social-image-1.jpg",
+    },
+    industry: "Barbershop / Kadeřnictví",
+  }));
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Domů", item: "https://www.akbarber.com" },
+      { "@type": "ListItem", position: 2, name: "Kariéra", item: "https://www.akbarber.com/kariera" },
+    ],
+  };
+
   return (
     <>
+      {jobPostingSchema.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Hero */}
       <section className="pb-16 pt-16">
         <div className="container">

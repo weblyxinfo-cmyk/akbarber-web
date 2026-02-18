@@ -19,13 +19,40 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const location = locations.find((l) => l.id === id);
   if (!location) return {};
+
+  const title = `AK BARBERS – ${location.city} | Barbershop ${location.city}`;
+  const description = `${location.name} – ${location.address}. ${
+    location.type === "walk-in"
+      ? "Přijďte bez objednání."
+      : "Rezervujte si termín online."
+  } Pánské stříhání od 449 Kč, úprava vousů, skin fade. Otevřeno Po–Pá 9–18, So–Ne 9–14.`;
+
   return {
-    title: `AK BARBERS – ${location.city}`,
-    description: `${location.name} – ${location.address}. ${
-      location.type === "walk-in"
-        ? "Přijďte bez objednání."
-        : "Rezervujte si termín online."
-    }`,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `https://www.akbarber.com/pobocky/${location.id}`,
+      siteName: "AK BARBERS",
+      locale: "cs_CZ",
+      type: "website",
+      images: [
+        {
+          url: "https://www.akbarber.com/wp-content/uploads/2023/06/social-image-1.jpg",
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+    alternates: {
+      canonical: `https://www.akbarber.com/pobocky/${location.id}`,
+    },
   };
 }
 
@@ -36,8 +63,113 @@ export default async function LocationPage({ params }: Props) {
 
   const displayName = `AK BARBERS – ${location.city}${location.id === "beroun-2" ? " 2" : ""}`;
 
+  // JSON-LD: BarberShop (LocalBusiness) schema
+  const barberShopSchema = {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "@id": `https://www.akbarber.com/pobocky/${location.id}#business`,
+    name: location.name,
+    image: location.image,
+    url: `https://www.akbarber.com/pobocky/${location.id}`,
+    telephone: location.phone,
+    email: "info@akbarber.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: location.address.split(",")[0],
+      addressLocality: location.city,
+      addressCountry: location.id === "nitra" ? "SK" : "CZ",
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Saturday", "Sunday"],
+        opens: "09:00",
+        closes: "14:00",
+      },
+    ],
+    priceRange: "299 Kč – 799 Kč",
+    currenciesAccepted: location.id === "nitra" ? "EUR" : "CZK",
+    paymentAccepted: "Cash, Credit Card",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Služby",
+      itemListElement: location.services.map((service) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: service.name,
+          description: service.description || service.name,
+        },
+        price: service.price.replace(/[^0-9]/g, "").slice(0, 3),
+        priceCurrency: location.id === "nitra" ? "EUR" : "CZK",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: service.price.replace(/[^0-9]/g, "").slice(0, 3),
+          priceCurrency: location.id === "nitra" ? "EUR" : "CZK",
+        },
+      })),
+    },
+    parentOrganization: {
+      "@id": "https://www.akbarber.com/#organization",
+    },
+    sameAs: [
+      "https://www.facebook.com/people/Akbarberscz/100079448784976/",
+      "https://www.instagram.com/ak.barbers.cz/",
+    ],
+    ...(location.bookingUrl && {
+      potentialAction: {
+        "@type": "ReserveAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: location.bookingUrl,
+          actionPlatform: "https://schema.org/DesktopWebPlatform",
+        },
+        result: {
+          "@type": "Reservation",
+          name: "Rezervace střihu",
+        },
+      },
+    }),
+  };
+
+  // JSON-LD: BreadcrumbList
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Provozovny",
+        item: "https://www.akbarber.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: location.name,
+        item: `https://www.akbarber.com/pobocky/${location.id}`,
+      },
+    ],
+  };
+
   return (
     <>
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(barberShopSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Hero Image */}
       <section className="pt-8">
         <div className="container">

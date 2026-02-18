@@ -52,6 +52,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.akbarber.com",
   },
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/images/logo.svg",
+  },
+  other: {
+    "google-site-verification": "",
+  },
 };
 
 export default function RootLayout({

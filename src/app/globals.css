@@ -31,6 +31,11 @@ a {
   text-decoration: none;
 }
 
+a.btn-outline:hover {
+  background-color: #fff;
+  color: #000;
+}
+
 .container {
   max-width: 800px;
   margin-left: auto;
