@@ -22,7 +22,7 @@ export const navItems: NavItem[] = [
   { label: "Provozovny", href: "/" },
   { label: "Dárkové poukázky", href: "/#vouchers" },
   { label: "Kariéra", href: "/kariera" },
-  { label: "Akademie", href: "/academy" },
+  { label: "Akademie", href: "https://www.barber-kurzy.com" },
   { label: "Kontakt", href: "/#kontakt" },
 ];
 

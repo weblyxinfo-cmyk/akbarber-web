@@ -36,6 +36,7 @@ export function MobileMenu({ open, onClose, links }: MobileMenuProps) {
             key={item.href}
             href={item.href}
             onClick={onClose}
+            {...(item.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             className="text-lg font-medium text-gray transition-colors hover:text-white"
           >
             {item.label}

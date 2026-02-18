@@ -10,7 +10,7 @@ const navLinks = [
   { label: "Provozovny", href: "/" },
   { label: "Dárkové poukázky", href: "/#vouchers" },
   { label: "Kariéra", href: "/kariera" },
-  { label: "Akademie", href: "/academy" },
+  { label: "Akademie", href: "https://www.barber-kurzy.com" },
   { label: "Kontakt", href: "/#kontakt" },
 ];
 
@@ -34,15 +34,27 @@ export function Header() {
             </Link>
 
             <nav className="hidden items-center gap-7 md:flex">
-              {navLinks.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-[13px] font-medium text-[#999] transition-colors hover:text-white"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navLinks.map((item) =>
+                item.href.startsWith("http") ? (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[13px] font-medium text-[#999] transition-colors hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-[13px] font-medium text-[#999] transition-colors hover:text-white"
+                  >
+                    {item.label}
+                  </Link>
+                )
+              )}
             </nav>
           </div>
 

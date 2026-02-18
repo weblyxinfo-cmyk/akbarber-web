@@ -33,13 +33,15 @@ export function CareerAcademy() {
               Akademie
             </h3>
             <p className="mb-5 text-[13px] leading-[1.6] text-gray">
-              <a href="/academy" className="text-white underline underline-offset-2">Využijte jedinečnou příležitost</a>{" "}
+              <a href="https://www.barber-kurzy.com" target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-2">Využijte jedinečnou příležitost</a>{" "}
               vstoupit do světa barberingu prostřednictvím profesionálního
               kurzu, který pro tebe připravila AK Barbers Academy pod vedením
               našich špičkových lektorů a zkušených barberů z AK Barbers.
             </p>
             <a
-              href="/academy"
+              href="https://www.barber-kurzy.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-2 inline-flex items-center gap-1.5 text-[13px] font-medium"
             >
               Více info
