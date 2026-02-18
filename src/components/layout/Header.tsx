@@ -4,11 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/data";
+import { IconCircle } from "@/components/IconCircle";
 import { MobileMenu } from "./MobileMenu";
 
 const navLinks = [
   { label: "Provozovny", href: "/" },
-  { label: "Dárkové poukázky", href: "/#vouchers" },
+  { label: "Dárkové poukazy", href: "/#vouchers" },
   { label: "Kariéra", href: "/kariera" },
   { label: "Akademie", href: "https://www.barber-kurzy.com" },
   { label: "Kontakt", href: "/#kontakt" },
@@ -58,20 +59,19 @@ export function Header() {
             </nav>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             <a
               href={siteConfig.booking}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-[13px] font-semibold transition-all duration-200 hover:opacity-90"
-              style={{ backgroundColor: "#fff", color: "#000" }}
+              className="hidden items-center gap-1.5 text-[13px] font-bold text-white transition-opacity hover:opacity-80 md:inline-flex"
             >
               Rezervace
-              <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "rgba(0,0,0,0.15)" }} />
+              <IconCircle />
             </a>
             <a
               href={`tel:${siteConfig.phone}`}
-              className="hidden text-[13px] font-medium text-[#999] md:block"
+              className="hidden text-[13px] font-bold text-white underline underline-offset-2 md:block"
             >
               {siteConfig.phone}
             </a>

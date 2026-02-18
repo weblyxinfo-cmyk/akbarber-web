@@ -5,7 +5,7 @@ export const siteConfig = {
   url: "https://www.akbarber.com",
   description:
     "Síť prémiových barbershopů v České republice a na Slovensku. Kvalitní pánské stříhání, úprava vousů a skvělý zážitek.",
-  phone: "+420 779 502 831",
+  phone: "+420 775 502 831",
   email: "info@akbarber.com",
   social: {
     facebook: "https://www.facebook.com/people/Akbarberscz/100079448784976/",
@@ -20,7 +20,7 @@ export const siteConfig = {
 
 export const navItems: NavItem[] = [
   { label: "Provozovny", href: "/" },
-  { label: "Dárkové poukázky", href: "/#vouchers" },
+  { label: "Dárkové poukazy", href: "/#vouchers" },
   { label: "Kariéra", href: "/kariera" },
   { label: "Akademie", href: "https://www.barber-kurzy.com" },
   { label: "Kontakt", href: "/#kontakt" },
@@ -32,7 +32,7 @@ export const locations: Location[] = [
     name: "AK BARBERS Beroun",
     city: "Beroun",
     address: "Havlíčkova 128, 266 01 Beroun-centrum",
-    phone: "+420 779 502 831",
+    phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
@@ -60,7 +60,7 @@ export const locations: Location[] = [
     name: "AK BARBERS Beroun 2",
     city: "Beroun",
     address: "Plzeňská 145/49, 266 01 Beroun-Město",
-    phone: "+420 779 502 831",
+    phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
@@ -90,7 +90,7 @@ export const locations: Location[] = [
     name: "AK BARBERS Praha 6",
     city: "Praha",
     address: "Bělohorská 1393/44, 169 00 Praha 6",
-    phone: "+420 779 502 831",
+    phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
@@ -118,7 +118,7 @@ export const locations: Location[] = [
     name: "AK BARBERS Praha 1",
     city: "Praha",
     address: "Národní 949/19, 110 00 Staré Město",
-    phone: "+420 779 502 831",
+    phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
@@ -146,7 +146,7 @@ export const locations: Location[] = [
     name: "AK BARBERS Králův Dvůr",
     city: "Králův Dvůr",
     address: "Plzeňská 396, 267 01 Králův Dvůr",
-    phone: "+420 779 502 831",
+    phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
@@ -174,7 +174,7 @@ export const locations: Location[] = [
     name: "AK BARBERS Plzeň",
     city: "Plzeň",
     address: "Gerská 2030/23, 323 00 Plzeň 1-Bolevec",
-    phone: "+420 779 502 831",
+    phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
@@ -203,7 +203,7 @@ export const locations: Location[] = [
     name: "AK BARBERS Hořovice",
     city: "Hořovice",
     address: "Fügnerova 374/1, 268 01 Hořovice",
-    phone: "+420 779 502 831",
+    phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
@@ -232,7 +232,7 @@ export const locations: Location[] = [
     name: "AK BARBERS Slaný",
     city: "Slaný",
     address: "Třebízského 182, 274 01 Slaný",
-    phone: "+420 779 502 831",
+    phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
@@ -261,7 +261,7 @@ export const locations: Location[] = [
     name: "AK BARBERS Máj",
     city: "Máj",
     address: "Máj 632/36, 370 02 České Budějovice",
-    phone: "+420 779 502 831",
+    phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
