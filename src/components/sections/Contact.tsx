@@ -99,9 +99,7 @@ export function Contact() {
                 <span>
                   Souhlasím se{" "}
                   <a
-                    href="https://www.akbarber.com/prohlaseni-o-ochrane-osobnich-udaju/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/ochrana-osobnich-udaju"
                     className="text-white underline"
                   >
                     zpracováním osobních údajů

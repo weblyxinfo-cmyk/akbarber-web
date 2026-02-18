@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { siteConfig } from "@/lib/data";
+import { CookieSettingsLink } from "@/components/CookieSettingsLink";
 
 export function Footer() {
   return (
@@ -40,6 +41,7 @@ export function Footer() {
 
         <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
           <div className="flex flex-wrap gap-6">
+            <CookieSettingsLink />
             <a href="/cookies" className="text-xs text-gray-light underline underline-offset-2 transition-colors hover:text-[#888]">
               Zásady používání souborů cookie
             </a>

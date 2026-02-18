@@ -39,16 +39,20 @@ export default async function LocationPage({ params }: Props) {
   return (
     <>
       {/* Hero Image */}
-      <section className="h-[320px] w-[100vw] overflow-hidden bg-bg leading-[0] md:relative md:left-1/2 md:ml-[-50vw]">
-        <Image
-          src={location.image}
-          alt={location.name}
-          width={1440}
-          height={400}
-          className="block h-full w-full object-cover"
-          sizes="100vw"
-          priority
-        />
+      <section className="pt-8">
+        <div className="container">
+          <div className="h-[200px] overflow-hidden rounded-[10px]">
+            <Image
+              src={location.image}
+              alt={location.name}
+              width={800}
+              height={200}
+              className="block h-full w-full object-cover"
+              sizes="(max-width: 768px) 100vw, 800px"
+              priority
+            />
+          </div>
+        </div>
       </section>
 
       {/* Location Info */}
@@ -98,8 +102,11 @@ export default async function LocationPage({ params }: Props) {
       {/* Price List */}
       <section className="py-5">
         <div className="container">
-          {location.services.map((service) => (
-            <div key={service.name} className="mb-10">
+          {location.services.map((service, i) => (
+            <div
+              key={service.name}
+              className={`pb-8 pt-8 ${i < location.services.length - 1 ? "border-b border-border" : ""} ${i === 0 ? "pt-0" : ""}`}
+            >
               <h3 className="mb-1.5 font-[family-name:var(--font-playfair)] text-2xl font-bold">
                 {service.name}
               </h3>
