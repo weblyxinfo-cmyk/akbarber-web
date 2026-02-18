@@ -63,10 +63,11 @@ export function Header() {
               href={siteConfig.booking}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-[#ffffff] px-5 py-2 text-[13px] font-semibold text-[#000] transition-all duration-200 hover:bg-[#e8e8e8]"
+              className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-[13px] font-semibold transition-all duration-200 hover:opacity-90"
+              style={{ backgroundColor: "#fff", color: "#000" }}
             >
               Rezervace
-              <span className="h-1.5 w-1.5 rounded-full bg-[#000]/15" />
+              <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "rgba(0,0,0,0.15)" }} />
             </a>
             <a
               href={`tel:${siteConfig.phone}`}
