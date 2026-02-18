@@ -36,7 +36,7 @@ export function Contact() {
       <div className="container">
         <div className="grid gap-12 rounded-2xl bg-bg-card p-8 sm:p-12 md:grid-cols-2">
           <div>
-            <h2 className="mb-4 font-[family-name:var(--font-playfair)] text-[28px] font-bold leading-[1.2]">
+            <h2 className="mb-4 font-[family-name:var(--font-roboto-slab)] text-[28px] font-bold leading-[1.2]">
               Máte dotazy?
               <br />
               Napište nám

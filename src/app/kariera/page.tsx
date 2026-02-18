@@ -116,7 +116,7 @@ export default function KarieraPage() {
           <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.2em] text-gray-light">
             Kariéra
           </p>
-          <h1 className="max-w-[560px] font-[family-name:var(--font-playfair)] text-[36px] font-bold leading-[1.15] sm:text-[42px]">
+          <h1 className="max-w-[560px] font-[family-name:var(--font-roboto-slab)] text-[36px] font-bold leading-[1.15] sm:text-[42px]">
             Připoj se k&nbsp;týmu AK&nbsp;BARBERS
           </h1>
           <p className="mt-5 max-w-[480px] text-[14px] leading-[1.7] text-gray">
@@ -130,7 +130,7 @@ export default function KarieraPage() {
       {/* Open Positions */}
       <section className="pb-16">
         <div className="container">
-          <h2 className="mb-6 font-[family-name:var(--font-playfair)] text-[26px] font-bold">
+          <h2 className="mb-6 font-[family-name:var(--font-roboto-slab)] text-[26px] font-bold">
             Otevřené pozice
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -166,7 +166,7 @@ export default function KarieraPage() {
       {/* Benefits */}
       <section className="pb-16">
         <div className="container">
-          <h2 className="mb-6 font-[family-name:var(--font-playfair)] text-[26px] font-bold">
+          <h2 className="mb-6 font-[family-name:var(--font-roboto-slab)] text-[26px] font-bold">
             Benefity
           </h2>
           <div className="grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -193,7 +193,7 @@ export default function KarieraPage() {
       <section className="pb-8">
         <div className="container">
           <div className="rounded-2xl border border-border bg-bg-card px-8 py-10 text-center">
-            <h3 className="font-[family-name:var(--font-playfair)] text-[24px] font-bold">
+            <h3 className="font-[family-name:var(--font-roboto-slab)] text-[24px] font-bold">
               Zaujala tě některá pozice?
             </h3>
             <p className="mx-auto mt-3 max-w-[400px] text-[13px] leading-[1.7] text-gray">

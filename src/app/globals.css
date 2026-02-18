@@ -9,8 +9,8 @@
   --color-gray-light: #555555;
   --color-gray-dark: #333333;
   --color-border: #1a1a1a;
-  --font-sans: var(--font-dm-sans);
-  --font-heading: var(--font-playfair);
+  --font-sans: var(--font-roboto);
+  --font-heading: var(--font-roboto-slab);
 }
 
 html {

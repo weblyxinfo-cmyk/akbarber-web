@@ -205,7 +205,7 @@ export default async function LocationPage({ params }: Props) {
                 href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location.address)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[13px] text-[#999] transition-colors hover:text-white"
+                className="text-[13px] font-bold transition-colors hover:text-white"
               >
                 {location.address}
               </a>
@@ -215,7 +215,7 @@ export default async function LocationPage({ params }: Props) {
                 Mobil
               </div>
               <div className="text-[13px]">
-                <a href={`tel:${location.phone}`} className="text-white underline underline-offset-2">
+                <a href={`tel:${location.phone}`} className="font-bold text-white underline underline-offset-2">
                   {location.phone}
                 </a>
               </div>
@@ -225,8 +225,9 @@ export default async function LocationPage({ params }: Props) {
                 Otevírací doba
               </div>
               {location.openingHours.map((h) => (
-                <div key={h.days} className="text-[13px] text-[#999]">
-                  {h.days}&ensp;{h.hours}
+                <div key={h.days} className="text-[13px]">
+                  <span className="font-bold text-white">{h.days}</span>
+                  <span className="ml-3 text-[#999]">{h.hours}</span>
                 </div>
               ))}
             </div>
@@ -242,7 +243,7 @@ export default async function LocationPage({ params }: Props) {
               key={service.name}
               className={`pb-8 pt-8 ${i < location.services.length - 1 ? "border-b border-border" : ""} ${i === 0 ? "pt-0" : ""}`}
             >
-              <h3 className="mb-1.5 font-[family-name:var(--font-playfair)] text-2xl font-bold">
+              <h3 className="mb-1.5 font-[family-name:var(--font-roboto-slab)] text-2xl font-bold">
                 {service.name}
               </h3>
               {service.description && (
@@ -259,7 +260,7 @@ export default async function LocationPage({ params }: Props) {
       {/* About */}
       <section className="py-12">
         <div className="container">
-          <h2 className="mb-4 max-w-[480px] font-[family-name:var(--font-playfair)] text-[32px] font-bold leading-[1.2]">
+          <h2 className="mb-4 max-w-[480px] font-[family-name:var(--font-roboto-slab)] text-[32px] font-bold leading-[1.2]">
             Záleží nám na&nbsp;tom, abyste se u&nbsp;nás cítili dobře
           </h2>
           <p className="mb-4 max-w-[480px] text-sm leading-[1.7] text-gray">

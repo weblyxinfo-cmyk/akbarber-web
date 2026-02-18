@@ -6,7 +6,7 @@ export function WalkIn() {
     <section className="py-16">
       <div className="container flex flex-col gap-6 md:flex-row md:gap-12">
         <div className="flex-1">
-          <h2 className="font-[family-name:var(--font-playfair)] text-[32px] font-bold leading-[1.2]">
+          <h2 className="font-[family-name:var(--font-roboto-slab)] text-[32px] font-bold leading-[1.2]">
             Přijďte bez objednání nebo se objednejte online
           </h2>
         </div>

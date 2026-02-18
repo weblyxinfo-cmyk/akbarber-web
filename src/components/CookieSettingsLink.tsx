@@ -7,7 +7,7 @@ export function CookieSettingsLink() {
         localStorage.removeItem("cookie-consent");
         window.location.reload();
       }}
-      className="text-xs text-gray-light transition-colors hover:text-[#888]"
+      className="text-[11px] text-[#444] transition-colors hover:text-[#777]"
     >
       Spravovat souhlas s cookies
     </button>

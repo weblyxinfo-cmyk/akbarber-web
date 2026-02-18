@@ -9,7 +9,7 @@ export default function PrivacyPage() {
   return (
     <section className="py-16">
       <div className="container">
-        <h1 className="mb-8 font-[family-name:var(--font-playfair)] text-[32px] font-bold">
+        <h1 className="mb-8 font-[family-name:var(--font-roboto-slab)] text-[32px] font-bold">
           Prohlášení o ochraně osobních údajů
         </h1>
         <div className="space-y-6 text-[14px] leading-[1.8] text-[#aaa]">

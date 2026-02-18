@@ -7,7 +7,7 @@ export function Vouchers() {
     <section className="py-12" id="vouchers">
       <div className="container flex items-center justify-between gap-6">
         <div>
-          <h2 className="mb-2 font-[family-name:var(--font-playfair)] text-[28px] font-bold">
+          <h2 className="mb-2 font-[family-name:var(--font-roboto-slab)] text-[28px] font-bold">
             Dárkové poukázky
           </h2>
           <p className="mb-2 text-sm text-gray">

@@ -58,7 +58,7 @@ export function FAQ() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <div className="container">
-        <h2 className="mb-6 font-[family-name:var(--font-playfair)] text-[28px] font-bold leading-[1.2]">
+        <h2 className="mb-6 font-[family-name:var(--font-roboto-slab)] text-[28px] font-bold leading-[1.2]">
           Často kladené dotazy
         </h2>
         <div>

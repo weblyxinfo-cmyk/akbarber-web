@@ -13,7 +13,7 @@ export default function HomePage() {
       {/* Page Header */}
       <section className="pb-10 pt-14">
         <div className="container">
-          <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-bold leading-tight">
+          <h1 className="font-[family-name:var(--font-roboto-slab)] text-4xl font-bold leading-tight">
             Provozovny AK BARBERS
           </h1>
           <p className="mt-4 max-w-[560px] text-sm leading-[1.7] text-gray">
