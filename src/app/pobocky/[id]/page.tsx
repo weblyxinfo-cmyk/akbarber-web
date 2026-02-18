@@ -3,7 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { locations } from "@/lib/data";
 import { IconCircle } from "@/components/IconCircle";
-import { About } from "@/components/sections/About";
+import { GoogleReviewBadge } from "@/components/sections/GoogleReviewBadge";
 import { CareerAcademy } from "@/components/sections/CareerAcademy";
 import { Vouchers } from "@/components/sections/Vouchers";
 import { Contact } from "@/components/sections/Contact";
@@ -55,33 +55,40 @@ export default async function LocationPage({ params }: Props) {
       {/* Location Info */}
       <section className="pt-8">
         <div className="container">
-          <h1 className="mb-5 text-[28px] font-bold">{displayName}</h1>
+          <h1 className="mb-6 font-[family-name:var(--font-playfair)] text-[28px] font-bold leading-tight">
+            {displayName}
+          </h1>
 
-          {/* Meta info: Adresa | Mobil | Otevírací doba */}
-          <div className="mb-12 flex flex-wrap gap-12 max-md:gap-6">
-            <div>
-              <div className="mb-1 text-[11px] font-medium uppercase tracking-wider text-gray-light">
+          {/* Google Review Badge */}
+          <GoogleReviewBadge location={location} />
+
+          {/* Meta info cards */}
+          <div className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="rounded-xl border border-border bg-bg-card px-5 py-4">
+              <div className="mb-2 text-[11px] font-medium uppercase tracking-[0.15em] text-gray-light">
                 Adresa
               </div>
-              <div className="text-[13px] text-[#999]">{location.address}</div>
+              <div className="text-[13px] leading-[1.5] text-[#bbb]">{location.address}</div>
             </div>
-            <div>
-              <div className="mb-1 text-[11px] font-medium uppercase tracking-wider text-gray-light">
+            <div className="rounded-xl border border-border bg-bg-card px-5 py-4">
+              <div className="mb-2 text-[11px] font-medium uppercase tracking-[0.15em] text-gray-light">
                 Mobil
               </div>
-              <div className="text-[13px]">
-                <a href={`tel:${location.phone}`} className="text-white underline underline-offset-2">
-                  {location.phone}
-                </a>
-              </div>
+              <a
+                href={`tel:${location.phone}`}
+                className="text-[13px] font-medium text-[#fff] underline underline-offset-2"
+              >
+                {location.phone}
+              </a>
             </div>
-            <div>
-              <div className="mb-1 text-[11px] font-medium uppercase tracking-wider text-gray-light">
+            <div className="rounded-xl border border-border bg-bg-card px-5 py-4">
+              <div className="mb-2 text-[11px] font-medium uppercase tracking-[0.15em] text-gray-light">
                 Otevírací doba
               </div>
               {location.openingHours.map((h) => (
-                <div key={h.days} className="text-[13px] text-[#999]">
-                  {h.days}&ensp;{h.hours}
+                <div key={h.days} className="flex justify-between text-[13px] text-[#bbb]">
+                  <span>{h.days}</span>
+                  <span className="font-medium text-[#ddd]">{h.hours}</span>
                 </div>
               ))}
             </div>
@@ -92,17 +99,24 @@ export default async function LocationPage({ params }: Props) {
       {/* Price List */}
       <section className="py-5">
         <div className="container">
+          <h2 className="mb-8 font-[family-name:var(--font-playfair)] text-[24px] font-bold">
+            Ceník
+          </h2>
           {location.services.map((service) => (
-            <div key={service.name} className="mb-10">
-              <h3 className="mb-1.5 font-[family-name:var(--font-playfair)] text-2xl font-bold">
-                {service.name}
-              </h3>
-              {service.description && (
-                <p className="mb-2.5 text-[13px] leading-[1.6] text-gray-light">
-                  {service.description}
-                </p>
-              )}
-              <p className="text-[26px] font-bold">{service.price}</p>
+            <div key={service.name} className="mb-8 border-b border-border pb-8 last:mb-0 last:border-0 last:pb-0">
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex-1">
+                  <h3 className="font-[family-name:var(--font-playfair)] text-[20px] font-bold leading-tight">
+                    {service.name}
+                  </h3>
+                  {service.description && (
+                    <p className="mt-1.5 text-[13px] leading-[1.6] text-gray-light">
+                      {service.description}
+                    </p>
+                  )}
+                </div>
+                <p className="shrink-0 text-[22px] font-bold">{service.price}</p>
+              </div>
             </div>
           ))}
         </div>

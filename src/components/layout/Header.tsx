@@ -51,10 +51,10 @@ export function Header() {
               href={siteConfig.booking}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md bg-white px-5 py-2.5 text-[13px] font-semibold text-black transition-opacity hover:opacity-85"
+              className="inline-flex items-center gap-2 rounded-full bg-[#ffffff] px-5 py-2 text-[13px] font-semibold text-[#000] transition-all duration-200 hover:bg-[#e8e8e8]"
             >
               Rezervace
-              <span className="h-[7px] w-[7px] rounded-full bg-black/15" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[#000]/15" />
             </a>
             <a
               href={`tel:${siteConfig.phone}`}
