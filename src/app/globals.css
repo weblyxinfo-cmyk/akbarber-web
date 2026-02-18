@@ -13,27 +13,24 @@
   --font-heading: var(--font-roboto-slab);
 }
 
-html {
-  scroll-behavior: smooth;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  font-family: var(--font-sans), system-ui, sans-serif;
-  background-color: var(--color-bg);
-  color: var(--color-white);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  body {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-a {
-  color: var(--color-white);
-  text-decoration: none;
-}
-
-a.btn-outline:hover {
-  background-color: #fff;
-  color: #000;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .container {
