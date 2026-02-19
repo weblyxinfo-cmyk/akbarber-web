@@ -38,7 +38,7 @@ const standardServices = [
 
 // Nižší ceník (Praha 6)
 const valueServices = [
-  { name: "Klasické pánské stříhání", price: "399 Kč", description: "Konzultace, precizní střih vlasů na míru strojkem nebo nůžkami, úprava a konečný styling vlasů" },
+  { name: "Klasické pánské stříhání", price: "499 Kč", description: "Konzultace, precizní střih vlasů na míru strojkem nebo nůžkami, úprava a konečný styling vlasů" },
   { name: "Skin Fade/dlouhé vlasy", price: "499 Kč", description: "Skin Fade - Konzultace (nízký, střední, vysoký Fade), střih strojkem od 0mm, použití Shaveru, stínování, precizní přechody, úprava a konečný styling" },
   { name: "Senior pánsky střih", price: "249 Kč", description: "Střih pro starší pány od 65 let" },
   { name: "Dětský střih", price: "299 Kč / 399 Kč", description: "Stříhání mladých mužů ve věku od 1 do 15 let. Klasický střih, foukaná, styling. Vždy radi poradíme. Skin Fade / Low Fade / Crop Fade / Buzz Cut + 100 Kč." },
@@ -148,7 +148,7 @@ export const locations: Location[] = [
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-1-stare-mesto4",
-    services: premiumDiscountServices,
+    services: standardServices,
     image: "/images/locations/photo-praha-1.jpg",
     currency: "CZK",
     googleMapsUrl: "https://share.google/ieWwYNLKRsKPQlx6a",
@@ -235,7 +235,7 @@ export const locations: Location[] = [
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.sk/sk/rezervacia/ak-barbers-slany1",
     eshopUrl: "https://booqme.sk/sk/eshop/ak-barbers-slany1",
-    services: slanyServices,
+    services: standardServices,
     image: "/images/locations/photo-slany.jpg",
     currency: "CZK",
     googleMapsUrl: "https://share.google/FJWH7veDQhP51zzBR",
@@ -255,7 +255,7 @@ export const locations: Location[] = [
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-19",
-    services: premiumDiscountServices,
+    services: standardServices,
     image: "/images/locations/photo-maj.jpg",
     currency: "CZK",
     googleMapsUrl: "https://share.google/ieWwYNLKRsKPQlx6a",
