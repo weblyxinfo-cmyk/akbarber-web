@@ -190,7 +190,7 @@ export default async function LocationPage({ params }: Props) {
               alt={location.name}
               width={800}
               height={200}
-              className="block h-full w-full object-cover object-bottom"
+              className="block h-full w-full object-cover object-[center_60%]"
               sizes="(max-width: 768px) 100vw, 800px"
               priority
             />
