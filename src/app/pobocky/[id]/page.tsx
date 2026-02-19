@@ -215,7 +215,7 @@ export default async function LocationPage({ params }: Props) {
             </a>
           ) : location.type === "walk-in + reservation" ? (
             <div className="mb-8 flex flex-col gap-2">
-              <p className="text-[20px] font-bold text-[#888]">Bez objednání</p>
+              <p className="text-[20px] font-bold text-white">Bez objednání – Walk ins</p>
               <a
                 href={location.bookingUrl}
                 target="_blank"
@@ -227,8 +227,8 @@ export default async function LocationPage({ params }: Props) {
               </a>
             </div>
           ) : (
-            <p className="mb-8 text-[20px] font-bold text-[#888]">
-              {isSlovak ? "Iba bez objednania" : "Bez objednání"}
+            <p className="mb-8 text-[20px] font-bold text-white">
+              {isSlovak ? "Iba bez objednania – Walk ins" : "Bez objednání – Walk ins"}
             </p>
           )}
 
