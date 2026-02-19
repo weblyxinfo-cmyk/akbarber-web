@@ -26,6 +26,34 @@ export const navItems: NavItem[] = [
   { label: "Kontakt", href: "/#kontakt" },
 ];
 
+// Standardní ceník (Beroun, Králův Dvůr, Plzeň, Hořovice)
+const standardServices = [
+  { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
+  { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", description: "Skin Fade – konzultace, nízký, střední, vysoký Fade, střih strojkem od 0 mm, použití shaveru, stínování, precizní přechody, úprava a konečný styling." },
+  { name: "Senior pánský střih (65+)", price: "299 Kč", description: "Střih pro starší pány od 65 let." },
+  { name: "Dětský střih (1–15 let)", price: "349 Kč / 449 Kč", description: "Stříhání mladých mužů ve věku od 1 do 15 let. Klasický střih, foukaná, styling. Skin Fade / Low Fade / Crop Fade / Buzz Cut +100 Kč." },
+  { name: "Úprava vousů", price: "399 Kč", description: "Konzultace, úprava vousů strojkem a nůžkami, zaholení břitvou na vyžádání, aplikace pečující kosmetiky, konečná úprava." },
+  { name: "Střih vlasů a úprava vousů", price: "799 Kč", description: "Konzultace, klasický střih vlasů strojkem, úprava vousů, aplikace pečující kosmetiky na vousy, úprava a finální styling vlasů a vousů." },
+];
+
+// Nižší ceník (Praha 6, Slaný)
+const valueServices = [
+  { name: "Klasické pánské stříhání", price: "399 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
+  { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", description: "Skin Fade – konzultace, nízký, střední, vysoký Fade, střih strojkem od 0 mm, použití shaveru, stínování, precizní přechody, úprava a konečný styling." },
+  { name: "Senior pánský střih (65+)", price: "249 Kč", description: "Střih pro starší pány od 65 let." },
+  { name: "Dětský střih (1–15 let)", price: "299 Kč / 399 Kč", description: "Stříhání mladých mužů ve věku od 1 do 15 let. Klasický střih, foukaná, styling. Skin Fade / Low Fade / Crop Fade / Buzz Cut +100 Kč." },
+  { name: "Úprava vousů", price: "349 Kč", description: "Konzultace, úprava vousů strojkem a nůžkami, zaholení břitvou na vyžádání, aplikace pečující kosmetiky, konečná úprava." },
+  { name: "Střih vlasů a úprava vousů", price: "749 Kč", description: "Konzultace, klasický střih vlasů strojkem, úprava vousů, aplikace pečující kosmetiky na vousy, úprava a finální styling vlasů a vousů." },
+];
+
+// Prémiový ceník (Beroun 2, Praha 1, Máj) – 4 služby
+const premiumServices = [
+  { name: "Klasické pánské stříhání", price: "499 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
+  { name: "Dětský střih (1–15 let)", price: "349 Kč / 449 Kč", description: "Stříhání mladých mužů ve věku od 1 do 15 let. Klasický střih, foukaná, styling. Skin Fade / Low Fade / Crop Fade / Buzz Cut +100 Kč." },
+  { name: "Úprava vousů", price: "399 Kč", description: "Konzultace, úprava vousů strojkem a nůžkami, zaholení břitvou na vyžádání, aplikace pečující kosmetiky, konečná úprava." },
+  { name: "Střih vlasů a úprava vousů", price: "889 Kč", description: "Konzultace, klasický střih vlasů strojkem, úprava vousů, aplikace pečující kosmetiky na vousy, úprava a finální styling vlasů a vousů." },
+];
+
 export const locations: Location[] = [
   {
     id: "beroun",
@@ -39,14 +67,7 @@ export const locations: Location[] = [
     ],
     type: "walk-in",
     eshopUrl: "https://booqme.cz/cs/eshop/ak-barbers-beroun-10",
-    services: [
-      { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
-      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", description: "Skin Fade – konzultace, čistý/střední/vousový fade, střih strojem od 0 mm, použití shaveru, precizní přechody, úprava a konečný styling." },
-      { name: "Senior pánský střih (65+)", price: "299 Kč", description: "Střih pro starší pány od 65 let." },
-      { name: "Dětský střih (1–15 let)", price: "349 Kč / 449 Kč", description: "Stříhání mladých mužů ve věku od 1 do 15 let. Klasický střih, focusový, styling. Skin Fade / Low Fade / Crop Fade / Buzz Cut +100 Kč." },
-      { name: "Úprava vousů", price: "399 Kč", description: "Konzultace, úprava vousů strojkem a nůžkami, celkem břitvou na vybledení, aplikace pečující kosmetiky, konečná úprava." },
-      { name: "Střih vlasů a úprava vousů", price: "799 Kč", description: "Konzultace, klasický střih vlasů strojkem, úprava vousů, aplikace pečující kosmetiky na vousy, úprava a celkový styling vlasů a vousů." },
-    ],
+    services: standardServices,
     image: "/images/locations/photo-beroun.jpg",
     currency: "CZK",
     googleMapsUrl: "https://share.google/p6mtjgPNIp3zPfXU0",
@@ -67,14 +88,7 @@ export const locations: Location[] = [
     type: "reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-beroun",
     eshopUrl: "https://booqme.cz/cs/eshop/ak-barbers-beroun",
-    services: [
-      { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
-      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", description: "Skin Fade – konzultace, čistý/střední/vousový fade, střih strojem od 0 mm, použití shaveru, precizní přechody, úprava a konečný styling." },
-      { name: "Senior pánský střih (65+)", price: "299 Kč", description: "Střih pro starší pány od 65 let." },
-      { name: "Dětský střih (1–15 let)", price: "349 Kč / 449 Kč", description: "Stříhání mladých mužů ve věku od 1 do 15 let. Klasický střih, focusový, styling. Skin Fade / Low Fade / Crop Fade / Buzz Cut +100 Kč." },
-      { name: "Úprava vousů", price: "399 Kč", description: "Konzultace, úprava vousů strojkem a nůžkami, celkem břitvou na vybledení, aplikace pečující kosmetiky, konečná úprava." },
-      { name: "Střih vlasů a úprava vousů", price: "799 Kč", description: "Konzultace, klasický střih vlasů strojkem, úprava vousů, aplikace pečující kosmetiky na vousy, úprava a celkový styling vlasů a vousů." },
-    ],
+    services: premiumServices,
     image: "/images/locations/photo-beroun-2.jpg",
     note: "Rezervace VIP Club",
     currency: "CZK",
@@ -96,14 +110,7 @@ export const locations: Location[] = [
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barber-praha",
-    services: [
-      { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
-      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", description: "Skin Fade – konzultace, čistý/střední/vousový fade, střih strojem od 0 mm, použití shaveru, precizní přechody, úprava a konečný styling." },
-      { name: "Senior pánský střih (65+)", price: "299 Kč", description: "Střih pro starší pány od 65 let." },
-      { name: "Dětský střih (1–15 let)", price: "349 Kč / 449 Kč", description: "Stříhání mladých mužů ve věku od 1 do 15 let. Klasický střih, focusový, styling. Skin Fade / Low Fade / Crop Fade / Buzz Cut +100 Kč." },
-      { name: "Úprava vousů", price: "399 Kč", description: "Konzultace, úprava vousů strojkem a nůžkami, celkem břitvou na vybledení, aplikace pečující kosmetiky, konečná úprava." },
-      { name: "Střih vlasů a úprava vousů", price: "799 Kč", description: "Konzultace, klasický střih vlasů strojkem, úprava vousů, aplikace pečující kosmetiky na vousy, úprava a celkový styling vlasů a vousů." },
-    ],
+    services: valueServices,
     image: "/images/locations/photo-praha-6.jpg",
     currency: "CZK",
     googleMapsUrl: "https://share.google/D6Aq8iH1IZYVxIqrA",
@@ -123,14 +130,7 @@ export const locations: Location[] = [
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-1-stare-mesto4",
-    services: [
-      { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
-      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", description: "Skin Fade – konzultace, čistý/střední/vousový fade, střih strojem od 0 mm, použití shaveru, precizní přechody, úprava a konečný styling." },
-      { name: "Senior pánský střih (65+)", price: "299 Kč", description: "Střih pro starší pány od 65 let." },
-      { name: "Dětský střih (1–15 let)", price: "349 Kč / 449 Kč", description: "Stříhání mladých mužů ve věku od 1 do 15 let. Klasický střih, focusový, styling. Skin Fade / Low Fade / Crop Fade / Buzz Cut +100 Kč." },
-      { name: "Úprava vousů", price: "399 Kč", description: "Konzultace, úprava vousů strojkem a nůžkami, celkem břitvou na vybledení, aplikace pečující kosmetiky, konečná úprava." },
-      { name: "Střih vlasů a úprava vousů", price: "799 Kč", description: "Konzultace, klasický střih vlasů strojkem, úprava vousů, aplikace pečující kosmetiky na vousy, úprava a celkový styling vlasů a vousů." },
-    ],
+    services: premiumServices,
     image: "/images/locations/photo-praha-1.jpg",
     currency: "CZK",
     googleMapsUrl: "https://share.google/ieWwYNLKRsKPQlx6a",
@@ -151,14 +151,7 @@ export const locations: Location[] = [
     ],
     type: "walk-in",
     eshopUrl: "https://booqme.cz/cs/eshop/ak-barbers-kraluv-dvur6",
-    services: [
-      { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
-      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", description: "Skin Fade – konzultace, čistý/střední/vousový fade, střih strojem od 0 mm, použití shaveru, precizní přechody, úprava a konečný styling." },
-      { name: "Senior pánský střih (65+)", price: "299 Kč", description: "Střih pro starší pány od 65 let." },
-      { name: "Dětský střih (1–15 let)", price: "349 Kč / 449 Kč", description: "Stříhání mladých mužů ve věku od 1 do 15 let. Klasický střih, focusový, styling. Skin Fade / Low Fade / Crop Fade / Buzz Cut +100 Kč." },
-      { name: "Úprava vousů", price: "399 Kč", description: "Konzultace, úprava vousů strojkem a nůžkami, celkem břitvou na vybledení, aplikace pečující kosmetiky, konečná úprava." },
-      { name: "Střih vlasů a úprava vousů", price: "799 Kč", description: "Konzultace, klasický střih vlasů strojkem, úprava vousů, aplikace pečující kosmetiky na vousy, úprava a celkový styling vlasů a vousů." },
-    ],
+    services: standardServices,
     image: "/images/locations/photo-kraluv-dvur.jpg",
     currency: "CZK",
     googleMapsUrl: "https://share.google/a01WYK1dXrVqUnAbR",
@@ -179,14 +172,7 @@ export const locations: Location[] = [
     ],
     type: "walk-in",
     eshopUrl: "https://booqme.cz/cs/eshop/ak-barbers-plzen1",
-    services: [
-      { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
-      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", description: "Skin Fade – konzultace, čistý/střední/vousový fade, střih strojem od 0 mm, použití shaveru, precizní přechody, úprava a konečný styling." },
-      { name: "Senior pánský střih (65+)", price: "299 Kč", description: "Střih pro starší pány od 65 let." },
-      { name: "Dětský střih (1–15 let)", price: "349 Kč / 449 Kč", description: "Stříhání mladých mužů ve věku od 1 do 15 let. Klasický střih, focusový, styling. Skin Fade / Low Fade / Crop Fade / Buzz Cut +100 Kč." },
-      { name: "Úprava vousů", price: "399 Kč", description: "Konzultace, úprava vousů strojkem a nůžkami, celkem břitvou na vybledení, aplikace pečující kosmetiky, konečná úprava." },
-      { name: "Střih vlasů a úprava vousů", price: "799 Kč", description: "Konzultace, klasický střih vlasů strojkem, úprava vousů, aplikace pečující kosmetiky na vousy, úprava a celkový styling vlasů a vousů." },
-    ],
+    services: standardServices,
     image: "/images/locations/photo-plzen.jpg",
     currency: "CZK",
     googleMapsUrl: "https://share.google/uDA8gpYTfzP3aXRaL",
@@ -208,14 +194,7 @@ export const locations: Location[] = [
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.sk/sk/rezervacia/ak-barbers-horovice6",
     eshopUrl: "https://booqme.sk/sk/eshop/ak-barbers-horovice6",
-    services: [
-      { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
-      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", description: "Skin Fade – konzultace, čistý/střední/vousový fade, střih strojem od 0 mm, použití shaveru, precizní přechody, úprava a konečný styling." },
-      { name: "Senior pánský střih (65+)", price: "299 Kč", description: "Střih pro starší pány od 65 let." },
-      { name: "Dětský střih (1–15 let)", price: "349 Kč / 449 Kč", description: "Stříhání mladých mužů ve věku od 1 do 15 let. Klasický střih, focusový, styling. Skin Fade / Low Fade / Crop Fade / Buzz Cut +100 Kč." },
-      { name: "Úprava vousů", price: "399 Kč", description: "Konzultace, úprava vousů strojkem a nůžkami, celkem břitvou na vybledení, aplikace pečující kosmetiky, konečná úprava." },
-      { name: "Střih vlasů a úprava vousů", price: "799 Kč", description: "Konzultace, klasický střih vlasů strojkem, úprava vousů, aplikace pečující kosmetiky na vousy, úprava a celkový styling vlasů a vousů." },
-    ],
+    services: standardServices,
     image: "/images/locations/photo-horovice.jpg",
     currency: "CZK",
     googleMapsUrl: "https://share.google/sW4uoZKb3Zt20YEZC",
@@ -236,14 +215,7 @@ export const locations: Location[] = [
     ],
     type: "walk-in",
     eshopUrl: "https://booqme.sk/sk/eshop/ak-barbers-slany1",
-    services: [
-      { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
-      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", description: "Skin Fade – konzultace, čistý/střední/vousový fade, střih strojem od 0 mm, použití shaveru, precizní přechody, úprava a konečný styling." },
-      { name: "Senior pánský střih (65+)", price: "299 Kč", description: "Střih pro starší pány od 65 let." },
-      { name: "Dětský střih (1–15 let)", price: "349 Kč / 449 Kč", description: "Stříhání mladých mužů ve věku od 1 do 15 let. Klasický střih, focusový, styling. Skin Fade / Low Fade / Crop Fade / Buzz Cut +100 Kč." },
-      { name: "Úprava vousů", price: "399 Kč", description: "Konzultace, úprava vousů strojkem a nůžkami, celkem břitvou na vybledení, aplikace pečující kosmetiky, konečná úprava." },
-      { name: "Střih vlasů a úprava vousů", price: "799 Kč", description: "Konzultace, klasický střih vlasů strojkem, úprava vousů, aplikace pečující kosmetiky na vousy, úprava a celkový styling vlasů a vousů." },
-    ],
+    services: valueServices,
     image: "/images/locations/photo-slany.jpg",
     currency: "CZK",
     googleMapsUrl: "https://share.google/FJWH7veDQhP51zzBR",
@@ -262,14 +234,7 @@ export const locations: Location[] = [
       { days: "Po – Ne", hours: "9:00 – 21:00" },
     ],
     type: "walk-in",
-    services: [
-      { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojem nebo nůžkami, úprava a konečný styling vlasů." },
-      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", description: "Skin Fade – konzultace, čistý/střední/vousový fade, střih strojem od 0 mm, použití shaveru, precizní přechody, úprava a konečný styling." },
-      { name: "Senior pánský střih (65+)", price: "299 Kč", description: "Střih pro starší pány od 65 let." },
-      { name: "Dětský střih (1–15 let)", price: "349 Kč / 449 Kč", description: "Stříhání mladých mužů ve věku od 1 do 15 let. Klasický střih, focusový, styling. Skin Fade / Low Fade / Crop Fade / Buzz Cut +100 Kč." },
-      { name: "Úprava vousů", price: "399 Kč", description: "Konzultace, úprava vousů strojkem a nůžkami, celkem břitvou na vybledení, aplikace pečující kosmetiky, konečná úprava." },
-      { name: "Střih vlasů a úprava vousů", price: "799 Kč", description: "Konzultace, klasický střih vlasů strojkem, úprava vousů, aplikace pečující kosmetiky na vousy, úprava a celkový styling vlasů a vousů." },
-    ],
+    services: premiumServices,
     image: "/images/locations/photo-maj.jpg",
     currency: "CZK",
     googleMapsUrl: "https://share.google/ieWwYNLKRsKPQlx6a",
