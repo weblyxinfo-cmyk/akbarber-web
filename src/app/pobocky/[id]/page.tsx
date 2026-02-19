@@ -74,6 +74,47 @@ export default async function LocationPage({ params }: Props) {
   const isSlovak = location.id === "nitra";
   const displayName = `AK BARBERS – ${location.city}${location.id === "beroun-2" ? " 2" : ""}`;
 
+  // Helper: map Czech/Slovak day abbreviations to schema.org days
+  const dayMap: Record<string, string[]> = {
+    "Po": ["Monday"], "Út": ["Tuesday"], "St": ["Wednesday"],
+    "Čt": ["Thursday"], "Pá": ["Friday"], "Pia": ["Friday"],
+    "So": ["Saturday"], "Ne": ["Sunday"],
+  };
+  function parseDays(daysStr: string): string[] {
+    const rangeMatch = daysStr.match(/^(\w+)\s*–\s*(\w+)$/);
+    if (rangeMatch) {
+      const allDays = ["Po", "Út", "St", "Čt", "Pá", "So", "Ne"];
+      const start = rangeMatch[1] === "Pia" ? "Pá" : rangeMatch[1];
+      const end = rangeMatch[2];
+      const startIdx = allDays.indexOf(start);
+      const endIdx = allDays.indexOf(end);
+      if (startIdx >= 0 && endIdx >= 0) {
+        return allDays.slice(startIdx, endIdx + 1).flatMap((d) => dayMap[d] || []);
+      }
+    }
+    return dayMap[daysStr.trim()] || [];
+  }
+  function parseTime(hoursStr: string): { opens: string; closes: string } {
+    const parts = hoursStr.split("–").map((s) => s.trim());
+    return { opens: parts[0] || "09:00", closes: parts[1] || "18:00" };
+  }
+
+  const openingHoursSpec = location.openingHours.map((h) => ({
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: parseDays(h.days),
+    ...parseTime(h.hours),
+  }));
+
+  // Calculate price range from actual services
+  const prices = location.services.map((s) => {
+    const match = s.price.match(/\d+/);
+    return match ? parseInt(match[0], 10) : 0;
+  }).filter((p) => p > 0);
+  const minPrice = Math.min(...prices);
+  const maxPrice = Math.max(...prices);
+  const currency = isSlovak ? "€" : "Kč";
+  const priceRange = `${minPrice} ${currency} – ${maxPrice} ${currency}`;
+
   // JSON-LD: BarberShop (LocalBusiness) schema
   const barberShopSchema = {
     "@context": "https://schema.org",
@@ -90,21 +131,8 @@ export default async function LocationPage({ params }: Props) {
       addressLocality: location.city,
       addressCountry: location.id === "nitra" ? "SK" : "CZ",
     },
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "09:00",
-        closes: "18:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Saturday", "Sunday"],
-        opens: "09:00",
-        closes: "14:00",
-      },
-    ],
-    priceRange: isSlovak ? "12 € – 27 €" : "299 Kč – 799 Kč",
+    openingHoursSpecification: openingHoursSpec,
+    priceRange,
     currenciesAccepted: location.id === "nitra" ? "EUR" : "CZK",
     paymentAccepted: "Cash, Credit Card",
     hasOfferCatalog: {
@@ -319,7 +347,7 @@ export default async function LocationPage({ params }: Props) {
       </section>
 
       <CareerAcademy />
-      <Vouchers eshopUrl={location.eshopUrl} />
+      <Vouchers eshopUrl={location.eshopUrl} isSlovak={isSlovak} />
       <Contact />
     </>
   );
