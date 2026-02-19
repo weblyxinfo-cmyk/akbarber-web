@@ -32,26 +32,24 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
 
   return (
     <div className="container flex justify-end pt-4 pb-0">
-      <div className="flex gap-1 rounded-full bg-[#1a1a1a] p-1 text-sm font-medium">
+      <div className="flex gap-1 rounded-full bg-[#1a1a1a] p-1">
         <button
           onClick={() => switchLang("cs")}
-          className={`rounded-full px-3 py-1 transition-colors ${
-            lang === "cs"
-              ? "bg-white text-black"
-              : "text-gray-400 hover:text-white"
+          className={`rounded-full px-2 py-1 text-lg leading-none transition-opacity ${
+            lang === "cs" ? "opacity-100" : "opacity-40 hover:opacity-70"
           }`}
+          aria-label="Česky"
         >
-          CZ
+          🇨🇿
         </button>
         <button
           onClick={() => switchLang("en")}
-          className={`rounded-full px-3 py-1 transition-colors ${
-            lang === "en"
-              ? "bg-white text-black"
-              : "text-gray-400 hover:text-white"
+          className={`rounded-full px-2 py-1 text-lg leading-none transition-opacity ${
+            lang === "en" ? "opacity-100" : "opacity-40 hover:opacity-70"
           }`}
+          aria-label="English"
         >
-          EN
+          🇬🇧
         </button>
       </div>
     </div>
