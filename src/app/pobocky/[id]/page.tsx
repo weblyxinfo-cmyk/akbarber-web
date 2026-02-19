@@ -6,33 +6,58 @@ import { IconCircle } from "@/components/IconCircle";
 import { CareerAcademy } from "@/components/sections/CareerAcademy";
 import { Vouchers } from "@/components/sections/Vouchers";
 import { Contact } from "@/components/sections/Contact";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import type { Lang } from "@/lib/translations";
+import {
+  locationPageTranslations,
+  translateService,
+  translateDays,
+} from "@/lib/translations";
 
 interface Props {
   params: Promise<{ id: string }>;
+  searchParams: Promise<{ lang?: string }>;
 }
 
 export async function generateStaticParams() {
   return locations.map((loc) => ({ id: loc.id }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
   const { id } = await params;
+  const { lang: langParam } = await searchParams;
   const location = locations.find((l) => l.id === id);
   if (!location) return {};
 
+  const isBilingual = id === "praha-1" || id === "praha-6";
+  const isEnglish = isBilingual && langParam === "en";
   const isSlovak = location.id === "nitra";
-  const title = `AK BARBERS – ${location.city} | Barbershop ${location.city}`;
-  const description = isSlovak
-    ? `${location.name} – ${location.address}. ${
-        location.type === "walk-in"
-          ? "Príďte bez objednania."
-          : "Rezervujte si termín online."
-      } Pánske strihanie od 12 €, úprava brady, skin fade. Otvorené Po–Pi 9–18, So–Ne 9–14.`
-    : `${location.name} – ${location.address}. ${
-        location.type === "walk-in"
-          ? "Přijďte bez objednání."
-          : "Rezervujte si termín online."
-      } Pánské stříhání od 449 Kč, úprava vousů, skin fade. Otevřeno Po–Pá 9–18, So–Ne 9–14.`;
+
+  let title: string;
+  let description: string;
+
+  if (isEnglish) {
+    title =
+      id === "praha-1"
+        ? "AK BARBERS Prague 1 \u2014 Premium Barbershop in the City Centre"
+        : "AK BARBERS Prague 6 \u2014 Professional Barbershop";
+    const minPrice = id === "praha-6" ? "399" : "499";
+    description = `${location.name} \u2013 ${location.address}. Walk-ins welcome, online booking available. Men\u2019s haircuts from ${minPrice} CZK, beard grooming, skin fade.`;
+  } else if (isSlovak) {
+    title = `AK BARBERS – ${location.city} | Barbershop ${location.city}`;
+    description = `${location.name} – ${location.address}. ${
+      location.type === "walk-in"
+        ? "Príďte bez objednania."
+        : "Rezervujte si termín online."
+    } Pánske strihanie od 12 €, úprava brady, skin fade. Otvorené Po–Pi 9–18, So–Ne 9–14.`;
+  } else {
+    title = `AK BARBERS – ${location.city} | Barbershop ${location.city}`;
+    description = `${location.name} – ${location.address}. ${
+      location.type === "walk-in"
+        ? "Přijďte bez objednání."
+        : "Rezervujte si termín online."
+    } Pánské stříhání od 449 Kč, úprava vousů, skin fade. Otevřeno Po–Pá 9–18, So–Ne 9–14.`;
+  }
 
   const ogImage = `/images/og/og-${location.id}.png`;
 
@@ -44,7 +69,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: `https://www.akbarber.com/pobocky/${location.id}`,
       siteName: "AK BARBERS",
-      locale: isSlovak ? "sk_SK" : "cs_CZ",
+      locale: isEnglish ? "en_US" : isSlovak ? "sk_SK" : "cs_CZ",
       type: "website",
       images: [
         {
@@ -66,12 +91,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function LocationPage({ params }: Props) {
+export default async function LocationPage({ params, searchParams }: Props) {
   const { id } = await params;
+  const { lang: langParam } = await searchParams;
   const location = locations.find((l) => l.id === id);
   if (!location) notFound();
 
   const isSlovak = location.id === "nitra";
+  const isBilingual = id === "praha-1" || id === "praha-6";
+  const lang: Lang = isBilingual && langParam === "en" ? "en" : "cs";
+  const t = locationPageTranslations[lang];
+
   const displayName = location.id === "maj"
     ? "AK BARBERS Máj - House of Fun"
     : `AK BARBERS – ${location.city}${location.id === "beroun-2" ? " 2" : ""}`;
@@ -211,8 +241,11 @@ export default async function LocationPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
+      {/* Language Switcher (Praha 1 & Praha 6 only) */}
+      {isBilingual && <LanguageSwitcher lang={lang} />}
+
       {/* Hero Image */}
-      <section className="pt-8">
+      <section className={isBilingual ? "pt-2" : "pt-8"}>
         <div className="container">
           <div className="h-[200px] overflow-hidden rounded-[10px]">
             <Image
@@ -240,33 +273,47 @@ export default async function LocationPage({ params }: Props) {
               rel="noopener noreferrer"
               className="mb-8 inline-flex items-center gap-2 text-[20px] font-bold text-white"
             >
-              Pouze na rezervaci
+              {lang === "en" ? t.byAppointment : "Pouze na rezervaci"}
               <IconCircle />
             </a>
           ) : location.type === "walk-in + reservation" ? (
             <div className="mb-8 flex flex-col gap-2">
-              <p className="text-[20px] font-bold text-white">Bez objednání – Walk ins</p>
+              <p className="text-[20px] font-bold text-white">
+                {lang === "en"
+                  ? t.walkIn
+                  : isSlovak
+                    ? "Bez objednania – Walk ins"
+                    : "Bez objednání – Walk ins"}
+              </p>
               <a
                 href={location.bookingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-[20px] font-bold text-white"
               >
-                {isSlovak ? "Rezervovať online" : "Rezervovat online"}
+                {lang === "en"
+                  ? t.bookOnline
+                  : isSlovak
+                    ? "Rezervovať online"
+                    : "Rezervovat online"}
                 <IconCircle />
               </a>
             </div>
           ) : (
             <p className="mb-8 text-[20px] font-bold text-white">
-              {isSlovak ? "Iba bez objednania – Walk ins" : "Bez objednání – Walk ins"}
+              {lang === "en"
+                ? t.walkIn
+                : isSlovak
+                  ? "Iba bez objednania – Walk ins"
+                  : "Bez objednání – Walk ins"}
             </p>
           )}
 
-          {/* Meta info: Adresa | Mobil | Otevírací doba */}
+          {/* Meta info: Address | Phone | Opening Hours */}
           <div className="mb-12 flex flex-wrap gap-12 max-md:gap-6">
             <div>
               <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
-                Adresa
+                {lang === "en" ? t.address : "Adresa"}
               </div>
               <a
                 href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location.address)}`}
@@ -279,7 +326,7 @@ export default async function LocationPage({ params }: Props) {
             </div>
             <div>
               <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
-                Mobil
+                {lang === "en" ? t.phone : "Mobil"}
               </div>
               <a
                 href={`tel:${location.phone}`}
@@ -290,11 +337,17 @@ export default async function LocationPage({ params }: Props) {
             </div>
             <div>
               <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
-                {isSlovak ? "Otváracie hodiny" : "Otevírací doba"}
+                {lang === "en"
+                  ? t.openingHours
+                  : isSlovak
+                    ? "Otváracie hodiny"
+                    : "Otevírací doba"}
               </div>
               {location.openingHours.map((h) => (
                 <div key={h.days} className="text-[13px]">
-                  <span className="font-semibold">{h.days}</span>
+                  <span className="font-semibold">
+                    {translateDays(h.days, lang)}
+                  </span>
                   <span className="ml-3 text-[#999]">{h.hours}</span>
                 </div>
               ))}
@@ -306,22 +359,25 @@ export default async function LocationPage({ params }: Props) {
       {/* Price List */}
       <section className="py-5">
         <div className="container">
-          {location.services.map((service, i) => (
-            <div
-              key={service.name}
-              className={`pb-8 pt-8 ${i < location.services.length - 1 ? "border-b border-border" : ""} ${i === 0 ? "pt-0" : ""}`}
-            >
-              <h3 className="mb-1.5 font-[family-name:var(--font-roboto-slab)] text-2xl font-bold">
-                {service.name}
-              </h3>
-              {service.description && (
-                <p className="mb-2.5 text-[13px] leading-[1.6] text-gray-light">
-                  {service.description}
-                </p>
-              )}
-              <p className="text-[26px] font-bold">{service.price}</p>
-            </div>
-          ))}
+          {location.services.map((service, i) => {
+            const s = translateService(service, lang);
+            return (
+              <div
+                key={service.name}
+                className={`pb-8 pt-8 ${i < location.services.length - 1 ? "border-b border-border" : ""} ${i === 0 ? "pt-0" : ""}`}
+              >
+                <h3 className="mb-1.5 font-[family-name:var(--font-roboto-slab)] text-2xl font-bold">
+                  {s.name}
+                </h3>
+                {s.description && (
+                  <p className="mb-2.5 text-[13px] leading-[1.6] text-gray-light">
+                    {s.description}
+                  </p>
+                )}
+                <p className="text-[26px] font-bold">{service.price}</p>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -329,28 +385,32 @@ export default async function LocationPage({ params }: Props) {
       <section className="py-12">
         <div className="container">
           <h2 className="mb-4 max-w-[480px] font-[family-name:var(--font-roboto-slab)] text-[32px] font-bold leading-[1.2]">
-            {isSlovak
-              ? "Záleží nám na\u00a0tom, aby ste sa u\u00a0nás cítili dobre"
-              : "Záleží nám na\u00a0tom, abyste se u\u00a0nás cítili dobře"}
+            {lang === "en"
+              ? t.aboutHeading
+              : isSlovak
+                ? "Záleží nám na\u00a0tom, aby ste sa u\u00a0nás cítili dobre"
+                : t.aboutHeading}
           </h2>
           <p className="mb-4 max-w-[480px] text-sm leading-[1.7] text-gray">
-            {isSlovak
-              ? "Stačí k nám prísť a zveriť sa do rúk našich profesionálnych barberov, pod vedením majiteľa siete Adriana Križana, ktorý všetkých nových prichádzajúcich najprv zaučí, než ich pustí do prevádzky, a tým pre Vás zabezpečujeme tú najlepšiu možnú starostlivosť o Vaše vlasy a bradu."
-              : "Stačí k nám dorazit a svěřit se do rukou našich profesionálních barberů, pod vedením majitele sítě Adriana Křižana, který všechny nové příchozí nejprve zaučí, než je pustí do provozu a tím pro Vás zajišťujeme tu nejlepší možnou péči o Vaše vlasy a vousy."}
+            {lang === "en"
+              ? t.aboutText
+              : isSlovak
+                ? "Stačí k nám prísť a zveriť sa do rúk našich profesionálnych barberov, pod vedením majiteľa siete Adriana Križana, ktorý všetkých nových prichádzajúcich najprv zaučí, než ich pustí do prevádzky, a tým pre Vás zabezpečujeme tú najlepšiu možnú starostlivosť o Vaše vlasy a bradu."
+                : t.aboutText}
           </p>
           <a
             href="/#kontakt"
             className="inline-flex items-center gap-1.5 text-[13px] font-medium text-white"
           >
-            Kontakt
+            {lang === "en" ? t.contact : "Kontakt"}
             <IconCircle />
           </a>
         </div>
       </section>
 
-      <CareerAcademy />
-      <Vouchers eshopUrl={location.eshopUrl} isSlovak={isSlovak} />
-      <Contact />
+      <CareerAcademy lang={lang} />
+      <Vouchers eshopUrl={location.eshopUrl} isSlovak={isSlovak} lang={lang} />
+      <Contact lang={lang} />
     </>
   );
 }

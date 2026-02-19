@@ -1,42 +1,46 @@
 import { IconCircle } from "@/components/IconCircle";
+import type { Lang } from "@/lib/translations";
+import { careerAcademyTranslations } from "@/lib/translations";
 
-export function CareerAcademy() {
+interface CareerAcademyProps {
+  lang?: Lang;
+}
+
+export function CareerAcademy({ lang = "cs" }: CareerAcademyProps) {
+  const t = careerAcademyTranslations[lang];
+
   return (
     <section className="py-10" id="kariera">
       <div className="container">
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="rounded-[14px] bg-bg-card p-8">
             <h3 className="mb-4 text-[22px] font-bold leading-[1.2]">
-              Kariéra
+              {t.careerHeading1}
               <br />
-              v AK BARBERS
+              {t.careerHeading2}
             </h3>
             <p className="mb-5 text-[13px] leading-[1.6] text-gray">
-              <a href="/#kontakt" className="text-white underline underline-offset-2">Připojte se k našemu týmu</a>{" "}
-              a staňte se součástí rodiny AK BARBERS! Hledáme nadšené a šikovné
-              barbery, ať už zkušené profesionály nebo začátečníky, kteří se
-              chtějí učit a rozvíjet.
+              <a href="/#kontakt" className="text-white underline underline-offset-2">{t.careerJoinLink}</a>{" "}
+              {t.careerDescription}
             </p>
             <a
               href="/kariera"
               className="mt-2 inline-flex items-center gap-1.5 text-[13px] font-medium"
             >
-              Pracovní pozice
+              {t.careerCta}
               <IconCircle />
             </a>
           </div>
 
           <div className="rounded-[14px] bg-bg-card p-8" id="akademie">
             <h3 className="mb-4 text-[22px] font-bold leading-[1.2]">
-              AK BARBERS
+              {t.academyHeading1}
               <br />
-              Akademie
+              {t.academyHeading2}
             </h3>
             <p className="mb-5 text-[13px] leading-[1.6] text-gray">
-              <a href="https://www.barber-kurzy.com" target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-2">Využijte jedinečnou příležitost</a>{" "}
-              vstoupit do světa barberingu prostřednictvím profesionálního
-              kurzu, který pro tebe připravila AK Barbers Academy pod vedením
-              našich špičkových lektorů a zkušených barberů z AK Barbers.
+              <a href="https://www.barber-kurzy.com" target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-2">{t.academyLink}</a>{" "}
+              {t.academyDescription}
             </p>
             <a
               href="https://www.barber-kurzy.com"
@@ -44,7 +48,7 @@ export function CareerAcademy() {
               rel="noopener noreferrer"
               className="mt-2 inline-flex items-center gap-1.5 text-[13px] font-medium"
             >
-              Více info
+              {t.academyCta}
               <IconCircle />
             </a>
           </div>
