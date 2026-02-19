@@ -395,7 +395,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
             {lang === "en"
               ? t.aboutText
               : isSlovak
-                ? "Stačí k nám prísť a zveriť sa do rúk našich profesionálnych barberov, pod vedením majiteľa siete Adriana Križana, ktorý všetkých nových prichádzajúcich najprv zaučí, než ich pustí do prevádzky, a tým pre Vás zabezpečujeme tú najlepšiu možnú starostlivosť o Vaše vlasy a bradu."
+                ? "Príďte bez objednania a doprajte si starostlivosť, ktorú spoznáte na prvý pohľad. V AK Barbers pracujeme podľa prísnych štandardov kvality, vďaka ktorým udržiavame špičkový výsledok na každej pobočke. Každý nový barber prechádza profesionálnym zaškolením a až potom nastupuje do prevádzky. Precíznosť, čistota a detail sú pre nás samozrejmosťou."
                 : t.aboutText}
           </p>
           <a

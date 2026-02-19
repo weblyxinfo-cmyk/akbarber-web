@@ -9,11 +9,11 @@ export function WalkIn() {
         </div>
         <div className="flex-1 text-sm leading-[1.7] text-gray">
           <p>
-            Všechny naše pobočky fungují jako walk-in barbershopy, takže se
-            nemusíte objednávat dopředu. Stačí k nám dorazit a svěřit se do
-            rukou našich profesionálních barberů, pod vedením majitele sítě
-            Adriana Křižana. Na některých pobočkách je možná také online
-            rezervace.
+            Přijďte bez objednání a dopřejte si péči, kterou poznáte na první
+            pohled. V AK Barbers pracujeme podle přísných standardů kvality,
+            díky kterým držíme špičkový výsledek na každé pobočce. Každý nový
+            barber prochází profesionálním zaškolením a až poté nastupuje do
+            provozu. Preciznost, čistota a detail jsou pro nás samozřejmostí.
           </p>
         </div>
       </div>

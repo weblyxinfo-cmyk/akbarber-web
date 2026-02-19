@@ -15,7 +15,7 @@ export const locationPageTranslations = {
     aboutHeading:
       "Záleží nám na\u00a0tom, abyste se u\u00a0nás cítili dobře",
     aboutText:
-      "Stačí k nám dorazit a svěřit se do rukou našich profesionálních barberů, pod vedením majitele sítě Adriana Křižana, který všechny nové příchozí nejprve zaučí, než je pustí do provozu a tím pro Vás zajišťujeme tu nejlepší možnou péči o Vaše vlasy a vousy.",
+      "Přijďte bez objednání a dopřejte si péči, kterou poznáte na první pohled. V AK Barbers pracujeme podle přísných standardů kvality, díky kterým držíme špičkový výsledek na každé pobočce. Každý nový barber prochází profesionálním zaškolením a až poté nastupuje do provozu. Preciznost, čistota a detail jsou pro nás samozřejmostí.",
   },
   en: {
     address: "Address",
@@ -27,7 +27,7 @@ export const locationPageTranslations = {
     contact: "Contact",
     aboutHeading: "Your comfort is our priority",
     aboutText:
-      "Just walk in and put yourself in the hands of our professional barbers. Every new team member is personally trained by AK BARBERS founder Adrian Křižan before they ever pick up the clippers \u2014 that\u2019s how we guarantee the best possible care for your hair and beard.",
+      "Walk right in and treat yourself to care you\u2019ll notice from the very first cut. At AK Barbers we follow strict quality standards that guarantee top results at every location. Every new barber completes professional training before they ever step behind the chair. Precision, cleanliness and attention to detail are a given.",
   },
 } as const;
 
@@ -187,7 +187,7 @@ export const contactTranslations = {
     heading1: "Máte dotazy?",
     heading2: "Napište nám",
     description:
-      "Všechny naše pobočky fungují jako walk-in barbershopy, takže se nemusíte objednávat dopředu. Stačí k nám dorazit a svěřit se do rukou našich profesionálních barberů pod vedením majitele sítě Adriana Křižana.",
+      "Přijďte bez objednání a dopřejte si péči, kterou poznáte na první pohled. V AK Barbers pracujeme podle přísných standardů kvality, díky kterým držíme špičkový výsledek na každé pobočce. Každý nový barber prochází profesionálním zaškolením a až poté nastupuje do provozu. Preciznost, čistota a detail jsou pro nás samozřejmostí.",
     tagline1: "Zajišťujeme tu nejlepší možnou",
     tagline2: "péči o Vaše vlasy a vousy.",
     namePlaceholder: "Jméno, příjmení *",

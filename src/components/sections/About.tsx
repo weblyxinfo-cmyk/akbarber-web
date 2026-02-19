@@ -8,10 +8,11 @@ export function About() {
           Záleží nám na&nbsp;tom, abyste se u&nbsp;nás cítili dobře
         </h2>
         <p className="mb-4 max-w-[480px] text-sm leading-[1.7] text-gray">
-          Stačí k nám dorazit a svěřit se do rukou našich profesionálních
-          barberů, pod vedením majitele sítě Adriana Křižana, který všechny nové
-          příchozí nejprve zaučí, než je pustí do provozu a tím pro Vás
-          zajišťujeme tu nejlepší možnou péči o Vaše vlasy a vousy.
+          Přijďte bez objednání a dopřejte si péči, kterou poznáte na první
+          pohled. V AK Barbers pracujeme podle přísných standardů kvality, díky
+          kterým držíme špičkový výsledek na každé pobočce. Každý nový barber
+          prochází profesionálním zaškolením a až poté nastupuje do provozu.
+          Preciznost, čistota a detail jsou pro nás samozřejmostí.
         </p>
         <a
           href="/#kontakt"
