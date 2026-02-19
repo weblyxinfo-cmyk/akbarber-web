@@ -38,7 +38,7 @@ const standardServices = [
 
 // Nižší ceník (Praha 6)
 const valueServices = [
-  { name: "Klasické pánské stříhání", price: "499 Kč", description: "Konzultace, precizní střih vlasů na míru strojkem nebo nůžkami, úprava a konečný styling vlasů" },
+  { name: "Klasické pánské stříhání", price: "449 Kč", description: "Konzultace, precizní střih vlasů na míru strojkem nebo nůžkami, úprava a konečný styling vlasů" },
   { name: "Skin Fade/dlouhé vlasy", price: "499 Kč", description: "Skin Fade - Konzultace (nízký, střední, vysoký Fade), střih strojkem od 0mm, použití Shaveru, stínování, precizní přechody, úprava a konečný styling" },
   { name: "Senior pánsky střih", price: "249 Kč", description: "Střih pro starší pány od 65 let" },
   { name: "Dětský střih", price: "299 Kč / 399 Kč", description: "Stříhání mladých mužů ve věku od 1 do 15 let. Klasický střih, foukaná, styling. Vždy radi poradíme. Skin Fade / Low Fade / Crop Fade / Buzz Cut + 100 Kč." },
