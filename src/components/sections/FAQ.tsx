@@ -16,7 +16,7 @@ const faqs = [
   {
     question: "Kde najdu pobočky AK Barbers?",
     answer:
-      "AK Barbers najdete v Berouně (2 pobočky), Praze (Praha 6, Praha 1 Staré Město), Králově Dvoře, Plzni, Hořovicích, Slaném, Českých Budějovicích (Máj) a Nitře na Slovensku.",
+      "AK Barbers najdete v Berouně (2 pobočky), Praze (Praha 6, Praha 1 – Máj - House of Fun), Králově Dvoře, Plzni, Hořovicích, Slaném a Nitře na Slovensku.",
   },
   {
     question: "Jaká je otevírací doba?",

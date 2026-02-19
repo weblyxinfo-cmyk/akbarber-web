@@ -11,6 +11,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // SEO landing pages — location pages (priority 0.9)
+  const seoLocationSlugs = [
+    "barber-praha-1",
+    "barber-praha-6",
+    "en/barber-prague-1",
+    "en/barber-prague-6",
+  ];
+  const seoLocationPages = seoLocationSlugs.map((slug) => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  }));
+
+  // SEO landing pages — service pages (priority 0.85)
+  const seoServiceSlugs = [
+    "pansky-strih-praha-1",
+    "pansky-strih-praha-6",
+    "skin-fade-praha-1",
+    "skin-fade-praha-6",
+    "en/mens-haircut-prague-1",
+    "en/mens-haircut-prague-6",
+    "en/skin-fade-prague-1",
+    "en/skin-fade-prague-6",
+  ];
+  const seoServicePages = seoServiceSlugs.map((slug) => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
+
   return [
     {
       url: baseUrl,
@@ -19,6 +51,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     ...locationPages,
+    ...seoLocationPages,
+    ...seoServicePages,
     {
       url: `${baseUrl}/kariera`,
       lastModified: new Date(),

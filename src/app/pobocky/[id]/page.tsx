@@ -102,9 +102,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
   const lang: Lang = isBilingual && langParam === "en" ? "en" : "cs";
   const t = locationPageTranslations[lang];
 
-  const displayName = location.id === "maj"
-    ? "AK BARBERS Máj - House of Fun"
-    : `AK BARBERS – ${location.city}${location.id === "beroun-2" ? " 2" : ""}`;
+  const displayName = `AK BARBERS – ${location.city}${location.id === "beroun-2" ? " 2" : ""}`;
 
   // Helper: map Czech/Slovak day abbreviations to schema.org days
   const dayMap: Record<string, string[]> = {

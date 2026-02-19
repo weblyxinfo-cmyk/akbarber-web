@@ -1,4 +1,5 @@
 import type { Location } from "@/types";
+import type { Lang } from "@/lib/translations";
 
 function StarIcon() {
   return (
@@ -19,7 +20,7 @@ function GoogleLogo() {
   );
 }
 
-export function GoogleReviewBadge({ location }: { location: Location }) {
+export function GoogleReviewBadge({ location, lang = "cs" }: { location: Location; lang?: Lang }) {
   return (
     <a
       href={location.googleMapsUrl}
@@ -38,7 +39,7 @@ export function GoogleReviewBadge({ location }: { location: Location }) {
             <StarIcon />
             <StarIcon />
           </span>
-          <span className="text-xs text-[#888]">{location.reviewCount} hodnocení</span>
+          <span className="text-xs text-[#888]">{location.reviewCount} {lang === "en" ? "reviews" : "hodnocení"}</span>
         </span>
       </span>
       <span className="text-[#333]">|</span>
