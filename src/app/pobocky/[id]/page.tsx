@@ -81,7 +81,7 @@ export default async function LocationPage({ params }: Props) {
     "So": ["Saturday"], "Ne": ["Sunday"],
   };
   function parseDays(daysStr: string): string[] {
-    const rangeMatch = daysStr.match(/^(\w+)\s*–\s*(\w+)$/);
+    const rangeMatch = daysStr.match(/^(\S+)\s*–\s*(\S+)$/);
     if (rangeMatch) {
       const allDays = ["Po", "Út", "St", "Čt", "Pá", "So", "Ne"];
       const start = rangeMatch[1] === "Pia" ? "Pá" : rangeMatch[1];
