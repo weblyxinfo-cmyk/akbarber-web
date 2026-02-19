@@ -41,8 +41,9 @@ export function Vouchers({ eshopUrl }: VouchersProps) {
           ) : (
             <p className="mb-2 text-sm text-gray">
               Potěšte přítele nebo někoho blízkého. Dárkové poukázky je možné
-              zakoupit v salonu nebo online — vyberte si konkrétní pobočku
-              pro více informací.
+              zakoupit v salonu nebo online —{" "}
+              <span className="font-semibold text-white">vyberte si konkrétní pobočku
+              pro více informací.</span>
             </p>
           )}
         </div>
