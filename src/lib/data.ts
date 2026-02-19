@@ -245,7 +245,7 @@ export const locations: Location[] = [
   {
     id: "maj",
     name: "AK BARBERS Máj - House of Fun",
-    city: "Praha",
+    city: "Máj",
     address: "Národní 63/26, 110 00 Nové Město",
     phone: "+420 775 502 831",
     openingHours: [

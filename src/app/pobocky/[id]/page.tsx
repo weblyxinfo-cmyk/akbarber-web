@@ -72,7 +72,9 @@ export default async function LocationPage({ params }: Props) {
   if (!location) notFound();
 
   const isSlovak = location.id === "nitra";
-  const displayName = `AK BARBERS – ${location.city}${location.id === "beroun-2" ? " 2" : ""}`;
+  const displayName = location.id === "maj"
+    ? "AK BARBERS Máj - House of Fun"
+    : `AK BARBERS – ${location.city}${location.id === "beroun-2" ? " 2" : ""}`;
 
   // Helper: map Czech/Slovak day abbreviations to schema.org days
   const dayMap: Record<string, string[]> = {
