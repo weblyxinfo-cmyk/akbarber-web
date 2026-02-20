@@ -149,7 +149,7 @@ export function generateSeoBarberShopSchema(
       "@id": "https://www.akbarber.com/#organization",
     },
     sameAs: [
-      "https://www.facebook.com/people/Akbarberscz/100079448784976/",
+      "https://www.facebook.com/akbarber.cz/",
       "https://www.instagram.com/ak.barbers.cz/",
     ],
     ...(location.bookingUrl && {

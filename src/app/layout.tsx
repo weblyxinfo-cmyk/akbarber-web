@@ -99,7 +99,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     url: "https://www.akbarber.com/wp-content/uploads/2023/06/social-image-1.jpg",
                   },
                   sameAs: [
-                    "https://www.facebook.com/people/Akbarberscz/100079448784976/",
+                    "https://www.facebook.com/akbarber.cz/",
                     "https://www.instagram.com/ak.barbers.cz/",
                   ],
                   contactPoint: {

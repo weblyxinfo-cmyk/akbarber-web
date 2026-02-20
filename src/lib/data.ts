@@ -8,7 +8,7 @@ export const siteConfig = {
   phone: "+420 775 502 831",
   email: "info@akbarber.com",
   social: {
-    facebook: "https://www.facebook.com/people/Akbarberscz/100079448784976/",
+    facebook: "https://www.facebook.com/akbarber.cz/",
     instagram: "https://www.instagram.com/ak.barbers.cz/",
   },
   booking: "https://booqme.cz/cs/rezervace/ak-barbers-beroun",
