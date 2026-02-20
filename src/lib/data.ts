@@ -253,7 +253,8 @@ export const locations: Location[] = [
     openingHours: [
       { days: "Po – Ne", hours: "9:00 – 21:00" },
     ],
-    type: "walk-in",
+    type: "walk-in + reservation",
+    bookingUrl: "https://booqme.sk/sk/rezervacia/ak-barbers-nitra2",
     eshopUrl: "https://booqme.sk/sk/eshop/ak-barbers-nitra2",
     services: [
       { name: "Klasický pánsky strih", price: "17 €", description: "Strih, úprava kontúr britvou, fúkaná, styling. Vždy radi poradíme klientom a pomôžeme s výberom strihu. Zľava 25% pre PZ, HaZZ, ZZS, ISIC – 13 €." },
