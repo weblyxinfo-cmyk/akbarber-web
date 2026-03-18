@@ -272,7 +272,7 @@ export const locations: Location[] = [
   },
   {
     id: "praha-5",
-    name: "AK BARBERS Praha 5",
+    name: "AK BARBERS Praha 5 – Smíchov",
     city: "Praha",
     address: "Toyen 3410/7, Praha 5",
     phone: "+420 775 502 831",
