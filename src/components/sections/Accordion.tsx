@@ -83,10 +83,10 @@ export function Accordion() {
                 onClick={() => toggle(city)}
                 className="flex w-full items-center justify-between py-4 text-left transition-opacity hover:opacity-70"
               >
-                <h2 className="text-lg font-bold">
+                <h2 className="inline-flex items-center gap-2 text-lg font-bold">
                   {city}
                   {locs.length > 1 && (
-                    <span className="ml-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#333] text-[11px] font-medium text-[#999]">
+                    <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#333] text-[11px] font-medium text-[#999]">
                       {locs.length}
                     </span>
                   )}
