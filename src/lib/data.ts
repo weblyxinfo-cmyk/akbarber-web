@@ -207,7 +207,7 @@ export const locations: Location[] = [
     address: "Fügnerova 374/1, 268 01 Hořovice",
     phone: "+420 775 502 831",
     openingHours: [
-      { days: "Po – Pá", hours: "8:30 – 19:30" },
+      { days: "Po – Pá", hours: "10:00 – 19:30" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
     ],
     type: "walk-in + reservation",
@@ -269,6 +269,26 @@ export const locations: Location[] = [
     reviewCount: "95+",
     rankText: "Top Barbershop v Nitre podľa Googlu",
     mapQuery: "AK+Barbers,+Nitra",
+  },
+  {
+    id: "praha-5",
+    name: "AK BARBERS Praha 5",
+    city: "Praha",
+    address: "Toyen 3410/7, Praha 5",
+    phone: "+420 775 502 831",
+    openingHours: [
+      { days: "Po – Pá", hours: "10:00 – 19:00" },
+      { days: "So", hours: "10:00 – 14:30" },
+    ],
+    type: "walk-in",
+    services: premiumServices,
+    image: "/images/locations/photo-beroun.jpg",
+    currency: "CZK",
+    googleMapsUrl: "",
+    reviewRating: 5.0,
+    reviewCount: "Nová pobočka",
+    rankText: "Nová pobočka v Praze 5",
+    mapQuery: "AK+Barbers,+Toyen+3410,+Praha+5",
   },
 ];
 
