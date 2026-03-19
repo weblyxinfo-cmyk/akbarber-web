@@ -8,8 +8,15 @@ import { IconCircle } from "@/components/IconCircle";
 import type { Location } from "@/types";
 
 function LocationCard({ location }: { location: Location }) {
+  const isComingSoon = location.type === "coming-soon";
+  const Wrapper = isComingSoon ? "div" : Link;
+  const wrapperProps = isComingSoon
+    ? { className: "block min-w-[200px] max-w-[calc(50%-8px)] flex-1 opacity-60 max-md:max-w-full" }
+    : { href: `/pobocky/${location.id}` as const, className: "group block min-w-[200px] max-w-[calc(50%-8px)] flex-1 max-md:max-w-full" };
+
   return (
-    <Link href={`/pobocky/${location.id}`} className="group block min-w-[200px] max-w-[calc(50%-8px)] flex-1 max-md:max-w-full">
+    // @ts-expect-error -- dynamic wrapper
+    <Wrapper {...wrapperProps}>
       <div className="mb-2 h-[120px] overflow-hidden rounded-[10px] bg-bg-card">
         <Image
           src={location.image}
@@ -24,6 +31,11 @@ function LocationCard({ location }: { location: Location }) {
       <p className="mb-2 text-[11px] text-[#666]">{location.address}</p>
       <div className="flex items-center justify-between">
         <div className="flex flex-wrap items-center gap-2">
+          {location.type === "coming-soon" && (
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#444] px-3 py-1 text-sm font-semibold text-[#ccc]">
+              Připravuje se
+            </span>
+          )}
           {location.type === "walk-in" && (
             <span className="text-sm font-semibold text-white">Bez objednání – Walk ins</span>
           )}
@@ -37,12 +49,14 @@ function LocationCard({ location }: { location: Location }) {
             </>
           )}
         </div>
-        <span className="inline-flex items-center gap-1 text-[11px] text-white">
-          Zobrazit
-          <IconCircle />
-        </span>
+        {!isComingSoon && (
+          <span className="inline-flex items-center gap-1 text-[11px] text-white">
+            Zobrazit
+            <IconCircle />
+          </span>
+        )}
       </div>
-    </Link>
+    </Wrapper>
   );
 }
 

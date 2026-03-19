@@ -264,7 +264,11 @@ export default async function LocationPage({ params, searchParams }: Props) {
         <div className="container">
           <h1 className="mb-5 text-[28px] font-bold">{displayName}</h1>
 
-          {location.type === "reservation" ? (
+          {location.type === "coming-soon" ? (
+            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#444] px-5 py-2 text-[20px] font-bold text-[#ccc]">
+              Připravuje se
+            </div>
+          ) : location.type === "reservation" ? (
             <a
               href={location.bookingUrl}
               target="_blank"
@@ -333,51 +337,68 @@ export default async function LocationPage({ params, searchParams }: Props) {
                 {location.phone}
               </a>
             </div>
-            <div>
-              <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
-                {lang === "en"
-                  ? t.openingHours
-                  : isSlovak
-                    ? "Otváracie hodiny"
-                    : "Otevírací doba"}
-              </div>
-              {location.openingHours.map((h) => (
-                <div key={h.days} className="text-[13px]">
-                  <span className="font-semibold">
-                    {translateDays(h.days, lang)}
-                  </span>
-                  <span className="ml-3 text-[#999]">{h.hours}</span>
+            {location.openingHours.length > 0 && (
+              <div>
+                <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
+                  {lang === "en"
+                    ? t.openingHours
+                    : isSlovak
+                      ? "Otváracie hodiny"
+                      : "Otevírací doba"}
                 </div>
-              ))}
-            </div>
+                {location.openingHours.map((h) => (
+                  <div key={h.days} className="text-[13px]">
+                    <span className="font-semibold">
+                      {translateDays(h.days, lang)}
+                    </span>
+                    <span className="ml-3 text-[#999]">{h.hours}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </section>
 
       {/* Price List */}
-      <section className="py-5">
-        <div className="container">
-          {location.services.map((service, i) => {
-            const s = translateService(service, lang);
-            return (
-              <div
-                key={service.name}
-                className={`pb-8 pt-8 ${i < location.services.length - 1 ? "border-b border-border" : ""} ${i === 0 ? "pt-0" : ""}`}
-              >
-                <h3 className="mb-1.5 font-[family-name:var(--font-roboto-slab)] text-2xl font-bold">
-                  {s.name}
-                </h3>
-                {s.description && (
-                  <p className="mb-2.5 text-[13px] leading-[1.6] text-gray-light">
-                    {s.description}
-                  </p>
-                )}
-                <p className="text-[26px] font-bold">{service.price}</p>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      {location.services.length > 0 ? (
+        <section className="py-5">
+          <div className="container">
+            {location.services.map((service, i) => {
+              const s = translateService(service, lang);
+              return (
+                <div
+                  key={service.name}
+                  className={`pb-8 pt-8 ${i < location.services.length - 1 ? "border-b border-border" : ""} ${i === 0 ? "pt-0" : ""}`}
+                >
+                  <h3 className="mb-1.5 font-[family-name:var(--font-roboto-slab)] text-2xl font-bold">
+                    {s.name}
+                  </h3>
+                  {s.description && (
+                    <p className="mb-2.5 text-[13px] leading-[1.6] text-gray-light">
+                      {s.description}
+                    </p>
+                  )}
+                  <p className="text-[26px] font-bold">{service.price}</p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      ) : (
+        <section className="py-12">
+          <div className="container">
+            <div className="rounded-lg border border-[#333] p-8 text-center">
+              <h2 className="mb-2 font-[family-name:var(--font-roboto-slab)] text-2xl font-bold">
+                Nová pobočka se připravuje
+              </h2>
+              <p className="text-sm text-gray">
+                Brzy vám představíme kompletní nabídku služeb a otevírací dobu. Sledujte nás!
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* About */}
       <section className="py-12">

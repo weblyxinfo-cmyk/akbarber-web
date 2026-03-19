@@ -16,7 +16,7 @@ export interface Location {
   address: string;
   phone: string;
   openingHours: OpeningHours[];
-  type: "walk-in" | "reservation" | "walk-in + reservation";
+  type: "walk-in" | "reservation" | "walk-in + reservation" | "coming-soon";
   bookingUrl?: string;
   eshopUrl?: string;
   services: Service[];
