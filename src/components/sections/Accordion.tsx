@@ -32,7 +32,7 @@ function LocationCard({ location }: { location: Location }) {
       <div className="flex items-center justify-between">
         <div className="flex flex-wrap items-center gap-2">
           {location.type === "coming-soon" && (
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#444] px-3 py-1 text-sm font-semibold text-[#ccc]">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/30 px-3 py-1 text-sm font-semibold text-white">
               Připravuje se
             </span>
           )}
