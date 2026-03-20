@@ -34,6 +34,7 @@ export interface Location {
     parking?: string;
   };
   openingDate?: string;
+  geo?: { lat: number; lng: number };
 }
 
 export interface VoucherBranch {

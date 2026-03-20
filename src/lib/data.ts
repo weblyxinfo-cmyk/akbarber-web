@@ -93,6 +93,7 @@ export const locations: Location[] = [
     reviewCount: "180+",
     rankText: "Top #1 Barbershop v Berouně podle Googlu",
     mapQuery: "AK+Barbers,+Havlickova+128,+Beroun",
+    geo: { lat: 49.9626, lng: 14.0731 },
     transport: {
       publicTransport: [
         "Zastávka Wagnerovo náměstí – autobus 861 (3 min chůze)",
@@ -122,6 +123,7 @@ export const locations: Location[] = [
     reviewCount: "120+",
     rankText: "Top Barbershop v Berouně podle Googlu",
     mapQuery: "AK+Barbers,+Plzenska+145,+Beroun",
+    geo: { lat: 49.9606, lng: 14.0656 },
     transport: {
       publicTransport: [
         "Zastávka Wagnerovo náměstí – autobus 861 (4 min chůze)",
@@ -150,6 +152,7 @@ export const locations: Location[] = [
     reviewCount: "250+",
     rankText: "Top #1 Barbershop na Praze 6 podle Googlu",
     mapQuery: "AK+Barbers,+Belohorska+1393,+Praha+6",
+    geo: { lat: 50.0849, lng: 14.3767 },
     transport: {
       publicTransport: [
         "Tramvaj Marjánka – linky 22, 25 (1 min chůze)",
@@ -178,6 +181,7 @@ export const locations: Location[] = [
     reviewCount: "300+",
     rankText: "Top #1 Barbershop v centru Prahy podle Googlu",
     mapQuery: "AK+Barbers,+Narodni+63,+Praha",
+    geo: { lat: 50.0838, lng: 14.4188 },
     transport: {
       publicTransport: [
         "Metro Národní třída (linka B) – 1 min chůze",
@@ -207,6 +211,7 @@ export const locations: Location[] = [
     reviewCount: "90+",
     rankText: "Top Barbershop v Králově Dvoře podle Googlu",
     mapQuery: "AK+Barbers,+Plzenska+396,+Kraluv+Dvur",
+    geo: { lat: 49.9509, lng: 14.0421 },
     transport: {
       publicTransport: [
         "Zastávka Beroun, Plzeňka – autobusy 380, 631, 633",
@@ -236,6 +241,7 @@ export const locations: Location[] = [
     reviewCount: "215+",
     rankText: "Top #1 Barbershop v Plzni podle Googlu",
     mapQuery: "AK+Barbers,+Gerska+2030,+Plzen",
+    geo: { lat: 49.7789, lng: 13.3689 },
     transport: {
       publicTransport: [
         "Zastávka U Gery – tramvaj 4, autobus 33, 40",
@@ -265,6 +271,7 @@ export const locations: Location[] = [
     reviewCount: "100+",
     rankText: "Top Barbershop v Hořovicích podle Googlu",
     mapQuery: "AK+Barbers,+Fugnerova+374,+Horovice",
+    geo: { lat: 49.8377, lng: 13.8973 },
     transport: {
       publicTransport: [
         "Vlakové nádraží Hořovice – linka Praha–Plzeň (5 min chůze)",
@@ -294,6 +301,7 @@ export const locations: Location[] = [
     reviewCount: "85+",
     rankText: "Top Barbershop ve Slaném podle Googlu",
     mapQuery: "AK+Barbers,+Trebizského+182,+Slany",
+    geo: { lat: 50.2326, lng: 14.0818 },
     transport: {
       publicTransport: [
         "Autobusové nádraží Slaný – 5 min chůze, linky 609, 456, 590",
@@ -327,6 +335,7 @@ export const locations: Location[] = [
     reviewCount: "95+",
     rankText: "Top Barbershop v Nitre podľa Googlu",
     mapQuery: "AK+Barbers,+Nitra",
+    geo: { lat: 48.3070, lng: 18.0865 },
     transport: {
       publicTransport: [
         "Zastávka CENTRUM, Mlyny – MHD linky 1, 2, 4, 6, 7, 8, 9, 10 a další",
@@ -355,6 +364,7 @@ export const locations: Location[] = [
     reviewCount: "Nová pobočka",
     rankText: "Nová pobočka v Praze 5",
     mapQuery: "AK+Barbers,+Toyen+3410,+Praha+5",
+    geo: { lat: 50.0678, lng: 14.4041 },
     transport: {
       publicTransport: [
         "Metro Anděl (linka B) – 5 min chůze",
@@ -380,6 +390,7 @@ export const locations: Location[] = [
     reviewCount: "",
     rankText: "Připravujeme pro vás novou pobočku",
     mapQuery: "Pod+Vítkovem+2,+Praha+3",
+    geo: { lat: 50.0873, lng: 14.4511 },
     transport: {
       publicTransport: [
         "Tramvaj Ohrada – linky 1, 9, 11 (5 min chůze)",
@@ -406,6 +417,7 @@ export const locations: Location[] = [
     rankText: "Připravujeme pro vás novou pobočku",
     openingDate: "15. 4. 2026",
     mapQuery: "Budějovická+371,+Jesenice+u+Prahy",
+    geo: { lat: 49.9663, lng: 14.5179 },
     transport: {
       publicTransport: [
         "Zastávka Jesenice – autobusy 332, 334, 335, 337, 339",

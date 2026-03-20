@@ -18,17 +18,28 @@ export function generateOrganizationSchema() {
 export function generateLocalBusinessSchema(location: Location) {
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "BarberShop",
     "@id": `${siteConfig.url}/#${location.id}`,
     name: location.name,
-    description: `${location.name} – prémiový barbershop. ${location.type === "walk-in" ? "Přijďte bez objednání." : "Rezervujte si termín online."}`,
+    description: `${location.name} – prémiový barbershop. ${location.type === "walk-in" ? "Přijďte bez objednání." : location.type === "coming-soon" ? "Připravujeme pro vás." : "Rezervujte si termín online."}`,
     telephone: location.phone,
     address: {
       "@type": "PostalAddress",
-      streetAddress: location.address,
+      streetAddress: location.address.split(",")[0],
+      addressLocality: location.city,
+      postalCode: location.address.match(/\d{3}\s?\d{2}/)?.[0] || "",
+      addressCountry: location.id === "nitra" ? "SK" : "CZ",
     },
-    image: location.image,
+    ...(location.geo && {
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: location.geo.lat,
+        longitude: location.geo.lng,
+      },
+    }),
+    image: `${siteConfig.url}${location.image}`,
     priceRange: location.currency === "CZK" ? "$$" : "€€",
+    publicAccess: true,
   };
 }
 
@@ -116,11 +127,13 @@ export function generateSeoBarberShopSchema(
       postalCode: location.address.match(/\d{3}\s?\d{2}/)?.[0] || "",
       addressCountry: "CZ",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: location.id === "praha-1" ? "50.0808" : "50.0833",
-      longitude: location.id === "praha-1" ? "14.4179" : "14.3818",
-    },
+    ...(location.geo && {
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: location.geo.lat,
+        longitude: location.geo.lng,
+      },
+    }),
     openingHoursSpecification: openingHoursSpec,
     priceRange,
     currenciesAccepted: "CZK",

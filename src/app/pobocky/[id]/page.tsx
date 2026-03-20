@@ -51,13 +51,18 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
         ? "Príďte bez objednania."
         : "Rezervujte si termín online."
     } Pánske strihanie od 12 €, úprava brady, skin fade. Otvorené Po–Pi 9–18, So–Ne 9–14.`;
+  } else if (location.type === "coming-soon") {
+    title = `AK BARBERS – ${location.name} | Nová pobočka`;
+    description = `${location.name} – ${location.address}. Nová pobočka AK Barbers se připravuje.${location.openingDate ? ` Otevíráme ${location.openingDate}.` : ""} ${location.transport?.publicTransport?.[0] || ""}`;
   } else {
+    const transportHint = location.transport?.publicTransport?.[0]?.split("–")[0]?.trim() || "";
+    const parkingHint = location.transport?.parking ? " Parkování k dispozici." : "";
     title = `AK BARBERS – ${location.city} | Barbershop ${location.city}`;
     description = `${location.name} – ${location.address}. ${
       location.type === "walk-in"
         ? "Přijďte bez objednání."
         : "Rezervujte si termín online."
-    } Pánské stříhání od 449 Kč, úprava vousů, skin fade. Otevřeno Po–Pá 9–18, So–Ne 9–14.`;
+    } Pánské stříhání od 449 Kč, úprava vousů, skin fade.${transportHint ? ` ${transportHint}.` : ""}${parkingHint}`;
   }
 
   const ogImage = `/images/og/og-${location.id}.png`;
@@ -147,12 +152,16 @@ export default async function LocationPage({ params, searchParams }: Props) {
   const priceRange = `${minPrice} ${currency} – ${maxPrice} ${currency}`;
 
   // JSON-LD: BarberShop (LocalBusiness) schema
+  const postalCode = location.address.match(/\d{3}\s?\d{2}/)?.[0] || "";
+  const currencyCode = location.id === "nitra" ? "EUR" : "CZK";
+  const countryCode = location.id === "nitra" ? "SK" : "CZ";
+
   const barberShopSchema = {
     "@context": "https://schema.org",
     "@type": "BarberShop",
     "@id": `https://www.akbarber.com/pobocky/${location.id}#business`,
     name: location.name,
-    image: location.image,
+    image: `https://www.akbarber.com${location.image}`,
     url: `https://www.akbarber.com/pobocky/${location.id}`,
     telephone: location.phone,
     email: "info@akbarber.com",
@@ -160,31 +169,56 @@ export default async function LocationPage({ params, searchParams }: Props) {
       "@type": "PostalAddress",
       streetAddress: location.address.split(",")[0],
       addressLocality: location.city,
-      addressCountry: location.id === "nitra" ? "SK" : "CZ",
+      ...(postalCode && { postalCode }),
+      addressCountry: countryCode,
     },
-    openingHoursSpecification: openingHoursSpec,
-    priceRange,
-    currenciesAccepted: location.id === "nitra" ? "EUR" : "CZK",
+    ...(location.geo && {
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: location.geo.lat,
+        longitude: location.geo.lng,
+      },
+    }),
+    ...(location.openingHours.length > 0 && {
+      openingHoursSpecification: openingHoursSpec,
+    }),
+    ...(prices.length > 0 && { priceRange }),
+    currenciesAccepted: currencyCode,
     paymentAccepted: "Cash, Credit Card",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Služby",
-      itemListElement: location.services.map((service) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: service.name,
-          description: service.description || service.name,
+    publicAccess: true,
+    ...(location.transport?.parking && {
+      amenityFeature: [
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Parking",
+          value: true,
         },
-        price: service.price.replace(/[^0-9]/g, "").slice(0, 3),
-        priceCurrency: location.id === "nitra" ? "EUR" : "CZK",
-        priceSpecification: {
-          "@type": "PriceSpecification",
+      ],
+    }),
+    ...(location.reviewRating > 0 && {
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: location.reviewRating,
+        reviewCount: location.reviewCount.replace("+", ""),
+        bestRating: "5",
+      },
+    }),
+    ...(location.services.length > 0 && {
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Služby",
+        itemListElement: location.services.map((service) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: service.name,
+            description: service.description || service.name,
+          },
           price: service.price.replace(/[^0-9]/g, "").slice(0, 3),
-          priceCurrency: location.id === "nitra" ? "EUR" : "CZK",
-        },
-      })),
-    },
+          priceCurrency: currencyCode,
+        })),
+      },
+    }),
     parentOrganization: {
       "@id": "https://www.akbarber.com/#organization",
     },
