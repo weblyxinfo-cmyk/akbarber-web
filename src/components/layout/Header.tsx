@@ -27,9 +27,9 @@ export function Header() {
               <Image
                 src="/images/logo.svg"
                 alt="AK Barbers"
-                width={44}
-                height={44}
-                className="h-11 w-11 rounded-full object-cover"
+                width={48}
+                height={48}
+                className="h-12 w-12 object-contain"
                 priority
               />
             </Link>
