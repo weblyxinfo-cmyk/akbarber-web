@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { locations } from "@/lib/data";
 import { IconCircle } from "@/components/IconCircle";
@@ -354,6 +355,13 @@ export default async function LocationPage({ params, searchParams }: Props) {
                     <span className="ml-3 text-[#999]">{h.hours}</span>
                   </div>
                 ))}
+                <Link
+                  href="/"
+                  className="mt-3 inline-flex items-center gap-1.5 text-[12px] font-medium text-[#999] transition-colors hover:text-white"
+                >
+                  {lang === "en" ? "View all locations" : isSlovak ? "Všetky prevádzky" : "Všechny pobočky"}
+                  <IconCircle />
+                </Link>
               </div>
             )}
           </div>
