@@ -29,6 +29,11 @@ export interface Location {
   reviewCount: string;
   rankText: string;
   mapQuery: string;
+  transport?: {
+    publicTransport?: string[];
+    parking?: string;
+  };
+  openingDate?: string;
 }
 
 export interface VoucherBranch {

@@ -266,7 +266,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
 
           {location.type === "coming-soon" ? (
             <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#444] px-5 py-2 text-[20px] font-bold text-[#ccc]">
-              Připravuje se
+              {location.openingDate ? `Otevíráme ${location.openingDate}` : "Připravuje se"}
             </div>
           ) : location.type === "reservation" ? (
             <a
@@ -357,6 +357,37 @@ export default async function LocationPage({ params, searchParams }: Props) {
               </div>
             )}
           </div>
+
+          {/* Transport */}
+          {location.transport && (
+            <div className="mt-10 rounded-lg border border-border p-6">
+              <h2 className="mb-4 text-[15px] font-bold">
+                {lang === "en" ? "How to get here" : isSlovak ? "Ako sa k nám dostanete" : "Jak se k nám dostanete"}
+              </h2>
+              <div className="flex flex-wrap gap-8 max-md:gap-6">
+                {location.transport.publicTransport && location.transport.publicTransport.length > 0 && (
+                  <div className="flex-1 min-w-[200px]">
+                    <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
+                      {lang === "en" ? "Public transport" : isSlovak ? "MHD" : "MHD"}
+                    </div>
+                    <ul className="space-y-1.5">
+                      {location.transport.publicTransport.map((line) => (
+                        <li key={line} className="text-[13px] text-[#999]">{line}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {location.transport.parking && (
+                  <div className="flex-1 min-w-[200px]">
+                    <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
+                      {lang === "en" ? "Parking" : isSlovak ? "Parkovanie" : "Parkování"}
+                    </div>
+                    <p className="text-[13px] text-[#999]">{location.transport.parking}</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

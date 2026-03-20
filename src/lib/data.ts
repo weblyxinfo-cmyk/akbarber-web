@@ -93,6 +93,13 @@ export const locations: Location[] = [
     reviewCount: "180+",
     rankText: "Top #1 Barbershop v Berouně podle Googlu",
     mapQuery: "AK+Barbers,+Havlickova+128,+Beroun",
+    transport: {
+      publicTransport: [
+        "Zastávka Wagnerovo náměstí – autobus 861 (3 min chůze)",
+        "Vlakové nádraží Beroun – linka Praha–Plzeň (5 min chůze)",
+      ],
+      parking: "Parkovací dům U Černého koně (40 Kč/hod, 130 Kč/den nad 4 hod), placené parkování na Husově náměstí",
+    },
   },
   {
     id: "beroun-2",
@@ -115,6 +122,13 @@ export const locations: Location[] = [
     reviewCount: "120+",
     rankText: "Top Barbershop v Berouně podle Googlu",
     mapQuery: "AK+Barbers,+Plzenska+145,+Beroun",
+    transport: {
+      publicTransport: [
+        "Zastávka Wagnerovo náměstí – autobus 861 (4 min chůze)",
+        "Vlakové nádraží Beroun – linka Praha–Plzeň (10 min chůze)",
+      ],
+      parking: "Parkovací dům U Černého koně (40 Kč/hod, 130 Kč/den nad 4 hod), parkování na Husově náměstí",
+    },
   },
   {
     id: "praha-6",
@@ -124,7 +138,7 @@ export const locations: Location[] = [
     phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "10:00 – 19:00" },
-      { days: "So", hours: "9:00 – 12:00" },
+      { days: "So – Ne", hours: "10:00 – 17:00" },
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barber-praha",
@@ -136,6 +150,14 @@ export const locations: Location[] = [
     reviewCount: "250+",
     rankText: "Top #1 Barbershop na Praze 6 podle Googlu",
     mapQuery: "AK+Barbers,+Belohorska+1393,+Praha+6",
+    transport: {
+      publicTransport: [
+        "Tramvaj Marjánka – linky 22, 25 (1 min chůze)",
+        "Autobus Marjánka – linky 143, 149, 164, 180",
+        "Metro Petřiny (linka A) – 10 min chůze",
+      ],
+      parking: "Fialové zóny Praha 6 (cca 40 Kč/hod), parkování v okolních ulicích",
+    },
   },
   {
     id: "praha-1",
@@ -156,6 +178,14 @@ export const locations: Location[] = [
     reviewCount: "300+",
     rankText: "Top #1 Barbershop v centru Prahy podle Googlu",
     mapQuery: "AK+Barbers,+Narodni+63,+Praha",
+    transport: {
+      publicTransport: [
+        "Metro Národní třída (linka B) – 1 min chůze",
+        "Tramvaj Národní třída – linky 2, 9, 18, 22",
+        "Tramvaj Národní divadlo – 3 min chůze",
+      ],
+      parking: "Garáže Národní divadlo (60 Kč/hod), garáž Vladislavova, garáž Spálená",
+    },
   },
   {
     id: "kraluv-dvur",
@@ -177,6 +207,13 @@ export const locations: Location[] = [
     reviewCount: "90+",
     rankText: "Top Barbershop v Králově Dvoře podle Googlu",
     mapQuery: "AK+Barbers,+Plzenska+396,+Kraluv+Dvur",
+    transport: {
+      publicTransport: [
+        "Zastávka Beroun, Plzeňka – autobusy 380, 631, 633",
+        "Vlakové nádraží Králův Dvůr – linka Praha–Plzeň",
+      ],
+      parking: "Bezplatné parkování na Plzeňské ulici a v okolí",
+    },
   },
   {
     id: "plzen",
@@ -199,6 +236,13 @@ export const locations: Location[] = [
     reviewCount: "215+",
     rankText: "Top #1 Barbershop v Plzni podle Googlu",
     mapQuery: "AK+Barbers,+Gerska+2030,+Plzen",
+    transport: {
+      publicTransport: [
+        "Zastávka U Gery – tramvaj 4, autobus 33, 40",
+        "Zastávka Nemocnice Lochotín – 5 min chůze, více linek",
+      ],
+      parking: "Parkovací dům Gerská 2005/4 (237 míst, 24/7), bezplatné parkování v okolí",
+    },
   },
   {
     id: "horovice",
@@ -208,7 +252,7 @@ export const locations: Location[] = [
     phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "10:00 – 19:30" },
-      { days: "So – Ne", hours: "9:00 – 14:00" },
+      { days: "So – Ne", hours: "10:00 – 14:30" },
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.sk/sk/rezervacia/ak-barbers-horovice6",
@@ -221,6 +265,13 @@ export const locations: Location[] = [
     reviewCount: "100+",
     rankText: "Top Barbershop v Hořovicích podle Googlu",
     mapQuery: "AK+Barbers,+Fugnerova+374,+Horovice",
+    transport: {
+      publicTransport: [
+        "Vlakové nádraží Hořovice – linka Praha–Plzeň (5 min chůze)",
+        "Autobus 384 z Prahy (Zličín) přes Zdice",
+      ],
+      parking: "Bezplatné parkování na Fügnerově ulici a na Palackého náměstí",
+    },
   },
   {
     id: "slany",
@@ -243,6 +294,13 @@ export const locations: Location[] = [
     reviewCount: "85+",
     rankText: "Top Barbershop ve Slaném podle Googlu",
     mapQuery: "AK+Barbers,+Trebizského+182,+Slany",
+    transport: {
+      publicTransport: [
+        "Autobusové nádraží Slaný – 5 min chůze, linky 609, 456, 590",
+        "Vlakové nádraží Slaný – spojení na Kladno a Prahu",
+      ],
+      parking: "Parkování v centru s parkovacím kotoučem, okolí Masarykova náměstí",
+    },
   },
   {
     id: "nitra",
@@ -269,6 +327,13 @@ export const locations: Location[] = [
     reviewCount: "95+",
     rankText: "Top Barbershop v Nitre podľa Googlu",
     mapQuery: "AK+Barbers,+Nitra",
+    transport: {
+      publicTransport: [
+        "Zastávka CENTRUM, Mlyny – MHD linky 1, 2, 4, 6, 7, 8, 9, 10 a další",
+        "Hlavná autobusová a vlaková stanica – 10 min chůze",
+      ],
+      parking: "Parkovanie OC Mlyny – 1. hodina zadarmo (pracovné dni), 2 hodiny zadarmo (víkendy), ďalšia hodina od 1 €",
+    },
   },
   {
     id: "praha-5",
@@ -290,6 +355,14 @@ export const locations: Location[] = [
     reviewCount: "Nová pobočka",
     rankText: "Nová pobočka v Praze 5",
     mapQuery: "AK+Barbers,+Toyen+3410,+Praha+5",
+    transport: {
+      publicTransport: [
+        "Metro Anděl (linka B) – 5 min chůze",
+        "Tramvaj Anděl – linky 4, 5, 7, 9, 10, 12, 15 a další",
+        "Autobusový terminál Na Knížecí – 5 min chůze",
+      ],
+      parking: "Fialové zóny Praha 5 (30 Kč/hod), OC Nový Smíchov (1 hod zdarma ve všední dny)",
+    },
   },
   {
     id: "praha-3",
@@ -307,6 +380,14 @@ export const locations: Location[] = [
     reviewCount: "",
     rankText: "Připravujeme pro vás novou pobočku",
     mapQuery: "Pod+Vítkovem+2,+Praha+3",
+    transport: {
+      publicTransport: [
+        "Tramvaj Ohrada – linky 1, 9, 11 (5 min chůze)",
+        "Tramvaj Tachovské náměstí – linky 9, 15, 26 (5 min chůze)",
+        "Autobus Ohrada – linky 133, 136, 207",
+      ],
+      parking: "Fialové zóny Praha 3 (20 Kč/hod), parkoviště Nádraží Žižkov",
+    },
   },
   {
     id: "jesenice",
@@ -323,7 +404,16 @@ export const locations: Location[] = [
     reviewRating: 0,
     reviewCount: "",
     rankText: "Připravujeme pro vás novou pobočku",
+    openingDate: "15. 4. 2026",
     mapQuery: "Budějovická+371,+Jesenice+u+Prahy",
+    transport: {
+      publicTransport: [
+        "Zastávka Jesenice – autobusy 332, 334, 335, 337, 339",
+        "Linky 335, 337, 339 na metro Budějovická (linka C)",
+        "Linka 334 na Smíchovské nádraží (metro B)",
+      ],
+      parking: "Bezplatné parkování na Budějovické ulici a v okolí",
+    },
   },
 ];
 
