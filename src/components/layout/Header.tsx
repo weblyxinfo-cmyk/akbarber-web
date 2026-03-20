@@ -25,11 +25,11 @@ export function Header() {
           <div className="flex items-center gap-7">
             <Link href="/" className="shrink-0">
               <Image
-                src="/images/logo.svg"
+                src="/images/logo-header.png"
                 alt="AK Barbers"
                 width={48}
                 height={48}
-                className="h-12 w-12 object-contain"
+                className="h-12 w-12"
                 priority
               />
             </Link>
