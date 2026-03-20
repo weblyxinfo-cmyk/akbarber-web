@@ -212,7 +212,7 @@ export const locations: Location[] = [
         "Zastávka Beroun, Plzeňka – autobusy 380, 631, 633",
         "Vlakové nádraží Králův Dvůr – linka Praha–Plzeň",
       ],
-      parking: "Bezplatné parkování na Plzeňské ulici a v okolí",
+      parking: "Parkoviště Albert (zdarma), bezplatné parkování na Plzeňské ulici",
     },
   },
   {
@@ -241,7 +241,7 @@ export const locations: Location[] = [
         "Zastávka U Gery – tramvaj 4, autobus 33, 40",
         "Zastávka Nemocnice Lochotín – 5 min chůze, více linek",
       ],
-      parking: "Parkovací dům Gerská 2005/4 (237 míst, 24/7), bezplatné parkování v okolí",
+      parking: "Parkoviště Albert (zdarma), parkovací dům Gerská 2005/4 (237 míst, 24/7)",
     },
   },
   {
@@ -412,7 +412,7 @@ export const locations: Location[] = [
         "Linky 335, 337, 339 na metro Budějovická (linka C)",
         "Linka 334 na Smíchovské nádraží (metro B)",
       ],
-      parking: "Bezplatné parkování na Budějovické ulici a v okolí",
+      parking: "Parkoviště Albert (zdarma), bezplatné parkování v okolí",
     },
   },
 ];
