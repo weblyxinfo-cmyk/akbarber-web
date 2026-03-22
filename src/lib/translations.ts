@@ -1,4 +1,4 @@
-export type Lang = "cs" | "en";
+export type Lang = "cs" | "en" | "sk";
 
 // ---------------------------------------------------------------------------
 // Location page – UI labels
@@ -28,6 +28,18 @@ export const locationPageTranslations = {
     aboutHeading: "Your comfort is our priority",
     aboutText:
       "Walk right in and treat yourself to care you\u2019ll notice from the very first cut. At AK Barbers we follow strict quality standards that guarantee top results at every location. Every new barber completes professional training before they ever step behind the chair. Precision, cleanliness and attention to detail are a given.",
+  },
+  sk: {
+    address: "Adresa",
+    phone: "Mobil",
+    openingHours: "Otváracie hodiny",
+    walkIn: "Bez objednávky \u2013 Walk ins",
+    bookOnline: "Rezervova\u0165 online",
+    byAppointment: "Len na rezerv\u00e1ciu",
+    contact: "Kontakt",
+    aboutHeading: "Z\u00e1le\u017e\u00ed n\u00e1m na\u00a0tom, aby ste sa u\u00a0n\u00e1s c\u00edtili dobre",
+    aboutText:
+      "Pr\u00ed\u010fte bez objedn\u00e1vky a doprajte si starostlivos\u0165, ktor\u00fa spozn\u00e1te na prv\u00fd poh\u013ead. V AK Barbers pracujeme pod\u013ea pr\u00edsnych \u0161tandardov kvality, v\u010faka ktor\u00fdm dr\u017e\u00edme \u0161pi\u010dkov\u00fd v\u00fdsledok na ka\u017edej pobo\u010dke. Ka\u017ed\u00fd nov\u00fd barber prech\u00e1dza profesion\u00e1lnym za\u0161kolen\u00edm a a\u017e potom nastupuje do prev\u00e1dzky. Prec\u00edznost, \u010distota a detail s\u00fa pre n\u00e1s samozrejmos\u0165ou.",
   },
 } as const;
 
@@ -107,7 +119,7 @@ export function translateService(
 // Day abbreviation translation
 // ---------------------------------------------------------------------------
 export function translateDays(daysStr: string, lang: Lang): string {
-  if (lang === "cs") return daysStr;
+  if (lang === "cs" || lang === "sk") return daysStr;
 
   return daysStr
     .replace(/Pá/g, "Fri")
@@ -151,6 +163,20 @@ export const careerAcademyTranslations = {
       "to enter the world of barbering through a professional course designed by AK Barbers Academy, led by our top instructors and experienced barbers from AK Barbers.",
     academyCta: "Learn More",
   },
+  sk: {
+    careerHeading1: "Kari\u00e9ra",
+    careerHeading2: "v AK BARBERS",
+    careerJoinLink: "Pridajte sa k n\u00e1\u0161mu t\u00edmu",
+    careerDescription:
+      "a sta\u0148te sa s\u00fa\u010das\u0165ou rodiny AK BARBERS! H\u013ead\u00e1me nad\u0161en\u00fdch a \u0161ikovn\u00fdch barberov, \u010di u\u017e sk\u00fasen\u00fdch profesion\u00e1lov alebo za\u010diato\u010dn\u00edkov, ktor\u00ed sa chc\u00fa u\u010di\u0165 a rozv\u00edja\u0165.",
+    careerCta: "Pracovn\u00e9 poz\u00edcie",
+    academyHeading1: "AK BARBERS",
+    academyHeading2: "Akad\u00e9mia",
+    academyLink: "Vyu\u017eite jedine\u010dn\u00fa pr\u00edle\u017eitos\u0165",
+    academyDescription:
+      "vstúpi\u0165 do sveta barberingu prostredn\u00edctvom profesion\u00e1lneho kurzu, ktor\u00fd pre teba pripravila AK Barbers Academy pod veden\u00edm na\u0161ich \u0161pi\u010dkov\u00fdch lektorov a sk\u00fasen\u00fdch barberov z AK Barbers.",
+    academyCta: "Viac info",
+  },
 } as const;
 
 // ---------------------------------------------------------------------------
@@ -176,6 +202,16 @@ export const vouchersTranslations = {
     descriptionWithoutUrl:
       "Treat a friend or someone special. Gift vouchers are available to purchase in-store or online \u2014 ",
     selectBranch: "select a specific branch for more info.",
+  },
+  sk: {
+    heading: "Darčekové poukážky",
+    descriptionWithUrl:
+      "Pote\u0161te priate\u013ea alebo niekoho bl\u00edzkeho. M\u00f4\u017eete zak\u00fapi\u0165 u n\u00e1s v sal\u00f3ne alebo ",
+    online: "online",
+    buyOnline: "K\u00fapi\u0165 online",
+    descriptionWithoutUrl:
+      "Pote\u0161te priate\u013ea alebo niekoho bl\u00edzkeho. Dar\u010dekov\u00e9 pouk\u00e1\u017eky je mo\u017en\u00e9 zak\u00fapi\u0165 v sal\u00f3ne alebo online \u2014 ",
+    selectBranch: "vyberte si konkr\u00e9tnu pobo\u010dku pre viac inform\u00e1ci\u00ed.",
   },
 } as const;
 
@@ -219,5 +255,24 @@ export const contactTranslations = {
     success:
       "Thanks for your message! We\u2019ll get back to you as soon as possible.",
     error: "Something went wrong. Please try again.",
+  },
+  sk: {
+    heading1: "M\u00e1te ot\u00e1zky?",
+    heading2: "Nap\u00ed\u0161te n\u00e1m",
+    description:
+      "Pr\u00ed\u010fte bez objedn\u00e1vky a doprajte si starostlivos\u0165, ktor\u00fa spozn\u00e1te na prv\u00fd poh\u013ead. V AK Barbers pracujeme pod\u013ea pr\u00edsnych \u0161tandardov kvality, v\u010faka ktor\u00fdm dr\u017e\u00edme \u0161pi\u010dkov\u00fd v\u00fdsledok na ka\u017edej pobo\u010dke. Ka\u017ed\u00fd nov\u00fd barber prech\u00e1dza profesion\u00e1lnym za\u0161kolen\u00edm a a\u017e potom nastupuje do prev\u00e1dzky. Prec\u00edznost, \u010distota a detail s\u00fa pre n\u00e1s samozrejmos\u0165ou.",
+    tagline1: "Zabezpe\u010dujeme t\u00fa najlep\u0161iu mo\u017en\u00fa",
+    tagline2: "starostlivos\u0165 o Va\u0161e vlasy a bradu.",
+    namePlaceholder: "Meno, priezvisko *",
+    emailPlaceholder: "Email *",
+    phonePlaceholder: "Telef\u00f3n",
+    messagePlaceholder: "Spr\u00e1va *",
+    consentPrefix: "S\u00fahlas\u00edm so",
+    consentLink: "spracovan\u00edm osobn\u00fdch \u00fadajov",
+    submit: "Odosla\u0165",
+    submitting: "Odosiela sa...",
+    success:
+      "\u010eakujeme za spr\u00e1vu! Ozveme sa v\u00e1m \u010do najsk\u00f4r.",
+    error: "Nie\u010do sa pokazilo. Sk\u00faste to znova.",
   },
 } as const;

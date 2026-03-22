@@ -15,6 +15,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const seoLocationSlugs = [
     "barber-praha-1",
     "barber-praha-6",
+    "barber-smichov",
+    "barber-beroun",
+    "barber-plzen",
+    "barber-kraluv-dvur",
+    "barber-horovice",
+    "barber-slany",
+    "barber-nitra",
+    "barber-jesenice",
     "en/barber-prague-1",
     "en/barber-prague-6",
   ];

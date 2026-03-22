@@ -113,7 +113,7 @@ export function generateSeoBarberShopSchema(
 
   return {
     "@context": "https://schema.org",
-    "@type": "BarberShop",
+    "@type": ["BarberShop", "LocalBusiness"],
     "@id": `${pageUrl}#business`,
     name: location.name,
     image: `https://www.akbarber.com${location.image}`,

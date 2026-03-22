@@ -257,6 +257,458 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       { name: "Barber Prague 6", href: "/en/barber-prague-6" },
     ],
   },
+
+  // ------------------------------------------------------------------
+  // barber-smichov (CZ) — Praha 5
+  // ------------------------------------------------------------------
+  "barber-smichov": {
+    lang: "cs",
+    slug: "barber-smichov",
+    locationId: "praha-5",
+    title: "Barber Smíchov – Praha 5 | AK BARBERS u metra Anděl",
+    description:
+      "Nový prémiový barbershop na Smíchově, Praha 5. Walk-in i rezervace. Pánské stříhání od 499 Kč, úprava vousů. 5 min od metra Anděl. Adresa: Toyen 3410/7.",
+    keywords: [
+      "barber smíchov",
+      "barbershop praha 5",
+      "barber anděl",
+      "pánské stříhání smíchov",
+      "barber praha 5 smíchov",
+      "pánské holictví praha 5",
+      "barbershop anděl praha",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Barber Smíchov – Praha 5",
+    localityDescription: [
+      "AK BARBERS Smíchov sídlí na adrese Toyen 3410/7, Praha 5, v samém srdci jedné z nejživějších pražských čtvrtí. Naše nová pobočka je vzdálená pouhých 5 minut chůze od stanice metra Anděl (linka B) a autobusového terminálu Na Knížecí. Tramvajové zastávky s linkami 4, 5, 7, 9, 10, 12 a 15 jsou na dosah, takže se k nám snadno dostanete z celé Prahy.",
+      "Smíchov je pulzující městská čtvrť, kde se mísí moderní kancelářské komplexy s historickými uličkami a oblíbenými kavárnami. V bezprostředním okolí najdete OC Nový Smíchov (1 hodina parkování zdarma ve všední dny), kino, restaurace a náplavku u Vltavy. Ať už pracujete v okolí Anděla nebo bydlíte na Praze 5, zastavte se na profesionální střih bez čekání.",
+      "Jako nejnovější pobočka sítě AK BARBERS nabízíme prémiové služby ve zbrusu novém interiéru. Otevřeno máme Po–Pá 10:00–19:00 a v sobotu 10:00–14:30. Fungujeme walk-in i s možností online rezervace přes Booqme.",
+    ],
+    services: [
+      { name: "Klasické pánské stříhání", price: "499 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "889 Kč" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+    ],
+    aboutText:
+      "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
+    faq: [
+      { question: "Kde se nachází AK BARBERS Smíchov?", answer: "Najdete nás na adrese Toyen 3410/7, Praha 5 – Smíchov. Jsme 5 minut chůze od metra Anděl (linka B) a autobusového terminálu Na Knížecí." },
+      { question: "Musím se objednat předem?", answer: "Ne, fungujeme na principu walk-in — přijďte kdykoliv během otevírací doby. Pokud preferujete jistotu, můžete si rezervovat termín online přes Booqme." },
+      { question: "Jaká je otevírací doba?", answer: "Po–Pá 10:00–19:00, So 10:00–14:30. V neděli máme zavřeno." },
+      { question: "Kolik stojí pánský střih na Smíchově?", answer: "Klasické pánské stříhání stojí 499 Kč. Kompletní balíček střih + úprava vousů je za 889 Kč." },
+      { question: "Je poblíž parkování?", answer: "Ano, v okolí jsou fialové zóny Praha 5 (30 Kč/hod). V OC Nový Smíchov máte 1 hodinu parkování zdarma ve všední dny." },
+      { question: "Stříháte i děti?", answer: "Ano, dětský střih nabízíme pro chlapce od 1 do 15 let za 349 Kč (klasický střih) nebo 449 Kč (fade varianty)." },
+      { question: "Mohu platit kartou?", answer: "Ano, přijímáme platbu v hotovosti i platební kartou." },
+      { question: "Je to nová pobočka?", answer: "Ano, AK BARBERS Smíchov je naše nejnovější pražská pobočka s hodnocením 5.0★. Nabízíme prémiové služby ve zcela novém interiéru." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Praha 1 – Národní třída", href: "/barber-praha-1" },
+      { label: "AK BARBERS Praha 6 – Bělohorská", href: "/barber-praha-6" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Smíchov", href: "/barber-smichov" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // barber-beroun (CZ)
+  // ------------------------------------------------------------------
+  "barber-beroun": {
+    lang: "cs",
+    slug: "barber-beroun",
+    locationId: "beroun",
+    title: "Barber Beroun – centrum | AK BARBERS Top #1 v Berouně",
+    description:
+      "Nejlépe hodnocený barbershop v Berouně, 4.8★ a 180+ recenzí. Walk-in bez objednání. Pánské stříhání od 449 Kč. Adresa: Havlíčkova 128, Beroun-centrum.",
+    keywords: [
+      "barber beroun",
+      "barbershop beroun",
+      "pánské stříhání beroun",
+      "kadeřnictví muži beroun",
+      "barber beroun centrum",
+      "holictví beroun",
+      "barber shop beroun",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Barber Beroun – centrum města",
+    localityDescription: [
+      "AK BARBERS Beroun najdete na Havlíčkově 128, přímo v centru historického královského města. Pobočka se nachází v blízkosti Wagnerova náměstí a Husova náměstí, v samém srdci berounského dění. Z vlakového nádraží Beroun (linka Praha–Plzeň) to k nám je pouhých 5 minut chůze, autobusem 861 na zastávku Wagnerovo náměstí jen 3 minuty pěšky.",
+      "Beroun je město s bohatou historií, obklopené Českým krasem a Berounkou. Ať už jste místní, dojíždíte za prací, nebo se zastavujete cestou mezi Prahou a Plzní — u nás se vždy dočkáte profesionálního střihu. Parkovat můžete v parkovacím domě U Černého koně (40 Kč/hod) nebo na placeném parkování na Husově náměstí.",
+      "Kromě naší hlavní pobočky provozujeme v Berouně také VIP Club na adrese Plzeňská 145/49 (Beroun 2) s prémiovým ceníkem a možností rezervace. Máme otevřeno Po–Pá 9:00–19:30 a v sobotu 9:00–14:00. Fungujeme walk-in bez objednání.",
+    ],
+    services: [
+      { name: "Klasické pánské stříhání", price: "449 Kč" },
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč" },
+      { name: "Senior pánský střih (65+)", price: "299 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "799 Kč" },
+    ],
+    aboutText:
+      "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
+    faq: [
+      { question: "Kde se nachází AK BARBERS Beroun?", answer: "Jsme na adrese Havlíčkova 128, 266 01 Beroun-centrum. V centru města, 5 minut chůze od vlakového nádraží a 3 minuty od zastávky Wagnerovo náměstí." },
+      { question: "Musím se objednat?", answer: "Ne, pobočka na Havlíčkově funguje výhradně walk-in — přijďte kdykoliv během otevírací doby. Pokud chcete rezervaci, navštivte naši VIP pobočku Beroun 2 na Plzeňské 145/49." },
+      { question: "Jaká je otevírací doba?", answer: "Po–Pá 9:00–19:30, So 9:00–14:00. V neděli máme zavřeno." },
+      { question: "Kolik stojí pánský střih v Berouně?", answer: "Klasické pánské stříhání stojí 449 Kč, Skin Fade 499 Kč. Kompletní balíček střih + vousy je za 799 Kč. Senior střih je zvýhodněný za 299 Kč." },
+      { question: "Kde zaparkuji?", answer: "V parkovacím domě U Černého koně (40 Kč/hod, celodenní nad 4 hod za 130 Kč) nebo na placeném parkování na Husově náměstí." },
+      { question: "Máte v Berouně i druhou pobočku?", answer: "Ano, AK BARBERS Beroun 2 VIP Club na Plzeňské 145/49 nabízí prémiové služby s možností online rezervace. Otevřeno Po–Pá 10:00–21:00." },
+      { question: "Stříháte i děti?", answer: "Ano, dětský střih pro chlapce od 1 do 15 let stojí 349 Kč (klasický) nebo 449 Kč (fade varianty)." },
+      { question: "Mohu platit kartou?", answer: "Ano, přijímáme platbu hotově i platební kartou." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Králův Dvůr", href: "/barber-kraluv-dvur" },
+      { label: "AK BARBERS Hořovice", href: "/barber-horovice" },
+      { label: "AK BARBERS Praha 1 – Národní třída", href: "/barber-praha-1" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Beroun", href: "/barber-beroun" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // barber-plzen (CZ)
+  // ------------------------------------------------------------------
+  "barber-plzen": {
+    lang: "cs",
+    slug: "barber-plzen",
+    locationId: "plzen",
+    title: "Barber Plzeň – Bolevec | AK BARBERS Top #1 v Plzni",
+    description:
+      "Nejlépe hodnocený barbershop v Plzni, 4.9★ a 215+ recenzí. Walk-in i rezervace. Pánské stříhání od 449 Kč. Gerská 2030/23, Plzeň 1-Bolevec. Parkování zdarma.",
+    keywords: [
+      "barber plzeň",
+      "barbershop plzeň",
+      "pánské stříhání plzeň",
+      "barber bolevec",
+      "kadeřnictví muži plzeň",
+      "holictví plzeň",
+      "barber shop plzeň",
+      "pánské holictví plzeň",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Barber Plzeň – Bolevec",
+    localityDescription: [
+      "AK BARBERS Plzeň sídlí na Gerské 2030/23 v městské části Plzeň 1-Bolevec. Pobočka je snadno dostupná tramvají — zastávka U Gery (tramvaj č. 4, autobusy 33 a 40) je přímo před dveřmi. Ze zastávky Nemocnice Lochotín to k nám je 5 minut chůze s přestupem na více linek. Parkovat můžete zdarma na parkovišti Albert přímo vedle nás nebo v parkovacím domě Gerská 2005/4 s 237 místy.",
+      "Bolevec je příjemná, zelená čtvrť na severu Plzně, oblíbená rodinami i studenty Západočeské univerzity. V okolí najdete Bolevecké rybníky, oblíbenou rekreační oblast, a nákupní zónu s Albertem. AK BARBERS Plzeň je s hodnocením 4.9★ a více než 215 recenzemi nejlépe hodnoceným barbershopem v celém Plzeňském kraji — jsme Top #1 v Plzni podle Google recenzí.",
+      "Otevřeno máme Po–Pá 9:30–18:00 a So–Ne 9:00–14:00, tedy celý týden včetně víkendů. Fungujeme walk-in i s možností online rezervace přes Booqme. Přijďte a přesvědčte se sami, proč nás zákazníci hodnotí tak vysoko.",
+    ],
+    services: [
+      { name: "Klasické pánské stříhání", price: "449 Kč" },
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč" },
+      { name: "Senior pánský střih (65+)", price: "299 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "799 Kč" },
+    ],
+    aboutText:
+      "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
+    faq: [
+      { question: "Kde přesně je AK BARBERS Plzeň?", answer: "Najdete nás na Gerské 2030/23, 323 00 Plzeň 1-Bolevec. Přímo u tramvajové zastávky U Gery, vedle supermarketu Albert." },
+      { question: "Je potřeba se objednat?", answer: "Ne nutně — fungujeme walk-in. Pokud ale chcete garantovaný čas, můžete si zarezervovat termín online přes Booqme." },
+      { question: "Jaké jsou otevírací hodiny?", answer: "Po–Pá 9:30–18:00, So–Ne 9:00–14:00. Máme otevřeno celý týden včetně víkendů." },
+      { question: "Kolik stojí střih v Plzni?", answer: "Klasické pánské stříhání stojí 449 Kč, Skin Fade 499 Kč. Kompletní balíček střih + vousy je za 799 Kč. Senior střih za zvýhodněných 299 Kč." },
+      { question: "Kde zaparkuji?", answer: "Parkování je zdarma na parkovišti Albert přímo vedle pobočky. K dispozici je také parkovací dům Gerská 2005/4 s 237 místy (otevřeno 24/7)." },
+      { question: "Proč je AK BARBERS Top #1 v Plzni?", answer: "S hodnocením 4.9★ a více než 215 recenzemi na Googlu jsme nejlépe hodnoceným barbershopem v Plzni. Naši barbeři jsou profesionálně vyškoleni v AK BARBERS Academy a dbáme na nejvyšší kvalitu služeb." },
+      { question: "Stříháte i děti a seniory?", answer: "Ano, dětský střih je za 349 Kč (klasický) nebo 449 Kč (fade). Senior střih pro pány od 65 let stojí zvýhodněných 299 Kč." },
+      { question: "Přijímáte platbu kartou?", answer: "Ano, můžete platit hotově i kartou." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Beroun", href: "/barber-beroun" },
+      { label: "AK BARBERS Králův Dvůr", href: "/barber-kraluv-dvur" },
+      { label: "AK BARBERS Hořovice", href: "/barber-horovice" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Plzeň", href: "/barber-plzen" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // barber-kraluv-dvur (CZ)
+  // ------------------------------------------------------------------
+  "barber-kraluv-dvur": {
+    lang: "cs",
+    slug: "barber-kraluv-dvur",
+    locationId: "kraluv-dvur",
+    title: "Barber Králův Dvůr | AK BARBERS – stříhání od 449 Kč",
+    description:
+      "Profesionální barbershop v Králově Dvoře, 4.8★ a 90+ recenzí. Walk-in bez objednání. Pánské stříhání od 449 Kč. Plzeňská 396, parkování zdarma u Alberta.",
+    keywords: [
+      "barber králův dvůr",
+      "barbershop králův dvůr",
+      "pánské stříhání králův dvůr",
+      "kadeřnictví králův dvůr",
+      "barber u alberta králův dvůr",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Barber Králův Dvůr",
+    localityDescription: [
+      "AK BARBERS Králův Dvůr najdete na adrese Plzeňská 396, v klidné části města s výbornou dostupností. Z autobusové zastávky Beroun, Plzeňka (autobusy 380, 631, 633) to je k nám jen pár kroků. Z vlakového nádraží Králův Dvůr na lince Praha–Plzeň se k nám snadno dostanete. Parkování je zdarma na parkovišti Albert hned vedle pobočky a také v okolních ulicích.",
+      "Králův Dvůr je město bezprostředně sousedící s Berounem, zasazené v malebné krajině u řeky Litavky. Místní i lidé z okolních obcí jako Zdice, Žebrák či Hořovice u nás najdou profesionální barberské služby bez nutnosti dojíždět do Prahy. Naše pobočka je oblíbená díky pohodové atmosféře, rychlému servisu a přátelskému přístupu.",
+      "Fungujeme výhradně walk-in — přijďte kdykoliv bez objednání. Otevřeno máme Po–Pá 9:00–19:30 a So–Ne 9:00–14:00, tedy celý týden včetně víkendů.",
+    ],
+    services: [
+      { name: "Klasické pánské stříhání", price: "449 Kč" },
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč" },
+      { name: "Senior pánský střih (65+)", price: "299 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "799 Kč" },
+    ],
+    aboutText:
+      "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
+    faq: [
+      { question: "Kde přesně je AK BARBERS Králův Dvůr?", answer: "Na adrese Plzeňská 396, 267 01 Králův Dvůr. Hned vedle supermarketu Albert, s bezplatným parkováním." },
+      { question: "Musím se objednat?", answer: "Ne, fungujeme výhradně walk-in. Přijďte kdykoliv během otevírací doby a obsloužíme vás bez čekání." },
+      { question: "Jaká je otevírací doba?", answer: "Po–Pá 9:00–19:30, So–Ne 9:00–14:00. Otevřeno máme celý týden." },
+      { question: "Kolik stojí střih v Králově Dvoře?", answer: "Klasické pánské stříhání stojí 449 Kč, Skin Fade 499 Kč. Balíček střih + vousy je za 799 Kč. Senior střih za 299 Kč." },
+      { question: "Kde zaparkuji?", answer: "Zdarma na parkovišti Albert přímo vedle pobočky nebo v okolních ulicích na Plzeňské. Parkování je bezplatné." },
+      { question: "Stříháte i děti?", answer: "Ano, dětský střih pro chlapce od 1 do 15 let za 349 Kč (klasický) nebo 449 Kč (fade varianty)." },
+      { question: "Máte pobočku i v Berouně?", answer: "Ano, máme dvě pobočky v sousedním Berouně — AK BARBERS Beroun na Havlíčkově (walk-in) a Beroun 2 VIP Club na Plzeňské (rezervace)." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Beroun", href: "/barber-beroun" },
+      { label: "AK BARBERS Hořovice", href: "/barber-horovice" },
+      { label: "AK BARBERS Plzeň", href: "/barber-plzen" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Králův Dvůr", href: "/barber-kraluv-dvur" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // barber-horovice (CZ)
+  // ------------------------------------------------------------------
+  "barber-horovice": {
+    lang: "cs",
+    slug: "barber-horovice",
+    locationId: "horovice",
+    title: "Barber Hořovice | AK BARBERS – pánské stříhání od 449 Kč",
+    description:
+      "Profesionální barbershop v Hořovicích, 4.8★ a 100+ recenzí. Walk-in i rezervace. Pánské stříhání od 449 Kč. Fügnerova 374/1, u vlakového nádraží.",
+    keywords: [
+      "barber hořovice",
+      "barbershop hořovice",
+      "pánské stříhání hořovice",
+      "kadeřnictví muži hořovice",
+      "barber hořovice u nádraží",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Barber Hořovice",
+    localityDescription: [
+      "AK BARBERS Hořovice sídlí na Fügnerově 374/1, v centru města s výbornou dopravní dostupností. Z vlakového nádraží Hořovice na hlavní lince Praha–Plzeň to k nám je pouhých 5 minut chůze. Autobusem 384 se sem dostanete z Prahy (Zličín) přes Zdice. Parkování je bezplatné přímo na Fügnerově ulici i na nedalekém Palackého náměstí.",
+      "Hořovice jsou malebné město na pomezí Brd a Křivoklátska, známé svým zámkem a přátelskou atmosférou. Naše pobočka slouží nejen místním, ale i lidem z okolních obcí jako Zdice, Žebrák, Komárov nebo Cerhovice. Díky poloze u železničního koridoru Praha–Plzeň jsme snadno dostupní i pro cestující projíždějící regionem.",
+      "Otevřeno máme Po–Pá 10:00–19:30 a So–Ne 10:00–14:30. Fungujeme walk-in i s možností online rezervace přes Booqme. S hodnocením 4.8★ a více než 100 recenzemi patříme mezi nejlépe hodnocené barbershopy v regionu.",
+    ],
+    services: [
+      { name: "Klasické pánské stříhání", price: "449 Kč" },
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč" },
+      { name: "Senior pánský střih (65+)", price: "299 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "799 Kč" },
+    ],
+    aboutText:
+      "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
+    faq: [
+      { question: "Kde se nachází AK BARBERS Hořovice?", answer: "Na adrese Fügnerova 374/1, 268 01 Hořovice. V centru města, 5 minut chůze od vlakového nádraží." },
+      { question: "Musím se objednat předem?", answer: "Nemusíte, fungujeme walk-in. Pokud preferujete rezervaci, můžete si ji vytvořit online přes Booqme." },
+      { question: "Jaká je otevírací doba?", answer: "Po–Pá 10:00–19:30, So–Ne 10:00–14:30. Otevřeno máme celý týden včetně víkendů." },
+      { question: "Kolik stojí pánský střih v Hořovicích?", answer: "Klasické pánské stříhání stojí 449 Kč, Skin Fade 499 Kč. Balíček střih + vousy je za 799 Kč. Senior střih za zvýhodněných 299 Kč." },
+      { question: "Kde zaparkuji?", answer: "Bezplatné parkování je k dispozici přímo na Fügnerově ulici a na Palackého náměstí nedaleko pobočky." },
+      { question: "Jak se dostanu vlakem?", answer: "Vlakové nádraží Hořovice leží na hlavní trase Praha–Plzeň. Z nádraží k nám je 5 minut chůze. Vlaky jezdí pravidelně z Prahy i z Plzně." },
+      { question: "Stříháte i děti a seniory?", answer: "Ano, dětský střih je za 349 Kč (klasický) nebo 449 Kč (fade). Senior střih pro pány od 65 let stojí zvýhodněných 299 Kč." },
+      { question: "Mohu platit kartou?", answer: "Ano, přijímáme platbu hotově i platební kartou." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Beroun", href: "/barber-beroun" },
+      { label: "AK BARBERS Králův Dvůr", href: "/barber-kraluv-dvur" },
+      { label: "AK BARBERS Plzeň", href: "/barber-plzen" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Hořovice", href: "/barber-horovice" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // barber-slany (CZ)
+  // ------------------------------------------------------------------
+  "barber-slany": {
+    lang: "cs",
+    slug: "barber-slany",
+    locationId: "slany",
+    title: "Barber Slaný | AK BARBERS – stříhání od 399 Kč + slevy",
+    description:
+      "Profesionální barbershop ve Slaném, 4.7★ a 85+ recenzí. Walk-in i rezervace. Pánské stříhání od 399 Kč, sleva 25% pro PČR/HZS/ZZS/ISIC. Třebízského 182.",
+    keywords: [
+      "barber slaný",
+      "barbershop slaný",
+      "pánské stříhání slaný",
+      "kadeřnictví muži slaný",
+      "barber slaný sleva",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Barber Slaný",
+    localityDescription: [
+      "AK BARBERS Slaný sídlí na Třebízského 182, v historickém centru královského města Slaný. Z autobusového nádraží Slaný (linky 609, 456, 590) to k nám je jen 5 minut chůze. Z vlakového nádraží se snadno dostanete spojením na Kladno a dále do Prahy. Parkovat můžete v centru s parkovacím kotoučem nebo v okolí Masarykova náměstí.",
+      "Slaný je útulné středočeské město s bohatou historií, dominantou gotického kostela a přilehlým náměstím plným kaváren a obchůdků. AK BARBERS Slaný nabízí jako jediný barbershop ve městě profesionální služby na úrovni velkoměstských poboček — navíc s nejnižším základním ceníkem v celé síti a exkluzivní slevou 25 % pro příslušníky PČR, HZS, ZZS a držitele karet ISIC.",
+      "Otevřeno máme Po–Pá 9:00–19:30 a So–Ne 9:00–14:00. Fungujeme walk-in i s online rezervací přes Booqme. Přijďte si užít kvalitní střih za férovou cenu.",
+    ],
+    services: [
+      { name: "Klasické pánské stříhání", price: "399 Kč (PČR/HZS/ZZS/ISIC 299 Kč)" },
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč" },
+      { name: "Senior pánský střih (65+)", price: "249 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "299 / 399 Kč" },
+      { name: "Úprava vousů", price: "349 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "749 Kč" },
+    ],
+    aboutText:
+      "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
+    faq: [
+      { question: "Kde se nachází AK BARBERS Slaný?", answer: "Na adrese Třebízského 182, 274 01 Slaný. V centru města, 5 minut chůze od autobusového nádraží." },
+      { question: "Musím se objednat předem?", answer: "Ne, fungujeme walk-in. Online rezervaci nabízíme přes Booqme pro ty, kdo si chtějí zajistit konkrétní čas." },
+      { question: "Jaká je otevírací doba?", answer: "Po–Pá 9:00–19:30, So–Ne 9:00–14:00. Máme otevřeno celý týden včetně víkendů." },
+      { question: "Kolik stojí pánský střih ve Slaném?", answer: "Klasické pánské stříhání stojí 399 Kč. Pro příslušníky PČR, HZS, ZZS a držitele karet ISIC nabízíme slevu 25 % — střih tak vyjde na 299 Kč." },
+      { question: "Jaké slevy nabízíte?", answer: "Nabízíme 25% slevu na klasické pánské stříhání pro příslušníky Policie ČR, Hasičského záchranného sboru, Zdravotnické záchranné služby a držitele karet ISIC. Stačí se prokázat průkazem." },
+      { question: "Kde zaparkuji?", answer: "V centru Slaného s parkovacím kotoučem nebo v okolí Masarykova náměstí." },
+      { question: "Stříháte i děti a seniory?", answer: "Ano, dětský střih je za 299 Kč (klasický) nebo 399 Kč (fade). Senior střih pro pány od 65 let je za zvýhodněných 249 Kč." },
+      { question: "Mohu platit kartou?", answer: "Ano, přijímáme platbu hotově i kartou." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Praha 6 – Bělohorská", href: "/barber-praha-6" },
+      { label: "AK BARBERS Praha 1 – Národní třída", href: "/barber-praha-1" },
+      { label: "AK BARBERS Beroun", href: "/barber-beroun" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Slaný", href: "/barber-slany" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // barber-nitra (SK)
+  // ------------------------------------------------------------------
+  "barber-nitra": {
+    lang: "sk",
+    slug: "barber-nitra",
+    locationId: "nitra",
+    title: "Barber Nitra – OC Mlyny | AK BARBERS Top barbershop",
+    description:
+      "Najlepší barbershop v Nitre, 4.8★ a 95+ recenzií. Walk-in aj rezervácia. Pánske strihanie od 17 €. OC MLYNY, Štefánikova trieda 35/61. Otvorené 7 dní.",
+    keywords: [
+      "barber nitra",
+      "barbershop nitra",
+      "pánske strihanie nitra",
+      "barber OC mlyny nitra",
+      "kaderníctvo muži nitra",
+      "pánske holictvo nitra",
+      "holictvo nitra",
+      "barber shop nitra",
+    ],
+    ogLocale: "sk_SK",
+    heroHeading: "Barber Nitra – OC Mlyny",
+    localityDescription: [
+      "AK BARBERS Nitra nájdete v obchodnom centre MLYNY na Štefánikovej triede 35/61, v samom centre Nitry. OC Mlyny je najväčšie nákupné centrum v meste, priamo napojené na MHD — zastávka CENTRUM, Mlyny obsluhuje linky 1, 2, 4, 6, 7, 8, 9, 10 a ďalšie. Z hlavnej autobusovej a vlakovej stanice je to k nám len 10 minút pešo. Parkovanie v OC Mlyny je prvú hodinu zadarmo v pracovné dni a 2 hodiny zadarmo cez víkend.",
+      "Nitra je starobylé mesto s bohatou históriou — Nitriansky hrad, pešia zóna a mestský park vytvárajú príjemné prostredie pre život aj návštevu. AK BARBERS Nitra je súčasťou českej siete prémiových barbershopov a prináša do Nitry rovnakú kvalitu služieb, akú poznáte z Prahy, Plzne alebo Berouna. S hodnotením 4.8★ a viac ako 95 recenziami patríme medzi najlepšie hodnotené barbershopy v Nitrianskom kraji.",
+      "Otvorené máme Po–Ne 9:00–21:00, teda každý deň v týždni vrátane víkendov. Fungujeme walk-in aj s možnosťou online rezervácie cez Booqme. Ceny sú v eurách — klasický pánsky strih od 17 €.",
+    ],
+    services: [
+      { name: "Klasický pánsky strih", price: "17 €" },
+      { name: "Strih + úprava brady", price: "27 €" },
+      { name: "Detský strih (1–15 rokov)", price: "12 / 15 €" },
+      { name: "Úprava brady", price: "14 €" },
+    ],
+    aboutText:
+      "V AK BARBERS pracujeme podľa prísnych štandardov kvality. Každý nový barber prechádza profesionálnym zaškolením v našej AK BARBERS Academy a až potom nastupuje do prevádzky. Precíznosť, čistota a dôraz na detail sú základom našej práce. Vďaka tomu držíme špičkovú úroveň služieb na každej pobočke — a naši zákazníci sa k nám radi vracajú.",
+    faq: [
+      { question: "Kde sa nachádza AK BARBERS Nitra?", answer: "Nájdete nás v OC MLYNY, Štefánikova trieda 35/61, 949 01 Nitra. Priamo v centre mesta, s výbornou dostupnosťou MHD." },
+      { question: "Musím sa objednať vopred?", answer: "Nie, fungujeme na princípe walk-in — príďte kedykoľvek počas otváracej doby. Ak preferujete istotu, môžete si rezervovať termín online cez Booqme." },
+      { question: "Aká je otváracie doba?", answer: "Po–Ne 9:00–21:00. Máme otvorené každý deň v týždni vrátane víkendov." },
+      { question: "Koľko stojí pánsky strih v Nitre?", answer: "Klasický pánsky strih stojí 17 €. Kompletný balíček strih + úprava brady je za 27 €. Pre PZ, HaZZ, ZZS a ISIC máme zľavu 25 % — strih za 13 €." },
+      { question: "Kde zaparkujem?", answer: "Parkovanie v OC Mlyny: prvá hodina zadarmo v pracovné dni, 2 hodiny zadarmo cez víkendy. Každá ďalšia hodina od 1 €." },
+      { question: "Strihajú aj detí?", answer: "Áno, detský strih pre chlapcov od 1 do 15 rokov stojí 12 € (klasický) alebo 15 € (fade varianty)." },
+      { question: "Môžem platiť kartou?", answer: "Áno, prijímame platbu v hotovosti aj platobnou kartou." },
+      { question: "Je AK BARBERS česká sieť?", answer: "Áno, AK BARBERS je sieť prémiových barbershopov založená v Čechách. Pobočka v Nitre je naša prvá na Slovensku a ponúka rovnakú kvalitu služieb ako naše české pobočky." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Praha 1 – Národní třída", href: "/barber-praha-1" },
+      { label: "AK BARBERS Plzeň", href: "/barber-plzen" },
+      { label: "AK BARBERS Beroun", href: "/barber-beroun" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Nitra", href: "/barber-nitra" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // barber-jesenice (CZ) — coming soon
+  // ------------------------------------------------------------------
+  "barber-jesenice": {
+    lang: "cs",
+    slug: "barber-jesenice",
+    locationId: "jesenice",
+    title: "Barber Jesenice u Prahy | AK BARBERS – otevíráme 15. 4. 2026",
+    description:
+      "AK BARBERS otevírá novou pobočku v Jesenici u Prahy! Budějovická 371. Slavnostní otevření 15. 4. 2026. Profesionální pánské stříhání blízko Prahy.",
+    keywords: [
+      "barber jesenice",
+      "barbershop jesenice u prahy",
+      "nový barbershop jesenice",
+      "pánské stříhání jesenice",
+      "barber jesenice otevření",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Barber Jesenice u Prahy – již brzy!",
+    localityDescription: [
+      "AK BARBERS připravuje novou pobočku v Jesenici u Prahy na adrese Budějovická 371. Slavnostní otevření je naplánováno na 15. dubna 2026. Jesenice je dynamicky rostoucí obec jižně od Prahy, kde dosud profesionální barbershop chyběl — a to se brzy změní.",
+      "Jesenice u Prahy je oblíbenou rezidenční lokalitou pro rodiny i profesionály dojíždějící do hlavního města. Výborná dopravní dostupnost zajišťuje spojení autobusy 332, 334, 335, 337 a 339, přičemž linky 335, 337 a 339 vás dovezou přímo na metro Budějovická (linka C) a linka 334 na Smíchovské nádraží (metro B). Parkování bude k dispozici zdarma na parkovišti Albert a v okolí.",
+      "Sledujte naše sociální sítě a web pro aktuální informace o otevření. Těšíme se na vás od 15. dubna 2026!",
+    ],
+    services: [],
+    aboutText:
+      "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
+    faq: [
+      { question: "Kdy otevírá AK BARBERS v Jesenici?", answer: "Slavnostní otevření je naplánováno na 15. dubna 2026. Sledujte naše sociální sítě pro aktuální informace." },
+      { question: "Kde bude pobočka v Jesenici?", answer: "Na adrese Budějovická 371, Jesenice u Prahy. V blízkosti parkoviště Albert." },
+      { question: "Jak se dostanu do Jesenice?", answer: "Autobusy 332, 334, 335, 337 a 339 ze zastávky Jesenice. Linky 335, 337, 339 jedou na metro Budějovická (C), linka 334 na Smíchovské nádraží (B)." },
+      { question: "Bude parkování zdarma?", answer: "Ano, parkování bude k dispozici zdarma na parkovišti Albert a v okolních ulicích." },
+      { question: "Bude potřeba rezervace?", answer: "Podrobnosti o formátu obsluhy (walk-in / rezervace) zveřejníme před otevřením na našem webu a sociálních sítích." },
+      { question: "Jaké budou ceny?", answer: "Ceník bude zveřejněn před otevřením. Orientačně odpovídá ceníku ostatních poboček sítě AK BARBERS." },
+      { question: "Mohu se přihlásit k odběru novinek?", answer: "Sledujte nás na Instagramu @ak.barbers.cz a Facebooku pro nejčerstvější informace o otevření pobočky v Jesenici." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Praha 1 – Národní třída", href: "/barber-praha-1" },
+      { label: "AK BARBERS Praha 5 – Smíchov", href: "/barber-smichov" },
+      { label: "AK BARBERS Beroun", href: "/barber-beroun" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Jesenice", href: "/barber-jesenice" },
+    ],
+  },
 };
 
 // ===================================================================

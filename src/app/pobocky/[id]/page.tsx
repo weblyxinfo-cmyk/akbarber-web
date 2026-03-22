@@ -158,7 +158,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
 
   const barberShopSchema = {
     "@context": "https://schema.org",
-    "@type": "BarberShop",
+    "@type": ["BarberShop", "LocalBusiness"],
     "@id": `https://www.akbarber.com/pobocky/${location.id}#business`,
     name: location.name,
     image: `https://www.akbarber.com${location.image}`,

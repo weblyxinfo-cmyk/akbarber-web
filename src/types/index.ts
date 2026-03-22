@@ -92,11 +92,11 @@ export interface SeoInternalLink {
 }
 
 export interface SeoLocationContent {
-  lang: "cs" | "en";
+  lang: "cs" | "en" | "sk";
   slug: string;
-  locationId: "praha-1" | "praha-6";
-  alternateSlug: string; // the other language version
-  crossLocationSlug: string; // the other Praha location
+  locationId: string;
+  alternateSlug?: string; // the other language version (if bilingual)
+  crossLocationSlug?: string; // related location page
   title: string;
   description: string;
   keywords: string[];
