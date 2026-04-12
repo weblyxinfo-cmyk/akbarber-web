@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { IconCircle } from "@/components/IconCircle";
 import type { Lang } from "@/lib/translations";
@@ -22,64 +23,75 @@ export function Vouchers({ eshopUrl, isSlovak, lang }: VouchersProps) {
 
   return (
     <section className="py-12" id="vouchers">
-      <div className="container">
-        <h2 className="mb-2 font-[family-name:var(--font-roboto-slab)] text-[28px] font-bold">
-          {heading}
-        </h2>
-        {eshopUrl ? (
-          <>
-            <p className="mb-2 text-sm text-gray">
-              {lang === "en"
-                ? t.descriptionWithUrl
-                : isSlovak
-                  ? "Potešte priateľa alebo niekoho blízkeho. Môžete zakúpiť u nás v salóne alebo "
-                  : t.descriptionWithUrl}
+      <div className="container flex items-center justify-between gap-6">
+        <div>
+          <h2 className="mb-2 font-[family-name:var(--font-roboto-slab)] text-[28px] font-bold">
+            {heading}
+          </h2>
+          {eshopUrl ? (
+            <>
+              <p className="mb-2 text-sm text-gray">
+                {lang === "en"
+                  ? t.descriptionWithUrl
+                  : isSlovak
+                    ? "Potešte priateľa alebo niekoho blízkeho. Môžete zakúpiť u nás v salóne alebo "
+                    : t.descriptionWithUrl}
+                <a
+                  href={eshopUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white underline underline-offset-2"
+                >
+                  {t.online}
+                </a>
+                .
+              </p>
               <a
                 href={eshopUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white underline underline-offset-2"
+                className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-bold text-white"
               >
-                {t.online}
+                {lang === "en"
+                  ? "Buy voucher – click HERE"
+                  : isSlovak
+                    ? "Kúpiť voucher – kliknite SEM"
+                    : "Koupit voucher – klikněte ZDE"}
+                <IconCircle />
               </a>
-              .
-            </p>
-            <a
-              href={eshopUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-bold text-white"
-            >
-              {lang === "en"
-                ? "Buy voucher – click HERE"
-                : isSlovak
-                  ? "Kúpiť voucher – kliknite SEM"
-                  : "Koupit voucher – klikněte ZDE"}
-              <IconCircle />
-            </a>
-          </>
-        ) : (
-          <>
-            <p className="mb-2 text-sm text-gray">
-              {lang === "en"
-                ? t.descriptionWithoutUrl
-                : isSlovak
-                  ? "Potešte priateľa alebo niekoho blízkeho. Darčekové poukážky je možné zakúpiť v salóne alebo online."
-                  : t.descriptionWithoutUrl}
-            </p>
-            <Link
-              href="/vouchery"
-              className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-bold text-white"
-            >
-              {lang === "en"
-                ? "Buy voucher – click HERE"
-                : isSlovak
-                  ? "Kúpiť voucher – kliknite SEM"
-                  : "Koupit voucher – klikněte ZDE"}
-              <IconCircle />
-            </Link>
-          </>
-        )}
+            </>
+          ) : (
+            <>
+              <p className="mb-2 text-sm text-gray">
+                {lang === "en"
+                  ? t.descriptionWithoutUrl
+                  : isSlovak
+                    ? "Potešte priateľa alebo niekoho blízkeho. Darčekové poukážky je možné zakúpiť v salóne alebo online."
+                    : t.descriptionWithoutUrl}
+              </p>
+              <Link
+                href="/vouchery"
+                className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-bold text-white"
+              >
+                {lang === "en"
+                  ? "Buy voucher – click HERE"
+                  : isSlovak
+                    ? "Kúpiť voucher – kliknite SEM"
+                    : "Koupit voucher – klikněte ZDE"}
+                <IconCircle />
+              </Link>
+            </>
+          )}
+        </div>
+        <div className="hidden shrink-0 sm:block">
+          <Image
+            src="/images/barber-pole.png"
+            alt="Barber pole"
+            width={140}
+            height={280}
+            className="h-auto w-[120px]"
+          />
+        </div>
       </div>
     </section>
   );
