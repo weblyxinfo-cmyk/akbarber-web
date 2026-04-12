@@ -190,6 +190,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       { label: "Skin Fade Prague 1", href: "/en/skin-fade-prague-1" },
       { label: "Men's Haircut Prague 1", href: "/en/mens-haircut-prague-1" },
       { label: "AK BARBERS Prague 6 – Bělohorská", href: "/en/barber-prague-6" },
+      { label: "AK BARBERS Prague 5 – Smíchov", href: "/en/barber-prague-5" },
       academyLinkEn,
       careerLinkEn,
     ],
@@ -243,12 +244,13 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       { question: "Do you do skin fades in Prague 6?", answer: "Yes, skin fade is one of our most popular services. Our barbers handle low, mid, and high fades with seamless transitions from 0mm." },
       { question: "Is the barbershop close to Dejvická metro?", answer: "Yes, from Dejvická metro (Line A) it's about 10 minutes by tram (Malovanka stop) or 15 minutes on foot." },
       { question: "Do you accept card payments?", answer: "Yes, we accept both cash and card." },
-      { question: "Do you have another branch in Prague?", answer: "Yes, our second Prague location is AK BARBERS Prague 1 on Národní třída in the Old Town. Open 7 days a week." },
+      { question: "Do you have another branch in Prague?", answer: "Yes, our second Prague location is AK BARBERS Prague 1 on Národní třída in the Old Town. Open 7 days a week. We also have a new branch in Prague 5 – Smíchov, near Anděl metro." },
     ],
     internalLinks: [
       { label: "Skin Fade Prague 6", href: "/en/skin-fade-prague-6" },
       { label: "Men's Haircut Prague 6", href: "/en/mens-haircut-prague-6" },
       { label: "AK BARBERS Prague 1 – Old Town", href: "/en/barber-prague-1" },
+      { label: "AK BARBERS Prague 5 – Smíchov", href: "/en/barber-prague-5" },
       academyLinkEn,
       careerLinkEn,
     ],
@@ -259,12 +261,74 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
   },
 
   // ------------------------------------------------------------------
+  // barber-prague-5 (EN) — Smíchov
+  // ------------------------------------------------------------------
+  "en/barber-prague-5": {
+    lang: "en",
+    slug: "en/barber-prague-5",
+    locationId: "praha-5",
+    alternateSlug: "barber-smichov",
+    crossLocationSlug: "en/barber-prague-1",
+    title: "Barber Prague 5 – Smíchov | AK BARBERS Near Anděl Metro",
+    description:
+      "Premium barbershop in Prague 5, Smíchov. Walk-ins & online booking. Men's haircuts from 499 CZK, beard grooming. 5 min from Anděl metro. Newest Prague branch, 5.0★ rating.",
+    keywords: [
+      "barber prague 5",
+      "barbershop smíchov",
+      "barber near anděl",
+      "men's haircut smíchov",
+      "barber prague 5 smíchov",
+      "best barbershop prague 5",
+      "barbershop anděl prague",
+    ],
+    ogLocale: "en_US",
+    heroHeading: "Barber Prague 5 – Smíchov",
+    localityDescription: [
+      "AK BARBERS Smíchov is located at Toyen 3410/7, Prague 5, in the heart of one of Prague's most vibrant districts. Our newest Prague branch is just a 5-minute walk from Anděl metro station (Line B) and the Na Knížecí bus terminal. Tram stops serving lines 4, 5, 7, 9, 10, 12 and 15 are within easy reach, making us accessible from anywhere in Prague.",
+      "Smíchov is a buzzing urban quarter where modern office complexes blend with historic lanes and popular cafés. You'll find OC Nový Smíchov shopping centre nearby (1 hour free parking on weekdays), cinemas, restaurants and the Vltava riverbank promenade. Whether you work around Anděl or live in Prague 5, drop in for a professional haircut — no appointment needed.",
+      "As the newest branch in the AK BARBERS network, we offer premium services in a brand-new interior. We're open Mon–Fri 10:00–19:00 and Saturday 10:00–14:30. Walk-ins are welcome, and online booking is available via Booqme.",
+    ],
+    services: [
+      { name: "Classic Haircut", price: "499 CZK", link: "/en/mens-haircut-prague-5" },
+      { name: "Haircut & Beard Grooming", price: "889 CZK" },
+      { name: "Beard Grooming", price: "399 CZK" },
+      { name: "Kids' Haircut (1–15)", price: "349 / 449 CZK" },
+    ],
+    aboutText:
+      "At AK BARBERS we follow strict quality standards. Every new barber completes professional training at our AK BARBERS Academy before they step behind the chair. Precision, cleanliness and attention to detail are the foundations of our work — that's why we maintain top-level service at every location, and our clients keep coming back.",
+    faq: [
+      { question: "Where is AK BARBERS Prague 5?", answer: "We're at Toyen 3410/7, Prague 5 – Smíchov. A 5-minute walk from Anděl metro station (Line B) and the Na Knížecí bus terminal." },
+      { question: "Do I need to book an appointment?", answer: "No, we operate on a walk-in basis — just come during opening hours. If you prefer certainty, you can book online via Booqme." },
+      { question: "What are the opening hours?", answer: "Mon–Fri 10:00–19:00, Sat 10:00–14:30. Closed on Sundays." },
+      { question: "How much is a men's haircut in Prague 5?", answer: "A classic men's haircut is 499 CZK. The full haircut + beard grooming package is 889 CZK." },
+      { question: "Is there parking nearby?", answer: "Yes, purple parking zones in Prague 5 are available at 30 CZK/hr. OC Nový Smíchov offers 1 hour free parking on weekdays." },
+      { question: "Do you cut children's hair?", answer: "Yes, kids' haircuts are available for boys aged 1–15 at 349 CZK (classic) or 449 CZK (fade styles)." },
+      { question: "Can I pay by card?", answer: "Yes, we accept both cash and card payments." },
+      { question: "Is this a new branch?", answer: "Yes, AK BARBERS Smíchov is our newest Prague branch with a 5.0★ rating. We offer premium services in a completely new interior." },
+      { question: "Do you speak English?", answer: "Yes, our barbers in Prague 5 are accustomed to international clients and communicate in English." },
+    ],
+    internalLinks: [
+      { label: "Skin Fade Prague 5", href: "/en/skin-fade-prague-5" },
+      { label: "Men's Haircut Prague 5", href: "/en/mens-haircut-prague-5" },
+      { label: "AK BARBERS Prague 1 – Old Town", href: "/en/barber-prague-1" },
+      { label: "AK BARBERS Prague 6 – Bělohorská", href: "/en/barber-prague-6" },
+      academyLinkEn,
+      careerLinkEn,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Prague 5", href: "/en/barber-prague-5" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
   // barber-smichov (CZ) — Praha 5
   // ------------------------------------------------------------------
   "barber-smichov": {
     lang: "cs",
     slug: "barber-smichov",
     locationId: "praha-5",
+    alternateSlug: "en/barber-prague-5",
     title: "Barber Smíchov – Praha 5 | AK BARBERS u metra Anděl",
     description:
       "Nový prémiový barbershop na Smíchově, Praha 5. Walk-in i rezervace. Pánské stříhání od 499 Kč, úprava vousů. 5 min od metra Anděl. Adresa: Toyen 3410/7.",
@@ -305,6 +369,9 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     internalLinks: [
       { label: "AK BARBERS Praha 1 – Národní třída", href: "/barber-praha-1" },
       { label: "AK BARBERS Praha 6 – Bělohorská", href: "/barber-praha-6" },
+      { label: "Barber Prague 5 – Smíchov (EN)", href: "/en/barber-prague-5" },
+      { label: "Men's Haircut Prague 5 (EN)", href: "/en/mens-haircut-prague-5" },
+      { label: "Skin Fade Prague 5 (EN)", href: "/en/skin-fade-prague-5" },
       academyLink,
       careerLink,
     ],
@@ -1235,6 +1302,137 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       { name: "AK BARBERS", href: "/" },
       { name: "Barber Prague 6", href: "/en/barber-prague-6" },
       { name: "Skin Fade", href: "/en/skin-fade-prague-6" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // mens-haircut-prague-5 (EN)
+  // ------------------------------------------------------------------
+  "en/mens-haircut-prague-5": {
+    lang: "en",
+    slug: "en/mens-haircut-prague-5",
+    locationId: "praha-5",
+    serviceType: "haircut",
+    alternateSlug: "barber-smichov",
+    crossLocationSlug: "en/mens-haircut-prague-1",
+    crossServiceSlug: "en/skin-fade-prague-5",
+    locationSlug: "en/barber-prague-5",
+    title: "Men's Haircut Prague 5 – Smíchov | AK BARBERS from 499 CZK",
+    description:
+      "Professional men's haircut in Prague 5, Smíchov. Classic cut from 499 CZK, consultation & styling included. 5 min from Anděl metro. Walk-ins & booking. AK BARBERS — newest Prague branch.",
+    keywords: [
+      "men's haircut prague 5",
+      "haircut smíchov",
+      "barber prague 5",
+      "classic haircut prague 5",
+      "men's barber smíchov anděl",
+    ],
+    ogLocale: "en_US",
+    heroHeading: "Men's Haircut Prague 5",
+    heroSubheading: "Smíchov – Near Anděl Metro",
+    serviceDetail: [
+      "A classic men's haircut at AK BARBERS Smíchov starts with a thorough consultation where your barber discusses the style and length with you. Then comes a precision cut with clippers or scissors tailored exactly to your preferences, followed by contour shaping and final styling.",
+      "The haircut takes approximately 30–40 minutes and includes a hair wash, blow-dry and styling. Our barbers are trained at the AK BARBERS Academy, so you can expect professional results every time. As our newest Prague branch, we work in a brand-new interior with premium equipment.",
+      "This service is perfect for men who want a quality classic haircut in one of Prague's most accessible locations. Just a 5-minute walk from Anděl metro, walk in without an appointment or book your slot online.",
+    ],
+    servicePrice: "499 CZK",
+    whyUs: [
+      "Professional barbers trained at AK BARBERS Academy",
+      "Consultation, cut and styling included in the price",
+      "Brand-new interior with premium equipment and products",
+      "5-minute walk from Anděl metro (Line B)",
+      "Walk-in friendly or book online via Booqme",
+    ],
+    otherServices: [
+      { name: "Haircut & Beard Grooming", price: "889 CZK" },
+      { name: "Beard Grooming", price: "399 CZK" },
+      { name: "Kids' Haircut (1–15)", price: "349 / 449 CZK" },
+    ],
+    faq: [
+      { question: "How much is a men's haircut in Prague 5?", answer: "A classic men's haircut at AK BARBERS Smíchov costs 499 CZK. It includes consultation, cut with clippers or scissors, blow-dry and final styling." },
+      { question: "How long does a haircut take?", answer: "Approximately 30–40 minutes, depending on the chosen style and hair length." },
+      { question: "Do I need to book?", answer: "No, we operate on a walk-in basis. Online booking is also available via Booqme." },
+      { question: "Where exactly is the shop?", answer: "At Toyen 3410/7, Prague 5 – Smíchov. A 5-minute walk from Anděl metro station (Line B)." },
+      { question: "Do you speak English?", answer: "Yes, our barbers in Prague 5 are used to international clients and communicate in English." },
+      { question: "Are you open on Saturdays?", answer: "Yes, Saturday 10:00–14:30. Closed on Sundays. Our Prague 1 branch is open 7 days a week." },
+    ],
+    internalLinks: [
+      { label: "Barber Prague 5 – all services", href: "/en/barber-prague-5" },
+      { label: "Skin Fade Prague 5", href: "/en/skin-fade-prague-5" },
+      { label: "Men's Haircut Prague 1", href: "/en/mens-haircut-prague-1" },
+      academyLinkEn,
+      careerLinkEn,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Prague 5", href: "/en/barber-prague-5" },
+      { name: "Men's Haircut", href: "/en/mens-haircut-prague-5" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // skin-fade-prague-5 (EN)
+  // ------------------------------------------------------------------
+  "en/skin-fade-prague-5": {
+    lang: "en",
+    slug: "en/skin-fade-prague-5",
+    locationId: "praha-5",
+    serviceType: "skin-fade",
+    alternateSlug: "barber-smichov",
+    crossLocationSlug: "en/skin-fade-prague-1",
+    crossServiceSlug: "en/mens-haircut-prague-5",
+    locationSlug: "en/barber-prague-5",
+    title: "Skin Fade Prague 5 – Smíchov | AK BARBERS from 499 CZK",
+    description:
+      "Professional skin fade in Prague 5, Smíchov. Low, mid & high fade from 499 CZK. Seamless blending from 0mm, shaver detailing. 5 min from Anděl metro. Walk-ins & booking. AK BARBERS.",
+    keywords: [
+      "skin fade prague 5",
+      "fade haircut smíchov",
+      "best fade prague 5",
+      "low fade prague 5",
+      "high fade smíchov anděl",
+    ],
+    ogLocale: "en_US",
+    heroHeading: "Skin Fade Prague 5",
+    heroSubheading: "Smíchov – Near Anděl Metro",
+    serviceDetail: [
+      "Skin fade is one of the most demanding and popular haircuts in modern barbering. At AK BARBERS Smíchov we start with a consultation to choose the type of fade — low, mid or high — and the style for the top.",
+      "Your barber then works with clippers from 0mm, gradually blending to create perfectly seamless transitions. We use a shaver for clean lines and fine details. The result is a sharp, modern look with a flawless gradient. In our brand-new Smíchov interior, you'll enjoy the experience in premium comfort.",
+      "Skin fade works great on all hair types — straight, wavy and curly. The whole process takes about 40–50 minutes. To maintain the shape, we recommend a visit every 2–3 weeks.",
+    ],
+    servicePrice: "499 CZK",
+    whyUs: [
+      "Fade specialists — our barbers undergo intensive training",
+      "Clippers from 0mm, shaver detailing, precise blending",
+      "Low, mid and high fade — always your choice",
+      "Brand-new interior, 5 min from Anděl metro (Line B)",
+      "Walk-in friendly or book online via Booqme",
+    ],
+    otherServices: [
+      { name: "Classic Haircut", price: "499 CZK", link: "/en/mens-haircut-prague-5" },
+      { name: "Haircut & Beard Grooming", price: "889 CZK" },
+      { name: "Beard Grooming", price: "399 CZK" },
+      { name: "Kids' Haircut (1–15)", price: "349 / 449 CZK" },
+    ],
+    faq: [
+      { question: "How much is a skin fade in Prague 5?", answer: "Skin fade at AK BARBERS Smíchov costs 499 CZK. Includes consultation, clipper cut from 0mm, shaver detailing, blending and final styling." },
+      { question: "What's the difference between low, mid and high fade?", answer: "Low fade starts the transition just above the ears, mid fade in the middle, and high fade higher up on the sides. Your barber will advise what suits your face best." },
+      { question: "How often should I get a skin fade?", answer: "For a sharp look, we recommend every 2–3 weeks." },
+      { question: "Does skin fade work on curly hair?", answer: "Absolutely — skin fade looks fantastic on curly hair. Your barber adjusts the blending technique to your hair texture." },
+      { question: "Do I need to book?", answer: "No, we welcome walk-ins. Online booking is available via Booqme." },
+      { question: "Where is the Prague 5 branch?", answer: "At Toyen 3410/7, Prague 5 – Smíchov. Just 5 minutes on foot from Anděl metro station (Line B)." },
+    ],
+    internalLinks: [
+      { label: "Barber Prague 5 – all services", href: "/en/barber-prague-5" },
+      { label: "Men's Haircut Prague 5", href: "/en/mens-haircut-prague-5" },
+      { label: "Skin Fade Prague 1", href: "/en/skin-fade-prague-1" },
+      academyLinkEn,
+      careerLinkEn,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Prague 5", href: "/en/barber-prague-5" },
+      { name: "Skin Fade", href: "/en/skin-fade-prague-5" },
     ],
   },
 };

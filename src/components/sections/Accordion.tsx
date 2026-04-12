@@ -40,7 +40,10 @@ function LocationCard({ location }: { location: Location }) {
             <span className="text-sm font-semibold text-white">Bez objednání – Walk ins</span>
           )}
           {location.type === "reservation" && (
-            <span className="text-sm font-semibold text-[#888]">Pouze rezervace VIP club</span>
+            <>
+              <span className="text-sm font-semibold text-[#888]">Pouze rezervace VIP club</span>
+              <span className="text-sm font-semibold text-white underline underline-offset-2">Rezervace online – ZDE</span>
+            </>
           )}
           {location.type === "walk-in + reservation" && (
             <>

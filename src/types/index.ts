@@ -113,7 +113,7 @@ export interface SeoLocationContent {
 export interface SeoServiceContent {
   lang: "cs" | "en";
   slug: string;
-  locationId: "praha-1" | "praha-6";
+  locationId: "praha-1" | "praha-5" | "praha-6";
   serviceType: "haircut" | "skin-fade";
   alternateSlug: string;
   crossLocationSlug: string; // same service, other location
