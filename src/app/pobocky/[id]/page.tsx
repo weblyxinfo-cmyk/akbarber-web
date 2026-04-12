@@ -30,7 +30,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const location = locations.find((l) => l.id === id);
   if (!location) return {};
 
-  const isBilingual = id === "praha-1" || id === "praha-6";
+  const isBilingual = id === "praha-1" || id === "praha-5" || id === "praha-6";
   const isEnglish = isBilingual && langParam === "en";
   const isSlovak = location.id === "nitra";
 
@@ -38,10 +38,12 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   let description: string;
 
   if (isEnglish) {
-    title =
-      id === "praha-1"
-        ? "AK BARBERS Prague 1 \u2014 Premium Barbershop in the City Centre"
-        : "AK BARBERS Prague 6 \u2014 Professional Barbershop";
+    const enTitles: Record<string, string> = {
+      "praha-1": "AK BARBERS Prague 1 \u2014 Premium Barbershop in the City Centre",
+      "praha-5": "AK BARBERS Prague 5 \u2014 Professional Barbershop Sm\u00edchov",
+      "praha-6": "AK BARBERS Prague 6 \u2014 Professional Barbershop",
+    };
+    title = enTitles[id] || `AK BARBERS ${location.city} \u2014 Professional Barbershop`;
     const minPrice = id === "praha-6" ? "399" : "499";
     description = `${location.name} \u2013 ${location.address}. Walk-ins welcome, online booking available. Men\u2019s haircuts from ${minPrice} CZK, beard grooming, skin fade.`;
   } else if (isSlovak) {
@@ -104,7 +106,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
   if (!location) notFound();
 
   const isSlovak = location.id === "nitra";
-  const isBilingual = id === "praha-1" || id === "praha-6";
+  const isBilingual = id === "praha-1" || id === "praha-5" || id === "praha-6";
   const lang: Lang = isBilingual && langParam === "en" ? "en" : "cs";
   const t = locationPageTranslations[lang];
 
