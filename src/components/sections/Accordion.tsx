@@ -48,7 +48,7 @@ function LocationCard({ location }: { location: Location }) {
           {location.type === "walk-in + reservation" && (
             <>
               <span className="text-sm font-semibold text-white">Bez objednání – Walk ins</span>
-              <span className="text-sm font-semibold text-white underline underline-offset-2">Rezervace online</span>
+              <span className="text-sm font-semibold text-white underline underline-offset-2">Rezervace online – ZDE</span>
             </>
           )}
         </div>
