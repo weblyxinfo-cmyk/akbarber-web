@@ -20,7 +20,7 @@ export const siteConfig = {
 
 export const navItems: NavItem[] = [
   { label: "Provozovny", href: "/" },
-  { label: "Dárkové poukazy", href: "/#vouchers" },
+  { label: "Dárkové poukazy", href: "/vouchery" },
   { label: "Kariéra", href: "/kariera" },
   { label: "Akademie", href: "https://www.barber-kurzy.com" },
   { label: "Kontakt", href: "/#kontakt" },

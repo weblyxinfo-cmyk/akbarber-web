@@ -304,18 +304,20 @@ export default async function LocationPage({ params, searchParams }: Props) {
               {location.openingDate ? `Otevíráme ${location.openingDate}` : "Připravuje se"}
             </div>
           ) : location.type === "reservation" ? (
-            <a
-              href={location.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mb-8 inline-flex items-center gap-2 text-[20px] font-bold text-white"
-            >
-              {lang === "en" ? t.byAppointment : "Pouze na rezervaci"}
-              <IconCircle />
-            </a>
+            <div className="mb-8">
+              <a
+                href={location.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 rounded-full bg-white px-6 py-3 text-[15px] font-bold text-black transition-opacity hover:opacity-90"
+              >
+                {lang === "en" ? t.byAppointment : "Pouze na rezervaci – Rezervovat"}
+                <IconCircle className="bg-black [&_svg]:stroke-white" />
+              </a>
+            </div>
           ) : location.type === "walk-in + reservation" ? (
-            <div className="mb-8 flex flex-col gap-2">
-              <p className="text-[20px] font-bold text-white">
+            <div className="mb-8 flex flex-col gap-3">
+              <p className="text-[15px] font-medium text-gray">
                 {lang === "en"
                   ? t.walkIn
                   : isSlovak
@@ -326,14 +328,14 @@ export default async function LocationPage({ params, searchParams }: Props) {
                 href={location.bookingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[20px] font-bold text-white"
+                className="inline-flex w-fit items-center gap-2.5 rounded-full bg-white px-6 py-3 text-[15px] font-bold text-black transition-opacity hover:opacity-90"
               >
                 {lang === "en"
                   ? t.bookOnline
                   : isSlovak
                     ? "Rezervovať online"
                     : "Rezervovat online"}
-                <IconCircle />
+                <IconCircle className="bg-black [&_svg]:stroke-white" />
               </a>
             </div>
           ) : (

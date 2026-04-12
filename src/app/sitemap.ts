@@ -62,6 +62,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...seoLocationPages,
     ...seoServicePages,
     {
+      url: `${baseUrl}/vouchery`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/kariera`,
       lastModified: new Date(),
       changeFrequency: "monthly",
