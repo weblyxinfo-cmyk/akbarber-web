@@ -66,18 +66,8 @@ export function Vouchers({ eshopUrl, isSlovak, lang }: VouchersProps) {
                 {lang === "en"
                   ? t.descriptionWithoutUrl
                   : isSlovak
-                    ? "Potešte priateľa alebo niekoho blízkeho. Darčekové poukážky je možné zakúpiť v salóne alebo online — "
+                    ? "Potešte priateľa alebo niekoho blízkeho. Darčekové poukážky je možné zakúpiť v salóne alebo online."
                     : t.descriptionWithoutUrl}
-                <Link
-                  href="/vouchery"
-                  className="font-semibold text-white underline underline-offset-2"
-                >
-                  {lang === "en"
-                    ? t.selectBranch
-                    : isSlovak
-                      ? "vyberte si konkrétnu pobočku pre viac informácií."
-                      : t.selectBranch}
-                </Link>
               </p>
               <Link
                 href="/vouchery"
