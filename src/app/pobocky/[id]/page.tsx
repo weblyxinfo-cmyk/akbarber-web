@@ -304,14 +304,21 @@ export default async function LocationPage({ params, searchParams }: Props) {
               {location.openingDate ? `Otevíráme ${location.openingDate}` : "Připravuje se"}
             </div>
           ) : location.type === "reservation" ? (
-            <div className="mb-8">
+            <div className="mb-8 flex flex-col gap-3">
+              <p className="text-[15px] font-medium text-white">
+                {lang === "en" ? t.byAppointment : "Pouze na rezervaci"}
+              </p>
               <a
                 href={location.bookingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 rounded-full bg-white px-6 py-3 text-[15px] font-bold text-black transition-opacity hover:opacity-90"
+                className="inline-flex w-fit items-center gap-2.5 rounded-full bg-white px-6 py-3 text-[15px] font-bold text-black transition-opacity hover:opacity-90"
               >
-                {lang === "en" ? t.byAppointment : "Pouze na rezervaci – Rezervovat"}
+                {lang === "en"
+                  ? "Book online"
+                  : isSlovak
+                    ? "Rezervácia online – kliknite sem"
+                    : "Rezervace online – klikněte zde"}
                 <IconCircle className="bg-black [&_svg]:stroke-white" />
               </a>
             </div>
@@ -331,10 +338,10 @@ export default async function LocationPage({ params, searchParams }: Props) {
                 className="inline-flex w-fit items-center gap-2.5 rounded-full bg-white px-6 py-3 text-[15px] font-bold text-black transition-opacity hover:opacity-90"
               >
                 {lang === "en"
-                  ? t.bookOnline
+                  ? "Book online"
                   : isSlovak
-                    ? "Rezervovať online"
-                    : "Rezervovat online"}
+                    ? "Rezervácia online – kliknite sem"
+                    : "Rezervace online – klikněte zde"}
                 <IconCircle className="bg-black [&_svg]:stroke-white" />
               </a>
             </div>
