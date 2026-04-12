@@ -190,7 +190,7 @@ export const vouchersTranslations = {
     online: "online",
     buyOnline: "Koupit online",
     descriptionWithoutUrl:
-      "Potěšte přítele nebo někoho blízkého. Dárkové poukázky je možné zakoupit v salonu nebo online \u2014 ",
+      "Potěšte přítele nebo někoho blízkého. Dárkové poukázky je možné zakoupit v salonu nebo online.",
     selectBranch: "vyberte si konkrétní pobočku pro více informací.",
   },
   en: {
@@ -200,7 +200,7 @@ export const vouchersTranslations = {
     online: "online",
     buyOnline: "Buy Online",
     descriptionWithoutUrl:
-      "Treat a friend or someone special. Gift vouchers are available to purchase in-store or online \u2014 ",
+      "Treat a friend or someone special. Gift vouchers are available to purchase in-store or online.",
     selectBranch: "select a specific branch for more info.",
   },
   sk: {
@@ -210,7 +210,7 @@ export const vouchersTranslations = {
     online: "online",
     buyOnline: "K\u00fapi\u0165 online",
     descriptionWithoutUrl:
-      "Pote\u0161te priate\u013ea alebo niekoho bl\u00edzkeho. Dar\u010dekov\u00e9 pouk\u00e1\u017eky je mo\u017en\u00e9 zak\u00fapi\u0165 v sal\u00f3ne alebo online \u2014 ",
+      "Pote\u0161te priate\u013ea alebo niekoho bl\u00edzkeho. Dar\u010dekov\u00e9 pouk\u00e1\u017eky je mo\u017en\u00e9 zak\u00fapi\u0165 v sal\u00f3ne alebo online.",
     selectBranch: "vyberte si konkr\u00e9tnu pobo\u010dku pre viac inform\u00e1ci\u00ed.",
   },
 } as const;
