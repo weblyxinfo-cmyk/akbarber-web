@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { IconCircle } from "@/components/IconCircle";
 import type { Lang } from "@/lib/translations";
 import { vouchersTranslations } from "@/lib/translations";
@@ -66,13 +67,16 @@ export function Vouchers({ eshopUrl, isSlovak, lang }: VouchersProps) {
                 : isSlovak
                   ? "Potešte priateľa alebo niekoho blízkeho. Darčekové poukážky je možné zakúpiť v salóne alebo online — "
                   : t.descriptionWithoutUrl}
-              <span className="font-semibold text-white">
+              <Link
+                href="/vouchery"
+                className="font-semibold text-white underline underline-offset-2"
+              >
                 {lang === "en"
                   ? t.selectBranch
                   : isSlovak
                     ? "vyberte si konkrétnu pobočku pre viac informácií."
                     : t.selectBranch}
-              </span>
+              </Link>
             </p>
           )}
         </div>
