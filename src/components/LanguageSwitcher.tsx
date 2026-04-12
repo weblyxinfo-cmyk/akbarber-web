@@ -31,31 +31,29 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
   }
 
   return (
-    <div className="container flex justify-end pt-6 pb-0">
-      <div className="flex items-center gap-1 rounded-full border border-[#333] px-1 py-1">
-        <button
-          onClick={() => switchLang("cs")}
-          className={`rounded-full px-3 py-1 text-[12px] font-medium transition-all ${
-            lang === "cs"
-              ? "bg-white text-black"
-              : "text-[#666] hover:text-white"
-          }`}
-          aria-label="Česky"
-        >
-          CZ
-        </button>
-        <button
-          onClick={() => switchLang("en")}
-          className={`rounded-full px-3 py-1 text-[12px] font-medium transition-all ${
-            lang === "en"
-              ? "bg-white text-black"
-              : "text-[#666] hover:text-white"
-          }`}
-          aria-label="English"
-        >
-          EN
-        </button>
-      </div>
+    <div className="flex shrink-0 items-center gap-0.5 rounded-full border border-[#333] p-1">
+      <button
+        onClick={() => switchLang("cs")}
+        className={`rounded-full px-2 py-1 text-[15px] leading-none transition-opacity ${
+          lang === "cs"
+            ? "bg-[#222] opacity-100"
+            : "opacity-40 hover:opacity-70"
+        }`}
+        aria-label="Česky"
+      >
+        🇨🇿
+      </button>
+      <button
+        onClick={() => switchLang("en")}
+        className={`rounded-full px-2 py-1 text-[15px] leading-none transition-opacity ${
+          lang === "en"
+            ? "bg-[#222] opacity-100"
+            : "opacity-40 hover:opacity-70"
+        }`}
+        aria-label="English"
+      >
+        🇬🇧
+      </button>
     </div>
   );
 }

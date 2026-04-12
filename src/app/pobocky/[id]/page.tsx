@@ -276,11 +276,8 @@ export default async function LocationPage({ params, searchParams }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Language Switcher (Praha 1 & Praha 6 only) */}
-      {isBilingual && <LanguageSwitcher lang={lang} />}
-
       {/* Hero Image */}
-      <section className={isBilingual ? "pt-2" : "pt-8"}>
+      <section className="pt-8">
         <div className="container">
           <div className="h-[200px] overflow-hidden rounded-[10px]">
             <Image
@@ -299,7 +296,10 @@ export default async function LocationPage({ params, searchParams }: Props) {
       {/* Location Info */}
       <section className="pt-8">
         <div className="container">
-          <h1 className="mb-5 text-[28px] font-bold">{displayName}</h1>
+          <div className="mb-5 flex items-center justify-between">
+            <h1 className="text-[28px] font-bold">{displayName}</h1>
+            {isBilingual && <LanguageSwitcher lang={lang} />}
+          </div>
 
           {location.type === "coming-soon" ? (
             <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#444] px-5 py-2 text-[20px] font-bold text-[#ccc]">
