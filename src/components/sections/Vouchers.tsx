@@ -61,23 +61,36 @@ export function Vouchers({ eshopUrl, isSlovak, lang }: VouchersProps) {
               </a>
             </>
           ) : (
-            <p className="mb-2 text-sm text-gray">
-              {lang === "en"
-                ? t.descriptionWithoutUrl
-                : isSlovak
-                  ? "Potešte priateľa alebo niekoho blízkeho. Darčekové poukážky je možné zakúpiť v salóne alebo online — "
-                  : t.descriptionWithoutUrl}
+            <>
+              <p className="mb-2 text-sm text-gray">
+                {lang === "en"
+                  ? t.descriptionWithoutUrl
+                  : isSlovak
+                    ? "Potešte priateľa alebo niekoho blízkeho. Darčekové poukážky je možné zakúpiť v salóne alebo online — "
+                    : t.descriptionWithoutUrl}
+                <Link
+                  href="/vouchery"
+                  className="font-semibold text-white underline underline-offset-2"
+                >
+                  {lang === "en"
+                    ? t.selectBranch
+                    : isSlovak
+                      ? "vyberte si konkrétnu pobočku pre viac informácií."
+                      : t.selectBranch}
+                </Link>
+              </p>
               <Link
                 href="/vouchery"
-                className="font-semibold text-white underline underline-offset-2"
+                className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-bold text-white"
               >
                 {lang === "en"
-                  ? t.selectBranch
+                  ? "Buy voucher – click HERE"
                   : isSlovak
-                    ? "vyberte si konkrétnu pobočku pre viac informácií."
-                    : t.selectBranch}
+                    ? "Kúpiť voucher – kliknite SEM"
+                    : "Koupit voucher – klikněte ZDE"}
+                <IconCircle />
               </Link>
-            </p>
+            </>
           )}
         </div>
         <div className="hidden shrink-0 sm:block">
