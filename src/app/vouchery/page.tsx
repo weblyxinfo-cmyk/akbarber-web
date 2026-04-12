@@ -61,24 +61,38 @@ const voucherLocations = locations.filter(
   (loc) => loc.eshopUrl && loc.type !== "coming-soon"
 );
 
-// JSON-LD: Product list + BreadcrumbList + FAQPage
+const BASE_URL = "https://www.akbarber.com";
+
+// JSON-LD: Product + BreadcrumbList + FAQPage + ItemList
 function buildJsonLd() {
   const offers = voucherLocations.flatMap((loc) =>
     loc.services.map((service) => {
       const priceMatch = service.price.match(/\d+/);
       const price = priceMatch ? priceMatch[0] : "0";
-      const currency = loc.id === "nitra" ? "EUR" : "CZK";
+      const currencyCode = loc.id === "nitra" ? "EUR" : "CZK";
+      const countryCode = loc.id === "nitra" ? "SK" : "CZ";
+      const postalCode = loc.address.match(/\d{3}\s?\d{2}/)?.[0] || "";
+
       return {
         "@type": "Offer",
         name: `Voucher – ${service.name} (${loc.name})`,
         price,
-        priceCurrency: currency,
+        priceCurrency: currencyCode,
         url: loc.eshopUrl,
         availability: "https://schema.org/InStock",
         seller: {
           "@type": "BarberShop",
+          "@id": `${BASE_URL}/pobocky/${loc.id}#business`,
           name: loc.name,
-          address: loc.address,
+          url: `${BASE_URL}/pobocky/${loc.id}`,
+          telephone: loc.phone,
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: loc.address.split(",")[0],
+            addressLocality: loc.city,
+            ...(postalCode && { postalCode }),
+            addressCountry: countryCode,
+          },
           ...(loc.geo && {
             geo: {
               "@type": "GeoCoordinates",
@@ -94,15 +108,22 @@ function buildJsonLd() {
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${BASE_URL}/vouchery#product`,
     name: "Dárkový voucher AK BARBERS",
     description:
       "Dárkový poukaz na profesionální barbershop služby v síti AK BARBERS – pánské stříhání, skin fade, úprava vousů.",
+    url: `${BASE_URL}/vouchery`,
     brand: {
       "@type": "Brand",
       name: "AK BARBERS",
     },
-    image: "https://www.akbarber.com/images/og/og-index.png",
+    image: `${BASE_URL}/images/og/og-index.png`,
     offers,
+    isRelatedTo: {
+      "@type": "HealthAndBeautyBusiness",
+      "@id": `${BASE_URL}/#organization`,
+      name: "AK BARBERS",
+    },
   };
 
   const breadcrumbSchema = {
@@ -113,13 +134,13 @@ function buildJsonLd() {
         "@type": "ListItem",
         position: 1,
         name: "Domů",
-        item: "https://www.akbarber.com",
+        item: BASE_URL,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Dárkové poukázky",
-        item: "https://www.akbarber.com/vouchery",
+        item: `${BASE_URL}/vouchery`,
       },
     ],
   };
@@ -127,6 +148,7 @@ function buildJsonLd() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    url: `${BASE_URL}/vouchery`,
     mainEntity: [
       {
         "@type": "Question",
@@ -155,7 +177,51 @@ function buildJsonLd() {
     ],
   };
 
-  return [productSchema, breadcrumbSchema, faqSchema];
+  // ItemList — seznam poboček pro GEO/local SEO
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Pobočky AK BARBERS s dárkovými vouchery",
+    url: `${BASE_URL}/vouchery`,
+    numberOfItems: voucherLocations.length,
+    itemListElement: voucherLocations.map((loc, i) => {
+      const countryCode = loc.id === "nitra" ? "SK" : "CZ";
+      const postalCode = loc.address.match(/\d{3}\s?\d{2}/)?.[0] || "";
+      return {
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "BarberShop",
+          "@id": `${BASE_URL}/pobocky/${loc.id}#business`,
+          name: loc.name,
+          url: `${BASE_URL}/pobocky/${loc.id}`,
+          telephone: loc.phone,
+          image: `${BASE_URL}${loc.image}`,
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: loc.address.split(",")[0],
+            addressLocality: loc.city,
+            ...(postalCode && { postalCode }),
+            addressCountry: countryCode,
+          },
+          ...(loc.geo && {
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: loc.geo.lat,
+              longitude: loc.geo.lng,
+            },
+          }),
+          potentialAction: {
+            "@type": "BuyAction",
+            target: loc.eshopUrl,
+            name: "Koupit voucher",
+          },
+        },
+      };
+    }),
+  };
+
+  return [productSchema, breadcrumbSchema, faqSchema, itemListSchema];
 }
 
 export default function VoucheryPage() {
