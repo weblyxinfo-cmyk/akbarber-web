@@ -21,26 +21,26 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dárkové poukázky – Darujte zážitek | AK BARBERS",
     description:
-      "Kupte dárkový voucher na profesionální pánské stříhání v AK BARBERS. Vyberte pobočku a objednejte online.",
+      "Darujte dárkový voucher na profesionální pánské stříhání, skin fade nebo úpravu vousů. Vyberte pobočku AK BARBERS a kupte voucher online – Beroun, Praha, Plzeň, Hořovice, Slaný, Králův Dvůr, Nitra.",
     url: "https://www.akbarber.com/vouchery",
     siteName: "AK BARBERS",
     locale: "cs_CZ",
     type: "website",
     images: [
       {
-        url: "/images/og/og-index.png",
+        url: "https://www.akbarber.com/images/og/og-index.png",
         width: 1200,
         height: 630,
-        alt: "AK BARBERS – Dárkové poukázky",
+        alt: "AK BARBERS – Dárkové poukázky na profesionální barbershop služby",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dárkové poukázky | AK BARBERS",
+    title: "Dárkové poukázky – Darujte zážitek | AK BARBERS",
     description:
-      "Darujte zážitek z prémiového barbershopu. Voucher online pro všechny pobočky AK BARBERS.",
-    images: ["/images/og/og-index.png"],
+      "Darujte dárkový voucher na profesionální pánské stříhání, skin fade nebo úpravu vousů. Vyberte pobočku AK BARBERS a kupte online.",
+    images: ["https://www.akbarber.com/images/og/og-index.png"],
   },
   alternates: {
     canonical: "https://www.akbarber.com/vouchery",
