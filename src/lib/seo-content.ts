@@ -132,7 +132,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     internalLinks: [
       { label: "Skin Fade Praha 6", href: "/skin-fade-praha-6" },
       { label: "Pánský střih Praha 6", href: "/pansky-strih-praha-6" },
-      { label: "AK BARBERS Praha 1 – Národní třída", href: "/barber-praha-1" },
+      { label: "AK BARBERS – Praha Máj", href: "/barber-praha-1" },
       academyLink,
       careerLink,
     ],
@@ -367,7 +367,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       { question: "Je to nová pobočka?", answer: "Ano, AK BARBERS Smíchov je naše nejnovější pražská pobočka s hodnocením 5.0★. Nabízíme prémiové služby ve zcela novém interiéru." },
     ],
     internalLinks: [
-      { label: "AK BARBERS Praha 1 – Národní třída", href: "/barber-praha-1" },
+      { label: "AK BARBERS – Praha Máj", href: "/barber-praha-1" },
       { label: "AK BARBERS Praha 6 – Bělohorská", href: "/barber-praha-6" },
       { label: "Barber Prague 5 – Smíchov (EN)", href: "/en/barber-prague-5" },
       { label: "Men's Haircut Prague 5 (EN)", href: "/en/mens-haircut-prague-5" },
@@ -430,7 +430,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     internalLinks: [
       { label: "AK BARBERS Králův Dvůr", href: "/barber-kraluv-dvur" },
       { label: "AK BARBERS Hořovice", href: "/barber-horovice" },
-      { label: "AK BARBERS Praha 1 – Národní třída", href: "/barber-praha-1" },
+      { label: "AK BARBERS – Praha Máj", href: "/barber-praha-1" },
       academyLink,
       careerLink,
     ],
@@ -659,7 +659,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     ],
     internalLinks: [
       { label: "AK BARBERS Praha 6 – Bělohorská", href: "/barber-praha-6" },
-      { label: "AK BARBERS Praha 1 – Národní třída", href: "/barber-praha-1" },
+      { label: "AK BARBERS – Praha Máj", href: "/barber-praha-1" },
       { label: "AK BARBERS Beroun", href: "/barber-beroun" },
       academyLink,
       careerLink,
@@ -716,7 +716,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       { question: "Je AK BARBERS česká sieť?", answer: "Áno, AK BARBERS je sieť prémiových barbershopov založená v Čechách. Pobočka v Nitre je naša prvá na Slovensku a ponúka rovnakú kvalitu služieb ako naše české pobočky." },
     ],
     internalLinks: [
-      { label: "AK BARBERS Praha 1 – Národní třída", href: "/barber-praha-1" },
+      { label: "AK BARBERS – Praha Máj", href: "/barber-praha-1" },
       { label: "AK BARBERS Plzeň", href: "/barber-plzen" },
       { label: "AK BARBERS Beroun", href: "/barber-beroun" },
       academyLink,
@@ -765,7 +765,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       { question: "Mohu se přihlásit k odběru novinek?", answer: "Sledujte nás na Instagramu @ak.barbers.cz a Facebooku pro nejčerstvější informace o otevření pobočky v Jesenici." },
     ],
     internalLinks: [
-      { label: "AK BARBERS Praha 1 – Národní třída", href: "/barber-praha-1" },
+      { label: "AK BARBERS – Praha Máj", href: "/barber-praha-1" },
       { label: "AK BARBERS Praha 5 – Smíchov", href: "/barber-smichov" },
       { label: "AK BARBERS Beroun", href: "/barber-beroun" },
       academyLink,
