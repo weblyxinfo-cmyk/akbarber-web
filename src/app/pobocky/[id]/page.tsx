@@ -114,9 +114,9 @@ export default async function LocationPage({ params, searchParams }: Props) {
   const displayNameSuffix: Record<string, string> = {
     "beroun-2": " 2",
     "praha-1": " Máj",
-    "praha-3": " 3 – Žižkov",
-    "praha-5": " 5 – Smíchov",
-    "praha-6": " 6 – Břevnov",
+    "praha-3": " 3 Žižkov",
+    "praha-5": " 5 Smíchov",
+    "praha-6": " 6 Břevnov",
   };
   const displayName = `AK BARBERS – ${location.city}${displayNameSuffix[location.id] || ""}`;
 
