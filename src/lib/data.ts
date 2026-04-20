@@ -198,8 +198,7 @@ export const locations: Location[] = [
     address: "Plzeňská 396, 267 01 Králův Dvůr",
     phone: "+420 775 502 831",
     openingHours: [
-      { days: "Po – Pá", hours: "9:00 – 19:30" },
-      { days: "So – Ne", hours: "9:00 – 14:00" },
+      { days: "Po – Ne", hours: "9:00 – 19:30" },
     ],
     type: "walk-in",
     eshopUrl: "https://booqme.cz/cs/eshop/ak-barbers-kraluv-dvur6",
@@ -288,7 +287,7 @@ export const locations: Location[] = [
     phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "9:00 – 19:30" },
-      { days: "So – Ne", hours: "9:00 – 14:00" },
+      { days: "So", hours: "9:00 – 14:00" },
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.sk/sk/rezervacia/ak-barbers-slany1",
