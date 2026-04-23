@@ -313,18 +313,16 @@ export default async function LocationPage({ params, searchParams }: Props) {
       {location.temporarilyClosed && (
         <section className="pt-6">
           <div className="container">
-            <div className="relative overflow-hidden rounded-[14px] border-2 border-white/90 bg-gradient-to-br from-[#1a1a1a] via-[#0f0f0f] to-[#1a1a1a] p-8 shadow-[0_0_40px_rgba(255,255,255,0.08)] max-md:p-6">
-              <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-white/5 blur-3xl" aria-hidden />
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full border-2 border-red-600 bg-red-600 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.15em] text-white shadow-[0_0_20px_rgba(220,38,38,0.5)]">
-                <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-white" />
+            <div className="rounded-[10px] border border-border bg-bg-card p-6 max-md:p-5">
+              <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[#c62828]/60 bg-[#c62828]/15 px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-[#ff6b6b]">
                 {lang === "en" ? "Important notice" : "Důležitá informace"}
               </div>
-              <h2 className="mb-4 font-[family-name:var(--font-roboto-slab)] text-[34px] font-bold leading-[1.1] max-md:text-[26px]">
+              <h2 className="mb-3 font-[family-name:var(--font-roboto-slab)] text-[28px] font-bold leading-[1.15] max-md:text-[24px]">
                 {lang === "en"
                   ? `${displayName} is temporarily closed`
                   : `Pobočka ${displayName.replace("AK BARBERS – ", "")} je dočasně uzavřena`}
               </h2>
-              <p className="mb-7 max-w-[520px] text-[15px] leading-[1.7] text-white/80 max-md:text-sm">
+              <p className="mb-6 text-sm leading-[1.7] text-gray">
                 {lang === "en" ? (
                   <>
                     We look forward to seeing you at{" "}
@@ -341,37 +339,32 @@ export default async function LocationPage({ params, searchParams }: Props) {
               </p>
               <Link
                 href={`/pobocky/${location.temporarilyClosed.redirectToId}`}
-                className="group inline-flex w-fit items-center gap-3 rounded-full bg-white px-8 py-4 text-[16px] font-bold uppercase tracking-wide text-black shadow-[0_0_30px_rgba(255,255,255,0.25)] transition-all hover:scale-[1.03] hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] max-md:px-6 max-md:py-3 max-md:text-[14px]"
+                className="inline-flex w-fit items-center gap-2.5 rounded-full bg-white px-6 py-3 text-[15px] font-bold text-black transition-opacity hover:opacity-90"
               >
                 {lang === "en" ? "Go to Smíchov" : "Přejít na Smíchov"}
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-black transition-transform group-hover:translate-x-1">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </span>
+                <IconCircle className="bg-black [&_svg]:stroke-white" />
               </Link>
-              <div className="mt-8 grid grid-cols-3 gap-4 border-t border-white/10 pt-6 max-md:grid-cols-1 max-md:gap-3">
+              <div className="mt-6 grid grid-cols-3 gap-4 border-t border-border pt-5 max-md:grid-cols-1 max-md:gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/5">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#333]">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M13 4v16" />
                       <path d="M17 4h-8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8" />
                       <circle cx="15" cy="12" r="1" fill="white" />
                     </svg>
                   </div>
                   <div>
-                    <div className="text-[14px] font-bold text-white leading-tight">
+                    <div className="text-[13px] font-semibold text-white leading-tight">
                       {lang === "en" ? "Walk-ins" : "Bez objednání"}
                     </div>
-                    <div className="text-[12px] text-white/60">
+                    <div className="text-[12px] text-gray">
                       {lang === "en" ? "No booking needed" : "Walk-ins"}
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/5">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#333]">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="3" y="4" width="18" height="18" rx="2" />
                       <line x1="3" y1="10" x2="21" y2="10" />
                       <line x1="8" y1="2" x2="8" y2="6" />
@@ -379,17 +372,17 @@ export default async function LocationPage({ params, searchParams }: Props) {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-[14px] font-bold text-white leading-tight">
+                    <div className="text-[13px] font-semibold text-white leading-tight">
                       {lang === "en" ? "Open 7 days" : "Otevřeno 7 dní"}
                     </div>
-                    <div className="text-[12px] text-white/60">
+                    <div className="text-[12px] text-gray">
                       {lang === "en" ? "Every day for you" : "Každý den pro vás"}
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/5">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#333]">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                       <circle cx="9" cy="7" r="4" />
                       <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -397,10 +390,10 @@ export default async function LocationPage({ params, searchParams }: Props) {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-[14px] font-bold text-white leading-tight">
+                    <div className="text-[13px] font-semibold text-white leading-tight">
                       {lang === "en" ? "Same team" : "Stejný tým"}
                     </div>
-                    <div className="text-[12px] text-white/60">
+                    <div className="text-[12px] text-gray">
                       {lang === "en" ? "Your barber from Prague 6" : "Váš barber z Prahy 6"}
                     </div>
                   </div>
