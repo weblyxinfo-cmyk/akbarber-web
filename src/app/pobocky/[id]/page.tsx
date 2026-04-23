@@ -351,29 +351,58 @@ export default async function LocationPage({ params, searchParams }: Props) {
                   </svg>
                 </span>
               </Link>
-              <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/10 pt-6">
-                <div>
-                  <div className="text-[14px] font-bold text-white">
-                    {lang === "en" ? "Walk-ins" : "Bez objednání"}
+              <div className="mt-8 grid grid-cols-3 gap-4 border-t border-white/10 pt-6 max-md:grid-cols-1 max-md:gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/5">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M13 4v16" />
+                      <path d="M17 4h-8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8" />
+                      <circle cx="15" cy="12" r="1" fill="white" />
+                    </svg>
                   </div>
-                  <div className="text-[12px] text-white/60">
-                    {lang === "en" ? "No booking needed" : "Walk-ins"}
+                  <div>
+                    <div className="text-[14px] font-bold text-white leading-tight">
+                      {lang === "en" ? "Walk-ins" : "Bez objednání"}
+                    </div>
+                    <div className="text-[12px] text-white/60">
+                      {lang === "en" ? "No booking needed" : "Walk-ins"}
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <div className="text-[14px] font-bold text-white">
-                    {lang === "en" ? "Open 7 days" : "Otevřeno 7 dní"}
+                <div className="flex items-center gap-3">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/5">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" />
+                      <line x1="3" y1="10" x2="21" y2="10" />
+                      <line x1="8" y1="2" x2="8" y2="6" />
+                      <line x1="16" y1="2" x2="16" y2="6" />
+                    </svg>
                   </div>
-                  <div className="text-[12px] text-white/60">
-                    {lang === "en" ? "Every day for you" : "Každý den pro vás"}
+                  <div>
+                    <div className="text-[14px] font-bold text-white leading-tight">
+                      {lang === "en" ? "Open 7 days" : "Otevřeno 7 dní"}
+                    </div>
+                    <div className="text-[12px] text-white/60">
+                      {lang === "en" ? "Every day for you" : "Každý den pro vás"}
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <div className="text-[14px] font-bold text-white">
-                    {lang === "en" ? "Same team" : "Stejný tým"}
+                <div className="flex items-center gap-3">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/5">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
                   </div>
-                  <div className="text-[12px] text-white/60">
-                    {lang === "en" ? "Your barber from Prague 6" : "Váš barber z Prahy 6"}
+                  <div>
+                    <div className="text-[14px] font-bold text-white leading-tight">
+                      {lang === "en" ? "Same team" : "Stejný tým"}
+                    </div>
+                    <div className="text-[12px] text-white/60">
+                      {lang === "en" ? "Your barber from Prague 6" : "Váš barber z Prahy 6"}
+                    </div>
                   </div>
                 </div>
               </div>
