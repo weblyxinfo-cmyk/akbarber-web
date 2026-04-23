@@ -748,7 +748,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     ogLocale: "cs_CZ",
     heroHeading: "Barber Jesenice u Prahy – již brzy!",
     localityDescription: [
-      "AK BARBERS připravuje novou pobočku v Jesenici u Prahy na adrese Budějovická 371. Slavnostní otevření je naplánováno na 15. dubna 2026. Jesenice je dynamicky rostoucí obec jižně od Prahy, kde dosud profesionální barbershop chyběl — a to se brzy změní.",
+      "AK BARBERS připravuje novou pobočku v Jesenici u Prahy na adrese Budějovická 371 – najdete nás uvnitř supermarketu Albert, hned u pokladen. Slavnostní otevření je naplánováno na 15. dubna 2026. Jesenice je dynamicky rostoucí obec jižně od Prahy, kde dosud profesionální barbershop chyběl — a to se brzy změní.",
       "Jesenice u Prahy je oblíbenou rezidenční lokalitou pro rodiny i profesionály dojíždějící do hlavního města. Výborná dopravní dostupnost zajišťuje spojení autobusy 332, 334, 335, 337 a 339, přičemž linky 335, 337 a 339 vás dovezou přímo na metro Budějovická (linka C) a linka 334 na Smíchovské nádraží (metro B). Parkování bude k dispozici zdarma na parkovišti Albert a v okolí.",
       "Sledujte naše sociální sítě a web pro aktuální informace o otevření. Těšíme se na vás od 15. dubna 2026!",
     ],
@@ -757,7 +757,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
     faq: [
       { question: "Kdy otevírá AK BARBERS v Jesenici?", answer: "Slavnostní otevření je naplánováno na 15. dubna 2026. Sledujte naše sociální sítě pro aktuální informace." },
-      { question: "Kde bude pobočka v Jesenici?", answer: "Na adrese Budějovická 371, Jesenice u Prahy. V blízkosti parkoviště Albert." },
+      { question: "Kde bude pobočka v Jesenici?", answer: "Na adrese Budějovická 371, Jesenice u Prahy – uvnitř supermarketu Albert, hned u pokladen. Parkování zdarma přímo u vchodu." },
       { question: "Jak se dostanu do Jesenice?", answer: "Autobusy 332, 334, 335, 337 a 339 ze zastávky Jesenice. Linky 335, 337, 339 jedou na metro Budějovická (C), linka 334 na Smíchovské nádraží (B)." },
       { question: "Bude parkování zdarma?", answer: "Ano, parkování bude k dispozici zdarma na parkovišti Albert a v okolních ulicích." },
       { question: "Bude potřeba rezervace?", answer: "Podrobnosti o formátu obsluhy (walk-in / rezervace) zveřejníme před otevřením na našem webu a sociálních sítích." },

@@ -408,6 +408,7 @@ export const locations: Location[] = [
     name: "AK BARBERS Jesenice u Prahy",
     city: "Jesenice u Prahy",
     address: "Budějovická 371, 252 42 Jesenice u Prahy",
+    note: "Uvnitř supermarketu Albert – u pokladen",
     phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "10:00 – 19:00" },

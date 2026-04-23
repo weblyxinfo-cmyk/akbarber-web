@@ -35,7 +35,18 @@ function LocationCard({ location }: { location: Location }) {
         )}
       </div>
       <h3 className="text-sm font-bold">{location.name}</h3>
-      <p className="mb-2 text-[11px] text-[#666]">{location.address}</p>
+      <p className="text-[11px] text-[#666]">{location.address}</p>
+      {location.note ? (
+        <p className="mb-2 mt-1 inline-flex items-center gap-1.5 rounded-md border border-[#4ade80]/40 bg-[#4ade80]/10 px-2 py-1 text-[11px] font-semibold text-white">
+          <svg className="h-3 w-3 text-[#4ade80]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 22s-8-7.5-8-13a8 8 0 1 1 16 0c0 5.5-8 13-8 13z" />
+            <circle cx="12" cy="9" r="2.5" />
+          </svg>
+          {location.note}
+        </p>
+      ) : (
+        <div className="mb-2" />
+      )}
       <div className="flex items-center justify-between">
         <div className="flex flex-wrap items-center gap-2">
           {location.temporarilyClosed ? (
