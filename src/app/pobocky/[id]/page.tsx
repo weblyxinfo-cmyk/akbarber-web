@@ -313,16 +313,18 @@ export default async function LocationPage({ params, searchParams }: Props) {
       {location.temporarilyClosed && (
         <section className="pt-6">
           <div className="container">
-            <div className="rounded-[10px] border border-border bg-bg-card p-6 max-md:p-5">
-              <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[#444] px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-gray-light">
+            <div className="relative overflow-hidden rounded-[14px] border-2 border-white/90 bg-gradient-to-br from-[#1a1a1a] via-[#0f0f0f] to-[#1a1a1a] p-8 shadow-[0_0_40px_rgba(255,255,255,0.08)] max-md:p-6">
+              <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-white/5 blur-3xl" aria-hidden />
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border-2 border-red-600 bg-red-600 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.15em] text-white shadow-[0_0_20px_rgba(220,38,38,0.5)]">
+                <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-white" />
                 {lang === "en" ? "Important notice" : "Důležitá informace"}
               </div>
-              <h2 className="mb-3 font-[family-name:var(--font-roboto-slab)] text-[28px] font-bold leading-[1.15] max-md:text-[24px]">
+              <h2 className="mb-4 font-[family-name:var(--font-roboto-slab)] text-[34px] font-bold leading-[1.1] max-md:text-[26px]">
                 {lang === "en"
                   ? `${displayName} is temporarily closed`
                   : `Pobočka ${displayName.replace("AK BARBERS – ", "")} je dočasně uzavřena`}
               </h2>
-              <p className="mb-6 text-sm leading-[1.7] text-gray">
+              <p className="mb-7 max-w-[520px] text-[15px] leading-[1.7] text-white/80 max-md:text-sm">
                 {lang === "en" ? (
                   <>
                     We look forward to seeing you at{" "}
@@ -339,33 +341,38 @@ export default async function LocationPage({ params, searchParams }: Props) {
               </p>
               <Link
                 href={`/pobocky/${location.temporarilyClosed.redirectToId}`}
-                className="inline-flex w-fit items-center gap-2.5 rounded-full bg-white px-6 py-3 text-[15px] font-bold text-black transition-opacity hover:opacity-90"
+                className="group inline-flex w-fit items-center gap-3 rounded-full bg-white px-8 py-4 text-[16px] font-bold uppercase tracking-wide text-black shadow-[0_0_30px_rgba(255,255,255,0.25)] transition-all hover:scale-[1.03] hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] max-md:px-6 max-md:py-3 max-md:text-[14px]"
               >
                 {lang === "en" ? "Go to Smíchov" : "Přejít na Smíchov"}
-                <IconCircle className="bg-black [&_svg]:stroke-white" />
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-black transition-transform group-hover:translate-x-1">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </span>
               </Link>
-              <div className="mt-6 flex flex-wrap gap-x-8 gap-y-4 border-t border-border pt-5">
+              <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/10 pt-6">
                 <div>
-                  <div className="text-[13px] font-semibold text-white">
+                  <div className="text-[14px] font-bold text-white">
                     {lang === "en" ? "Walk-ins" : "Bez objednání"}
                   </div>
-                  <div className="text-[12px] text-gray">
+                  <div className="text-[12px] text-white/60">
                     {lang === "en" ? "No booking needed" : "Walk-ins"}
                   </div>
                 </div>
                 <div>
-                  <div className="text-[13px] font-semibold text-white">
+                  <div className="text-[14px] font-bold text-white">
                     {lang === "en" ? "Open 7 days" : "Otevřeno 7 dní"}
                   </div>
-                  <div className="text-[12px] text-gray">
+                  <div className="text-[12px] text-white/60">
                     {lang === "en" ? "Every day for you" : "Každý den pro vás"}
                   </div>
                 </div>
                 <div>
-                  <div className="text-[13px] font-semibold text-white">
+                  <div className="text-[14px] font-bold text-white">
                     {lang === "en" ? "Same team" : "Stejný tým"}
                   </div>
-                  <div className="text-[12px] text-gray">
+                  <div className="text-[12px] text-white/60">
                     {lang === "en" ? "Your barber from Prague 6" : "Váš barber z Prahy 6"}
                   </div>
                 </div>
