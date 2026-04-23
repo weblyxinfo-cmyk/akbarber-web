@@ -116,6 +116,9 @@ export default async function LocationPage({ params, searchParams }: Props) {
 
   const isSlovak = location.id === "nitra";
   const isBilingual = id === "praha-1" || id === "praha-5" || id === "praha-6" || id === "jesenice";
+  const redirectLocation = location.temporarilyClosed
+    ? locations.find((l) => l.id === location.temporarilyClosed!.redirectToId)
+    : undefined;
   const lang: Lang = isBilingual && langParam === "en" ? "en" : "cs";
   const t = locationPageTranslations[lang];
 
@@ -335,14 +338,15 @@ export default async function LocationPage({ params, searchParams }: Props) {
                   </>
                 )}
               </h2>
-              <p className="mb-6 max-w-[480px] text-[13px] leading-[1.65] text-gray">
+              <p className="mb-6 max-w-[520px] text-[13px] leading-[1.65] text-gray">
                 {lang === "en" ? (
                   <>
                     We look forward to seeing you at{" "}
                     <strong className="font-semibold text-white">
                       {location.temporarilyClosed.redirectToName}
                     </strong>
-                    , where your favourite barber from Prague 6 continues.
+                    , where your favourite barber from Prague 6 continues, as well as our{" "}
+                    <strong className="font-semibold text-[#e57373]">American Barber</strong>.
                   </>
                 ) : (
                   <>
@@ -351,10 +355,11 @@ export default async function LocationPage({ params, searchParams }: Props) {
                       PRAZE 5 – SMÍCHOV
                     </strong>
                     , kde pokračuje i{" "}
-                    <strong className="font-semibold text-[#ffffff]">
+                    <strong className="font-semibold text-white">
                       váš oblíbený barber z Prahy 6
                     </strong>
-                    .
+                    {" "}a navíc tam najdete i{" "}
+                    <strong className="font-semibold text-[#e57373]">American Barbera</strong>.
                   </>
                 )}
               </p>
@@ -431,7 +436,85 @@ export default async function LocationPage({ params, searchParams }: Props) {
         </section>
       )}
 
+      {/* Smíchov reservation system info (shown when current branch is closed) */}
+      {location.temporarilyClosed && redirectLocation && (
+        <section className="pt-6">
+          <div className="container">
+            <div className="rounded-[10px] border border-border bg-bg-card p-7 max-md:p-5">
+              <div className="mb-4 text-[11px] font-medium uppercase tracking-wider text-gray-light">
+                {lang === "en" ? "Booking at Smíchov" : "Rezervace na Smíchově"}
+              </div>
+              <h2 className="mb-3 font-[family-name:var(--font-roboto-slab)] text-[26px] font-bold leading-[1.15] max-md:text-[22px]">
+                {lang === "en"
+                  ? "Book your visit at AK BARBERS Prague 5 – Smíchov"
+                  : "Rezervujte si návštěvu na AK BARBERS Praha 5 – Smíchov"}
+              </h2>
+              <p className="mb-5 text-[13px] leading-[1.7] text-gray">
+                {lang === "en" ? (
+                  <>
+                    Our Smíchov branch welcomes you on{" "}
+                    <strong className="text-white">{redirectLocation.address}</strong>,
+                    5 min from Anděl metro. Use the online booking system to choose your
+                    barber and time, or simply walk in.
+                  </>
+                ) : (
+                  <>
+                    Pobočka na Smíchově vás vítá na adrese{" "}
+                    <strong className="text-white">{redirectLocation.address}</strong>
+                    , 5 minut od metra Anděl. Přes online rezervační systém si vyberete
+                    svého barbera i čas, nebo přijďte bez objednání.
+                  </>
+                )}
+              </p>
+              <div className="mb-5 rounded-[8px] border border-[#ffffff]/15 bg-[#0f0f0f] p-4">
+                <div className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-[#ffffff]/80">
+                  American Barber
+                </div>
+                <p className="text-[13px] leading-[1.6] text-gray">
+                  {lang === "en"
+                    ? "Prague 5 – Smíchov also hosts our American Barber – authentic old-school experience, traditional razor shave and premium men's grooming."
+                    : "Na Smíchově najdete i našeho American Barbera – autentický old-school zážitek, tradiční holení břitvou a prémiová péče pro pány."}
+                </p>
+              </div>
+              {redirectLocation.openingHours.length > 0 && (
+                <div className="mb-5">
+                  <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
+                    {lang === "en" ? "Opening hours" : "Otevírací doba"}
+                  </div>
+                  {redirectLocation.openingHours.map((h) => (
+                    <div key={h.days} className="text-[13px]">
+                      <span className="font-semibold">{translateDays(h.days, lang)}</span>
+                      <span className="ml-3 text-[#999]">{h.hours}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+              <div className="flex flex-wrap gap-3">
+                {redirectLocation.bookingUrl && (
+                  <a
+                    href={redirectLocation.bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-fit items-center gap-2.5 rounded-full bg-white px-6 py-3 text-[13px] font-bold text-black transition-opacity hover:opacity-90"
+                  >
+                    {lang === "en" ? "Book online" : "Rezervace online"}
+                    <IconCircle className="bg-black [&_svg]:stroke-white" />
+                  </a>
+                )}
+                <Link
+                  href={`/pobocky/${redirectLocation.id}`}
+                  className="inline-flex w-fit items-center gap-2.5 rounded-full border border-[#333] px-6 py-3 text-[13px] font-bold text-white transition-colors hover:border-white"
+                >
+                  {lang === "en" ? "Smíchov details" : "Detail Smíchov"}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Location Info */}
+      {!location.temporarilyClosed && (
       <section className="pt-8">
         <div className="container">
           <div className="mb-5 flex items-center justify-between">
@@ -581,45 +664,48 @@ export default async function LocationPage({ params, searchParams }: Props) {
           )}
         </div>
       </section>
+      )}
 
       {/* Price List */}
-      {location.services.length > 0 ? (
-        <section className="py-5">
-          <div className="container">
-            {location.services.map((service, i) => {
-              const s = translateService(service, lang);
-              return (
-                <div
-                  key={service.name}
-                  className={`pb-8 pt-8 ${i < location.services.length - 1 ? "border-b border-border" : ""} ${i === 0 ? "pt-0" : ""}`}
-                >
-                  <h3 className="mb-1.5 font-[family-name:var(--font-roboto-slab)] text-2xl font-bold">
-                    {s.name}
-                  </h3>
-                  {s.description && (
-                    <p className="mb-2.5 text-[13px] leading-[1.6] text-gray-light">
-                      {s.description}
-                    </p>
-                  )}
-                  <p className="text-[26px] font-bold">{service.price}</p>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-      ) : (
-        <section className="py-12">
-          <div className="container">
-            <div className="rounded-lg border border-[#333] p-8 text-center">
-              <h2 className="mb-2 font-[family-name:var(--font-roboto-slab)] text-2xl font-bold">
-                Nová pobočka se připravuje
-              </h2>
-              <p className="text-sm text-gray">
-                Brzy vám představíme kompletní nabídku služeb a otevírací dobu. Sledujte nás!
-              </p>
+      {!location.temporarilyClosed && (
+        location.services.length > 0 ? (
+          <section className="py-5">
+            <div className="container">
+              {location.services.map((service, i) => {
+                const s = translateService(service, lang);
+                return (
+                  <div
+                    key={service.name}
+                    className={`pb-8 pt-8 ${i < location.services.length - 1 ? "border-b border-border" : ""} ${i === 0 ? "pt-0" : ""}`}
+                  >
+                    <h3 className="mb-1.5 font-[family-name:var(--font-roboto-slab)] text-2xl font-bold">
+                      {s.name}
+                    </h3>
+                    {s.description && (
+                      <p className="mb-2.5 text-[13px] leading-[1.6] text-gray-light">
+                        {s.description}
+                      </p>
+                    )}
+                    <p className="text-[26px] font-bold">{service.price}</p>
+                  </div>
+                );
+              })}
             </div>
-          </div>
-        </section>
+          </section>
+        ) : (
+          <section className="py-12">
+            <div className="container">
+              <div className="rounded-lg border border-[#333] p-8 text-center">
+                <h2 className="mb-2 font-[family-name:var(--font-roboto-slab)] text-2xl font-bold">
+                  Nová pobočka se připravuje
+                </h2>
+                <p className="text-sm text-gray">
+                  Brzy vám představíme kompletní nabídku služeb a otevírací dobu. Sledujte nás!
+                </p>
+              </div>
+            </div>
+          </section>
+        )
       )}
 
       {/* About */}
