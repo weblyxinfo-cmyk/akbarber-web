@@ -360,22 +360,39 @@ export default async function LocationPage({ params, searchParams }: Props) {
                     </strong>
                     {" "}a navíc tam najdete i{" "}
                     <strong className="font-semibold text-[#e57373]">American Barbera</strong>.
+                    {" "}Rezervaci si pohodlně uděláte online, nebo přijďte bez objednání.
                   </>
                 )}
               </p>
-              <Link
-                href={`/pobocky/${location.temporarilyClosed.redirectToId}`}
-                className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.1em] text-black transition-opacity hover:opacity-90"
-              >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                  <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
-                </svg>
-                {lang === "en" ? "Go to Smíchov" : "Přejít na Smíchov"}
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </Link>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href={`/pobocky/${location.temporarilyClosed.redirectToId}`}
+                  className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.1em] text-black transition-opacity hover:opacity-90"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                  </svg>
+                  {lang === "en" ? "Go to Smíchov" : "Přejít na Smíchov"}
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </Link>
+                {redirectLocation?.bookingUrl && (
+                  <a
+                    href={redirectLocation.bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-fit items-center gap-2 rounded-full border border-[#333] px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.1em] text-white transition-colors hover:border-white"
+                  >
+                    {lang === "en" ? "Book online" : "Rezervace online"}
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </a>
+                )}
+              </div>
               <div className="mt-6 grid grid-cols-3 gap-4 rounded-[8px] border border-[#2a2a2a] p-4 max-md:grid-cols-1 max-md:gap-3">
                 <div className="flex items-center gap-3">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#ffffff]/50 text-[#ffffff]">
@@ -430,83 +447,6 @@ export default async function LocationPage({ params, searchParams }: Props) {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Smíchov reservation system info (shown when current branch is closed) */}
-      {location.temporarilyClosed && redirectLocation && (
-        <section className="pt-6">
-          <div className="container">
-            <div className="rounded-[10px] border border-border bg-bg-card p-7 max-md:p-5">
-              <div className="mb-4 text-[11px] font-medium uppercase tracking-wider text-gray-light">
-                {lang === "en" ? "Booking at Smíchov" : "Rezervace na Smíchově"}
-              </div>
-              <h2 className="mb-3 font-[family-name:var(--font-roboto-slab)] text-[26px] font-bold leading-[1.15] max-md:text-[22px]">
-                {lang === "en"
-                  ? "Book your visit at AK BARBERS Prague 5 – Smíchov"
-                  : "Rezervujte si návštěvu na AK BARBERS Praha 5 – Smíchov"}
-              </h2>
-              <p className="mb-5 text-[13px] leading-[1.7] text-gray">
-                {lang === "en" ? (
-                  <>
-                    Our Smíchov branch welcomes you on{" "}
-                    <strong className="text-white">{redirectLocation.address}</strong>,
-                    5 min from Anděl metro. Use the online booking system to choose your
-                    barber and time, or simply walk in.
-                  </>
-                ) : (
-                  <>
-                    Pobočka na Smíchově vás vítá na adrese{" "}
-                    <strong className="text-white">{redirectLocation.address}</strong>
-                    , 5 minut od metra Anděl. Přes online rezervační systém si vyberete
-                    svého barbera i čas, nebo přijďte bez objednání.
-                  </>
-                )}
-              </p>
-              <div className="mb-5 rounded-[8px] border border-[#ffffff]/15 bg-[#0f0f0f] p-4">
-                <div className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-[#ffffff]/80">
-                  American Barber
-                </div>
-                <p className="text-[13px] leading-[1.6] text-gray">
-                  {lang === "en"
-                    ? "Prague 5 – Smíchov also hosts our American Barber – authentic old-school experience, traditional razor shave and premium men's grooming."
-                    : "Na Smíchově najdete i našeho American Barbera – autentický old-school zážitek, tradiční holení břitvou a prémiová péče pro pány."}
-                </p>
-              </div>
-              {redirectLocation.openingHours.length > 0 && (
-                <div className="mb-5">
-                  <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
-                    {lang === "en" ? "Opening hours" : "Otevírací doba"}
-                  </div>
-                  {redirectLocation.openingHours.map((h) => (
-                    <div key={h.days} className="text-[13px]">
-                      <span className="font-semibold">{translateDays(h.days, lang)}</span>
-                      <span className="ml-3 text-[#999]">{h.hours}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
-              <div className="flex flex-wrap gap-3">
-                {redirectLocation.bookingUrl && (
-                  <a
-                    href={redirectLocation.bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex w-fit items-center gap-2.5 rounded-full bg-white px-6 py-3 text-[13px] font-bold text-black transition-opacity hover:opacity-90"
-                  >
-                    {lang === "en" ? "Book online" : "Rezervace online"}
-                    <IconCircle className="bg-black [&_svg]:stroke-white" />
-                  </a>
-                )}
-                <Link
-                  href={`/pobocky/${redirectLocation.id}`}
-                  className="inline-flex w-fit items-center gap-2.5 rounded-full border border-[#333] px-6 py-3 text-[13px] font-bold text-white transition-colors hover:border-white"
-                >
-                  {lang === "en" ? "Smíchov details" : "Detail Smíchov"}
-                </Link>
               </div>
             </div>
           </div>
