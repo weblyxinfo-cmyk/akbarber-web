@@ -393,6 +393,13 @@ export default async function LocationPage({ params, searchParams }: Props) {
                   </a>
                 )}
               </div>
+              {redirectLocation?.bookingUrl && (
+                <p className="mt-3 text-[11px] text-gray-light">
+                  {lang === "en"
+                    ? "Online booking takes you directly to AK Barbers Prague 5 – Smíchov."
+                    : "Rezervace online vás přesměruje rovnou na AK Barbers Praha 5 – Smíchov."}
+                </p>
+              )}
               <div className="mt-6 grid grid-cols-3 gap-4 rounded-[8px] border border-[#2a2a2a] p-4 max-md:grid-cols-1 max-md:gap-3">
                 <div className="flex items-center gap-3">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#ffffff]/50 text-[#ffffff]">
