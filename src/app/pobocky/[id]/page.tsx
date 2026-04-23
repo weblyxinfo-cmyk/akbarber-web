@@ -301,6 +301,72 @@ export default async function LocationPage({ params, searchParams }: Props) {
         </div>
       </section>
 
+      {/* Temporarily Closed Banner */}
+      {location.temporarilyClosed && (
+        <section className="pt-6">
+          <div className="container">
+            <div className="rounded-[10px] border border-border bg-bg-card p-6 max-md:p-5">
+              <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[#444] px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-gray-light">
+                {lang === "en" ? "Important notice" : "Důležitá informace"}
+              </div>
+              <h2 className="mb-3 font-[family-name:var(--font-roboto-slab)] text-[28px] font-bold leading-[1.15] max-md:text-[24px]">
+                {lang === "en"
+                  ? `${displayName} is temporarily closed`
+                  : `Pobočka ${displayName.replace("AK BARBERS – ", "")} je dočasně uzavřena`}
+              </h2>
+              <p className="mb-6 text-sm leading-[1.7] text-gray">
+                {lang === "en" ? (
+                  <>
+                    We look forward to seeing you at{" "}
+                    <strong className="text-white">{location.temporarilyClosed.redirectToName}</strong>
+                    , where your favourite barber from Prague 6 continues.
+                  </>
+                ) : (
+                  <>
+                    Těšíme se na vás na{" "}
+                    <strong className="text-white">{location.temporarilyClosed.redirectToName}</strong>
+                    , kde pokračuje i váš oblíbený barber z Prahy 6.
+                  </>
+                )}
+              </p>
+              <Link
+                href={`/pobocky/${location.temporarilyClosed.redirectToId}`}
+                className="inline-flex w-fit items-center gap-2.5 rounded-full bg-white px-6 py-3 text-[15px] font-bold text-black transition-opacity hover:opacity-90"
+              >
+                {lang === "en" ? "Go to Smíchov" : "Přejít na Smíchov"}
+                <IconCircle className="bg-black [&_svg]:stroke-white" />
+              </Link>
+              <div className="mt-6 flex flex-wrap gap-x-8 gap-y-4 border-t border-border pt-5">
+                <div>
+                  <div className="text-[13px] font-semibold text-white">
+                    {lang === "en" ? "Walk-ins" : "Bez objednání"}
+                  </div>
+                  <div className="text-[12px] text-gray">
+                    {lang === "en" ? "No booking needed" : "Walk-ins"}
+                  </div>
+                </div>
+                <div>
+                  <div className="text-[13px] font-semibold text-white">
+                    {lang === "en" ? "Open 7 days" : "Otevřeno 7 dní"}
+                  </div>
+                  <div className="text-[12px] text-gray">
+                    {lang === "en" ? "Every day for you" : "Každý den pro vás"}
+                  </div>
+                </div>
+                <div>
+                  <div className="text-[13px] font-semibold text-white">
+                    {lang === "en" ? "Same team" : "Stejný tým"}
+                  </div>
+                  <div className="text-[12px] text-gray">
+                    {lang === "en" ? "Your barber from Prague 6" : "Váš barber z Prahy 6"}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Location Info */}
       <section className="pt-8">
         <div className="container">
@@ -309,7 +375,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
             {isBilingual && <LanguageSwitcher lang={lang} />}
           </div>
 
-          {location.type === "coming-soon" ? (
+          {location.temporarilyClosed ? null : location.type === "coming-soon" ? (
             <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#444] px-5 py-2 text-[20px] font-bold text-[#ccc]">
               {location.openingDate ? `Otevíráme ${location.openingDate}` : "Připravuje se"}
             </div>

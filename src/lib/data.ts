@@ -144,6 +144,10 @@ export const locations: Location[] = [
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barber-praha",
+    temporarilyClosed: {
+      redirectToId: "praha-5",
+      redirectToName: "Praha 5 – Smíchov",
+    },
     services: standardServices,
     image: "/images/locations/photo-praha-6.jpg",
     currency: "CZK",

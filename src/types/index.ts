@@ -35,6 +35,10 @@ export interface Location {
   };
   openingDate?: string;
   geo?: { lat: number; lng: number };
+  temporarilyClosed?: {
+    redirectToId: string;
+    redirectToName: string;
+  };
 }
 
 export interface VoucherBranch {

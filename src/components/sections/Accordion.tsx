@@ -31,24 +31,37 @@ function LocationCard({ location }: { location: Location }) {
       <p className="mb-2 text-[11px] text-[#666]">{location.address}</p>
       <div className="flex items-center justify-between">
         <div className="flex flex-wrap items-center gap-2">
-          {location.type === "coming-soon" && (
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/30 px-3 py-1 text-sm font-semibold text-white">
-              {location.openingDate ? `Otevíráme ${location.openingDate}` : "Připravuje se"}
-            </span>
-          )}
-          {location.type === "walk-in" && (
-            <span className="text-sm font-semibold text-white">Bez objednání – Walk ins</span>
-          )}
-          {location.type === "reservation" && (
+          {location.temporarilyClosed ? (
             <>
-              <span className="text-sm font-semibold text-[#888]">Pouze rezervace VIP club</span>
-              <span className="text-sm font-semibold text-white underline underline-offset-2">Rezervace online – ZDE</span>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/30 px-3 py-1 text-[12px] font-semibold text-white">
+                Dočasně uzavřeno
+              </span>
+              <span className="text-[12px] font-semibold text-gray">
+                Pokračujeme na {location.temporarilyClosed.redirectToName}
+              </span>
             </>
-          )}
-          {location.type === "walk-in + reservation" && (
+          ) : (
             <>
-              <span className="text-sm font-semibold text-white">Bez objednání – Walk ins</span>
-              <span className="text-sm font-semibold text-white underline underline-offset-2">Rezervace online – ZDE</span>
+              {location.type === "coming-soon" && (
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-white/30 px-3 py-1 text-sm font-semibold text-white">
+                  {location.openingDate ? `Otevíráme ${location.openingDate}` : "Připravuje se"}
+                </span>
+              )}
+              {location.type === "walk-in" && (
+                <span className="text-sm font-semibold text-white">Bez objednání – Walk ins</span>
+              )}
+              {location.type === "reservation" && (
+                <>
+                  <span className="text-sm font-semibold text-[#888]">Pouze rezervace VIP club</span>
+                  <span className="text-sm font-semibold text-white underline underline-offset-2">Rezervace online – ZDE</span>
+                </>
+              )}
+              {location.type === "walk-in + reservation" && (
+                <>
+                  <span className="text-sm font-semibold text-white">Bez objednání – Walk ins</span>
+                  <span className="text-sm font-semibold text-white underline underline-offset-2">Rezervace online – ZDE</span>
+                </>
+              )}
             </>
           )}
         </div>
