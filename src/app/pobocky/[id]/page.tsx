@@ -314,7 +314,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
         <section className="pt-6">
           <div className="container">
             <div className="rounded-[10px] border border-[#ffffff]/25 bg-[#0f0f0f] p-7 max-md:p-5">
-              <div className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-[#ffffff]/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#ffffff]">
+              <div className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-[#e57373]/50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#e57373]">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="10" />
                   <line x1="12" y1="8" x2="12" y2="12" />
