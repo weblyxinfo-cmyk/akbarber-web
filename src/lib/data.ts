@@ -415,7 +415,7 @@ export const locations: Location[] = [
     ],
     type: "walk-in",
     services: standardServices,
-    image: "/images/locations/photo-beroun-2.jpg",
+    image: "/images/locations/photo-beroun.jpg",
     currency: "CZK",
     googleMapsUrl: "",
     reviewRating: 5.0,
