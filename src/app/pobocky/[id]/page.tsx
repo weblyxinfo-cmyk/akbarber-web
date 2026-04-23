@@ -37,7 +37,15 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   let title: string;
   let description: string;
 
-  if (isEnglish) {
+  if (location.temporarilyClosed) {
+    if (isEnglish) {
+      title = `${location.name} — Temporarily Closed | Continuing at ${location.temporarilyClosed.redirectToName}`;
+      description = `${location.name} is temporarily closed. We look forward to seeing you at ${location.temporarilyClosed.redirectToName} — the same team, walk-ins welcome, open 7 days a week.`;
+    } else {
+      title = `${location.name} – Dočasně uzavřeno | Pokračujeme na ${location.temporarilyClosed.redirectToName}`;
+      description = `${location.name} je dočasně uzavřena. Těšíme se na vás na ${location.temporarilyClosed.redirectToName} – stejný tým, bez objednání, otevřeno 7 dní v týdnu.`;
+    }
+  } else if (isEnglish) {
     const enTitles: Record<string, string> = {
       "praha-1": "AK BARBERS Prague 1 \u2014 Premium Barbershop in the City Centre",
       "praha-5": "AK BARBERS Prague 5 \u2014 Professional Barbershop Sm\u00edchov",
@@ -189,7 +197,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
         longitude: location.geo.lng,
       },
     }),
-    ...(location.openingHours.length > 0 && {
+    ...(location.openingHours.length > 0 && !location.temporarilyClosed && {
       openingHoursSpecification: openingHoursSpec,
     }),
     ...(prices.length > 0 && { priceRange }),
