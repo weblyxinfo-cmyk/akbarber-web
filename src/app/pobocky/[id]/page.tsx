@@ -313,8 +313,8 @@ export default async function LocationPage({ params, searchParams }: Props) {
       {location.temporarilyClosed && (
         <section className="pt-6">
           <div className="container">
-            <div className="rounded-[10px] border border-[#c9a46e]/25 bg-[#0f0f0f] p-7 max-md:p-5">
-              <div className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-[#c9a46e]/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#c9a46e]">
+            <div className="rounded-[10px] border border-[#ffffff]/25 bg-[#0f0f0f] p-7 max-md:p-5">
+              <div className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-[#ffffff]/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#ffffff]">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="10" />
                   <line x1="12" y1="8" x2="12" y2="12" />
@@ -326,12 +326,12 @@ export default async function LocationPage({ params, searchParams }: Props) {
                 {lang === "en" ? (
                   <>
                     {displayName}{" "}
-                    <span className="block text-[#c9a46e]">is temporarily closed</span>
+                    <span className="block text-[#ffffff]">is temporarily closed</span>
                   </>
                 ) : (
                   <>
                     Pobočka {displayName.replace("AK BARBERS – ", "")}
-                    <span className="block text-[#c9a46e]">je dočasně uzavřena.</span>
+                    <span className="block text-[#ffffff]">je dočasně uzavřena.</span>
                   </>
                 )}
               </h2>
@@ -351,7 +351,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
                       PRAZE 5 – SMÍCHOV
                     </strong>
                     , kde pokračuje i{" "}
-                    <strong className="font-semibold text-[#c9a46e]">
+                    <strong className="font-semibold text-[#ffffff]">
                       váš oblíbený barber z Prahy 6
                     </strong>
                     .
@@ -360,7 +360,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
               </p>
               <Link
                 href={`/pobocky/${location.temporarilyClosed.redirectToId}`}
-                className="inline-flex w-fit items-center gap-2 rounded-full bg-[#c9a46e] px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.1em] text-black transition-colors hover:bg-[#d4b380]"
+                className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.1em] text-black transition-opacity hover:opacity-90"
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none">
                   <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
@@ -373,7 +373,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
               </Link>
               <div className="mt-6 grid grid-cols-3 gap-4 rounded-[8px] border border-[#2a2a2a] p-4 max-md:grid-cols-1 max-md:gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#c9a46e]/50 text-[#c9a46e]">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#ffffff]/50 text-[#ffffff]">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="6" cy="6" r="3" />
                       <circle cx="6" cy="18" r="3" />
@@ -392,7 +392,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#c9a46e]/50 text-[#c9a46e]">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#ffffff]/50 text-[#ffffff]">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="12" r="10" />
                       <polyline points="12 6 12 12 16 14" />
@@ -408,7 +408,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#c9a46e]/50 text-[#c9a46e]">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#ffffff]/50 text-[#ffffff]">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                       <circle cx="9" cy="7" r="4" />
