@@ -9,6 +9,7 @@ import type { Location } from "@/types";
 
 function LocationCard({ location }: { location: Location }) {
   const isComingSoon = location.type === "coming-soon";
+  const isClosed = !!location.temporarilyClosed;
   const Wrapper = isComingSoon ? "div" : Link;
   const wrapperProps = isComingSoon
     ? { className: "block min-w-[200px] max-w-[calc(50%-8px)] flex-1 opacity-60 max-md:max-w-full" }
@@ -17,15 +18,21 @@ function LocationCard({ location }: { location: Location }) {
   return (
     // @ts-expect-error -- dynamic wrapper
     <Wrapper {...wrapperProps}>
-      <div className="mb-2 h-[120px] overflow-hidden rounded-[10px] bg-bg-card">
+      <div className="relative mb-2 h-[120px] overflow-hidden rounded-[10px] bg-bg-card">
         <Image
           src={location.image}
           alt={location.name}
           width={400}
           height={200}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          className={`h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 ${isClosed ? "opacity-40" : ""}`}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
+        {isClosed && (
+          <div className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-[#e57373]/50 bg-black/70 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#e57373] backdrop-blur-sm">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#e57373]" />
+            Dočasně uzavřeno
+          </div>
+        )}
       </div>
       <h3 className="text-sm font-bold">{location.name}</h3>
       <p className="mb-2 text-[11px] text-[#666]">{location.address}</p>
