@@ -784,9 +784,9 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     lang: "cs",
     slug: "barber-cerny-most",
     locationId: "cerny-most",
-    title: "Barber Praha 9 – Černý Most | AK BARBERS Bryksova",
+    title: "Barber Praha 9 – Černý Most | AK BARBERS Bryksova u OC Černý Most",
     description:
-      "Prémiový barbershop na Černém Mostě, Bryksova 758/62. Walk-in bez objednání. Pánské stříhání od 449 Kč, skin fade, úprava vousů. 5 min od metra Černý Most.",
+      "Prémiový barbershop na Černém Mostě, Bryksova 758/62 – hned vedle OC Černý Most. Walk-in bez objednání. Pánské stříhání od 449 Kč, skin fade, úprava vousů. 5 min od metra Černý Most.",
     keywords: [
       "barber praha 9",
       "barber černý most",
@@ -796,6 +796,8 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       "pánské stříhání praha 9",
       "barber bryksova",
       "barber u metra černý most",
+      "barber u oc černý most",
+      "barbershop u oc černý most",
       "holičství černý most",
       "kadeřnictví muži praha 9",
       "barber shop praha 14",
@@ -804,8 +806,8 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     ogLocale: "cs_CZ",
     heroHeading: "Barber Praha 9 – Černý Most",
     localityDescription: [
-      "AK BARBERS Černý Most najdete na adrese Bryksova 758/62, v srdci sídliště Černý Most – městská část Praha 14. Pobočka je jen 5 minut chůze od konečné stanice metra Černý Most (linka B), která vás spojí přímo s centrem Prahy přes Florenc, Náměstí Republiky i Anděl. Hned vedle je i autobusový terminál Černý Most s desítkami regionálních i městských linek (110, 163, 181, 221, 223, 263, 269, 273, 296) a tramvajová trať s linkami 19 a 25.",
-      "Černý Most je největší pražské sídliště a zároveň dopravní uzel východního okraje Prahy – přirozeně se sem sjíždějí lidé z Kyjí, Hostavic, Dolních a Horních Počernic, Hloubětína, Újezdu nad Lesy, ale také z Mladoboleslavska a Nymburska. V okolí pobočky najdete obrovské obchodní centrum OC Černý Most s IKEA i multikinem, novou zástavbu v okolí Bryksovy, Mansfeldovy a Arnošta Valenty. Zaparkovat můžete zdarma na P+R Černý Most (cca 40 Kč/den), v OC Černý Most (1. hodina zdarma ve všední dny) nebo v okolních modrých zónách.",
+      "AK BARBERS Černý Most najdete na adrese Bryksova 758/62 – hned vedle obchodního centra OC Černý Most, v srdci sídliště Černý Most a městské části Praha 14. Pobočka je jen 5 minut chůze od konečné stanice metra Černý Most (linka B), která vás spojí přímo s centrem Prahy přes Florenc, Náměstí Republiky i Anděl. Vedle metra je i autobusový terminál Černý Most s desítkami regionálních i městských linek (110, 163, 181, 221, 223, 263, 269, 273, 296) a tramvajová trať s linkami 19 a 25.",
+      "Černý Most je největší pražské sídliště a zároveň dopravní uzel východního okraje Prahy – přirozeně se sem sjíždějí lidé z Kyjí, Hostavic, Dolních a Horních Počernic, Hloubětína, Újezdu nad Lesy, ale také z Mladoboleslavska a Nymburska. Přesně před pobočkou stojí obrovské obchodní centrum OC Černý Most s IKEA i multikinem – po cestě ke stříhání tak zvládnete i nákupy. V okolí je i nová zástavba Bryksovy, Mansfeldovy a Arnošta Valenty. Zaparkovat můžete zdarma na P+R Černý Most (cca 40 Kč/den), v OC Černý Most (1. hodina zdarma ve všední dny) nebo v okolních modrých zónách.",
       "Fungujeme jako walk-in — přijďte kdykoliv bez objednání a užijte si profesionální střih od vyškolených barberů AK BARBERS. Otevřeno máme Po–Pá 9:00–19:30 a So–Ne 9:00–14:00, tedy celý týden včetně víkendů. Na Černém Mostě navazujeme na naši osvědčenou kvalitu z Prahy 1 Máj, Prahy 5 Smíchov a Prahy 6 Břevnov.",
     ],
     services: [
@@ -819,7 +821,8 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     aboutText:
       "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
     faq: [
-      { question: "Kde přesně se nachází AK BARBERS Černý Most?", answer: "Na adrese Bryksova 758/62, 198 00 Praha 14 – Černý Most. Administrativně patříme pod MČ Praha 14, poštovně pod Prahu 9. Jsme 5 minut chůze od konečné stanice metra Černý Most (linka B) a autobusového terminálu." },
+      { question: "Kde přesně se nachází AK BARBERS Černý Most?", answer: "Na adrese Bryksova 758/62, 198 00 Praha 14 – Černý Most, hned vedle obchodního centra OC Černý Most. Administrativně patříme pod MČ Praha 14, poštovně pod Prahu 9. Jsme 5 minut chůze od konečné stanice metra Černý Most (linka B) a autobusového terminálu." },
+      { question: "Je barbershop u OC Černý Most?", answer: "Ano, pobočka stojí přímo u obchodního centra OC Černý Most – můžete střih zkombinovat s nákupy, IKEA nebo kinem. Parkování v OC Černý Most je první hodinu zdarma ve všední dny." },
       { question: "Je to Praha 9 nebo Praha 14?", answer: "Obojí platí – Černý Most historicky a poštou patří pod Prahu 9 (PSČ 198 00), administrativně je součástí městské části Praha 14. V běžné řeči lidé říkají „Praha 9 – Černý Most“, úředně je to Praha 14." },
       { question: "Jak se k vám nejlépe dostanu MHD?", answer: "Nejrychleji metrem B až na konečnou Černý Most, odtud 5 minut pěšky Bryksovou ulicí. Autobusem do terminálu Černý Most (linky 110, 163, 181, 221, 223, 263, 269, 273, 296), tramvají 19 nebo 25." },
       { question: "Musím se objednat předem?", answer: "Ne, fungujeme výhradně walk-in — přijďte kdykoliv během otevírací doby a obsloužíme vás bez rezervace." },

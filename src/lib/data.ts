@@ -408,6 +408,7 @@ export const locations: Location[] = [
     name: "AK BARBERS Praha 14 – Černý Most",
     city: "Praha",
     address: "Bryksova 758/62, 198 00 Praha 14 – Černý Most",
+    note: "Hned vedle OC Černý Most",
     phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "9:00 – 19:30" },

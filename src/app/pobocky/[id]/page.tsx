@@ -128,6 +128,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
     "praha-3": " 3 Žižkov",
     "praha-5": " 5 Smíchov",
     "praha-6": " 6 Břevnov",
+    "cerny-most": " 14 – Černý Most",
   };
   const displayName = `AK BARBERS – ${location.city}${displayNameSuffix[location.id] || ""}`;
 
