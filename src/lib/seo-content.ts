@@ -776,6 +776,74 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       { name: "Barber Jesenice", href: "/barber-jesenice" },
     ],
   },
+
+  // ------------------------------------------------------------------
+  // barber-cerny-most (CZ) — Praha 14 / Praha 9 – Černý Most
+  // ------------------------------------------------------------------
+  "barber-cerny-most": {
+    lang: "cs",
+    slug: "barber-cerny-most",
+    locationId: "cerny-most",
+    title: "Barber Praha 9 – Černý Most | AK BARBERS Bryksova",
+    description:
+      "Prémiový barbershop na Černém Mostě, Bryksova 758/62. Walk-in bez objednání. Pánské stříhání od 449 Kč, skin fade, úprava vousů. 5 min od metra Černý Most.",
+    keywords: [
+      "barber praha 9",
+      "barber černý most",
+      "barbershop černý most",
+      "barbershop praha 14",
+      "pánské stříhání černý most",
+      "pánské stříhání praha 9",
+      "barber bryksova",
+      "barber u metra černý most",
+      "holičství černý most",
+      "kadeřnictví muži praha 9",
+      "barber shop praha 14",
+      "pánské holičství praha 9",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Barber Praha 9 – Černý Most",
+    localityDescription: [
+      "AK BARBERS Černý Most najdete na adrese Bryksova 758/62, v srdci sídliště Černý Most – městská část Praha 14. Pobočka je jen 5 minut chůze od konečné stanice metra Černý Most (linka B), která vás spojí přímo s centrem Prahy přes Florenc, Náměstí Republiky i Anděl. Hned vedle je i autobusový terminál Černý Most s desítkami regionálních i městských linek (110, 163, 181, 221, 223, 263, 269, 273, 296) a tramvajová trať s linkami 19 a 25.",
+      "Černý Most je největší pražské sídliště a zároveň dopravní uzel východního okraje Prahy – přirozeně se sem sjíždějí lidé z Kyjí, Hostavic, Dolních a Horních Počernic, Hloubětína, Újezdu nad Lesy, ale také z Mladoboleslavska a Nymburska. V okolí pobočky najdete obrovské obchodní centrum OC Černý Most s IKEA i multikinem, novou zástavbu v okolí Bryksovy, Mansfeldovy a Arnošta Valenty. Zaparkovat můžete zdarma na P+R Černý Most (cca 40 Kč/den), v OC Černý Most (1. hodina zdarma ve všední dny) nebo v okolních modrých zónách.",
+      "Fungujeme jako walk-in — přijďte kdykoliv bez objednání a užijte si profesionální střih od vyškolených barberů AK BARBERS. Otevřeno máme Po–Pá 9:00–19:30 a So–Ne 9:00–14:00, tedy celý týden včetně víkendů. Na Černém Mostě navazujeme na naši osvědčenou kvalitu z Prahy 1 Máj, Prahy 5 Smíchov a Prahy 6 Břevnov.",
+    ],
+    services: [
+      { name: "Klasické pánské stříhání", price: "449 Kč" },
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč" },
+      { name: "Senior pánský střih (65+)", price: "299 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "799 Kč" },
+    ],
+    aboutText:
+      "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
+    faq: [
+      { question: "Kde přesně se nachází AK BARBERS Černý Most?", answer: "Na adrese Bryksova 758/62, 198 00 Praha 14 – Černý Most. Administrativně patříme pod MČ Praha 14, poštovně pod Prahu 9. Jsme 5 minut chůze od konečné stanice metra Černý Most (linka B) a autobusového terminálu." },
+      { question: "Je to Praha 9 nebo Praha 14?", answer: "Obojí platí – Černý Most historicky a poštou patří pod Prahu 9 (PSČ 198 00), administrativně je součástí městské části Praha 14. V běžné řeči lidé říkají „Praha 9 – Černý Most“, úředně je to Praha 14." },
+      { question: "Jak se k vám nejlépe dostanu MHD?", answer: "Nejrychleji metrem B až na konečnou Černý Most, odtud 5 minut pěšky Bryksovou ulicí. Autobusem do terminálu Černý Most (linky 110, 163, 181, 221, 223, 263, 269, 273, 296), tramvají 19 nebo 25." },
+      { question: "Musím se objednat předem?", answer: "Ne, fungujeme výhradně walk-in — přijďte kdykoliv během otevírací doby a obsloužíme vás bez rezervace." },
+      { question: "Jaká je otevírací doba?", answer: "Po–Pá 9:00–19:30, So–Ne 9:00–14:00. Otevřeno máme celý týden včetně víkendů." },
+      { question: "Kolik stojí pánský střih na Černém Mostě?", answer: "Klasické pánské stříhání stojí 449 Kč, Skin Fade 499 Kč. Kompletní balíček střih + úprava vousů je za 799 Kč. Senior střih (65+) za zvýhodněných 299 Kč a dětský střih od 349 Kč." },
+      { question: "Kde můžu zaparkovat?", answer: "Na P+R Černý Most (cca 40 Kč/den) hned u metra, v parkovacím domě OC Černý Most (1. hodina zdarma ve všední dny, víkendy déle) nebo v modrých zónách v okolí Bryksovy ulice." },
+      { question: "Stříháte i děti?", answer: "Ano, dětský střih pro chlapce od 1 do 15 let stojí 349 Kč (klasický) nebo 449 Kč (Skin Fade / Low Fade / Crop Fade / Buzz Cut). Rádi poradíme s výběrem střihu." },
+      { question: "Děláte skin fade?", answer: "Ano, skin fade je jedna z našich nejžádanějších služeb. Naši barbeři ovládají low, mid i high fade se strojkem od 0 mm, precizním stínováním a plynulými přechody. Cena 499 Kč." },
+      { question: "Nabízíte slevu pro seniory nebo IZS?", answer: "Ano, senior pánský střih pro pány od 65 let je za zvýhodněných 299 Kč. Kontaktujte nás přímo na pobočce ohledně aktuálních slev pro PČR, HZS, ZZS a ISIC." },
+      { question: "Můžu platit kartou?", answer: "Ano, přijímáme platbu hotově i platební kartou, včetně Apple Pay a Google Pay." },
+      { question: "Máte i další pobočky v Praze?", answer: "Ano, v Praze máme pobočky Praha 1 Máj (Národní 63/26, centrum), Praha 5 Smíchov (Toyen 3410/7, u metra Anděl) a Praha 6 Břevnov (Bělohorská 1393/44). Všechny pracují pod jednotnými standardy AK BARBERS." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS – Praha Máj (Praha 1)", href: "/barber-praha-1" },
+      { label: "AK BARBERS Praha 5 – Smíchov", href: "/barber-smichov" },
+      { label: "AK BARBERS Praha 6 – Bělohorská", href: "/barber-praha-6" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Praha 9 – Černý Most", href: "/barber-cerny-most" },
+    ],
+  },
 };
 
 // ===================================================================

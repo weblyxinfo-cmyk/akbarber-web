@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "barber-slany",
     "barber-nitra",
     "barber-jesenice",
+    "barber-cerny-most",
     "en/barber-prague-1",
     "en/barber-prague-5",
     "en/barber-prague-6",
