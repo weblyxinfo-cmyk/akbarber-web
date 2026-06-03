@@ -396,10 +396,10 @@ export const locations: Location[] = [
     transport: {
       publicTransport: [
         "Tramvaj Lipanská – linky 5, 9, 15, 26 (pár minut pěšky)",
+        "Autobus Tachovské náměstí / U Památníku – linky 133, 136, 175, 207",
         "Metro Florenc (linky B a C) – cca 10 min chůze",
-        "Autobusové nádraží Florenc – regionální i dálkové linky",
       ],
-      parking: "Modré a fialové zóny Praha 3 (cca 20 Kč/hod), parkoviště u Nákladového nádraží Žižkov",
+      parking: "Modré a fialové parkovací zóny Prahy 3 přímo v okolí Husitské (cca 20 Kč/hod)",
     },
   },
   {
