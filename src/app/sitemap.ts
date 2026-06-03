@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "barber-nitra",
     "barber-jesenice",
     "barber-cerny-most",
+    "barber-praha-3",
     "en/barber-prague-1",
     "en/barber-prague-5",
     "en/barber-prague-6",
@@ -39,8 +40,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const seoServiceSlugs = [
     "pansky-strih-praha-1",
     "pansky-strih-praha-6",
+    "pansky-strih-praha-3",
     "skin-fade-praha-1",
     "skin-fade-praha-6",
+    "skin-fade-praha-3",
     "en/mens-haircut-prague-1",
     "en/mens-haircut-prague-5",
     "en/mens-haircut-prague-6",

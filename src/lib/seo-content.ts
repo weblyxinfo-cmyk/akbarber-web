@@ -105,7 +105,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     ogLocale: "cs_CZ",
     heroHeading: "Barber Praha 6 – Břevnov",
     localityDescription: [
-      "AK BARBERS Praha 6 sídlí na Bělohorské 1393/44, v srdci Břevnova. Pobočka je snadno dostupná tramvají — zastávka Malovanka je přímo před dveřmi. Zároveň jsme nedaleko metra Dejvická (linka A), odkud to k nám je jen pár minut tramvají nebo pěšky.",
+      "AK BARBERS Praha 6 nově sídlí na adrese Radimova 2522/4 (dříve Bělohorská 1393/44), v srdci Břevnova. Pobočka je snadno dostupná tramvají — zastávka Marjánka je pár kroků. Zároveň jsme nedaleko metra Dejvická (linka A), odkud to k nám je jen pár minut tramvají nebo pěšky.",
       "Břevnov je klidná, rezidenční čtvrť s přátelskou atmosférou. Naše pobočka je oblíbeným místem jak pro místní obyvatele, tak pro studenty a profesionály z okolí Dejvic a Hradčan. Přijďte si užít profesionální střih v příjemném prostředí, bez shonu centra města.",
       "Otevřeno máme Po–Pá 10:00–19:00 a v sobotu 9:00–12:00. Fungujeme walk-in i s možností online rezervace.",
     ],
@@ -120,12 +120,12 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     aboutText:
       "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
     faq: [
-      { question: "Kde přesně je AK BARBERS Praha 6?", answer: "Jsme na adrese Bělohorská 1393/44, Praha 6 – Břevnov. Přímo u tramvajové zastávky Malovanka, nedaleko metra Dejvická." },
+      { question: "Kde přesně je AK BARBERS Praha 6?", answer: "Nově nás najdete na adrese Radimova 2522/4, Praha 6 – Břevnov (dříve Bělohorská 1393/44). Přímo u tramvajové zastávky Marjánka, nedaleko metra Dejvická." },
       { question: "Je potřeba se objednat?", answer: "Ne, fungujeme walk-in, přijďte kdykoliv. Zároveň nabízíme online rezervaci přes Booqme pro ty, kdo si chtějí zajistit konkrétní čas." },
       { question: "Jaké jsou otevírací hodiny?", answer: "Po–Pá 10:00–19:00, So 9:00–12:00. V neděli máme zavřeno." },
       { question: "Kolik stojí střih na Praze 6?", answer: "Klasické pánské stříhání stojí 449 Kč, Skin Fade 499 Kč. Kompletní balíček střih + vousy je za 749 Kč. Senior střih je zvýhodněný za 249 Kč." },
       { question: "Děláte skin fade na Praze 6?", answer: "Ano, skin fade patří k našim nejžádanějším službám. Naši barbeři zvládají low, mid i high fade s precizními přechody od 0 mm." },
-      { question: "Je barbershop blízko metra Dejvická?", answer: "Ano, od metra Dejvická (linka A) to k nám je cca 10 minut tramvají (zastávka Malovanka) nebo 15 minut pěšky." },
+      { question: "Je barbershop blízko metra Dejvická?", answer: "Ano, od metra Dejvická (linka A) to k nám je cca 10 minut tramvají (zastávka Marjánka) nebo 15 minut pěšky." },
       { question: "Přijímáte platby kartou?", answer: "Ano, můžete platit hotově i kartou." },
       { question: "Máte i druhou pobočku v Praze?", answer: "Ano, naše druhá pražská pobočka je AK BARBERS Praha 1 na Národní třídě v centru Starého Města. Otevřeno 7 dní v týdnu." },
     ],
@@ -133,6 +133,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       { label: "Skin Fade Praha 6", href: "/skin-fade-praha-6" },
       { label: "Pánský střih Praha 6", href: "/pansky-strih-praha-6" },
       { label: "AK BARBERS – Praha Máj", href: "/barber-praha-1" },
+      { label: "AK BARBERS Praha 3 – Žižkov", href: "/barber-praha-3" },
       academyLink,
       careerLink,
     ],
@@ -222,7 +223,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     ogLocale: "en_US",
     heroHeading: "Barber Prague 6 – Břevnov",
     localityDescription: [
-      "AK BARBERS Prague 6 is at Bělohorská 1393/44, in the heart of Břevnov. Our shop is easily accessible by tram — the Malovanka stop is right outside. We're also close to Dejvická metro station (Line A), just a few minutes by tram or a short walk.",
+      "AK BARBERS Prague 6 has reopened at a new address — Radimova 2522/4 (formerly Bělohorská 1393/44), in the heart of Břevnov. Our shop is easily accessible by tram — the Marjánka stop is just a few steps away. We're also close to Dejvická metro station (Line A), just a few minutes by tram or a short walk.",
       "Břevnov is a quiet, residential neighbourhood with a friendly atmosphere. Our branch is popular with locals as well as students and professionals from the nearby Dejvice and Hradčany areas. Come enjoy a professional haircut in a relaxed setting, away from the hustle of the city centre.",
       "We're open Mon–Fri 10:00–19:00 and Saturday 9:00–12:00. Walk-ins welcome, online booking also available.",
     ],
@@ -237,12 +238,12 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     aboutText:
       "At AK BARBERS we follow strict quality standards. Every new barber completes professional training at our AK BARBERS Academy before they step behind the chair. Precision, cleanliness and attention to detail are the foundations of our work — that's why we maintain top-level service at every location, and our clients keep coming back.",
     faq: [
-      { question: "Where exactly is AK BARBERS Prague 6?", answer: "We're at Bělohorská 1393/44, Prague 6 – Břevnov. Right by the Malovanka tram stop, close to Dejvická metro station." },
+      { question: "Where exactly is AK BARBERS Prague 6?", answer: "We've reopened at a new address — Radimova 2522/4, Prague 6 – Břevnov (formerly Bělohorská 1393/44). Right by the Marjánka tram stop, close to Dejvická metro station." },
       { question: "Do I need a reservation?", answer: "No, we welcome walk-ins. You can also book online via Booqme if you prefer a guaranteed slot." },
       { question: "What are the opening hours?", answer: "Mon–Fri 10:00–19:00, Sat 9:00–12:00. Closed on Sundays." },
       { question: "How much is a haircut in Prague 6?", answer: "Classic haircut is 449 CZK, Skin Fade 499 CZK. The full haircut + beard package is 749 CZK. Senior discount haircut is 249 CZK." },
       { question: "Do you do skin fades in Prague 6?", answer: "Yes, skin fade is one of our most popular services. Our barbers handle low, mid, and high fades with seamless transitions from 0mm." },
-      { question: "Is the barbershop close to Dejvická metro?", answer: "Yes, from Dejvická metro (Line A) it's about 10 minutes by tram (Malovanka stop) or 15 minutes on foot." },
+      { question: "Is the barbershop close to Dejvická metro?", answer: "Yes, from Dejvická metro (Line A) it's about 10 minutes by tram (Marjánka stop) or 15 minutes on foot." },
       { question: "Do you accept card payments?", answer: "Yes, we accept both cash and card." },
       { question: "Do you have another branch in Prague?", answer: "Yes, our second Prague location is AK BARBERS Prague 1 on Národní třída in the Old Town. Open 7 days a week. We also have a new branch in Prague 5 – Smíchov, near Anděl metro." },
     ],
@@ -833,10 +834,11 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       { question: "Děláte skin fade?", answer: "Ano, skin fade je jedna z našich nejžádanějších služeb. Naši barbeři ovládají low, mid i high fade se strojkem od 0 mm, precizním stínováním a plynulými přechody. Cena 499 Kč." },
       { question: "Nabízíte slevu pro seniory nebo IZS?", answer: "Ano, senior pánský střih pro pány od 65 let je za zvýhodněných 299 Kč. Kontaktujte nás přímo na pobočce ohledně aktuálních slev pro PČR, HZS, ZZS a ISIC." },
       { question: "Můžu platit kartou?", answer: "Ano, přijímáme platbu hotově i platební kartou, včetně Apple Pay a Google Pay." },
-      { question: "Máte i další pobočky v Praze?", answer: "Ano, v Praze máme pobočky Praha 1 Máj (Národní 63/26, centrum), Praha 5 Smíchov (Toyen 3410/7, u metra Anděl) a Praha 6 Břevnov (Bělohorská 1393/44). Všechny pracují pod jednotnými standardy AK BARBERS." },
+      { question: "Máte i další pobočky v Praze?", answer: "Ano, v Praze máme pobočky Praha 1 Máj (Národní 63/26, centrum), Praha 3 Žižkov (Husitská 53), Praha 5 Smíchov (Toyen 3410/7, u metra Anděl) a Praha 6 Břevnov (Radimova 2522/4, dříve Bělohorská). Všechny pracují pod jednotnými standardy AK BARBERS." },
     ],
     internalLinks: [
       { label: "AK BARBERS – Praha Máj (Praha 1)", href: "/barber-praha-1" },
+      { label: "AK BARBERS Praha 3 – Žižkov", href: "/barber-praha-3" },
       { label: "AK BARBERS Praha 5 – Smíchov", href: "/barber-smichov" },
       { label: "AK BARBERS Praha 6 – Bělohorská", href: "/barber-praha-6" },
       academyLink,
@@ -845,6 +847,73 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     breadcrumbs: [
       { name: "AK BARBERS", href: "/" },
       { name: "Barber Praha 9 – Černý Most", href: "/barber-cerny-most" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // barber-praha-3 (CZ) – Žižkov
+  // ------------------------------------------------------------------
+  "barber-praha-3": {
+    lang: "cs",
+    slug: "barber-praha-3",
+    locationId: "praha-3",
+    title: "Barber Praha 3 – Žižkov | AK BARBERS Husitská, bez objednání",
+    description:
+      "Nový barbershop na Žižkově, Husitská 53, Praha 3. Walk-in bez objednání. Pánské stříhání od 499 Kč, skin fade, úprava vousů. Pár minut od Florence a centra Prahy.",
+    keywords: [
+      "barber praha 3",
+      "barber žižkov",
+      "barbershop žižkov",
+      "barbershop praha 3",
+      "pánské stříhání žižkov",
+      "pánské stříhání praha 3",
+      "barber husitská",
+      "barber bez objednání praha 3",
+      "holičství žižkov",
+      "kadeřnictví muži praha 3",
+      "barber shop žižkov",
+      "pánské holičství praha 3",
+      "barber u florence",
+      "skin fade žižkov",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Barber Praha 3 – Žižkov",
+    localityDescription: [
+      "AK BARBERS Praha 3 najdete na adrese Husitská 53, v srdci Žižkova — pár kroků pod vrchem Vítkov a Národním památníkem. Husitská je hlavní žižkovská tepna spojující čtvrť s Karlínem, Florencí a centrem Prahy, takže k nám dojedete rychle z celé Prahy. Tramvají vystupte na Tachovském náměstí nebo na Ohradě (linky 1, 9, 11, 15, 26), metro Florenc (linky B a C) i autobusové nádraží Florenc máte cca 10 minut pěšky nebo jednu zastávku tramvají.",
+      "Žižkov je jedna z nejživějších a nejvíc autentických pražských čtvrtí — domov mladých lidí, studentů, kreativců i rodin, proslulý nejvyšší koncentrací hospod v Evropě a kultovní atmosférou. Přirozeně se sem sjíždí i lidé z Karlína, Vinohrad a Nového Města. Naše pobočka je ideální zastávkou cestou z práce i o víkendu. Zaparkovat můžete v modrých a fialových zónách Prahy 3 (cca 20 Kč/hod) nebo na parkovišti u Nákladového nádraží Žižkov.",
+      "Fungujeme jako walk-in — přijďte kdykoliv bez objednání a užijte si profesionální střih od barberů vyškolených v AK BARBERS Academy. Otevřeno máme Po–Pá 10:00–19:00 a So–Ne 10:00–17:00. Na Žižkově navazujeme na osvědčenou kvalitu z poboček Praha 1 Máj, Praha 5 Smíchov, Praha 6 Břevnov a Praha 9 Černý Most.",
+    ],
+    services: [
+      { name: "Klasické pánské stříhání", price: "499 Kč" },
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "889 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+    ],
+    aboutText:
+      "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
+    faq: [
+      { question: "Kde přesně se nachází AK BARBERS Praha 3?", answer: "Na adrese Husitská 53, 130 00 Praha 3 – Žižkov, pod vrchem Vítkov. Jsme pár minut od metra a autobusového nádraží Florenc (linky B a C) a od tramvajových zastávek Tachovské náměstí a Ohrada." },
+      { question: "Musím se objednat předem?", answer: "Ne, fungujeme jako walk-in — přijďte kdykoliv během otevírací doby a obsloužíme vás bez rezervace." },
+      { question: "Jaká je otevírací doba na Žižkově?", answer: "Po–Pá 10:00–19:00, So–Ne 10:00–17:00. Otevřeno máme celý týden včetně víkendů." },
+      { question: "Kolik stojí pánský střih na Žižkově?", answer: "Klasické pánské stříhání stojí 499 Kč, Skin Fade 499 Kč. Kompletní balíček střih + úprava vousů je za 889 Kč, samotná úprava vousů 399 Kč a dětský střih od 349 Kč." },
+      { question: "Jak se k vám nejlépe dostanu MHD?", answer: "Nejrychleji metrem B nebo C na Florenc a odtud cca 10 minut pěšky Husitskou ulicí, případně jednu zastávku tramvají. Tramvají vystupte na Tachovském náměstí nebo na Ohradě (linky 1, 9, 11, 15, 26)." },
+      { question: "Kde můžu zaparkovat?", answer: "V modrých a fialových zónách Prahy 3 (cca 20 Kč/hod) v okolí Husitské, nebo na parkovišti u Nákladového nádraží Žižkov." },
+      { question: "Děláte skin fade?", answer: "Ano, skin fade patří k našim nejžádanějším službám. Naši barbeři ovládají low, mid i high fade se strojkem od 0 mm, precizním stínováním a plynulými přechody." },
+      { question: "Stříháte i děti?", answer: "Ano, dětský střih pro chlapce od 1 do 15 let stojí 349 Kč (klasický) nebo 449 Kč (Skin Fade / Low Fade / Crop Fade / Buzz Cut). Rádi poradíme s výběrem střihu." },
+      { question: "Můžu platit kartou?", answer: "Ano, přijímáme platbu hotově i platební kartou, včetně Apple Pay a Google Pay." },
+      { question: "Máte i další pobočky v Praze?", answer: "Ano, v Praze máme pobočky Praha 1 Máj (Národní 63/26, centrum), Praha 5 Smíchov (Toyen 3410/7, u metra Anděl), Praha 6 Břevnov (Radimova 2522/4) a Praha 9 Černý Most (Bryksova 758/62). Všechny pracují pod jednotnými standardy AK BARBERS." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS – Praha Máj (Praha 1)", href: "/barber-praha-1" },
+      { label: "AK BARBERS Praha 5 – Smíchov", href: "/barber-smichov" },
+      { label: "AK BARBERS Praha 9 – Černý Most", href: "/barber-cerny-most" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Praha 3 – Žižkov", href: "/barber-praha-3" },
     ],
   },
 };
@@ -942,7 +1011,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
     ],
     ogLocale: "cs_CZ",
     heroHeading: "Pánské stříhání Praha 6",
-    heroSubheading: "Bělohorská – Břevnov",
+    heroSubheading: "Radimova – Břevnov",
     serviceDetail: [
       "Klasické pánské stříhání v AK BARBERS zahrnuje důkladnou konzultaci, kde s vámi barber probere styl a délku střihu. Poté následuje precizní střih strojkem nebo nůžkami přesně na míru vašim představám, úprava kontúr a konečný styling.",
       "Střih trvá přibližně 30–40 minut a zahrnuje umytí vlasů, foukanou a styling. Naši barbeři jsou vyškoleni v AK BARBERS Academy, takže můžete očekávat profesionální výsledek pokaždé.",
@@ -967,7 +1036,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       { question: "Kolik stojí pánský střih na Praze 6?", answer: "Klasické pánské stříhání v AK BARBERS Praha 6 stojí 449 Kč. V ceně je konzultace, střih, foukaná a finální styling." },
       { question: "Jak dlouho trvá střih?", answer: "Přibližně 30–40 minut, v závislosti na zvoleném stylu." },
       { question: "Musím se objednat?", answer: "Ne, fungujeme walk-in. Online rezervace je dostupná přes Booqme." },
-      { question: "Kde se nachází pobočka na Praze 6?", answer: "Na adrese Bělohorská 1393/44, Praha 6 – Břevnov, přímo u tramvajové zastávky Malovanka." },
+      { question: "Kde se nachází pobočka na Praze 6?", answer: "Nově na adrese Radimova 2522/4, Praha 6 – Břevnov (dříve Bělohorská), přímo u tramvajové zastávky Marjánka." },
       { question: "Máte otevřeno i o víkendu?", answer: "V sobotu ano (9:00–12:00). V neděli máme zavřeno. Alternativně naše pobočka Praha 1 má otevřeno 7 dní v týdnu." },
     ],
     internalLinks: [
@@ -1073,7 +1142,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
     ],
     ogLocale: "cs_CZ",
     heroHeading: "Skin Fade Praha 6",
-    heroSubheading: "Bělohorská – Břevnov",
+    heroSubheading: "Radimova – Břevnov",
     serviceDetail: [
       "Skin fade je jedním z nejnáročnějších a nejpopulárnějších střihů v moderním barberingu. V AK BARBERS začínáme konzultací, kde společně zvolíme typ fadu — low, mid nebo high — a styl horní části vlasů.",
       "Barber poté pracuje strojkem od 0 mm, postupně stínuje a vytváří dokonale plynulé přechody. Používáme shaver pro čisté linie a detaily. Výsledkem je ostrý, moderní look s perfektním gradientem.",
@@ -1099,7 +1168,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       { question: "Jaký je rozdíl mezi low, mid a high fade?", answer: "Low fade začíná přechod těsně nad ušima, mid fade uprostřed hlavy a high fade vysoko na stranách. Barber vám poradí, co nejlépe sedne." },
       { question: "Jak často se má fade obnovovat?", answer: "Pro udržení ostrého vzhledu doporučujeme návštěvu každé 2–3 týdny." },
       { question: "Funguje skin fade i na kudrnatých vlasech?", answer: "Ano, skin fade skvěle funguje na všech typech vlasů včetně kudrnatých." },
-      { question: "Kde vás najdu na Praze 6?", answer: "Na adrese Bělohorská 1393/44, Praha 6 – Břevnov, u tramvajové zastávky Malovanka." },
+      { question: "Kde vás najdu na Praze 6?", answer: "Nově na adrese Radimova 2522/4, Praha 6 – Břevnov (dříve Bělohorská), u tramvajové zastávky Marjánka." },
     ],
     internalLinks: [
       { label: "Barber Praha 6 – všechny služby", href: "/barber-praha-6" },
@@ -1203,7 +1272,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
     ],
     ogLocale: "en_US",
     heroHeading: "Men's Haircut Prague 6",
-    heroSubheading: "Bělohorská – Břevnov",
+    heroSubheading: "Radimova – Břevnov",
     serviceDetail: [
       "A classic men's haircut at AK BARBERS starts with a thorough consultation where your barber discusses the style and length with you. Then comes a precision cut with clippers or scissors tailored exactly to your preferences, followed by contour shaping and final styling.",
       "The haircut takes approximately 30–40 minutes and includes a hair wash, blow-dry and styling. Our barbers are trained at the AK BARBERS Academy, so you can expect professional results every time.",
@@ -1228,7 +1297,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       { question: "How much is a men's haircut in Prague 6?", answer: "A classic men's haircut at AK BARBERS Prague 6 costs 449 CZK. Includes consultation, cut, blow-dry and styling." },
       { question: "How long does a haircut take?", answer: "About 30–40 minutes depending on the style." },
       { question: "Do I need a reservation?", answer: "No, walk-ins are welcome. Online booking is also available via Booqme." },
-      { question: "Where is the Prague 6 branch?", answer: "At Bělohorská 1393/44, Prague 6 – Břevnov, right by the Malovanka tram stop, near Dejvická metro." },
+      { question: "Where is the Prague 6 branch?", answer: "Now at a new address — Radimova 2522/4, Prague 6 – Břevnov (formerly Bělohorská), right by the Marjánka tram stop, near Dejvická metro." },
       { question: "Are you open on weekends?", answer: "Saturday yes (9:00–12:00). Sunday we're closed. Our Prague 1 branch is open 7 days a week." },
     ],
     internalLinks: [
@@ -1334,7 +1403,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
     ],
     ogLocale: "en_US",
     heroHeading: "Skin Fade Prague 6",
-    heroSubheading: "Bělohorská – Břevnov",
+    heroSubheading: "Radimova – Břevnov",
     serviceDetail: [
       "Skin fade is one of the most demanding and popular haircuts in modern barbering. At AK BARBERS we start with a consultation to choose the type of fade — low, mid or high — and the style for the top.",
       "Your barber then works with clippers from 0mm, gradually blending to create perfectly seamless transitions. We use a shaver for clean lines and fine details. The result is a sharp, modern look with a flawless gradient.",
@@ -1360,7 +1429,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       { question: "What's the difference between low, mid and high fade?", answer: "Low fade starts just above the ears, mid fade in the middle, high fade higher up. Your barber will recommend the best option for you." },
       { question: "How often should I refresh my fade?", answer: "Every 2–3 weeks to keep it looking sharp." },
       { question: "Does skin fade work on curly hair?", answer: "Yes, skin fade looks great on all hair types including curly." },
-      { question: "Where is the Prague 6 branch?", answer: "At Bělohorská 1393/44, Prague 6 – Břevnov, by the Malovanka tram stop, near Dejvická metro." },
+      { question: "Where is the Prague 6 branch?", answer: "Now at a new address — Radimova 2522/4, Prague 6 – Břevnov (formerly Bělohorská), by the Marjánka tram stop, near Dejvická metro." },
     ],
     internalLinks: [
       { label: "Barber Prague 6 – all services", href: "/en/barber-prague-6" },
@@ -1504,6 +1573,134 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       { name: "AK BARBERS", href: "/" },
       { name: "Barber Prague 5", href: "/en/barber-prague-5" },
       { name: "Skin Fade", href: "/en/skin-fade-prague-5" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // pansky-strih-praha-3 (CZ) – Žižkov
+  // ------------------------------------------------------------------
+  "pansky-strih-praha-3": {
+    lang: "cs",
+    slug: "pansky-strih-praha-3",
+    locationId: "praha-3",
+    serviceType: "haircut",
+    crossLocationSlug: "pansky-strih-praha-6",
+    crossServiceSlug: "skin-fade-praha-3",
+    locationSlug: "barber-praha-3",
+    title: "Pánské stříhání Praha 3 – Žižkov | AK BARBERS od 499 Kč",
+    description:
+      "Profesionální pánské stříhání na Žižkově, Husitská 53, Praha 3. Klasický střih od 499 Kč, konzultace a styling v ceně. Walk-in bez objednání. AK BARBERS.",
+    keywords: [
+      "pánské stříhání praha 3",
+      "pánský střih žižkov",
+      "kadeřnictví muži praha 3",
+      "klasický střih žižkov",
+      "barber střih husitská",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Pánské stříhání Praha 3",
+    heroSubheading: "Husitská – Žižkov",
+    serviceDetail: [
+      "Klasické pánské stříhání v AK BARBERS zahrnuje důkladnou konzultaci, kde s vámi barber probere styl a délku střihu. Poté následuje precizní střih strojkem nebo nůžkami přesně na míru vašim představám, úprava kontúr a konečný styling.",
+      "Střih trvá přibližně 30–40 minut a zahrnuje umytí vlasů, foukanou a styling. Naši barbeři jsou vyškoleni v AK BARBERS Academy, takže můžete očekávat profesionální výsledek pokaždé.",
+      "Služba je ideální pro muže, kteří hledají kvalitní klasický střih bez zbytečného čekání. Na Žižkově fungujeme walk-in — stačí přijít.",
+    ],
+    servicePrice: "499 Kč",
+    whyUs: [
+      "Profesionální barbeři vyškolení v AK BARBERS Academy",
+      "Konzultace, střih a styling v ceně",
+      "Prémiové vybavení a kosmetika",
+      "Skvělá dostupnost — pár minut od Florence a centra",
+      "Walk-in bez objednání, otevřeno celý týden",
+    ],
+    otherServices: [
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", link: "/skin-fade-praha-3" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Střih + úprava vousů", price: "889 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+    ],
+    faq: [
+      { question: "Kolik stojí pánský střih na Žižkově?", answer: "Klasické pánské stříhání v AK BARBERS Praha 3 stojí 499 Kč. V ceně je konzultace, střih strojkem nebo nůžkami, foukaná a finální styling." },
+      { question: "Jak dlouho trvá střih?", answer: "Přibližně 30–40 minut, v závislosti na zvoleném stylu a délce vlasů." },
+      { question: "Musím se objednat?", answer: "Ne, na Žižkově fungujeme walk-in. Přijďte kdykoliv během otevírací doby." },
+      { question: "Kde se nachází pobočka na Praze 3?", answer: "Na adrese Husitská 53, Praha 3 – Žižkov, pár minut od metra a autobusového nádraží Florenc." },
+      { question: "Máte otevřeno i o víkendu?", answer: "Ano, Po–Pá 10:00–19:00 a So–Ne 10:00–17:00 — otevřeno celý týden." },
+    ],
+    internalLinks: [
+      { label: "Barber Praha 3 – všechny služby", href: "/barber-praha-3" },
+      { label: "Skin Fade Praha 3", href: "/skin-fade-praha-3" },
+      { label: "Pánský střih Praha 6", href: "/pansky-strih-praha-6" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Praha 3", href: "/barber-praha-3" },
+      { name: "Pánské stříhání", href: "/pansky-strih-praha-3" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // skin-fade-praha-3 (CZ) – Žižkov
+  // ------------------------------------------------------------------
+  "skin-fade-praha-3": {
+    lang: "cs",
+    slug: "skin-fade-praha-3",
+    locationId: "praha-3",
+    serviceType: "skin-fade",
+    crossLocationSlug: "skin-fade-praha-6",
+    crossServiceSlug: "pansky-strih-praha-3",
+    locationSlug: "barber-praha-3",
+    title: "Skin Fade Praha 3 – Žižkov | AK BARBERS od 499 Kč",
+    description:
+      "Precizní skin fade na Žižkově, Husitská 53, Praha 3. Low, mid i high fade od 499 Kč, přechody od 0 mm. Walk-in bez objednání. AK BARBERS.",
+    keywords: [
+      "skin fade praha 3",
+      "skin fade žižkov",
+      "fade střih praha 3",
+      "high fade žižkov",
+      "barber fade husitská",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Skin Fade Praha 3",
+    heroSubheading: "Husitská – Žižkov",
+    serviceDetail: [
+      "Skin Fade je jedna z našich nejžádanějších služeb. Začínáme konzultací, kde určíme typ fade (low, mid nebo high) podle tvaru hlavy a tvého stylu. Následuje precizní střih strojkem od 0 mm, použití shaveru, jemné stínování a plynulé přechody.",
+      "Střih zahrnuje úpravu kontúr, umytí, foukanou a konečný styling. Naši barbeři jsou vyškoleni v AK BARBERS Academy a fade ovládají do detailu — výsledkem je čistý, ostrý a dlouho držící vzhled.",
+      "Skin Fade skvěle funguje na všech typech vlasů včetně kratších i delších délek. Na Žižkově fungujeme walk-in — stačí přijít bez objednání.",
+    ],
+    servicePrice: "499 Kč",
+    whyUs: [
+      "Specialisté na low, mid i high fade s přechody od 0 mm",
+      "Konzultace, stínování a styling v ceně",
+      "Prémiové strojky a kosmetika",
+      "Skvělá dostupnost — pár minut od Florence a centra",
+      "Walk-in bez objednání, otevřeno celý týden",
+    ],
+    otherServices: [
+      { name: "Klasické pánské stříhání", price: "499 Kč", link: "/pansky-strih-praha-3" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Střih + úprava vousů", price: "889 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+    ],
+    faq: [
+      { question: "Kolik stojí skin fade na Žižkově?", answer: "Skin Fade v AK BARBERS Praha 3 stojí 499 Kč. V ceně je konzultace, střih strojkem od 0 mm, stínování, přechody a finální styling." },
+      { question: "Jaký fade děláte?", answer: "Low, mid i high fade. Typ doporučíme podle tvaru hlavy a tvého stylu při konzultaci." },
+      { question: "Jak často se má fade obnovovat?", answer: "Pro udržení ostrého vzhledu doporučujeme návštěvu každé 2–3 týdny." },
+      { question: "Musím se objednat?", answer: "Ne, na Žižkově fungujeme walk-in. Přijďte kdykoliv během otevírací doby." },
+      { question: "Kde se nachází pobočka na Praze 3?", answer: "Na adrese Husitská 53, Praha 3 – Žižkov, pár minut od metra a autobusového nádraží Florenc." },
+    ],
+    internalLinks: [
+      { label: "Barber Praha 3 – všechny služby", href: "/barber-praha-3" },
+      { label: "Pánský střih Praha 3", href: "/pansky-strih-praha-3" },
+      { label: "Skin Fade Praha 6", href: "/skin-fade-praha-6" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber Praha 3", href: "/barber-praha-3" },
+      { name: "Skin Fade", href: "/skin-fade-praha-3" },
     ],
   },
 };
