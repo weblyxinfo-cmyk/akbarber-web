@@ -879,7 +879,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     ogLocale: "cs_CZ",
     heroHeading: "Barber Praha 3 – Žižkov",
     localityDescription: [
-      "AK BARBERS Praha 3 najdete na adrese Husitská 53, v srdci Žižkova — pár kroků pod vrchem Vítkov a Národním památníkem. Husitská je hlavní žižkovská tepna spojující čtvrť s Karlínem, Florencí a centrem Prahy, takže k nám dojedete rychle z celé Prahy. Tramvají vystupte na Tachovském náměstí nebo na Ohradě (linky 1, 9, 11, 15, 26), metro Florenc (linky B a C) i autobusové nádraží Florenc máte cca 10 minut pěšky nebo jednu zastávku tramvají.",
+      "AK BARBERS Praha 3 najdete na adrese Husitská 53, v srdci Žižkova — pár kroků pod vrchem Vítkov a Národním památníkem. Husitská je hlavní žižkovská tepna spojující čtvrť s Karlínem, Florencí a centrem Prahy, takže k nám dojedete rychle z celé Prahy. Nejbližší tramvajová zastávka je Lipanská (linky 5, 9, 15, 26), odkud je to k nám pár minut pěšky. Metro Florenc (linky B a C) i autobusové nádraží Florenc máte zhruba 10 minut pěšky.",
       "Žižkov je jedna z nejživějších a nejvíc autentických pražských čtvrtí — domov mladých lidí, studentů, kreativců i rodin, proslulý nejvyšší koncentrací hospod v Evropě a kultovní atmosférou. Přirozeně se sem sjíždí i lidé z Karlína, Vinohrad a Nového Města. Naše pobočka je ideální zastávkou cestou z práce i o víkendu. Zaparkovat můžete v modrých a fialových zónách Prahy 3 (cca 20 Kč/hod) nebo na parkovišti u Nákladového nádraží Žižkov.",
       "Fungujeme jako walk-in — přijďte kdykoliv bez objednání a užijte si profesionální střih od barberů vyškolených v AK BARBERS Academy. Otevřeno máme Po–Pá 10:00–19:00 a So–Ne 10:00–17:00. Na Žižkově navazujeme na osvědčenou kvalitu z poboček Praha 1 Máj, Praha 5 Smíchov, Praha 6 Břevnov a Praha 9 Černý Most.",
     ],
@@ -893,11 +893,11 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     aboutText:
       "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
     faq: [
-      { question: "Kde přesně se nachází AK BARBERS Praha 3?", answer: "Na adrese Husitská 53, 130 00 Praha 3 – Žižkov, pod vrchem Vítkov. Jsme pár minut od metra a autobusového nádraží Florenc (linky B a C) a od tramvajových zastávek Tachovské náměstí a Ohrada." },
+      { question: "Kde přesně se nachází AK BARBERS Praha 3?", answer: "Na adrese Husitská 53, 130 00 Praha 3 – Žižkov, pod vrchem Vítkov. Jsme pár minut od metra a autobusového nádraží Florenc (linky B a C) a od tramvajové zastávky Lipanská (linky 5, 9, 15, 26)." },
       { question: "Musím se objednat předem?", answer: "Ne, fungujeme jako walk-in — přijďte kdykoliv během otevírací doby a obsloužíme vás bez rezervace." },
       { question: "Jaká je otevírací doba na Žižkově?", answer: "Po–Pá 10:00–19:00, So–Ne 10:00–17:00. Otevřeno máme celý týden včetně víkendů." },
       { question: "Kolik stojí pánský střih na Žižkově?", answer: "Klasické pánské stříhání stojí 499 Kč, Skin Fade 499 Kč. Kompletní balíček střih + úprava vousů je za 889 Kč, samotná úprava vousů 399 Kč a dětský střih od 349 Kč." },
-      { question: "Jak se k vám nejlépe dostanu MHD?", answer: "Nejrychleji metrem B nebo C na Florenc a odtud cca 10 minut pěšky Husitskou ulicí, případně jednu zastávku tramvají. Tramvají vystupte na Tachovském náměstí nebo na Ohradě (linky 1, 9, 11, 15, 26)." },
+      { question: "Jak se k vám nejlépe dostanu MHD?", answer: "Nejrychleji metrem B nebo C na Florenc a odtud zhruba 10 minut pěšky. Tramvají vystupte na zastávce Lipanská (linky 5, 9, 15, 26) a dojděte pár minut pěšky." },
       { question: "Kde můžu zaparkovat?", answer: "V modrých a fialových zónách Prahy 3 (cca 20 Kč/hod) v okolí Husitské, nebo na parkovišti u Nákladového nádraží Žižkov." },
       { question: "Děláte skin fade?", answer: "Ano, skin fade patří k našim nejžádanějším službám. Naši barbeři ovládají low, mid i high fade se strojkem od 0 mm, precizním stínováním a plynulými přechody." },
       { question: "Stříháte i děti?", answer: "Ano, dětský střih pro chlapce od 1 do 15 let stojí 349 Kč (klasický) nebo 449 Kč (Skin Fade / Low Fade / Crop Fade / Buzz Cut). Rádi poradíme s výběrem střihu." },

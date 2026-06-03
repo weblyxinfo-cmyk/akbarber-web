@@ -395,11 +395,11 @@ export const locations: Location[] = [
     geo: { lat: 50.0871954, lng: 14.4513103 },
     transport: {
       publicTransport: [
-        "Tramvaj Ohrada – linky 1, 9, 11 (5 min chůze)",
-        "Tramvaj Tachovské náměstí – linky 9, 15, 26 (5 min chůze)",
-        "Autobus Ohrada – linky 133, 136, 207",
+        "Tramvaj Lipanská – linky 5, 9, 15, 26 (pár minut pěšky)",
+        "Metro Florenc (linky B a C) – cca 10 min chůze",
+        "Autobusové nádraží Florenc – regionální i dálkové linky",
       ],
-      parking: "Fialové zóny Praha 3 (20 Kč/hod), parkoviště Nádraží Žižkov",
+      parking: "Modré a fialové zóny Praha 3 (cca 20 Kč/hod), parkoviště u Nákladového nádraží Žižkov",
     },
   },
   {
