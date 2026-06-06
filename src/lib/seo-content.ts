@@ -859,7 +859,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     locationId: "praha-3",
     title: "Barber Praha 3 – Žižkov | AK BARBERS Husitská, bez objednání",
     description:
-      "Nový barbershop na Žižkově, Husitská 53, Praha 3. Walk-in bez objednání. Pánské stříhání od 499 Kč, skin fade, úprava vousů. Pár minut od Florence a centra Prahy.",
+      "Nový barbershop na Žižkově, Husitská 53, Praha 3. Walk-in i online rezervace. Pánské stříhání od 499 Kč, skin fade, úprava vousů. Pár minut od Florence a centra Prahy.",
     keywords: [
       "barber praha 3",
       "barber žižkov",
@@ -881,7 +881,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     localityDescription: [
       "AK BARBERS Praha 3 najdete na adrese Husitská 53, v srdci Žižkova — pár kroků pod vrchem Vítkov a Národním památníkem. Husitská je hlavní žižkovská tepna spojující čtvrť s Karlínem, Florencí a centrem Prahy, takže k nám dojedete rychle z celé Prahy. Nejbližší tramvajová zastávka je Lipanská (linky 5, 9, 15, 26), odkud je to k nám pár minut pěšky. Autobusem dojedete na zastávku Tachovské náměstí nebo U Památníku (linky 133, 136, 175, 207). Metro a autobusové nádraží Florenc (linky B a C) máte zhruba 10 minut pěšky.",
       "Žižkov je jedna z nejživějších a nejvíc autentických pražských čtvrtí — domov mladých lidí, studentů, kreativců i rodin, proslulý nejvyšší koncentrací hospod v Evropě a kultovní atmosférou. Přirozeně se sem sjíždí i lidé z Karlína, Vinohrad a Nového Města. Naše pobočka je ideální zastávkou cestou z práce i o víkendu. Zaparkovat můžete v modrých a fialových parkovacích zónách Prahy 3 přímo v okolí Husitské (cca 20 Kč/hod).",
-      "Fungujeme jako walk-in — přijďte kdykoliv bez objednání a užijte si profesionální střih od barberů vyškolených v AK BARBERS Academy. Otevřeno máme Po–Pá 10:00–19:00 a So–Ne 10:00–17:00. Na Žižkově navazujeme na osvědčenou kvalitu z poboček Praha 1 Máj, Praha 5 Smíchov, Praha 6 Břevnov a Praha 9 Černý Most.",
+      "Fungujeme jako walk-in i na rezervaci — přijďte kdykoliv bez objednání, nebo si pohodlně zarezervujte termín online přes Booqme. Užijte si profesionální střih od barberů vyškolených v AK BARBERS Academy. Otevřeno máme Po–Pá 10:00–19:00 a So–Ne 10:00–17:00. Na Žižkově navazujeme na osvědčenou kvalitu z poboček Praha 1 Máj, Praha 5 Smíchov, Praha 6 Břevnov a Praha 9 Černý Most.",
     ],
     services: [
       { name: "Klasické pánské stříhání", price: "499 Kč" },
@@ -894,7 +894,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
     faq: [
       { question: "Kde přesně se nachází AK BARBERS Praha 3?", answer: "Na adrese Husitská 53, 130 00 Praha 3 – Žižkov, pod vrchem Vítkov. Jsme pár minut od metra a autobusového nádraží Florenc (linky B a C) a od tramvajové zastávky Lipanská (linky 5, 9, 15, 26)." },
-      { question: "Musím se objednat předem?", answer: "Ne, fungujeme jako walk-in — přijďte kdykoliv během otevírací doby a obsloužíme vás bez rezervace." },
+      { question: "Musím se objednat předem?", answer: "Nemusíte — fungujeme jako walk-in, takže můžete přijít kdykoliv během otevírací doby. Pokud si chcete zajistit konkrétní čas, nabízíme i online rezervaci přes Booqme." },
       { question: "Jaká je otevírací doba na Žižkově?", answer: "Po–Pá 10:00–19:00, So–Ne 10:00–17:00. Otevřeno máme celý týden včetně víkendů." },
       { question: "Kolik stojí pánský střih na Žižkově?", answer: "Klasické pánské stříhání stojí 499 Kč, Skin Fade 499 Kč. Kompletní balíček střih + úprava vousů je za 889 Kč, samotná úprava vousů 399 Kč a dětský střih od 349 Kč." },
       { question: "Jak se k vám nejlépe dostanu MHD?", answer: "Nejrychleji metrem B nebo C na Florenc a odtud zhruba 10 minut pěšky. Tramvají vystupte na zastávce Lipanská (linky 5, 9, 15, 26), autobusem na Tachovské náměstí nebo U Památníku (linky 133, 136, 175, 207) – pak pár minut pěšky." },
@@ -1589,7 +1589,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
     locationSlug: "barber-praha-3",
     title: "Pánské stříhání Praha 3 – Žižkov | AK BARBERS od 499 Kč",
     description:
-      "Profesionální pánské stříhání na Žižkově, Husitská 53, Praha 3. Klasický střih od 499 Kč, konzultace a styling v ceně. Walk-in bez objednání. AK BARBERS.",
+      "Profesionální pánské stříhání na Žižkově, Husitská 53, Praha 3. Klasický střih od 499 Kč, konzultace a styling v ceně. Walk-in i online rezervace. AK BARBERS.",
     keywords: [
       "pánské stříhání praha 3",
       "pánský střih žižkov",
@@ -1603,7 +1603,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
     serviceDetail: [
       "Klasické pánské stříhání v AK BARBERS zahrnuje důkladnou konzultaci, kde s vámi barber probere styl a délku střihu. Poté následuje precizní střih strojkem nebo nůžkami přesně na míru vašim představám, úprava kontúr a konečný styling.",
       "Střih trvá přibližně 30–40 minut a zahrnuje umytí vlasů, foukanou a styling. Naši barbeři jsou vyškoleni v AK BARBERS Academy, takže můžete očekávat profesionální výsledek pokaždé.",
-      "Služba je ideální pro muže, kteří hledají kvalitní klasický střih bez zbytečného čekání. Na Žižkově fungujeme walk-in — stačí přijít.",
+      "Služba je ideální pro muže, kteří hledají kvalitní klasický střih bez zbytečného čekání. Na Žižkově fungujeme walk-in — stačí přijít, nebo si termín zarezervujte online přes Booqme.",
     ],
     servicePrice: "499 Kč",
     whyUs: [
@@ -1611,7 +1611,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       "Konzultace, střih a styling v ceně",
       "Prémiové vybavení a kosmetika",
       "Skvělá dostupnost — pár minut od Florence a centra",
-      "Walk-in bez objednání, otevřeno celý týden",
+      "Walk-in i online rezervace, otevřeno celý týden",
     ],
     otherServices: [
       { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", link: "/skin-fade-praha-3" },
@@ -1622,7 +1622,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
     faq: [
       { question: "Kolik stojí pánský střih na Žižkově?", answer: "Klasické pánské stříhání v AK BARBERS Praha 3 stojí 499 Kč. V ceně je konzultace, střih strojkem nebo nůžkami, foukaná a finální styling." },
       { question: "Jak dlouho trvá střih?", answer: "Přibližně 30–40 minut, v závislosti na zvoleném stylu a délce vlasů." },
-      { question: "Musím se objednat?", answer: "Ne, na Žižkově fungujeme walk-in. Přijďte kdykoliv během otevírací doby." },
+      { question: "Musím se objednat?", answer: "Nemusíte — na Žižkově fungujeme walk-in, můžete přijít kdykoliv během otevírací doby. K dispozici je i online rezervace přes Booqme." },
       { question: "Kde se nachází pobočka na Praze 3?", answer: "Na adrese Husitská 53, Praha 3 – Žižkov, pár minut od metra a autobusového nádraží Florenc." },
       { question: "Máte otevřeno i o víkendu?", answer: "Ano, Po–Pá 10:00–19:00 a So–Ne 10:00–17:00 — otevřeno celý týden." },
     ],
@@ -1653,7 +1653,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
     locationSlug: "barber-praha-3",
     title: "Skin Fade Praha 3 – Žižkov | AK BARBERS od 499 Kč",
     description:
-      "Precizní skin fade na Žižkově, Husitská 53, Praha 3. Low, mid i high fade od 499 Kč, přechody od 0 mm. Walk-in bez objednání. AK BARBERS.",
+      "Precizní skin fade na Žižkově, Husitská 53, Praha 3. Low, mid i high fade od 499 Kč, přechody od 0 mm. Walk-in i online rezervace. AK BARBERS.",
     keywords: [
       "skin fade praha 3",
       "skin fade žižkov",
@@ -1667,7 +1667,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
     serviceDetail: [
       "Skin Fade je jedna z našich nejžádanějších služeb. Začínáme konzultací, kde určíme typ fade (low, mid nebo high) podle tvaru hlavy a tvého stylu. Následuje precizní střih strojkem od 0 mm, použití shaveru, jemné stínování a plynulé přechody.",
       "Střih zahrnuje úpravu kontúr, umytí, foukanou a konečný styling. Naši barbeři jsou vyškoleni v AK BARBERS Academy a fade ovládají do detailu — výsledkem je čistý, ostrý a dlouho držící vzhled.",
-      "Skin Fade skvěle funguje na všech typech vlasů včetně kratších i delších délek. Na Žižkově fungujeme walk-in — stačí přijít bez objednání.",
+      "Skin Fade skvěle funguje na všech typech vlasů včetně kratších i delších délek. Na Žižkově fungujeme walk-in — stačí přijít, nebo si termín zarezervujte online přes Booqme.",
     ],
     servicePrice: "499 Kč",
     whyUs: [
@@ -1675,7 +1675,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       "Konzultace, stínování a styling v ceně",
       "Prémiové strojky a kosmetika",
       "Skvělá dostupnost — pár minut od Florence a centra",
-      "Walk-in bez objednání, otevřeno celý týden",
+      "Walk-in i online rezervace, otevřeno celý týden",
     ],
     otherServices: [
       { name: "Klasické pánské stříhání", price: "499 Kč", link: "/pansky-strih-praha-3" },
@@ -1687,7 +1687,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       { question: "Kolik stojí skin fade na Žižkově?", answer: "Skin Fade v AK BARBERS Praha 3 stojí 499 Kč. V ceně je konzultace, střih strojkem od 0 mm, stínování, přechody a finální styling." },
       { question: "Jaký fade děláte?", answer: "Low, mid i high fade. Typ doporučíme podle tvaru hlavy a tvého stylu při konzultaci." },
       { question: "Jak často se má fade obnovovat?", answer: "Pro udržení ostrého vzhledu doporučujeme návštěvu každé 2–3 týdny." },
-      { question: "Musím se objednat?", answer: "Ne, na Žižkově fungujeme walk-in. Přijďte kdykoliv během otevírací doby." },
+      { question: "Musím se objednat?", answer: "Nemusíte — na Žižkově fungujeme walk-in, můžete přijít kdykoliv během otevírací doby. K dispozici je i online rezervace přes Booqme." },
       { question: "Kde se nachází pobočka na Praze 3?", answer: "Na adrese Husitská 53, Praha 3 – Žižkov, pár minut od metra a autobusového nádraží Florenc." },
     ],
     internalLinks: [
