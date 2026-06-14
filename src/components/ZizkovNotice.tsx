@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-// Promo oznámení k otevření nové pobočky Praha 3 – Žižkov.
+// Promo oznámení: znovuotevření Prahy 6 + nová pobočka Praha 3 – Žižkov.
 // Automaticky zmizí po tomto datu.
-const STORAGE_KEY = "ak-promo-zizkov-dismissed";
+const STORAGE_KEY = "ak-promo-news-dismissed";
 const HIDE_AFTER = new Date("2026-07-31T23:59:59");
 
 export function ZizkovNotice() {
@@ -27,6 +27,13 @@ export function ZizkovNotice() {
 
   if (!visible) return null;
 
+  const arrow = (
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <polyline points="12 5 19 12 12 19" />
+    </svg>
+  );
+
   return (
     <div
       role="status"
@@ -43,17 +50,42 @@ export function ZizkovNotice() {
           <line x1="6" y1="6" x2="18" y2="18" />
         </svg>
       </button>
+
+      {/* Praha 6 – znovu otevřeno */}
+      <div className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-[#4ade80]/50 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#4ade80]">
+        <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#4ade80] animate-pulse" />
+        Znovu otevřeno
+      </div>
+      <p className="mb-1.5 pr-6 text-[13px] font-semibold leading-tight text-white">
+        Jsme zpátky na Praze 6! 🎉
+      </p>
+      <p className="mb-2.5 text-[12px] leading-[1.5] text-gray">
+        Břevnovská pobočka je opět otevřena – nově na adrese{" "}
+        <span className="font-semibold text-white">Radimova 2522/4, Praha 6 – Břevnov</span>. Stejný tým, bez objednání i na rezervaci.
+      </p>
+      <Link
+        href="/pobocky/praha-6"
+        onClick={dismiss}
+        className="inline-flex items-center gap-1.5 rounded-full bg-[#4ade80] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-black transition-opacity hover:opacity-90"
+      >
+        Přejít na pobočku
+        {arrow}
+      </Link>
+
+      <div className="my-3 h-px bg-white/10" />
+
+      {/* Praha 3 Žižkov – nově otevřeno */}
       <div className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-[#4ade80]/50 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#4ade80]">
         <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#4ade80] animate-pulse" />
         Nově otevřeno
       </div>
-      <p className="mb-3 pr-6 text-[13px] font-semibold leading-tight text-white">
+      <p className="mb-1.5 pr-6 text-[13px] font-semibold leading-tight text-white">
         Nově na Žižkově! 🎉
       </p>
-      <p className="mb-3 text-[12px] leading-[1.5] text-gray">
+      <p className="mb-2.5 text-[12px] leading-[1.5] text-gray">
         Otevřeli jsme novou pobočku na adrese{" "}
         <span className="font-semibold text-white">Husitská 53, Praha 3 – Žižkov</span>.{" "}
-        <span className="font-semibold text-white">14 křesel</span> znamená skoro žádné čekání – stavte se bez objednání i na rezervaci!
+        <span className="font-semibold text-white">14 křesel</span> znamená skoro žádné čekání – bez objednání i na rezervaci.
       </p>
       <Link
         href="/pobocky/praha-3"
@@ -61,10 +93,7 @@ export function ZizkovNotice() {
         className="inline-flex items-center gap-1.5 rounded-full bg-[#4ade80] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-black transition-opacity hover:opacity-90"
       >
         Přejít na pobočku
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <line x1="5" y1="12" x2="19" y2="12" />
-          <polyline points="12 5 19 12 12 19" />
-        </svg>
+        {arrow}
       </Link>
     </div>
   );
