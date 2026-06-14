@@ -382,11 +382,6 @@ export const locations: Location[] = [
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-3",
-    stats: [
-      { value: "14", label: "křesel" },
-      { value: "0", label: "čekání" },
-      { value: "7", label: "dní v týdnu" },
-    ],
     services: premiumServices,
     image: "/images/locations/photo-beroun.jpg",
     currency: "CZK",

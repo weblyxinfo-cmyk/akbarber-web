@@ -69,24 +69,6 @@ export function SeoLocationPage({ content, location }: Props) {
 
           <GoogleReviewBadge location={location} lang={lang} />
 
-          {content.stats && content.stats.length > 0 && (
-            <div className="mb-8 mt-6 grid grid-cols-3 gap-px overflow-hidden rounded-xl border border-border bg-border max-sm:gap-px">
-              {content.stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col items-center justify-center bg-bg-card px-3 py-5 text-center"
-                >
-                  <span className="font-[family-name:var(--font-roboto-slab)] text-[40px] font-bold leading-none text-white max-sm:text-[30px]">
-                    {stat.value}
-                  </span>
-                  <span className="mt-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          )}
-
           {location.type === "walk-in + reservation" && (
             <div className="mb-8 flex flex-col gap-2">
               <p className="text-[20px] font-bold text-white">

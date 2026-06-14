@@ -6,7 +6,7 @@ import { CareerAcademy } from "@/components/sections/CareerAcademy";
 import { Vouchers } from "@/components/sections/Vouchers";
 import { FAQ } from "@/components/sections/FAQ";
 import { Contact } from "@/components/sections/Contact";
-import { ClosureNotice } from "@/components/ClosureNotice";
+import { ZizkovNotice } from "@/components/ZizkovNotice";
 
 export default function HomePage() {
   return (
@@ -36,7 +36,7 @@ export default function HomePage() {
       <Vouchers />
       <FAQ />
       <Contact />
-      <ClosureNotice />
+      <ZizkovNotice />
     </>
   );
 }

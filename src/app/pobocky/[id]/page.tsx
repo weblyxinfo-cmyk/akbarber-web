@@ -470,24 +470,6 @@ export default async function LocationPage({ params, searchParams }: Props) {
             {isBilingual && <LanguageSwitcher lang={lang} />}
           </div>
 
-          {!location.temporarilyClosed && location.stats && location.stats.length > 0 && (
-            <div className="mb-8 grid grid-cols-3 gap-px overflow-hidden rounded-xl border border-border bg-border">
-              {location.stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col items-center justify-center bg-bg-card px-3 py-5 text-center"
-                >
-                  <span className="font-[family-name:var(--font-roboto-slab)] text-[40px] font-bold leading-none text-white max-sm:text-[30px]">
-                    {stat.value}
-                  </span>
-                  <span className="mt-2 text-[11px] font-medium uppercase tracking-wider text-gray-light">
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          )}
-
           {location.temporarilyClosed ? null : location.type === "coming-soon" ? (
             <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#444] px-5 py-2 text-[20px] font-bold text-[#ccc]">
               {location.openingDate ? `Otevíráme ${location.openingDate}` : "Připravuje se"}
