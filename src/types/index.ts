@@ -17,6 +17,7 @@ export interface Location {
   phone: string;
   openingHours: OpeningHours[];
   type: "walk-in" | "reservation" | "walk-in + reservation" | "coming-soon";
+  stats?: { value: string; label: string }[]; // bold hero stat bar (e.g. "14 křesel")
   bookingUrl?: string;
   eshopUrl?: string;
   services: Service[];
@@ -106,6 +107,7 @@ export interface SeoLocationContent {
   keywords: string[];
   ogLocale: string;
   heroHeading: string;
+  stats?: { value: string; label: string }[]; // bold hero stat bar (e.g. "14 křesel")
   localityDescription: string[];
   services: SeoServiceItem[];
   aboutText: string;

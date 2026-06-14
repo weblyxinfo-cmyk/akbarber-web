@@ -878,6 +878,11 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     ],
     ogLocale: "cs_CZ",
     heroHeading: "Barber Praha 3 – Žižkov",
+    stats: [
+      { value: "14", label: "křesel" },
+      { value: "0", label: "čekání" },
+      { value: "7", label: "dní v týdnu" },
+    ],
     localityDescription: [
       "AK BARBERS Praha 3 najdete na adrese Husitská 53, v srdci Žižkova — pár kroků pod vrchem Vítkov a Národním památníkem. Husitská je hlavní žižkovská tepna spojující čtvrť s Karlínem, Florencí a centrem Prahy, takže k nám dojedete rychle z celé Prahy. Nejbližší tramvajová zastávka je Lipanská (linky 5, 9, 15, 26), odkud je to k nám pár minut pěšky. Autobusem dojedete na zastávku Tachovské náměstí nebo U Památníku (linky 133, 136, 175, 207). Metro a autobusové nádraží Florenc (linky B a C) máte zhruba 10 minut pěšky.",
       "Žižkov je jedna z nejživějších a nejvíc autentických pražských čtvrtí — domov mladých lidí, studentů, kreativců i rodin, proslulý nejvyšší koncentrací hospod v Evropě a kultovní atmosférou. Přirozeně se sem sjíždí i lidé z Karlína, Vinohrad a Nového Města. Naše pobočka je ideální zastávkou cestou z práce i o víkendu. Zaparkovat můžete v modrých a fialových parkovacích zónách Prahy 3 přímo v okolí Husitské (cca 20 Kč/hod).",

@@ -171,8 +171,7 @@ export const locations: Location[] = [
     openingHours: [
       { days: "Po – Ne", hours: "9:00 – 21:00" },
     ],
-    type: "walk-in + reservation",
-    bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-19",
+    type: "walk-in",
     services: premiumServices,
     image: "/images/locations/photo-praha-1.jpg",
     currency: "CZK",
@@ -229,8 +228,7 @@ export const locations: Location[] = [
       { days: "Po – Pá", hours: "9:30 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
     ],
-    type: "walk-in + reservation",
-    bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-plzen1",
+    type: "walk-in",
     eshopUrl: "https://booqme.cz/cs/eshop/ak-barbers-plzen1",
     services: standardServices,
     image: "/images/locations/photo-plzen.jpg",
@@ -318,8 +316,7 @@ export const locations: Location[] = [
     openingHours: [
       { days: "Po – Ne", hours: "9:00 – 21:00" },
     ],
-    type: "walk-in + reservation",
-    bookingUrl: "https://booqme.sk/sk/rezervacia/ak-barbers-nitra2",
+    type: "walk-in",
     eshopUrl: "https://booqme.sk/sk/eshop/ak-barbers-nitra2",
     services: [
       { name: "Klasický pánsky strih", price: "17 €", description: "Strih, úprava kontúr britvou, fúkaná, styling. Vždy radi poradíme klientom a pomôžeme s výberom strihu. Zľava 25% pre PZ, HaZZ, ZZS, ISIC – 13 €." },
@@ -385,6 +382,11 @@ export const locations: Location[] = [
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-3",
+    stats: [
+      { value: "14", label: "křesel" },
+      { value: "0", label: "čekání" },
+      { value: "7", label: "dní v týdnu" },
+    ],
     services: premiumServices,
     image: "/images/locations/photo-beroun.jpg",
     currency: "CZK",
