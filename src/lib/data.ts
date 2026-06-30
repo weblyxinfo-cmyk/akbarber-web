@@ -384,8 +384,7 @@ export const locations: Location[] = [
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-3",
     services: premiumServices,
-    discountPercent: 20, // Akce – sleva 20 % na celý ceník
-    discountFrom: "2026-07-01T00:00:00+02:00", // aktivuje se automaticky od 1. 7. 2026
+    discountPercent: 20, // Akce – sleva 20 % na celý ceník (aktivní od 30. 6. 2026)
     image: "/images/locations/photo-beroun.jpg",
     currency: "CZK",
     googleMapsUrl: "https://www.google.com/maps/place/AK+BARBERS+%C5%BDI%C5%BDKOV+PRAHA+3+-+BEZ+OBJEDN%C3%81N%C3%8D/@50.0871954,14.4513103,17z/data=!3m1!4b1!4m6!3m5!1s0x470b958856fb4827:0xc24a5d11b091489f!8m2!3d50.0871954!4d14.4513103!16s%2Fg%2F11njcglvy7",
