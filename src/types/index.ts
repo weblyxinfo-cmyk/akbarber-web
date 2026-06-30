@@ -39,6 +39,10 @@ export interface Location {
     redirectToId: string;
     redirectToName: string;
   };
+  /** Procentuální sleva na celý ceník pobočky (např. 20 = –20 %). Zobrazí přeškrtnutou původní cenu a sníženou cenu. */
+  discountPercent?: number;
+  /** ISO datum, od kterého se sleva automaticky aktivuje (např. "2026-07-01T00:00:00+02:00"). Bez něj platí sleva ihned. */
+  discountFrom?: string;
 }
 
 export interface VoucherBranch {

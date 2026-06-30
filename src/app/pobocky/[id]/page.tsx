@@ -15,9 +15,18 @@ import {
   translateDays,
 } from "@/lib/translations";
 
+// Aplikuje procentuální slevu na cenový řetězec ("499 Kč" → "399 Kč",
+// "349 Kč / 449 Kč" → "279 Kč / 359 Kč")
+function applyDiscount(price: string, percent?: number): string {
+  if (!percent) return price;
+  return price.replace(/\d+/g, (n) =>
+    String(Math.round(parseInt(n, 10) * (1 - percent / 100))),
+  );
+}
+
 interface Props {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ lang?: string }>;
+  searchParams: Promise<{ lang?: string; sleva?: string }>;
 }
 
 export async function generateStaticParams() {
@@ -110,7 +119,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
 
 export default async function LocationPage({ params, searchParams }: Props) {
   const { id } = await params;
-  const { lang: langParam } = await searchParams;
+  const { lang: langParam, sleva: slevaParam } = await searchParams;
   const location = locations.find((l) => l.id === id);
   if (!location) notFound();
 
@@ -121,6 +130,15 @@ export default async function LocationPage({ params, searchParams }: Props) {
     : undefined;
   const lang: Lang = isBilingual && langParam === "en" ? "en" : "cs";
   const t = locationPageTranslations[lang];
+
+  // Sleva je aktivní jen má-li pobočka discountPercent a už nastalo discountFrom
+  // (?sleva=1 vynutí náhled i před datem startu – pro kontrolu na localhostu)
+  const discountActive =
+    !!location.discountPercent &&
+    (slevaParam === "1" ||
+      !location.discountFrom ||
+      new Date() >= new Date(location.discountFrom));
+  const activeDiscount = discountActive ? location.discountPercent : undefined;
 
   const displayNameSuffix: Record<string, string> = {
     "beroun-2": " 2",
@@ -163,9 +181,9 @@ export default async function LocationPage({ params, searchParams }: Props) {
     ...parseTime(h.hours),
   }));
 
-  // Calculate price range from actual services
+  // Calculate price range from actual services (po případné slevě)
   const prices = location.services.map((s) => {
-    const match = s.price.match(/\d+/);
+    const match = applyDiscount(s.price, activeDiscount).match(/\d+/);
     return match ? parseInt(match[0], 10) : 0;
   }).filter((p) => p > 0);
   const minPrice = Math.min(...prices);
@@ -236,7 +254,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
             name: service.name,
             description: service.description || service.name,
           },
-          price: service.price.replace(/[^0-9]/g, "").slice(0, 3),
+          price: applyDiscount(service.price, activeDiscount).replace(/[^0-9]/g, "").slice(0, 3),
           priceCurrency: currencyCode,
         })),
       },
@@ -651,7 +669,23 @@ export default async function LocationPage({ params, searchParams }: Props) {
                         {s.description}
                       </p>
                     )}
-                    <p className="text-[26px] font-bold">{service.price}</p>
+                    {activeDiscount ? (
+                      <div className="flex flex-col gap-1">
+                        <span className="text-[17px] font-semibold text-gray line-through decoration-2">
+                          {service.price}
+                        </span>
+                        <div className="flex items-center gap-2.5">
+                          <span className="inline-flex items-center rounded-md bg-[#22c55e]/15 px-2 py-0.5 text-[13px] font-bold text-[#22c55e]">
+                            −{activeDiscount}%
+                          </span>
+                          <span className="text-[26px] font-bold text-[#22c55e]">
+                            {applyDiscount(service.price, activeDiscount)}
+                          </span>
+                        </div>
+                      </div>
+                    ) : (
+                      <p className="text-[26px] font-bold">{service.price}</p>
+                    )}
                   </div>
                 );
               })}

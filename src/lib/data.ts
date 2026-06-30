@@ -374,22 +374,25 @@ export const locations: Location[] = [
     id: "praha-3",
     name: "AK BARBERS Praha 3 – Žižkov",
     city: "Praha",
-    address: "Husitská 53, 130 00 Praha 3 – Žižkov",
+    address: "Husitská 55, 130 00 Praha 3 – Žižkov",
     phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "10:00 – 19:00" },
-      { days: "So – Ne", hours: "10:00 – 17:00" },
+      { days: "So", hours: "10:00 – 14:00" },
+      { days: "Ne", hours: "10:00 – 17:00" },
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-3",
     services: premiumServices,
+    discountPercent: 20, // Akce – sleva 20 % na celý ceník
+    discountFrom: "2026-07-01T00:00:00+02:00", // aktivuje se automaticky od 1. 7. 2026
     image: "/images/locations/photo-beroun.jpg",
     currency: "CZK",
     googleMapsUrl: "https://www.google.com/maps/place/AK+BARBERS+%C5%BDI%C5%BDKOV+PRAHA+3+-+BEZ+OBJEDN%C3%81N%C3%8D/@50.0871954,14.4513103,17z/data=!3m1!4b1!4m6!3m5!1s0x470b958856fb4827:0xc24a5d11b091489f!8m2!3d50.0871954!4d14.4513103!16s%2Fg%2F11njcglvy7",
     reviewRating: 5.0,
     reviewCount: "Nová pobočka",
     rankText: "Nová pobočka na Praze 3 – Žižkov (bez objednání)",
-    mapQuery: "AK+Barbers,+Husitská+53,+Praha+3+Žižkov",
+    mapQuery: "AK+Barbers,+Husitská+55,+Praha+3+Žižkov",
     geo: { lat: 50.0871954, lng: 14.4513103 },
     transport: {
       publicTransport: [
@@ -440,6 +443,7 @@ export const locations: Location[] = [
     phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "10:00 – 19:00" },
+      { days: "So – Ne", hours: "10:00 – 14:30" },
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-jesenice",

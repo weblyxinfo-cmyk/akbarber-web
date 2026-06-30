@@ -12,7 +12,7 @@ const NEWS = [
   {
     href: "/pobocky/praha-3",
     badge: "Nově na Žižkově",
-    detail: "Husitská 53 · 14 křesel",
+    detail: "Husitská 55 · 14 křesel",
   },
   {
     href: "/pobocky/praha-6",
