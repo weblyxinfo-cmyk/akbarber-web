@@ -374,7 +374,7 @@ export const locations: Location[] = [
     id: "praha-3",
     name: "AK BARBERS Praha 3 – Žižkov",
     city: "Praha",
-    address: "Husitská 55, 130 00 Praha 3 – Žižkov",
+    address: "Husitská 219/55, 130 00 Praha 3 – Žižkov",
     phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "10:00 – 19:00" },
@@ -391,7 +391,7 @@ export const locations: Location[] = [
     reviewRating: 5.0,
     reviewCount: "Nová pobočka",
     rankText: "Nová pobočka na Praze 3 – Žižkov (bez objednání)",
-    mapQuery: "AK+Barbers,+Husitská+55,+Praha+3+Žižkov",
+    mapQuery: "AK+Barbers,+Husitská+219/55,+Praha+3+Žižkov",
     geo: { lat: 50.0871954, lng: 14.4513103 },
     transport: {
       publicTransport: [
