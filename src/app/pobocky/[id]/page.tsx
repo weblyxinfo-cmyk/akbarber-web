@@ -643,29 +643,27 @@ export default async function LocationPage({ params, searchParams }: Props) {
               <h2 className="mb-9 max-w-[620px] font-[family-name:var(--font-roboto-slab)] text-[34px] font-bold leading-[1.1] max-md:text-[26px]">
                 Prémiový střih a výběrová káva na jednom místě
               </h2>
-              <div className="mb-10 flex items-stretch gap-8 max-md:gap-6">
+              <div className="mb-10 flex flex-wrap items-center gap-x-9 gap-y-5">
                 <div>
-                  <div className="font-[family-name:var(--font-roboto-slab)] text-[46px] font-bold leading-none max-md:text-[38px]">
+                  <div className="font-[family-name:var(--font-roboto-slab)] text-[46px] font-bold leading-none max-md:text-[40px]">
                     14
                   </div>
                   <div className="mt-2 text-[11px] uppercase tracking-wider text-gray-light">
                     barber křesel
                   </div>
                 </div>
-                <div className="w-px self-stretch bg-white/10" />
+                <div className="h-11 w-px bg-white/10 max-md:hidden" />
                 <div>
-                  <div className="font-[family-name:var(--font-roboto-slab)] text-[46px] font-bold leading-none max-md:text-[38px]">
+                  <div className="font-[family-name:var(--font-roboto-slab)] text-[46px] font-bold leading-none max-md:text-[40px]">
                     16
                   </div>
                   <div className="mt-2 text-[11px] uppercase tracking-wider text-gray-light">
                     poboček
                   </div>
                 </div>
-                <div className="w-px self-stretch bg-white/10" />
-                <div className="flex items-center">
-                  <span className="max-w-[160px] text-[13px] leading-snug text-gray">
-                    Prémiová péče za dostupnou cenu
-                  </span>
+                <div className="h-11 w-px bg-white/10 max-md:hidden" />
+                <div className="max-w-[180px] text-[13px] leading-snug text-gray max-md:w-full max-md:max-w-none">
+                  Prémiová péče za dostupnou cenu
                 </div>
               </div>
               <div className="max-w-[620px] space-y-5">
@@ -680,8 +678,15 @@ export default async function LocationPage({ params, searchParams }: Props) {
                 <p className="text-[15px] leading-[1.75] text-gray">
                   Na Žižkově jsme vytvořili největší barber shop v České
                   republice – navíc propojený s moderní kavárnou{" "}
-                  <span className="font-semibold text-white">NOA Matcha Café</span>.
-                  Zatímco si užíváte prémiový střih, můžete si přímo v křesle
+                  <a
+                    href="https://www.noamatcha.cz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-white underline decoration-[#4ade80]/60 underline-offset-2 transition-colors hover:text-[#4ade80]"
+                  >
+                    NOA Matcha Café
+                  </a>
+                  . Zatímco si užíváte prémiový střih, můžete si přímo v křesle
                   vychutnat výběrovou kávu.
                 </p>
               </div>
