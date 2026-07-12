@@ -914,15 +914,184 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       { question: "Máte i další pobočky v Praze?", answer: "Ano, v Praze máme pobočky Praha 1 Máj (Národní 63/26, centrum), Praha 5 Smíchov (Toyen 3410/7, u metra Anděl), Praha 6 Břevnov (Radimova 2522/4) a Praha 9 Černý Most (Bryksova 758/62). Všechny pracují pod jednotnými standardy AK BARBERS." },
     ],
     internalLinks: [
+      { label: "Největší barber shop v Praze", href: "/nejvetsi-barber-shop-praha" },
+      { label: "Barber s kavárnou v Praze", href: "/barber-s-kavarnou-praha" },
+      { label: "Holičství Žižkov", href: "/holicstvi-zizkov" },
       { label: "AK BARBERS – Praha Máj (Praha 1)", href: "/barber-praha-1" },
       { label: "AK BARBERS Praha 5 – Smíchov", href: "/barber-smichov" },
-      { label: "AK BARBERS Praha 9 – Černý Most", href: "/barber-cerny-most" },
       academyLink,
       careerLink,
     ],
     breadcrumbs: [
       { name: "AK BARBERS", href: "/" },
       { name: "Barber Praha 3 – Žižkov", href: "/barber-praha-3" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // barber-s-kavarnou-praha (CZ) – Žižkov × NOA Matcha Café
+  // ------------------------------------------------------------------
+  "barber-s-kavarnou-praha": {
+    lang: "cs",
+    slug: "barber-s-kavarnou-praha",
+    locationId: "praha-3",
+    title: "Barber s kavárnou v Praze | AK BARBERS Žižkov × NOA Matcha Café",
+    description:
+      "Jediný barbershop v Praze propojený s kavárnou. Na Žižkově (Husitská 55) si dáte prémiový střih a k tomu výběrovou kávu nebo matchu z NOA Matcha Café – přímo v barberském křesle. Walk-in i rezervace, střih od 499 Kč.",
+    keywords: [
+      "barber s kavárnou praha",
+      "barbershop s kavárnou",
+      "barber a káva praha",
+      "střih a káva praha",
+      "barber žižkov kavárna",
+      "noa matcha café žižkov",
+      "barbershop praha 3 kavárna",
+      "barber s kávou praha",
+      "matcha praha žižkov",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Barber s kavárnou v Praze",
+    localityDescription: [
+      "AK BARBERS na Žižkově (Husitská 55, Praha 3) je jediný barbershop v Praze, který jste propojili s vlastní kavárnou. Zatímco se o vás stará náš barber, můžete si vychutnat výběrovou kávu nebo matchu z NOA Matcha Café – přímo v barberském křesle. Střih a káva na jednom místě, bez zbytečného spěchu.",
+      "Je to ideální kombinace pro každého, kdo bere návštěvu barbera jako chvíli pro sebe. Přijďte bez objednání jako walk-in, nebo si termín zarezervujte online přes Booqme. Otevřeno máme Po–Pá 10:00–19:00 a v sobotu 10:00–14:00. K nám dojedete pár minut od metra a autobusového nádraží Florenc (linky B a C) nebo tramvají na zastávku Lipanská (linky 5, 9, 15, 26).",
+    ],
+    services: [
+      { name: "Klasické pánské stříhání", price: "499 Kč" },
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "889 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+    ],
+    aboutText:
+      "AK BARBERS je největší barber shop v České republice. Na Žižkově spojujeme prémiovou barberskou péči s pohodovou atmosférou kavárny NOA Matcha Café. Každý náš barber prochází zaškolením v AK BARBERS Academy – díky tomu držíme špičkovou kvalitu na všech pobočkách. Skutečný luxus totiž není o ceně, ale o zážitku, který si od nás odnesete.",
+    faq: [
+      { question: "Opravdu si u vás dám kávu během střihu?", answer: "Ano. Naše žižkovská pobočka je propojená s kavárnou NOA Matcha Café, takže si výběrovou kávu nebo matchu můžete vychutnat přímo v barberském křesle." },
+      { question: "Kde vás najdu?", answer: "Na adrese Husitská 55, 130 00 Praha 3 – Žižkov. Pár minut od metra a nádraží Florenc (linky B a C) a od tramvajové zastávky Lipanská (linky 5, 9, 15, 26)." },
+      { question: "Musím se objednat?", answer: "Ne, fungujeme jako walk-in – přijďte kdykoliv během otevírací doby. Pokud chcete jistý čas, zarezervujte si termín online přes Booqme." },
+      { question: "Kolik stojí střih?", answer: "Klasické pánské stříhání i Skin Fade stojí 499 Kč, kompletní balíček střih + vousy 889 Kč, samotná úprava vousů 399 Kč." },
+      { question: "Jaká je otevírací doba?", answer: "Po–Pá 10:00–19:00 a v sobotu 10:00–14:00. V neděli máme zavřeno." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Praha 3 – Žižkov", href: "/barber-praha-3" },
+      { label: "Největší barber shop v Praze", href: "/nejvetsi-barber-shop-praha" },
+      { label: "Holičství Žižkov", href: "/holicstvi-zizkov" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber s kavárnou v Praze", href: "/barber-s-kavarnou-praha" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // nejvetsi-barber-shop-praha (CZ) – Žižkov
+  // ------------------------------------------------------------------
+  "nejvetsi-barber-shop-praha": {
+    lang: "cs",
+    slug: "nejvetsi-barber-shop-praha",
+    locationId: "praha-3",
+    title: "Největší barber shop v Praze i ČR | AK BARBERS Žižkov, 14 křesel",
+    description:
+      "Největší barber shop v České republice najdete na Žižkově, Husitská 55, Praha 3. 14 barberských křesel, prémiová péče, krátké čekání i ve špičce. Walk-in i rezervace, pánské stříhání od 499 Kč, navíc kavárna NOA Matcha Café.",
+    keywords: [
+      "největší barber shop praha",
+      "největší barber shop v čr",
+      "největší barbershop praha",
+      "velký barber shop praha",
+      "barber shop praha 3 žižkov",
+      "prémiový barber praha",
+      "barber žižkov",
+      "pánské stříhání praha 3",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Největší barber shop v Praze",
+    localityDescription: [
+      "AK BARBERS na Žižkově (Husitská 55, Praha 3) je největší barber shop v České republice. Se 14 barberskými křesly nabízíme prémiovou péči a krátké čekání i ve špičce – i když přijdete bez objednání. Za celým konceptem stojí Adrian Križan, který osobně dbá na to, aby byla kvalita stejně špičková na všech našich pobočkách.",
+      "Kromě velikosti je naše žižkovská pobočka výjimečná i tím, že je propojená s kavárnou NOA Matcha Café – během střihu si tak dáte výběrovou kávu přímo v křesle. Přijďte jako walk-in, nebo si termín zarezervujte online přes Booqme. Otevřeno máme Po–Pá 10:00–19:00 a v sobotu 10:00–14:00. Dojedete k nám pár minut od Florence (metro B a C) nebo tramvají na Lipanskou (linky 5, 9, 15, 26).",
+    ],
+    services: [
+      { name: "Klasické pánské stříhání", price: "499 Kč" },
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "889 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+    ],
+    aboutText:
+      "AK BARBERS provozuje 16 poboček po celém Česku a Slovensku a naše žižkovská pobočka je vůbec největší barber shop v ČR. Každý nový barber prochází profesionálním zaškolením v AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce.",
+    faq: [
+      { question: "Proč je Žižkov největší barber shop v Česku?", answer: "Naše pobočka na Husitské má 14 barberských křesel – nejvíc ze všech barbershopů v ČR. Díky tomu zvládneme obsloužit víc zákazníků a čekání je krátké i ve špičce." },
+      { question: "Musím se objednat, nebo můžu přijít bez objednání?", answer: "Fungujeme jako walk-in i na rezervaci. Díky 14 křeslům se k nám dostanete rychle i bez objednání, případně si termín zarezervujte online přes Booqme." },
+      { question: "Kde přesně jste?", answer: "Husitská 55, 130 00 Praha 3 – Žižkov. Pár minut od metra a nádraží Florenc (linky B a C) a od tramvaje Lipanská (linky 5, 9, 15, 26)." },
+      { question: "Kolik stojí střih?", answer: "Klasické pánské stříhání i Skin Fade stojí 499 Kč, kompletní balíček střih + vousy 889 Kč, úprava vousů 399 Kč, dětský střih od 349 Kč." },
+      { question: "Máte i kavárnu?", answer: "Ano, žižkovská pobočka je propojená s kavárnou NOA Matcha Café – výběrovou kávu nebo matchu si dáte přímo v barberském křesle." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Praha 3 – Žižkov", href: "/barber-praha-3" },
+      { label: "Barber s kavárnou v Praze", href: "/barber-s-kavarnou-praha" },
+      { label: "Holičství Žižkov", href: "/holicstvi-zizkov" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Největší barber shop v Praze", href: "/nejvetsi-barber-shop-praha" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // holicstvi-zizkov (CZ) – Žižkov
+  // ------------------------------------------------------------------
+  "holicstvi-zizkov": {
+    lang: "cs",
+    slug: "holicstvi-zizkov",
+    locationId: "praha-3",
+    title: "Holičství Žižkov | AK BARBERS Praha 3 – pánské stříhání a vousy",
+    description:
+      "Moderní holičství na Žižkově, Husitská 55, Praha 3. Pánské stříhání, skin fade a úprava vousů od profesionálních barberů. Bez objednání i na rezervaci, střih od 499 Kč. Největší barber shop v ČR s kavárnou NOA Matcha Café.",
+    keywords: [
+      "holičství žižkov",
+      "holičství praha 3",
+      "pánské holičství praha 3",
+      "holič žižkov",
+      "holič praha 3",
+      "kadeřnictví muži žižkov",
+      "pánský kadeřník praha 3",
+      "barber žižkov",
+      "úprava vousů žižkov",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Holičství na Žižkově",
+    localityDescription: [
+      "Hledáte holičství na Žižkově? AK BARBERS na Husitské 55 (Praha 3) je moderní pánské holičství, kde spojujeme řemeslnou tradici s dnešními trendy. Nabízíme klasické pánské stříhání, skin fade, střih dlouhých vlasů i precizní úpravu vousů břitvou. Naši barbeři vám vždy rádi poradí s výběrem střihu podle typu vlasů i tvaru obličeje.",
+      "Žižkov je jedna z nejživějších pražských čtvrtí a naše holičství je ideální zastávkou cestou z práce i o víkendu. Přijďte bez objednání jako walk-in, nebo si termín zarezervujte online přes Booqme. Otevřeno máme Po–Pá 10:00–19:00 a v sobotu 10:00–14:00. Zaparkovat můžete v modrých a fialových zónách Prahy 3 přímo v okolí Husitské (cca 20 Kč/hod).",
+    ],
+    services: [
+      { name: "Klasické pánské stříhání", price: "499 Kč" },
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "889 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+    ],
+    aboutText:
+      "AK BARBERS je největší barber shop v České republice. Naše holičství na Žižkově staví na řemeslné preciznosti, čistotě a důrazu na detail. Každý barber prochází zaškolením v AK BARBERS Academy, takže se u nás vždy dostanete do rukou profesionála. Navíc je pobočka propojená s kavárnou NOA Matcha Café.",
+    faq: [
+      { question: "Kde holičství na Žižkově najdu?", answer: "Na adrese Husitská 55, 130 00 Praha 3 – Žižkov. Pár minut od metra a nádraží Florenc (linky B a C) a od tramvaje Lipanská (linky 5, 9, 15, 26)." },
+      { question: "Musím se objednat?", answer: "Ne, fungujeme jako walk-in – přijďte kdykoliv během otevírací doby. Pokud chcete jistý čas, zarezervujte si termín online přes Booqme." },
+      { question: "Děláte i úpravu vousů?", answer: "Ano, úpravu vousů strojkem a nůžkami, zaholení břitvou na vyžádání i aplikaci pečující kosmetiky. Samotná úprava vousů stojí 399 Kč, kombinace střih + vousy 889 Kč." },
+      { question: "Kolik stojí pánský střih?", answer: "Klasické pánské stříhání i Skin Fade stojí 499 Kč, dětský střih od 349 Kč." },
+      { question: "Jaká je otevírací doba?", answer: "Po–Pá 10:00–19:00 a v sobotu 10:00–14:00. V neděli máme zavřeno." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Praha 3 – Žižkov", href: "/barber-praha-3" },
+      { label: "Největší barber shop v Praze", href: "/nejvetsi-barber-shop-praha" },
+      { label: "Barber s kavárnou v Praze", href: "/barber-s-kavarnou-praha" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Holičství Žižkov", href: "/holicstvi-zizkov" },
     ],
   },
 };
