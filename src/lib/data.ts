@@ -141,7 +141,6 @@ export const locations: Location[] = [
     openingHours: [
       { days: "Po – Pá", hours: "10:00 – 19:00" },
       { days: "So", hours: "10:00 – 14:00" },
-      { days: "Ne", hours: "10:00 – 17:00" },
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-3",
@@ -287,7 +286,7 @@ export const locations: Location[] = [
     phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "10:00 – 19:30" },
-      { days: "So – Ne", hours: "10:00 – 14:30" },
+      { days: "So", hours: "10:00 – 14:30" },
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.sk/sk/rezervacia/ak-barbers-horovice6",

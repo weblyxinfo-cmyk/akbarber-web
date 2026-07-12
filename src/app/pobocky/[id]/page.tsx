@@ -314,34 +314,24 @@ export default async function LocationPage({ params, searchParams }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Hero Image */}
+      {/* Hero Image (pobočky bez videa) */}
+      {!location.videoSrc && (
       <section className="pt-8">
         <div className="container">
           <div className="h-[200px] overflow-hidden rounded-[10px]">
-            {location.videoSrc ? (
-              <video
-                src={location.videoSrc}
-                poster={location.image}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="block h-full w-full object-cover object-[center_60%]"
-              />
-            ) : (
-              <Image
-                src={location.image}
-                alt={location.name}
-                width={800}
-                height={200}
-                className="block h-full w-full object-cover object-[center_60%]"
-                sizes="(max-width: 768px) 100vw, 800px"
-                priority
-              />
-            )}
+            <Image
+              src={location.image}
+              alt={location.name}
+              width={800}
+              height={200}
+              className="block h-full w-full object-cover object-[center_60%]"
+              sizes="(max-width: 768px) 100vw, 800px"
+              priority
+            />
           </div>
         </div>
       </section>
+      )}
 
       {/* Temporarily Closed Banner */}
       {location.temporarilyClosed && (
@@ -495,6 +485,8 @@ export default async function LocationPage({ params, searchParams }: Props) {
       {!location.temporarilyClosed && (
       <section className="pt-8">
         <div className="container">
+          <div className="flex gap-12 max-lg:flex-col-reverse max-lg:gap-8">
+          <div className="min-w-0 flex-1">
           <div className="mb-5 flex items-center justify-between">
             <h1 className="text-[28px] font-bold">{displayName}</h1>
             {isBilingual && <LanguageSwitcher lang={lang} />}
@@ -625,6 +617,21 @@ export default async function LocationPage({ params, searchParams }: Props) {
                 </Link>
               </div>
             )}
+          </div>
+          </div>
+          {location.videoSrc && (
+            <div className="w-[300px] shrink-0 self-start max-lg:mx-auto max-lg:w-full max-lg:max-w-[300px]">
+              <video
+                src={location.videoSrc}
+                poster={location.image}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="aspect-[9/16] w-full rounded-[16px] border border-border object-cover"
+              />
+            </div>
+          )}
           </div>
 
           {/* Žižkov – brand blok + NOA Matcha Café */}
