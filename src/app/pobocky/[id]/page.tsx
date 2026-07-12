@@ -636,7 +636,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
 
           {/* Žižkov – kompletní brand text klienta + NOA Matcha Café */}
           {location.id === "praha-3" && (
-            <div className="mb-14 border-t border-white/10 pt-10">
+            <div className="mb-14 pt-4">
               <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#4ade80]">
                 Největší barber shop v České republice
               </p>
