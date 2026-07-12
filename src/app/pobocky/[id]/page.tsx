@@ -486,7 +486,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
       <section className="pt-8">
         <div className="container">
           {/* Mobil: H1 nad videem */}
-          <div className="mb-6 hidden items-center justify-between max-lg:flex">
+          <div className="mb-6 hidden flex-col items-center gap-3 text-center max-lg:flex">
             <h1 className="text-[26px] font-bold">{displayName}</h1>
             {isBilingual && <LanguageSwitcher lang={lang} />}
           </div>
@@ -625,7 +625,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
           </div>
           </div>
           {location.videoSrc && (
-            <div className="relative aspect-[9/16] w-[330px] shrink-0 lg:aspect-auto max-lg:mx-auto max-lg:w-full max-lg:max-w-[320px]">
+            <div className="relative aspect-[9/16] w-[330px] shrink-0 lg:aspect-auto max-lg:w-full max-lg:max-w-[320px] max-lg:self-center">
               <video
                 src={location.videoSrc}
                 poster={location.image}
