@@ -485,7 +485,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
       {!location.temporarilyClosed && (
       <section className="pt-8">
         <div className="container">
-          <div className="flex gap-12 max-lg:flex-col-reverse max-lg:gap-8">
+          <div className="flex items-center gap-14 max-lg:flex-col-reverse max-lg:items-stretch max-lg:gap-8">
           <div className="min-w-0 flex-1">
           <div className="mb-5 flex items-center justify-between">
             <h1 className="text-[28px] font-bold">{displayName}</h1>
@@ -620,7 +620,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
           </div>
           </div>
           {location.videoSrc && (
-            <div className="w-[300px] shrink-0 self-start max-lg:mx-auto max-lg:w-full max-lg:max-w-[300px]">
+            <div className="w-[330px] shrink-0 max-lg:mx-auto max-lg:w-full max-lg:max-w-[320px]">
               <video
                 src={location.videoSrc}
                 poster={location.image}
