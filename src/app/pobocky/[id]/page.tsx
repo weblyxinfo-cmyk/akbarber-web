@@ -634,21 +634,45 @@ export default async function LocationPage({ params, searchParams }: Props) {
           )}
           </div>
 
-          {/* Žižkov – brand blok + NOA Matcha Café */}
+          {/* Žižkov – kompletní brand text klienta + NOA Matcha Café */}
           {location.id === "praha-3" && (
-            <div className="mb-12 rounded-xl border border-[#4ade80]/30 bg-gradient-to-br from-[#4ade80]/10 to-transparent p-6">
+            <div className="mb-12 rounded-xl border border-[#4ade80]/30 bg-gradient-to-br from-[#4ade80]/10 to-transparent p-6 max-md:p-5">
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-[#4ade80]">
                 Největší barber shop v České republice
               </p>
-              <h2 className="mb-3 font-[family-name:var(--font-roboto-slab)] text-[22px] font-bold leading-tight">
+              <h2 className="mb-4 font-[family-name:var(--font-roboto-slab)] text-[24px] font-bold leading-tight">
                 Prémiový střih a výběrová káva na jednom místě
               </h2>
-              <p className="text-sm leading-[1.7] text-gray">
+              <div className="mb-5 flex flex-wrap items-center gap-x-8 gap-y-3">
+                <div className="flex items-baseline gap-2">
+                  <span className="font-[family-name:var(--font-roboto-slab)] text-3xl font-bold">14</span>
+                  <span className="text-[13px] text-gray">barber křesel</span>
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <span className="font-[family-name:var(--font-roboto-slab)] text-3xl font-bold">16</span>
+                  <span className="text-[13px] text-gray">poboček</span>
+                </div>
+                <div className="text-[13px] font-medium text-white">
+                  Prémiová péče za dostupnou cenu
+                </div>
+              </div>
+              <p className="mb-4 text-sm leading-[1.7] text-gray">
+                AK Barbers vznikl s jedinou vizí – nabídnout služby na té nejvyšší
+                úrovni, bez kompromisů. Za celým konceptem stojí{" "}
+                <span className="font-semibold text-white">Adrian Križan</span>,
+                který své dlouholeté zkušenosti předává každému barberovi a osobně
+                dbá na to, aby byla kvalita stejně špičková na všech pobočkách.
+              </p>
+              <p className="mb-4 text-sm leading-[1.7] text-gray">
                 Na Žižkově jsme vytvořili největší barber shop v České republice –
                 navíc propojený s moderní kavárnou{" "}
                 <span className="font-semibold text-white">NOA Matcha Café</span>.
                 Zatímco si užíváte prémiový střih, můžete si přímo v křesle
                 vychutnat výběrovou kávu.
+              </p>
+              <p className="text-sm font-medium leading-[1.7] text-white">
+                Pánský střih od 499 Kč. Protože skutečný luxus není o ceně – je
+                o kvalitě, kterou poznáte už při první návštěvě.
               </p>
             </div>
           )}
