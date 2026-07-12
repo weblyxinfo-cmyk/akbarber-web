@@ -919,6 +919,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       { label: "Holičství Žižkov", href: "/holicstvi-zizkov" },
       { label: "AK BARBERS – Praha Máj (Praha 1)", href: "/barber-praha-1" },
       { label: "AK BARBERS Praha 5 – Smíchov", href: "/barber-smichov" },
+      { label: "AK BARBERS Praha 9 – Černý Most", href: "/barber-cerny-most" },
       academyLink,
       careerLink,
     ],
