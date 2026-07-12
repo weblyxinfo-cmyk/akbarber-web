@@ -620,7 +620,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
           </div>
           </div>
           {location.videoSrc && (
-            <div className="w-[330px] shrink-0 max-lg:mx-auto max-lg:w-full max-lg:max-w-[320px]">
+            <div className="relative aspect-[9/16] w-[330px] shrink-0 lg:aspect-auto max-lg:mx-auto max-lg:w-full max-lg:max-w-[320px]">
               <video
                 src={location.videoSrc}
                 poster={location.image}
@@ -628,7 +628,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
                 muted
                 loop
                 playsInline
-                className="block aspect-[9/16] w-full rounded-[20px] object-cover shadow-[0_28px_80px_-24px_rgba(0,0,0,0.85)] ring-1 ring-white/10 lg:aspect-auto lg:h-full"
+                className="absolute inset-0 block h-full w-full rounded-[20px] object-cover shadow-[0_28px_80px_-24px_rgba(0,0,0,0.85)] ring-1 ring-white/10"
               />
             </div>
           )}
