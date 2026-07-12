@@ -485,7 +485,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
       {!location.temporarilyClosed && (
       <section className="pt-8">
         <div className="container">
-          <div className="flex items-center gap-14 max-lg:flex-col-reverse max-lg:items-stretch max-lg:gap-8">
+          <div className="flex items-stretch gap-14 max-lg:flex-col-reverse max-lg:gap-8">
           <div className="min-w-0 flex-1">
           <div className="mb-5 flex items-center justify-between">
             <h1 className="text-[28px] font-bold">{displayName}</h1>
@@ -628,7 +628,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
                 muted
                 loop
                 playsInline
-                className="aspect-[9/16] w-full rounded-[20px] object-cover shadow-[0_28px_80px_-24px_rgba(0,0,0,0.85)] ring-1 ring-white/10"
+                className="block aspect-[9/16] w-full rounded-[20px] object-cover shadow-[0_28px_80px_-24px_rgba(0,0,0,0.85)] ring-1 ring-white/10 lg:aspect-auto lg:h-full"
               />
             </div>
           )}
