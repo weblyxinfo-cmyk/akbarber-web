@@ -1095,6 +1095,224 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       { name: "Holičství Žižkov", href: "/holicstvi-zizkov" },
     ],
   },
+
+  // ------------------------------------------------------------------
+  // barber-bez-objednani-praha (CZ) – Žižkov (walk-in intent)
+  // ------------------------------------------------------------------
+  "barber-bez-objednani-praha": {
+    lang: "cs",
+    slug: "barber-bez-objednani-praha",
+    locationId: "praha-3",
+    title: "Barber bez objednání v Praze | AK BARBERS Žižkov – walk-in",
+    description:
+      "Barber v Praze bez objednání? AK BARBERS na Žižkově (Husitská 55) má 14 křesel, takže se ostříháte i bez rezervace a s krátkým čekáním. Walk-in i online rezervace, střih od 499 Kč, otevřeno 6 dní v týdnu.",
+    keywords: [
+      "barber bez objednání praha",
+      "barbershop bez objednání praha",
+      "walk in barber praha",
+      "barber bez rezervace praha",
+      "barber praha 3 bez objednání",
+      "holič bez objednání praha",
+      "kadeřník bez objednání praha muži",
+      "barber žižkov bez objednání",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Barber bez objednání v Praze",
+    localityDescription: [
+      "Nemáte čas plánovat návštěvu dopředu? AK BARBERS na Žižkově (Husitská 55, Praha 3) funguje jako walk-in – přijďte kdykoliv během otevírací doby a ostříháme vás bez objednání. Díky 14 barberským křeslům, což je nejvíc z barbershopů v ČR, je čekání krátké i ve špičce. A pokud chcete mít jistý termín, můžete si ho pohodlně zarezervovat online přes Booqme.",
+      "Otevřeno máme šest dní v týdnu: Po–Pá 10:00–19:00 a v sobotu 10:00–14:00. Dojedete k nám pár minut od metra a autobusového nádraží Florenc (linky B a C) nebo tramvají na zastávku Lipanská (linky 5, 9, 15, 26). Zaparkovat můžete v modrých a fialových zónách Prahy 3 přímo v okolí Husitské.",
+    ],
+    services: [
+      { name: "Klasické pánské stříhání", price: "499 Kč" },
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "889 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+    ],
+    aboutText:
+      "AK BARBERS je největší barber shop v České republice a na walk-in zákazníky jsme perfektně připravení. 14 křesel znamená krátké čekání, profesionální barbeři vyškolení v AK BARBERS Academy znamenají špičkový výsledek. Přijďte bez objednání a přesvědčte se sami.",
+    faq: [
+      { question: "Můžu přijít bez objednání?", answer: "Ano, jsme walk-in barbershop – přijďte kdykoliv během otevírací doby a ostříháme vás bez rezervace. Díky 14 křeslům je čekání krátké i ve špičce." },
+      { question: "Jak dlouho budu čekat?", answer: "Zpravidla velmi krátce. Naše žižkovská pobočka má 14 barberských křesel, nejvíc z barbershopů v ČR, takže obsloužíme víc zákazníků najednou." },
+      { question: "Můžu se přesto objednat předem?", answer: "Ano, pokud chcete mít jistý čas, zarezervujte si termín online přes Booqme." },
+      { question: "Jaká je otevírací doba?", answer: "Po–Pá 10:00–19:00 a v sobotu 10:00–14:00. V neděli máme zavřeno." },
+      { question: "Kde vás najdu?", answer: "Husitská 55, 130 00 Praha 3 – Žižkov. Pár minut od metra a nádraží Florenc (linky B a C)." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Praha 3 – Žižkov", href: "/barber-praha-3" },
+      { label: "Největší barber shop v Praze", href: "/nejvetsi-barber-shop-praha" },
+      { label: "Holičství Žižkov", href: "/holicstvi-zizkov" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber bez objednání v Praze", href: "/barber-bez-objednani-praha" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // uprava-vousu-zizkov (CZ) – Žižkov (beard intent)
+  // ------------------------------------------------------------------
+  "uprava-vousu-zizkov": {
+    lang: "cs",
+    slug: "uprava-vousu-zizkov",
+    locationId: "praha-3",
+    title: "Úprava vousů Žižkov | AK BARBERS Praha 3 – holení břitvou",
+    description:
+      "Úprava a střih vousů na Žižkově, Husitská 55, Praha 3. Tvarování strojkem a nůžkami, zaholení břitvou, pečující kosmetika. Od profesionálních barberů AK BARBERS. Úprava vousů 399 Kč, střih + vousy 889 Kč.",
+    keywords: [
+      "úprava vousů žižkov",
+      "úprava vousů praha 3",
+      "holení břitvou praha",
+      "střih vousů praha 3",
+      "tvarování vousů praha",
+      "barber vousy žižkov",
+      "úprava brady praha 3",
+      "péče o vousy praha",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Úprava vousů na Žižkově",
+    localityDescription: [
+      "Vousy dělají muže – a u nás na Žižkově (Husitská 55, Praha 3) se o ně postaráme na profesionální úrovni. Nabízíme úpravu vousů strojkem i nůžkami, přesné tvarování kontur, tradiční zaholení břitvou na vyžádání a aplikaci pečující kosmetiky. Naši barbeři vždy poradí s délkou i stylem podle tvaru obličeje.",
+      "Úpravu vousů zvládneme samostatně (399 Kč) nebo v kombinaci se střihem vlasů (889 Kč). Přijďte bez objednání jako walk-in, nebo si termín zarezervujte online přes Booqme. Otevřeno máme Po–Pá 10:00–19:00 a v sobotu 10:00–14:00. K nám dojedete pár minut od Florence (metro B a C) nebo tramvají na Lipanskou.",
+    ],
+    services: [
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "889 Kč" },
+      { name: "Klasické pánské stříhání", price: "499 Kč" },
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč" },
+    ],
+    aboutText:
+      "AK BARBERS je největší barber shop v České republice. Úprava vousů patří k našemu řemeslu – přesná práce s břitvou, kvalitní kosmetika a cit pro detail. Každý barber prochází zaškolením v AK BARBERS Academy, takže se u nás o vousy postará skutečný profesionál.",
+    faq: [
+      { question: "Co všechno úprava vousů zahrnuje?", answer: "Konzultaci, úpravu vousů strojkem a nůžkami, tvarování kontur, zaholení břitvou na vyžádání, aplikaci pečující kosmetiky a finální úpravu. Cena je 399 Kč." },
+      { question: "Zaholíte mě i britvou?", answer: "Ano, tradiční zaholení a úpravu kontur břitvou děláme na vyžádání jako součást péče o vousy." },
+      { question: "Můžu mít střih i vousy najednou?", answer: "Ano, kombinace střih vlasů + úprava vousů stojí 889 Kč a zahrnuje kompletní péči včetně kosmetiky." },
+      { question: "Musím se objednat?", answer: "Ne, fungujeme jako walk-in. Pokud chcete jistý čas, zarezervujte si termín online přes Booqme." },
+      { question: "Kde vás najdu?", answer: "Husitská 55, 130 00 Praha 3 – Žižkov, pár minut od nádraží Florenc." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Praha 3 – Žižkov", href: "/barber-praha-3" },
+      { label: "Holičství Žižkov", href: "/holicstvi-zizkov" },
+      { label: "Pánské stříhání Praha 3", href: "/pansky-strih-praha-3" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Úprava vousů Žižkov", href: "/uprava-vousu-zizkov" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // barber-florenc (CZ) – Žižkov (landmark intent)
+  // ------------------------------------------------------------------
+  "barber-florenc": {
+    lang: "cs",
+    slug: "barber-florenc",
+    locationId: "praha-3",
+    title: "Barber u Florence | AK BARBERS Žižkov, Husitská – bez objednání",
+    description:
+      "Barber pár minut od Florence. AK BARBERS na Husitské 55 (Praha 3 – Žižkov) je snadno dostupný z metra i autobusového nádraží Florenc (linky B a C). Walk-in i rezervace, pánské stříhání od 499 Kč, největší barber shop v ČR.",
+    keywords: [
+      "barber florenc",
+      "barber u florence",
+      "barbershop florenc praha",
+      "holič florenc",
+      "pánské stříhání florenc",
+      "barber praha florenc metro",
+      "barber karlín žižkov",
+      "barber husitská",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Barber u Florence",
+    localityDescription: [
+      "Hledáte barbera blízko Florence? AK BARBERS na Husitské 55 (Praha 3 – Žižkov) je jen zhruba 10 minut pěšky od metra a autobusového nádraží Florenc (linky B a C). Skvěle dostupní jsme i z Karlína a centra Prahy, takže se u nás ostříháte cestou z práce, před cestou autobusem i po příjezdu do Prahy.",
+      "Naše pobočka je největší barber shop v České republice – 14 křesel znamená krátké čekání i bez objednání. Přijďte jako walk-in, nebo si zarezervujte termín online přes Booqme. Otevřeno máme Po–Pá 10:00–19:00 a v sobotu 10:00–14:00. Kromě metra dojedete i tramvají na zastávku Lipanská (linky 5, 9, 15, 26).",
+    ],
+    services: [
+      { name: "Klasické pánské stříhání", price: "499 Kč" },
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "889 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+    ],
+    aboutText:
+      "AK BARBERS je největší barber shop v České republice. Naše žižkovská pobočka u Florence je ideální pro každého, kdo cestuje přes centrum Prahy. Profesionální barbeři vyškolení v AK BARBERS Academy, 14 křesel a navíc kavárna NOA Matcha Café přímo na místě.",
+    faq: [
+      { question: "Jak daleko jste od Florence?", answer: "Zhruba 10 minut pěšky od metra a autobusového nádraží Florenc (linky B a C). Jsme na Husitské 55, Praha 3 – Žižkov." },
+      { question: "Dostanu se k vám i tramvají?", answer: "Ano, vystupte na zastávce Lipanská (linky 5, 9, 15, 26), odkud je to k nám pár minut pěšky. Autobusem na Tachovské náměstí nebo U Památníku." },
+      { question: "Musím se objednat?", answer: "Ne, fungujeme jako walk-in. Díky 14 křeslům je čekání krátké. Případně si zarezervujte termín online přes Booqme." },
+      { question: "Kolik stojí střih?", answer: "Klasické pánské stříhání i Skin Fade stojí 499 Kč, kompletní balíček střih + vousy 889 Kč." },
+      { question: "Jaká je otevírací doba?", answer: "Po–Pá 10:00–19:00 a v sobotu 10:00–14:00. V neděli máme zavřeno." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Praha 3 – Žižkov", href: "/barber-praha-3" },
+      { label: "Barber bez objednání v Praze", href: "/barber-bez-objednani-praha" },
+      { label: "Největší barber shop v Praze", href: "/nejvetsi-barber-shop-praha" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Barber u Florence", href: "/barber-florenc" },
+    ],
+  },
+
+  // ------------------------------------------------------------------
+  // detsky-strih-zizkov (CZ) – Žižkov (kids intent)
+  // ------------------------------------------------------------------
+  "detsky-strih-zizkov": {
+    lang: "cs",
+    slug: "detsky-strih-zizkov",
+    locationId: "praha-3",
+    title: "Dětský střih Žižkov | AK BARBERS Praha 3 – stříhání kluků",
+    description:
+      "Dětský střih na Žižkově, Husitská 55, Praha 3. Trpělivý přístup barberů ke klukům od 1 do 15 let, klasický střih i fade. Bez objednání i na rezervaci. Dětský střih od 349 Kč, největší barber shop v ČR.",
+    keywords: [
+      "dětský střih žižkov",
+      "dětský střih praha 3",
+      "stříhání dětí praha 3",
+      "barber pro děti praha",
+      "dětský barber žižkov",
+      "stříhání kluků praha",
+      "dětský kadeřník praha 3",
+      "dětský fade praha",
+    ],
+    ogLocale: "cs_CZ",
+    heroHeading: "Dětský střih na Žižkově",
+    localityDescription: [
+      "Přiveďte kluka k profíkům. Na Žižkově (Husitská 55, Praha 3) stříháme děti od 1 do 15 let s trpělivým a přátelským přístupem. Zvládneme klasický střih, foukanou a styling, ale i modernější účesy jako Skin Fade, Low Fade, Crop Fade nebo Buzz Cut. Vždy rádi poradíme s výběrem střihu tak, aby byl spokojený kluk i rodič.",
+      "Dětský střih stojí 349 Kč (klasický) nebo 449 Kč (fade a modernější účesy). Přijďte bez objednání jako walk-in, nebo si termín zarezervujte online přes Booqme. Otevřeno máme Po–Pá 10:00–19:00 a v sobotu 10:00–14:00. K nám dojedete pár minut od Florence (metro B a C).",
+    ],
+    services: [
+      { name: "Dětský střih – klasický (1–15 let)", price: "349 Kč" },
+      { name: "Dětský střih – Fade / Crop / Buzz", price: "449 Kč" },
+      { name: "Klasické pánské stříhání", price: "499 Kč" },
+      { name: "Skin Fade / dlouhé vlasy", price: "499 Kč" },
+    ],
+    aboutText:
+      "AK BARBERS je největší barber shop v České republice. Se stříháním dětí máme bohaté zkušenosti – naši barbeři jsou trpěliví, přátelští a vždy poradí. Každý prochází zaškolením v AK BARBERS Academy, takže je váš kluk v těch nejlepších rukou.",
+    faq: [
+      { question: "Od kolika let stříháte děti?", answer: "Stříháme kluky od 1 do 15 let. Přistupujeme k nim trpělivě a přátelsky, aby si střih užili." },
+      { question: "Kolik stojí dětský střih?", answer: "Klasický dětský střih stojí 349 Kč, modernější účesy jako Skin Fade, Low Fade, Crop Fade nebo Buzz Cut 449 Kč." },
+      { question: "Uděláte klukovi fade?", answer: "Ano, zvládneme Skin Fade, Low Fade, Crop Fade i Buzz Cut. Rádi poradíme, co bude klukovi slušet." },
+      { question: "Musím se objednat?", answer: "Ne, fungujeme jako walk-in. Pokud chcete jistý čas bez čekání, zarezervujte si termín online přes Booqme." },
+      { question: "Kde vás najdu?", answer: "Husitská 55, 130 00 Praha 3 – Žižkov, pár minut od nádraží Florenc (metro B a C)." },
+    ],
+    internalLinks: [
+      { label: "AK BARBERS Praha 3 – Žižkov", href: "/barber-praha-3" },
+      { label: "Holičství Žižkov", href: "/holicstvi-zizkov" },
+      { label: "Pánské stříhání Praha 3", href: "/pansky-strih-praha-3" },
+      academyLink,
+      careerLink,
+    ],
+    breadcrumbs: [
+      { name: "AK BARBERS", href: "/" },
+      { name: "Dětský střih Žižkov", href: "/detsky-strih-zizkov" },
+    ],
+  },
 };
 
 // ===================================================================
