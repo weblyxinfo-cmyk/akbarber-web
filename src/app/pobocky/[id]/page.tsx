@@ -318,15 +318,27 @@ export default async function LocationPage({ params, searchParams }: Props) {
       <section className="pt-8">
         <div className="container">
           <div className="h-[200px] overflow-hidden rounded-[10px]">
-            <Image
-              src={location.image}
-              alt={location.name}
-              width={800}
-              height={200}
-              className="block h-full w-full object-cover object-[center_60%]"
-              sizes="(max-width: 768px) 100vw, 800px"
-              priority
-            />
+            {location.videoSrc ? (
+              <video
+                src={location.videoSrc}
+                poster={location.image}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="block h-full w-full object-cover object-[center_60%]"
+              />
+            ) : (
+              <Image
+                src={location.image}
+                alt={location.name}
+                width={800}
+                height={200}
+                className="block h-full w-full object-cover object-[center_60%]"
+                sizes="(max-width: 768px) 100vw, 800px"
+                priority
+              />
+            )}
           </div>
         </div>
       </section>
