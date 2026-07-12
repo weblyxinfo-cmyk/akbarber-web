@@ -615,6 +615,25 @@ export default async function LocationPage({ params, searchParams }: Props) {
             )}
           </div>
 
+          {/* Žižkov – brand blok + NOA Matcha Café */}
+          {location.id === "praha-3" && (
+            <div className="mb-12 rounded-xl border border-[#4ade80]/30 bg-gradient-to-br from-[#4ade80]/10 to-transparent p-6">
+              <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-[#4ade80]">
+                Největší barber shop v České republice
+              </p>
+              <h2 className="mb-3 font-[family-name:var(--font-roboto-slab)] text-[22px] font-bold leading-tight">
+                Prémiový střih a výběrová káva na jednom místě
+              </h2>
+              <p className="text-sm leading-[1.7] text-gray">
+                Na Žižkově jsme vytvořili největší barber shop v České republice –
+                navíc propojený s moderní kavárnou{" "}
+                <span className="font-semibold text-white">NOA Matcha Café</span>.
+                Zatímco si užíváte prémiový střih, můžete si přímo v křesle
+                vychutnat výběrovou kávu.
+              </p>
+            </div>
+          )}
+
           {/* Transport */}
           {location.transport && (
             <div className="mt-10 rounded-lg border border-border p-6">
