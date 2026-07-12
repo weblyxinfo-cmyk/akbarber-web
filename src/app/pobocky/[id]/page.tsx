@@ -485,9 +485,14 @@ export default async function LocationPage({ params, searchParams }: Props) {
       {!location.temporarilyClosed && (
       <section className="pt-8">
         <div className="container">
+          {/* Mobil: H1 nad videem */}
+          <div className="mb-6 hidden items-center justify-between max-lg:flex">
+            <h1 className="text-[26px] font-bold">{displayName}</h1>
+            {isBilingual && <LanguageSwitcher lang={lang} />}
+          </div>
           <div className="flex items-stretch gap-14 max-lg:flex-col-reverse max-lg:gap-8">
           <div className="min-w-0 flex-1">
-          <div className="mb-5 flex items-center justify-between">
+          <div className="mb-5 flex items-center justify-between max-lg:hidden">
             <h1 className="text-[28px] font-bold">{displayName}</h1>
             {isBilingual && <LanguageSwitcher lang={lang} />}
           </div>
@@ -643,28 +648,12 @@ export default async function LocationPage({ params, searchParams }: Props) {
               <h2 className="mb-9 max-w-[620px] font-[family-name:var(--font-roboto-slab)] text-[34px] font-bold leading-[1.1] max-md:text-[26px]">
                 Prémiový střih a výběrová káva na jednom místě
               </h2>
-              <div className="mb-10 flex flex-wrap items-center gap-x-9 gap-y-5">
-                <div>
-                  <div className="font-[family-name:var(--font-roboto-slab)] text-[46px] font-bold leading-none max-md:text-[40px]">
-                    14
-                  </div>
-                  <div className="mt-2 text-[11px] uppercase tracking-wider text-gray-light">
-                    barber křesel
-                  </div>
-                </div>
-                <div className="h-11 w-px bg-white/10 max-md:hidden" />
-                <div>
-                  <div className="font-[family-name:var(--font-roboto-slab)] text-[46px] font-bold leading-none max-md:text-[40px]">
-                    16
-                  </div>
-                  <div className="mt-2 text-[11px] uppercase tracking-wider text-gray-light">
-                    poboček
-                  </div>
-                </div>
-                <div className="h-11 w-px bg-white/10 max-md:hidden" />
-                <div className="max-w-[180px] text-[13px] leading-snug text-gray max-md:w-full max-md:max-w-none">
-                  Prémiová péče za dostupnou cenu
-                </div>
+              <div className="mb-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-[14px] font-medium text-white max-md:flex-col max-md:items-start max-md:gap-y-2.5">
+                <span>Luxusní prostředí</span>
+                <span className="h-4 w-px bg-white/20 max-md:hidden" />
+                <span>Prémiová péče</span>
+                <span className="h-4 w-px bg-white/20 max-md:hidden" />
+                <span>Vždy místo pro každého zákazníka</span>
               </div>
               <div className="max-w-[620px] space-y-5">
                 <p className="text-[15px] leading-[1.75] text-gray">
