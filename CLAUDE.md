@@ -34,29 +34,54 @@ src/
 └── types/index.ts                   # TypeScript typy (Location, Service, ...)
 ```
 
-## Pobočky — 10 lokací
-| ID | Město | Typ | Ceník | Bilingvální |
-|---|---|---|---|---|
-| beroun | Beroun | walk-in | standardServices | ne |
-| beroun-2 | Beroun | reservation | premiumServices | ne |
-| praha-6 | Praha | walk-in + reservation | valueServices (klasika 449) | **CZ/EN** |
-| praha-1 | Praha | walk-in + reservation | standardServices | **CZ/EN** |
-| kraluv-dvur | Králův Dvůr | walk-in | standardServices | ne |
-| plzen | Plzeň | walk-in + reservation | standardServices | ne |
-| horovice | Hořovice | walk-in + reservation | standardServices | ne |
-| slany | Slaný | walk-in + reservation | standardServices | ne |
-| maj | Máj | walk-in + reservation | standardServices | ne |
-| nitra | Nitra (SK) | walk-in | vlastní (EUR) | ne |
+## Pobočky — 13 lokací
+Zdroj pravdy je vždy `src/lib/data.ts` — tabulka níže je jen přehled.
+
+| ID | Město | Bilingvální |
+|---|---|---|
+| beroun | Beroun | ne |
+| beroun-2 | Beroun | ne |
+| praha-3 | Praha 3 – Žižkov | **CZ/EN** |
+| praha-6 | Praha 6 | **CZ/EN** |
+| praha-1 | Praha 1 | **CZ/EN** |
+| praha-5 | Praha 5 – Smíchov | **CZ/EN** |
+| jesenice | Jesenice u Prahy | **CZ/EN** |
+| cerny-most | Praha 9 – Černý Most | ne |
+| kraluv-dvur | Králův Dvůr | ne |
+| plzen | Plzeň | ne |
+| horovice | Hořovice | ne |
+| slany | Slaný | ne |
+| nitra | Nitra (SK) | ne — vlastní ceník v EUR |
+
+## ⚠️ Odložená práce — větev `nezaplaceno-2026-07-12`
+21 commitů z 12. 7. 2026 bylo **dočasně staženo z produkce** (revert `ddf50f7`) kvůli
+neuhrazené faktuře. Obsah: hero video Žižkov, EN verze Žižkova, brand texty
+(Adrian Križan, NOA Matcha), homepage statistiky, SEO úpravy.
+
+Práce je zachovaná ve větvi `nezaplaceno-2026-07-12` (na origin).
+
+**Vrácení po zaplacení:**
+```bash
+git revert ddf50f7 && git push && npx vercel --prod
+```
+
+Pozor: revert `ddf50f7` **záměrně nevrátil** tato faktická data — po obnovení
+zkontrolovat, že zůstala správně:
+- Žižkov: sleva -20 % odebraná (akce neběží)
+- Žižkov: neděle zavřeno (`data.ts` i `seo-content.ts`)
+- Jesenice: otevřeno jen So (ne So–Ne)
 
 ## Ceníkové skupiny (src/lib/data.ts)
-- **standardServices** (449/499/299/349+449/399/799 Kč) — Beroun, Praha 1, Králův Dvůr, Plzeň, Hořovice, Slaný, Máj
-- **valueServices** (449/499/249/299+399/349/749 Kč) — Praha 6 (klasika 449, zbytek levnější)
-- **premiumServices** (499/889/399/349+449 Kč, 4 služby) — Beroun 2
-- **premiumDiscountServices** — NEPOUŽÍVÁ SE (dříve Praha 1 a Máj)
-- **slanyServices** — NEPOUŽÍVÁ SE (dříve Slaný)
+- **standardServices** (449/499/299/349+449/399/799 Kč, 6 služeb) — Beroun, Praha 6, Králův Dvůr, Plzeň, Hořovice, Černý Most
+- **premiumServices** (499/889/399/349+449 Kč, 4 služby) — Beroun 2, Praha 1 (Máj), Praha 3 (Žižkov), Praha 5 (Smíchov), Jesenice
+- **slanyServices** (399/499/249/299+399/349/749 Kč) — Slaný (klasika 399 + sleva 25 % pro PČR/HZS/ZZS/ISIC)
+- **valueServices** — NEPOUŽÍVÁ SE
+- **premiumDiscountServices** — NEPOUŽÍVÁ SE
+- **Nitra** — vlastní inline ceník v EUR, není ve sdílené skupině
 
 ## CZ/EN jazykový přepínač
-- **Pouze Praha 1 a Praha 6** (`isBilingual = id === "praha-1" || id === "praha-6"`)
+- **Praha 1, Praha 3, Praha 5, Praha 6, Jesenice** — `isBilingual` check v `src/app/pobocky/[id]/page.tsx`
+- ⚠️ Check je **duplikovaný na 2 místech** v tom souboru — při přidání pobočky upravit OBĚ
 - URL parametr `?lang=en`, ukládá se do `localStorage` pod klíčem `ak-lang`
 - Přepínač: vlajky 🇨🇿/🇬🇧 nad hero obrázkem (`LanguageSwitcher.tsx`)
 - Překlady v `src/lib/translations.ts`:
@@ -70,8 +95,14 @@ src/
 
 ## Fotky poboček
 - Uložené v `public/images/locations/photo-{id}.jpg`
-- Beroun, Praha 1, Slaný, Máj, Králův Dvůr sdílejí stejnou fotku
-- Beroun 2, Hořovice, Plzeň, Praha 6, Nitra mají vlastní fotky (aktualizovány 2025-02-18)
+- Část poboček sdílí `photo-beroun.jpg` — aktuální přiřazení viz pole `image` v `data.ts`
+
+## SEO landing pages
+- Vzor: `barber-{mesto}`, `pansky-strih-{mesto}`, `skin-fade-{mesto}` + EN varianty pod `/en/`
+- Standard = pobočka + 2 služby
+- Obsah v `src/lib/seo-content.ts` (~1700 ř., největší soubor projektu)
+- Šablony: `src/components/seo/SeoLocationPage.tsx`, `SeoServicePage.tsx`
+- ⚠️ Doorway pages byly záměrně odebrány jako Google-unfriendly (commit `9bec8de`) — **nevracet**
 
 ## Deploy
 ```bash
