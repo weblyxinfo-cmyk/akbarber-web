@@ -21,8 +21,6 @@ export interface Location {
   eshopUrl?: string;
   services: Service[];
   image: string;
-  /** Volitelné hero video (např. "/videos/zizkov.mp4"). Když je vyplněné, na detailu pobočky se místo fotky přehrává video (autoplay, muted, loop); `image` slouží jako poster. */
-  videoSrc?: string;
   rating?: string;
   note?: string;
   currency: "CZK" | "EUR";

@@ -39,7 +39,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const location = locations.find((l) => l.id === id);
   if (!location) return {};
 
-  const isBilingual = id === "praha-1" || id === "praha-3" || id === "praha-5" || id === "praha-6" || id === "jesenice";
+  const isBilingual = id === "praha-1" || id === "praha-5" || id === "praha-6" || id === "jesenice";
   const isEnglish = isBilingual && langParam === "en";
   const isSlovak = location.id === "nitra";
 
@@ -124,7 +124,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
   if (!location) notFound();
 
   const isSlovak = location.id === "nitra";
-  const isBilingual = id === "praha-1" || id === "praha-3" || id === "praha-5" || id === "praha-6" || id === "jesenice";
+  const isBilingual = id === "praha-1" || id === "praha-5" || id === "praha-6" || id === "jesenice";
   const redirectLocation = location.temporarilyClosed
     ? locations.find((l) => l.id === location.temporarilyClosed!.redirectToId)
     : undefined;
@@ -314,8 +314,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Hero Image (pobočky bez videa) */}
-      {!location.videoSrc && (
+      {/* Hero Image */}
       <section className="pt-8">
         <div className="container">
           <div className="h-[200px] overflow-hidden rounded-[10px]">
@@ -331,7 +330,6 @@ export default async function LocationPage({ params, searchParams }: Props) {
           </div>
         </div>
       </section>
-      )}
 
       {/* Temporarily Closed Banner */}
       {location.temporarilyClosed && (
@@ -485,14 +483,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
       {!location.temporarilyClosed && (
       <section className="pt-8">
         <div className="container">
-          {/* Mobil: H1 nad videem */}
-          <div className="mb-6 hidden flex-col items-center gap-3 text-center max-lg:flex">
-            <h1 className="text-[26px] font-bold">{displayName}</h1>
-            {isBilingual && <LanguageSwitcher lang={lang} />}
-          </div>
-          <div className="flex items-stretch gap-14 max-lg:flex-col-reverse max-lg:gap-8">
-          <div className="min-w-0 flex-1">
-          <div className="mb-5 flex items-center justify-between max-lg:hidden">
+          <div className="mb-5 flex items-center justify-between">
             <h1 className="text-[28px] font-bold">{displayName}</h1>
             {isBilingual && <LanguageSwitcher lang={lang} />}
           </div>
@@ -623,110 +614,6 @@ export default async function LocationPage({ params, searchParams }: Props) {
               </div>
             )}
           </div>
-          </div>
-          {location.videoSrc && (
-            <div className="relative aspect-[9/16] w-[330px] shrink-0 lg:aspect-auto max-lg:w-full max-lg:max-w-[320px] max-lg:self-center">
-              <video
-                src={location.videoSrc}
-                poster={location.image}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 block h-full w-full rounded-[20px] object-cover shadow-[0_28px_80px_-24px_rgba(0,0,0,0.85)] ring-1 ring-white/10"
-              />
-            </div>
-          )}
-          </div>
-
-          {/* Žižkov – kompletní brand text klienta + NOA Matcha Café */}
-          {location.id === "praha-3" && (
-            <div className="mb-14 pt-4">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#4ade80]">
-                {lang === "en"
-                  ? "The largest barber shop in the Czech Republic"
-                  : "Největší barber shop v České republice"}
-              </p>
-              <h2 className="mb-9 max-w-[620px] font-[family-name:var(--font-roboto-slab)] text-[34px] font-bold leading-[1.1] max-md:text-[26px]">
-                {lang === "en"
-                  ? "Premium haircut and specialty coffee in one place"
-                  : "Prémiový střih a výběrová káva na jednom místě"}
-              </h2>
-              <div className="mb-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-[14px] font-medium text-white max-md:flex-col max-md:items-start max-md:gap-y-2.5">
-                <span>{lang === "en" ? "Luxury space" : "Luxusní prostředí"}</span>
-                <span className="h-4 w-px bg-white/20 max-md:hidden" />
-                <span>{lang === "en" ? "Premium care" : "Prémiová péče"}</span>
-                <span className="h-4 w-px bg-white/20 max-md:hidden" />
-                <span>
-                  {lang === "en"
-                    ? "Always room for every client"
-                    : "Vždy místo pro každého zákazníka"}
-                </span>
-              </div>
-              <div className="max-w-[620px] space-y-5">
-                <p className="text-[15px] leading-[1.75] text-gray">
-                  {lang === "en" ? (
-                    <>
-                      AK Barbers was founded with a single vision – to offer
-                      services at the highest level, without compromise. Behind
-                      the whole concept stands{" "}
-                      <span className="font-semibold text-white">Adrian Križan</span>,
-                      who passes his years of experience on to every barber and
-                      personally makes sure the quality stays top-notch across all
-                      branches.
-                    </>
-                  ) : (
-                    <>
-                      AK Barbers vznikl s jedinou vizí – nabídnout služby na té
-                      nejvyšší úrovni, bez kompromisů. Za celým konceptem stojí{" "}
-                      <span className="font-semibold text-white">Adrian Križan</span>,
-                      který své dlouholeté zkušenosti předává každému barberovi
-                      a osobně dbá na to, aby byla kvalita stejně špičková na všech
-                      pobočkách.
-                    </>
-                  )}
-                </p>
-                <p className="text-[15px] leading-[1.75] text-gray">
-                  {lang === "en" ? (
-                    <>
-                      In Žižkov we created the largest barber shop in the Czech
-                      Republic – connected with the modern café{" "}
-                      <a
-                        href="https://www.noamatcha.cz"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-semibold text-white underline decoration-[#4ade80]/60 underline-offset-2 transition-colors hover:text-[#4ade80]"
-                      >
-                        NOA Matcha Café
-                      </a>
-                      . While you enjoy a premium haircut, you can sip specialty
-                      coffee right in the chair.
-                    </>
-                  ) : (
-                    <>
-                      Na Žižkově jsme vytvořili největší barber shop v České
-                      republice – navíc propojený s moderní kavárnou{" "}
-                      <a
-                        href="https://www.noamatcha.cz"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-semibold text-white underline decoration-[#4ade80]/60 underline-offset-2 transition-colors hover:text-[#4ade80]"
-                      >
-                        NOA Matcha Café
-                      </a>
-                      . Zatímco si užíváte prémiový střih, můžete si přímo v křesle
-                      vychutnat výběrovou kávu.
-                    </>
-                  )}
-                </p>
-              </div>
-              <p className="mt-9 max-w-[560px] border-l-2 border-[#4ade80] pl-5 font-[family-name:var(--font-roboto-slab)] text-[19px] font-medium leading-[1.5] text-white">
-                {lang === "en"
-                  ? "Men's haircut from 499 CZK. Because true luxury isn't about the price – it's about the quality you'll notice on your very first visit."
-                  : "Pánský střih od 499 Kč. Protože skutečný luxus není o ceně – je o kvalitě, kterou poznáte už při první návštěvě."}
-              </p>
-            </div>
-          )}
 
           {/* Transport */}
           {location.transport && (
