@@ -40,6 +40,8 @@ export interface Location {
   temporarilyClosed?: {
     redirectToId: string;
     redirectToName: string;
+    /** "reconstruction" = zobrazí se "Rekonstrukce" místo "Dočasně uzavřeno". */
+    reason?: "reconstruction";
   };
   /** Procentuální sleva na celý ceník pobočky (např. 20 = –20 %). Zobrazí přeškrtnutou původní cenu a sníženou cenu. */
   discountPercent?: number;

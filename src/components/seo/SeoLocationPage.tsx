@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Location } from "@/types";
+import { ClosedNotice } from "@/components/seo/ClosedNotice";
 import type { SeoLocationContent } from "@/types";
 import { IconCircle } from "@/components/IconCircle";
 import { GoogleReviewBadge } from "@/components/sections/GoogleReviewBadge";
@@ -42,6 +43,8 @@ export function SeoLocationPage({ content, location }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+
+      <ClosedNotice location={location} lang={content.lang} />
 
       {/* Hero */}
       <section className="pt-8">

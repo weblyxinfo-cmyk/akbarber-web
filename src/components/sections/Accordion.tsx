@@ -30,7 +30,7 @@ function LocationCard({ location }: { location: Location }) {
         {isClosed && (
           <div className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-[#e57373]/50 bg-black/70 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#e57373] backdrop-blur-sm">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#e57373]" />
-            Dočasně uzavřeno
+            {location.temporarilyClosed?.reason === "reconstruction" ? "Rekonstrukce" : "Dočasně uzavřeno"}
           </div>
         )}
       </div>
@@ -52,10 +52,10 @@ function LocationCard({ location }: { location: Location }) {
           {location.temporarilyClosed ? (
             <>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-white/30 px-3 py-1 text-[12px] font-semibold text-white">
-                Dočasně uzavřeno
+                {location.temporarilyClosed.reason === "reconstruction" ? "Rekonstrukce" : "Dočasně uzavřeno"}
               </span>
               <span className="text-[12px] font-semibold text-gray">
-                Pokračujeme na {location.temporarilyClosed.redirectToName}
+                Těšíme se na vás na {location.temporarilyClosed.redirectToName}
               </span>
             </>
           ) : (

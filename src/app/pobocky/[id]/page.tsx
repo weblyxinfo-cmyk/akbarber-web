@@ -39,7 +39,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const location = locations.find((l) => l.id === id);
   if (!location) return {};
 
-  const isBilingual = id === "praha-1" || id === "praha-3" || id === "praha-5" || id === "praha-6" || id === "jesenice";
+  const isBilingual = id === "praha-1" || id === "praha-3" || id === "praha-5" || id === "praha-6" || id === "jesenice" || id === "revolucni";
   const isEnglish = isBilingual && langParam === "en";
   const isSlovak = location.id === "nitra";
 
@@ -48,11 +48,13 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
 
   if (location.temporarilyClosed) {
     if (isEnglish) {
-      title = `${location.name} — Temporarily Closed | Continuing at ${location.temporarilyClosed.redirectToName}`;
-      description = `${location.name} is temporarily closed. We look forward to seeing you at ${location.temporarilyClosed.redirectToName} — the same team, walk-ins welcome, open 7 days a week.`;
+      const status = location.temporarilyClosed.reason === "reconstruction" ? "Closed for Renovation" : "Temporarily Closed";
+      title = `${location.name} — ${status} | Visit us at ${location.temporarilyClosed.redirectToName}`;
+      description = `${location.name} is ${status.toLowerCase()}. In the meantime, we look forward to seeing you at AK BARBERS ${location.temporarilyClosed.redirectToName}.`;
     } else {
-      title = `${location.name} – Dočasně uzavřeno | Pokračujeme na ${location.temporarilyClosed.redirectToName}`;
-      description = `${location.name} je dočasně uzavřena. Těšíme se na vás na ${location.temporarilyClosed.redirectToName} – stejný tým, bez objednání, otevřeno 7 dní v týdnu.`;
+      const status = location.temporarilyClosed.reason === "reconstruction" ? "Rekonstrukce" : "Dočasně uzavřeno";
+      title = `${location.name} – ${status} | Těšíme se na vás na ${location.temporarilyClosed.redirectToName}`;
+      description = `${location.name} je ${location.temporarilyClosed.reason === "reconstruction" ? "v rekonstrukci" : "dočasně uzavřena"}. Mezitím se na vás těšíme na pobočce AK BARBERS ${location.temporarilyClosed.redirectToName}.`;
     }
   } else if (isEnglish) {
     const enTitles: Record<string, string> = {
@@ -60,6 +62,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
       "praha-5": "AK BARBERS Prague 5 \u2014 Professional Barbershop Sm\u00edchov",
       "praha-6": "AK BARBERS Prague 6 \u2014 Professional Barbershop",
       "jesenice": "AK BARBERS Jesenice \u2014 Professional Barbershop near Prague",
+      revolucni: "AK BARBERS Prague 1 Revolu\u010dn\u00ed \u2014 New Barbershop Coming Soon",
     };
     title = enTitles[id] || `AK BARBERS ${location.city} \u2014 Professional Barbershop`;
     const minPrice = id === "praha-6" || id === "jesenice" ? "449" : "499";
@@ -124,11 +127,12 @@ export default async function LocationPage({ params, searchParams }: Props) {
   if (!location) notFound();
 
   const isSlovak = location.id === "nitra";
-  const isBilingual = id === "praha-1" || id === "praha-3" || id === "praha-5" || id === "praha-6" || id === "jesenice";
+  const isBilingual = id === "praha-1" || id === "praha-3" || id === "praha-5" || id === "praha-6" || id === "jesenice" || id === "revolucni";
   const redirectLocation = location.temporarilyClosed
     ? locations.find((l) => l.id === location.temporarilyClosed!.redirectToId)
     : undefined;
   const lang: Lang = isBilingual && langParam === "en" ? "en" : "cs";
+  const isReconstruction = location.temporarilyClosed?.reason === "reconstruction";
   const t = locationPageTranslations[lang];
 
   // Sleva je aktivní jen má-li pobočka discountPercent a už nastalo discountFrom
@@ -143,6 +147,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
   const displayNameSuffix: Record<string, string> = {
     "beroun-2": " 2",
     "praha-1": " Máj",
+    revolucni: " 1 Revoluční",
     "praha-3": " 3 Žižkov",
     "praha-5": " 5 Smíchov",
     "praha-6": " 6 Břevnov",
@@ -345,62 +350,61 @@ export default async function LocationPage({ params, searchParams }: Props) {
                   <line x1="12" y1="8" x2="12" y2="12" />
                   <line x1="12" y1="16" x2="12.01" y2="16" />
                 </svg>
-                {lang === "en" ? "Important notice" : "Důležitá informace"}
+                {isReconstruction
+                  ? lang === "en" ? "Renovation" : "Rekonstrukce"
+                  : lang === "en" ? "Important notice" : "Důležitá informace"}
               </div>
               <h2 className="mb-4 font-[family-name:var(--font-roboto-slab)] text-[32px] font-bold uppercase leading-[1.05] tracking-tight max-md:text-[24px]">
                 {lang === "en" ? (
                   <>
                     {displayName}{" "}
-                    <span className="block text-[#ffffff]">is temporarily closed</span>
+                    <span className="block text-[#ffffff]">
+                      {isReconstruction ? "is closed for renovation." : "is temporarily closed."}
+                    </span>
                   </>
                 ) : (
                   <>
                     Pobočka {displayName.replace("AK BARBERS – ", "")}
-                    <span className="block text-[#ffffff]">je dočasně uzavřena.</span>
+                    <span className="block text-[#ffffff]">
+                      {isReconstruction ? "je v rekonstrukci." : "je dočasně uzavřena."}
+                    </span>
                   </>
                 )}
               </h2>
               <p className="mb-6 max-w-[520px] text-[13px] leading-[1.65] text-gray">
                 {lang === "en" ? (
                   <>
-                    We look forward to seeing you at{" "}
+                    In the meantime, we look forward to seeing you at{" "}
                     <strong className="font-semibold text-white">
-                      {location.temporarilyClosed.redirectToName}
+                      AK BARBERS {location.temporarilyClosed.redirectToName}
                     </strong>
-                    , where your favourite barber from Prague 6 continues, as well as our{" "}
-                    <strong className="font-semibold text-[#e57373]">American Barber</strong>.
+                    .
                   </>
                 ) : (
                   <>
-                    Těšíme se na vás na{" "}
+                    Mezitím se na vás těšíme na pobočce{" "}
                     <strong className="font-semibold text-white">
-                      PRAZE 5 – SMÍCHOV
+                      AK BARBERS {location.temporarilyClosed.redirectToName}
                     </strong>
-                    , kde pokračuje i{" "}
-                    <strong className="font-semibold text-white">
-                      váš oblíbený barber z Prahy 6
-                    </strong>
-                    {" "}a navíc tam najdete i{" "}
-                    <strong className="font-semibold text-[#e57373]">American Barbera</strong>.
-                    {" "}Rezervaci si pohodlně uděláte online, nebo přijďte bez objednání.
+                    .
                   </>
                 )}
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href={`/pobocky/${location.temporarilyClosed.redirectToId}`}
+                  href={`/pobocky/${location.temporarilyClosed.redirectToId}${lang === "en" ? "?lang=en" : ""}`}
                   className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.1em] text-black transition-opacity hover:opacity-90"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none">
                     <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
                   </svg>
-                  {lang === "en" ? "Go to Smíchov" : "Přejít na Smíchov"}
+                  {lang === "en" ? "Go to" : "Přejít na"} {location.temporarilyClosed.redirectToName}
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="5" y1="12" x2="19" y2="12" />
                     <polyline points="12 5 19 12 12 19" />
                   </svg>
                 </Link>
-                {redirectLocation?.bookingUrl && (
+                {redirectLocation?.bookingUrl && redirectLocation.type !== "coming-soon" && (
                   <a
                     href={redirectLocation.bookingUrl}
                     target="_blank"
@@ -414,68 +418,6 @@ export default async function LocationPage({ params, searchParams }: Props) {
                     </svg>
                   </a>
                 )}
-              </div>
-              {redirectLocation?.bookingUrl && (
-                <p className="mt-3 text-[11px] text-gray-light">
-                  {lang === "en"
-                    ? "Online booking takes you directly to AK Barbers Prague 5 – Smíchov."
-                    : "Rezervace online vás přesměruje rovnou na AK Barbers Praha 5 – Smíchov."}
-                </p>
-              )}
-              <div className="mt-6 grid grid-cols-3 gap-4 rounded-[8px] border border-[#2a2a2a] p-4 max-md:grid-cols-1 max-md:gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#ffffff]/50 text-[#ffffff]">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="6" cy="6" r="3" />
-                      <circle cx="6" cy="18" r="3" />
-                      <line x1="20" y1="4" x2="8.12" y2="15.88" />
-                      <line x1="14.47" y1="14.48" x2="20" y2="20" />
-                      <line x1="8.12" y1="8.12" x2="12" y2="12" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-white leading-tight">
-                      {lang === "en" ? "Walk-ins" : "Bez objednání"}
-                    </div>
-                    <div className="text-[11px] text-gray">
-                      {lang === "en" ? "No booking" : "Walk-ins"}
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#ffffff]/50 text-[#ffffff]">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="10" />
-                      <polyline points="12 6 12 12 16 14" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-white leading-tight">
-                      {lang === "en" ? "Open 7 days" : "Otevřeno 7 dní"}
-                    </div>
-                    <div className="text-[11px] text-gray">
-                      {lang === "en" ? "Every day" : "Každý den pro vás"}
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#ffffff]/50 text-[#ffffff]">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                      <circle cx="9" cy="7" r="4" />
-                      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-white leading-tight">
-                      {lang === "en" ? "Same team" : "Stejný tým"}
-                    </div>
-                    <div className="text-[11px] text-gray">
-                      {lang === "en" ? "From Prague 6" : "Barber z Prahy 6"}
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -500,7 +442,9 @@ export default async function LocationPage({ params, searchParams }: Props) {
 
           {location.temporarilyClosed ? null : location.type === "coming-soon" ? (
             <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#444] px-5 py-2 text-[20px] font-bold text-[#ccc]">
-              {location.openingDate ? `Otevíráme ${location.openingDate}` : "Připravuje se"}
+              {lang === "en"
+                ? location.openingDate ? `Opening ${location.openingDate}` : "Coming soon"
+                : location.openingDate ? `Otevíráme ${location.openingDate}` : "Připravuje se"}
             </div>
           ) : location.type === "reservation" ? (
             <div className="mb-8 flex flex-col gap-3">

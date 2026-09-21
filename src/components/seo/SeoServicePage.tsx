@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Location } from "@/types";
+import { ClosedNotice } from "@/components/seo/ClosedNotice";
 import type { SeoServiceContent } from "@/types";
 import { IconCircle } from "@/components/IconCircle";
 import { CareerAcademy } from "@/components/sections/CareerAcademy";
@@ -53,6 +54,8 @@ export function SeoServicePage({ content, location }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+
+      <ClosedNotice location={location} lang={content.lang} />
 
       {/* Hero */}
       <section className="pt-8">
