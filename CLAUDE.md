@@ -41,9 +41,10 @@ Zdroj pravdy je vždy `src/lib/data.ts` — tabulka níže je jen přehled.
 |---|---|---|
 | beroun | Beroun | ne |
 | beroun-2 | Beroun | ne |
-| praha-3 | Praha 3 – Žižkov | **CZ/EN** |
+| praha-3 | Praha 3 – Žižkov | **CZ/EN** — REKONSTRUKCE (`temporarilyClosed` → revolucni) |
 | praha-6 | Praha 6 | **CZ/EN** |
 | praha-1 | Praha 1 | **CZ/EN** |
+| revolucni | Praha 1 – Revoluční | **CZ/EN** — coming-soon, chybí adresa/doba/ceník |
 | praha-5 | Praha 5 – Smíchov | **CZ/EN** |
 | jesenice | Jesenice u Prahy | **CZ/EN** |
 | cerny-most | Praha 9 – Černý Most | ne |
@@ -57,7 +58,7 @@ Zdroj pravdy je vždy `src/lib/data.ts` — tabulka níže je jen přehled.
 Změny dočasně stažené revertem `ddf50f7` (neuhrazená faktura) byly po zaplacení
 21. 9. 2026 vráceny do produkce (hero video Žižkov, EN verze Žižkova, brand texty,
 statistiky, SEO). Faktická data ponechána: Žižkov bez slevy −20 % a v neděli zavřeno,
-Jesenice otevřeno jen So.
+Jesenice (oprava 21. 9. dle klienta) otevřeno So–Ne 10–14:30.
 
 ## Ceníkové skupiny (src/lib/data.ts)
 - **standardServices** (449/499/299/349+449/399/799 Kč, 6 služeb) — Beroun, Praha 6, Králův Dvůr, Plzeň, Hořovice, Černý Most
