@@ -231,7 +231,7 @@ export const locations: Location[] = [
     id: "revolucni",
     name: "AK BARBERS Praha 1 – Revoluční",
     city: "Praha",
-    address: "Revoluční, 110 00 Praha 1",
+    address: "Revoluční 763/15, 110 00 Praha 1",
     phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "10:00 – 19:00" },
@@ -247,7 +247,7 @@ export const locations: Location[] = [
     reviewRating: 5.0,
     reviewCount: "Nová pobočka",
     rankText: "Nová pobočka v centru Prahy",
-    mapQuery: "Revoluční,+Praha+1",
+    mapQuery: "Revoluční+763/15,+Praha+1",
     transport: {
       publicTransport: [
         "Metro Náměstí Republiky (linka B) – pár minut chůze",
