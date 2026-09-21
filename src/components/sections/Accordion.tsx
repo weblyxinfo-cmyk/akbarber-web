@@ -107,7 +107,9 @@ export function Accordion() {
 
   const citiesMap = useMemo(() => {
     const map = new Map<string, Location[]>();
-    locations.forEach((loc) => {
+    // Otevřené pobočky první, pak "Připravuje se", nakonec "Rekonstrukce" / dočasně uzavřené
+    const rank = (l: Location) => (l.temporarilyClosed ? 2 : l.type === "coming-soon" ? 1 : 0);
+    [...locations].sort((a, b) => rank(a) - rank(b)).forEach((loc) => {
       const list = map.get(loc.city) || [];
       list.push(loc);
       map.set(loc.city, list);
