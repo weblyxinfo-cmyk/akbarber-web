@@ -145,8 +145,9 @@ export const locations: Location[] = [
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-3",
     services: premiumServices,
-    image: "/images/locations/photo-zizkov.jpg",
-    videoSrc: "/videos/zizkov.mp4",
+    image: "/images/locations/photo-zizkov-2.jpg",
+    // hero video (/videos/zizkov.mp4, poster photo-zizkov.jpg) vypnuto během rekonstrukce — po otevření vrátit
+    // videoSrc: "/videos/zizkov.mp4",
     temporarilyClosed: {
       redirectToId: "revolucni",
       redirectToName: "Praha 1 – Revoluční",

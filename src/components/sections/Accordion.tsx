@@ -24,7 +24,7 @@ function LocationCard({ location }: { location: Location }) {
           alt={location.name}
           width={400}
           height={200}
-          className={`h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 ${isClosed ? "opacity-40" : ""}`}
+          className={`h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 ${isClosed ? "opacity-75" : ""}`}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
         {isClosed && (
