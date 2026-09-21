@@ -47,15 +47,23 @@ function LocationCard({ location }: { location: Location }) {
       ) : (
         <div className="mb-2" />
       )}
-      <div className="flex items-center justify-between">
-        <div className="flex flex-wrap items-center gap-2">
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">
           {location.temporarilyClosed ? (
             <>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/30 px-3 py-1 text-[12px] font-semibold text-white">
-                {location.temporarilyClosed.reason === "reconstruction" ? "Rekonstrukce" : "Dočasně uzavřeno"}
-              </span>
-              <span className="text-[12px] font-semibold text-gray">
-                Navštivte pobočku {location.temporarilyClosed.redirectToName}
+              <span className="flex w-full items-center gap-3 rounded-lg border border-[#5eead4]/40 bg-[#5eead4]/10 px-3 py-2.5 transition-colors group-hover:border-[#5eead4]/70">
+                <svg className="h-4 w-4 shrink-0 text-[#5eead4]" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                  <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                </svg>
+                <span className="flex flex-1 flex-col leading-tight">
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#5eead4]">
+                    Mezitím nás najdete
+                  </span>
+                  <span className="whitespace-nowrap text-[13px] font-bold text-white">
+                    {location.temporarilyClosed.redirectToName}
+                  </span>
+                </span>
+                <IconCircle />
               </span>
             </>
           ) : (
@@ -83,7 +91,7 @@ function LocationCard({ location }: { location: Location }) {
             </>
           )}
         </div>
-        {!isComingSoon && (
+        {!isComingSoon && !isClosed && (
           <span className="inline-flex items-center gap-1 text-[11px] text-white">
             Zobrazit
             <IconCircle />
