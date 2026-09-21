@@ -43,9 +43,9 @@ Zdroj pravdy je vždy `src/lib/data.ts` — tabulka níže je jen přehled.
 | beroun-2 | Beroun | ne |
 | praha-3 | Praha 3 – Žižkov | **CZ/EN** — REKONSTRUKCE (`temporarilyClosed` → revolucni) |
 | praha-6 | Praha 6 | **CZ/EN** |
-| praha-1 | Praha 1 | **CZ/EN** |
+| praha-1 | Praha 1 – Máj | **CZ/EN** — REKONSTRUKCE (→ revolucni) |
 | revolucni | Praha 1 – Revoluční | **CZ/EN** — coming-soon, ceník+doba jako Žižkov, chybí přesná adresa |
-| praha-5 | Praha 5 – Smíchov | **CZ/EN** |
+| praha-5 | Praha 5 – Smíchov | **CZ/EN** — REKONSTRUKCE (→ revolucni) |
 | jesenice | Jesenice u Prahy | **CZ/EN** |
 | cerny-most | Praha 9 – Černý Most | ne |
 | kraluv-dvur | Králův Dvůr | ne |
