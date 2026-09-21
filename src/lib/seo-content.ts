@@ -696,7 +696,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     localityDescription: [
       "AK BARBERS Nitra nájdete v obchodnom centre MLYNY na Štefánikovej triede 35/61, v samom centre Nitry. OC Mlyny je najväčšie nákupné centrum v meste, priamo napojené na MHD — zastávka CENTRUM, Mlyny obsluhuje linky 1, 2, 4, 6, 7, 8, 9, 10 a ďalšie. Z hlavnej autobusovej a vlakovej stanice je to k nám len 10 minút pešo. Parkovanie v OC Mlyny je prvú hodinu zadarmo v pracovné dni a 2 hodiny zadarmo cez víkend.",
       "Nitra je starobylé mesto s bohatou históriou — Nitriansky hrad, pešia zóna a mestský park vytvárajú príjemné prostredie pre život aj návštevu. AK BARBERS Nitra je súčasťou českej siete prémiových barbershopov a prináša do Nitry rovnakú kvalitu služieb, akú poznáte z Prahy, Plzne alebo Berouna. S hodnotením 4.8★ a viac ako 95 recenziami patríme medzi najlepšie hodnotené barbershopy v Nitrianskom kraji.",
-      "Otvorené máme Po–Ne 9:00–21:00, teda každý deň v týždni vrátane víkendov. Fungujeme walk-in aj s možnosťou online rezervácie cez Booqme. Ceny sú v eurách — klasický pánsky strih od 17 €.",
+      "Otvorené máme Po–Ne 9:00–20:00, teda každý deň v týždni vrátane víkendov. Fungujeme walk-in aj s možnosťou online rezervácie cez Booqme. Ceny sú v eurách — klasický pánsky strih od 17 €.",
     ],
     services: [
       { name: "Klasický pánsky strih", price: "17 €" },
@@ -709,7 +709,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     faq: [
       { question: "Kde sa nachádza AK BARBERS Nitra?", answer: "Nájdete nás v OC MLYNY, Štefánikova trieda 35/61, 949 01 Nitra. Priamo v centre mesta, s výbornou dostupnosťou MHD." },
       { question: "Musím sa objednať vopred?", answer: "Nie, fungujeme na princípe walk-in — príďte kedykoľvek počas otváracej doby. Ak preferujete istotu, môžete si rezervovať termín online cez Booqme." },
-      { question: "Aká je otváracie doba?", answer: "Po–Ne 9:00–21:00. Máme otvorené každý deň v týždni vrátane víkendov." },
+      { question: "Aká je otváracie doba?", answer: "Po–Ne 9:00–20:00. Máme otvorené každý deň v týždni vrátane víkendov." },
       { question: "Koľko stojí pánsky strih v Nitre?", answer: "Klasický pánsky strih stojí 17 €. Kompletný balíček strih + úprava brady je za 27 €. Pre PZ, HaZZ, ZZS a ISIC máme zľavu 25 % — strih za 13 €." },
       { question: "Kde zaparkujem?", answer: "Parkovanie v OC Mlyny: prvá hodina zadarmo v pracovné dni, 2 hodiny zadarmo cez víkendy. Každá ďalšia hodina od 1 €." },
       { question: "Strihajú aj detí?", answer: "Áno, detský strih pre chlapcov od 1 do 15 rokov stojí 12 € (klasický) alebo 15 € (fade varianty)." },

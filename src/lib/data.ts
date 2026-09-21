@@ -346,7 +346,7 @@ export const locations: Location[] = [
     address: "OC MLYNY, Štefánikova trieda 35/61, 949 01 Nitra",
     phone: "+421 948 442 413",
     openingHours: [
-      { days: "Po – Ne", hours: "9:00 – 21:00" },
+      { days: "Po – Ne", hours: "9:00 – 20:00" },
     ],
     type: "walk-in",
     eshopUrl: "https://booqme.sk/sk/eshop/ak-barbers-nitra2",
@@ -442,7 +442,7 @@ export const locations: Location[] = [
     phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "10:00 – 19:00" },
-      { days: "So", hours: "10:00 – 14:30" },
+      { days: "So – Ne", hours: "10:00 – 14:30" },
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-jesenice",
