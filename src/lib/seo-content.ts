@@ -127,7 +127,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       { question: "Děláte skin fade na Praze 6?", answer: "Ano, skin fade patří k našim nejžádanějším službám. Naši barbeři zvládají low, mid i high fade s precizními přechody od 0 mm." },
       { question: "Je barbershop blízko metra Dejvická?", answer: "Ano, od metra Dejvická (linka A) to k nám je cca 10 minut tramvají (zastávka Marjánka) nebo 15 minut pěšky." },
       { question: "Přijímáte platby kartou?", answer: "Ano, můžete platit hotově i kartou." },
-      { question: "Máte i druhou pobočku v Praze?", answer: "Ano, naše druhá pražská pobočka je AK BARBERS Praha 1 na Národní třídě v centru Starého Města. Otevřeno 7 dní v týdnu." },
+      { question: "Máte i další pobočky v Praze?", answer: "Ano, AK BARBERS Praha 14 – Černý Most (Bryksova 758/62, hned vedle OC Černý Most) má otevřeno i o víkendu. Připravujeme také novou pobočku Praha 1 – Revoluční." },
     ],
     internalLinks: [
       { label: "Skin Fade Praha 6", href: "/skin-fade-praha-6" },
@@ -1056,7 +1056,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       { question: "Jak dlouho trvá střih?", answer: "Přibližně 30–40 minut, v závislosti na zvoleném stylu." },
       { question: "Musím se objednat?", answer: "Ne, fungujeme walk-in. Online rezervace je dostupná přes Booqme." },
       { question: "Kde se nachází pobočka na Praze 6?", answer: "Nově na adrese Radimova 2522/4, Praha 6 – Břevnov (dříve Bělohorská), přímo u tramvajové zastávky Marjánka." },
-      { question: "Máte otevřeno i o víkendu?", answer: "V sobotu ano (10:00–14:00). V neděli máme zavřeno. Alternativně naše pobočka Praha 1 má otevřeno 7 dní v týdnu." },
+      { question: "Máte otevřeno i o víkendu?", answer: "V sobotu ano (10:00–14:00). V neděli máme zavřeno. O víkendu má otevřeno naše pobočka Praha 14 – Černý Most." },
     ],
     internalLinks: [
       { label: "Barber Praha 6 – všechny služby", href: "/barber-praha-6" },
@@ -1317,7 +1317,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       { question: "How long does a haircut take?", answer: "About 30–40 minutes depending on the style." },
       { question: "Do I need a reservation?", answer: "No, walk-ins are welcome. Online booking is also available via Booqme." },
       { question: "Where is the Prague 6 branch?", answer: "Now at a new address — Radimova 2522/4, Prague 6 – Břevnov (formerly Bělohorská), right by the Marjánka tram stop, near Dejvická metro." },
-      { question: "Are you open on weekends?", answer: "Saturday yes (10:00–14:00). Sunday we're closed. Our Prague 1 branch is open 7 days a week." },
+      { question: "Are you open on weekends?", answer: "Saturday yes (10:00–14:00). Sunday we're closed. Our Prague 14 – Černý Most branch is open on weekends." },
     ],
     internalLinks: [
       { label: "Barber Prague 6 – all services", href: "/en/barber-prague-6" },
@@ -1513,7 +1513,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       { question: "Do I need to book?", answer: "No, we operate on a walk-in basis. Online booking is also available via Booqme." },
       { question: "Where exactly is the shop?", answer: "At Toyen 3410/7, Prague 5 – Smíchov. A 5-minute walk from Anděl metro station (Line B)." },
       { question: "Do you speak English?", answer: "Yes, our barbers in Prague 5 are used to international clients and communicate in English." },
-      { question: "Are you open on Saturdays?", answer: "Yes, Saturday 10:00–14:30. Closed on Sundays. Our Prague 1 branch is open 7 days a week." },
+      { question: "Are you open on Saturdays?", answer: "Yes, Saturday 10:00–14:30. Closed on Sundays." },
     ],
     internalLinks: [
       { label: "Barber Prague 5 – all services", href: "/en/barber-prague-5" },

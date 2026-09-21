@@ -209,6 +209,11 @@ export const locations: Location[] = [
     ],
     type: "walk-in",
     services: premiumServices,
+    temporarilyClosed: {
+      redirectToId: "revolucni",
+      redirectToName: "Praha 1 – Revoluční",
+      reason: "reconstruction",
+    },
     image: "/images/locations/photo-praha-1.jpg",
     currency: "CZK",
     googleMapsUrl: "https://share.google/ieWwYNLKRsKPQlx6a",
@@ -416,6 +421,11 @@ export const locations: Location[] = [
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-1-stare-mesto4",
     services: premiumServices,
+    temporarilyClosed: {
+      redirectToId: "revolucni",
+      redirectToName: "Praha 1 – Revoluční",
+      reason: "reconstruction",
+    },
     image: "/images/locations/photo-beroun.jpg",
     currency: "CZK",
     googleMapsUrl: "",
