@@ -231,7 +231,7 @@ export const locations: Location[] = [
     id: "revolucni",
     name: "AK BARBERS Praha 1 – Revoluční",
     city: "Praha",
-    address: "Revoluční 763/15, 110 00 Praha 1",
+    address: "Revoluční 763/15, 110 00 Praha 1 – Staré Město",
     phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "10:00 – 19:00" },
@@ -243,16 +243,19 @@ export const locations: Location[] = [
     services: premiumServices,
     image: "/images/locations/photo-praha-1.jpg",
     currency: "CZK",
-    googleMapsUrl: "",
+    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Revolu%C4%8Dn%C3%AD+763%2F15%2C+110+00+Praha+1",
     reviewRating: 5.0,
     reviewCount: "Nová pobočka",
     rankText: "Nová pobočka v centru Prahy",
     mapQuery: "Revoluční+763/15,+Praha+1",
+    geo: { lat: 50.0913, lng: 14.4274 },
     transport: {
       publicTransport: [
-        "Metro Náměstí Republiky (linka B) – pár minut chůze",
-        "Tramvaj Dlouhá třída – linky 6, 8, 15, 26",
+        "Tramvaj Dlouhá třída – linky 6, 8, 15, 26 (1 min chůze)",
+        "Metro Náměstí Republiky (linka B) – 5 min chůze",
+        "Tramvaj Náměstí Republiky – 5 min chůze",
       ],
+      parking: "Garáže OC Palladium (Náměstí Republiky), Mr. Parkit Na Poříčí 5, modré a fialové zóny Praha 1",
     },
   },
   {
