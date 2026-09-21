@@ -441,7 +441,7 @@ export const locations: Location[] = [
     phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "10:00 – 19:00" },
-      { days: "So – Ne", hours: "10:00 – 14:30" },
+      { days: "So", hours: "10:00 – 14:30" },
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-jesenice",
