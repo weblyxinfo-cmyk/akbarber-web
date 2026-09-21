@@ -107,13 +107,20 @@ export function Accordion() {
 
   const citiesMap = useMemo(() => {
     const map = new Map<string, Location[]>();
-    // Otevřené pobočky první, pak "Připravuje se", nakonec "Rekonstrukce" / dočasně uzavřené
-    const rank = (l: Location) => (l.temporarilyClosed ? 2 : l.type === "coming-soon" ? 1 : 0);
-    [...locations].sort((a, b) => rank(a) - rank(b)).forEach((loc) => {
+    // Pořadí dle klienta (platí pro mobil i PC); ostatní pobočky: otevřené, "Připravuje se", "Rekonstrukce"
+    const pinned = ["praha-1", "revolucni", "praha-6", "cerny-most", "praha-3", "praha-5"];
+    const rank = (l: Location) => {
+      const i = pinned.indexOf(l.id);
+      if (i >= 0) return i;
+      return pinned.length + (l.temporarilyClosed ? 2 : l.type === "coming-soon" ? 1 : 0);
+    };
+    locations.forEach((loc) => {
       const list = map.get(loc.city) || [];
       list.push(loc);
       map.set(loc.city, list);
     });
+    // řadí se jen uvnitř města, pořadí měst zůstává
+    map.forEach((list) => list.sort((a, b) => rank(a) - rank(b)));
     return map;
   }, []);
 

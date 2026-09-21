@@ -200,7 +200,7 @@ export const locations: Location[] = [
   },
   {
     id: "praha-1",
-    name: "AK BARBERS – Praha Máj",
+    name: "AK BARBERS Praha 1 – Máj House of Fun",
     city: "Praha",
     address: "Národní 63/26, 110 00 Nové Město",
     phone: "+420 775 502 831",
@@ -519,7 +519,7 @@ export const voucherBranches: VoucherBranch[] = [
     url: "https://booqme.cz/cs/rezervace/ak-barbers-beroun",
   },
   {
-    name: "AK BARBERS – Praha Máj",
+    name: "AK BARBERS Praha 1 – Máj House of Fun",
     address: "Národní 63/26, 110 00 Nové Město",
     url: "https://booqme.cz/cs/rezervace/ak-barbers-praha-19",
   },

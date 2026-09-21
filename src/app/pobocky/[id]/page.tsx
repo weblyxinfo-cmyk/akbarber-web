@@ -146,7 +146,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
 
   const displayNameSuffix: Record<string, string> = {
     "beroun-2": " 2",
-    "praha-1": " Máj",
+    "praha-1": " 1 Máj House of Fun",
     revolucni: " 1 Revoluční",
     "praha-3": " 3 Žižkov",
     "praha-5": " 5 Smíchov",
