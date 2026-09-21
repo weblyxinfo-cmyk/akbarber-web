@@ -44,7 +44,7 @@ Zdroj pravdy je vždy `src/lib/data.ts` — tabulka níže je jen přehled.
 | praha-3 | Praha 3 – Žižkov | **CZ/EN** — REKONSTRUKCE (`temporarilyClosed` → revolucni) |
 | praha-6 | Praha 6 | **CZ/EN** |
 | praha-1 | Praha 1 | **CZ/EN** |
-| revolucni | Praha 1 – Revoluční | **CZ/EN** — coming-soon, chybí adresa/doba/ceník |
+| revolucni | Praha 1 – Revoluční | **CZ/EN** — coming-soon, ceník+doba jako Žižkov, chybí přesná adresa |
 | praha-5 | Praha 5 – Smíchov | **CZ/EN** |
 | jesenice | Jesenice u Prahy | **CZ/EN** |
 | cerny-most | Praha 9 – Černý Most | ne |
@@ -62,7 +62,7 @@ Jesenice (oprava 21. 9. dle klienta) otevřeno So–Ne 10–14:30.
 
 ## Ceníkové skupiny (src/lib/data.ts)
 - **standardServices** (449/499/299/349+449/399/799 Kč, 6 služeb) — Beroun, Praha 6, Králův Dvůr, Plzeň, Hořovice, Černý Most
-- **premiumServices** (499/889/399/349+449 Kč, 4 služby) — Beroun 2, Praha 1 (Máj), Praha 3 (Žižkov), Praha 5 (Smíchov), Jesenice
+- **premiumServices** (499/889/399/349+449 Kč, 4 služby) — Beroun 2, Praha 1 (Máj), Praha 3 (Žižkov), Praha 5 (Smíchov), Jesenice, Revoluční
 - **slanyServices** (399/499/249/299+399/349/749 Kč) — Slaný (klasika 399 + sleva 25 % pro PČR/HZS/ZZS/ISIC)
 - **valueServices** — NEPOUŽÍVÁ SE
 - **premiumDiscountServices** — NEPOUŽÍVÁ SE
