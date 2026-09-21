@@ -107,7 +107,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     localityDescription: [
       "AK BARBERS Praha 6 nově sídlí na adrese Radimova 2522/4 (dříve Bělohorská 1393/44), v srdci Břevnova. Pobočka je snadno dostupná tramvají — zastávka Marjánka je pár kroků. Zároveň jsme nedaleko metra Dejvická (linka A), odkud to k nám je jen pár minut tramvají nebo pěšky.",
       "Břevnov je klidná, rezidenční čtvrť s přátelskou atmosférou. Naše pobočka je oblíbeným místem jak pro místní obyvatele, tak pro studenty a profesionály z okolí Dejvic a Hradčan. Přijďte si užít profesionální střih v příjemném prostředí, bez shonu centra města.",
-      "Otevřeno máme Po–Pá 10:00–19:00 a v sobotu 9:00–12:00. Fungujeme walk-in i s možností online rezervace.",
+      "Otevřeno máme Po–Pá 10:00–19:00 a v sobotu 10:00–14:00. Fungujeme walk-in i s možností online rezervace.",
     ],
     services: [
       { name: "Klasické pánské stříhání", price: "449 Kč", link: "/pansky-strih-praha-6" },
@@ -122,7 +122,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     faq: [
       { question: "Kde přesně je AK BARBERS Praha 6?", answer: "Nově nás najdete na adrese Radimova 2522/4, Praha 6 – Břevnov (dříve Bělohorská 1393/44). Přímo u tramvajové zastávky Marjánka, nedaleko metra Dejvická." },
       { question: "Je potřeba se objednat?", answer: "Ne, fungujeme walk-in, přijďte kdykoliv. Zároveň nabízíme online rezervaci přes Booqme pro ty, kdo si chtějí zajistit konkrétní čas." },
-      { question: "Jaké jsou otevírací hodiny?", answer: "Po–Pá 10:00–19:00, So 9:00–12:00. V neděli máme zavřeno." },
+      { question: "Jaké jsou otevírací hodiny?", answer: "Po–Pá 10:00–19:00, So 10:00–14:00. V neděli máme zavřeno." },
       { question: "Kolik stojí střih na Praze 6?", answer: "Klasické pánské stříhání stojí 449 Kč, Skin Fade 499 Kč. Kompletní balíček střih + vousy je za 749 Kč. Senior střih je zvýhodněný za 249 Kč." },
       { question: "Děláte skin fade na Praze 6?", answer: "Ano, skin fade patří k našim nejžádanějším službám. Naši barbeři zvládají low, mid i high fade s precizními přechody od 0 mm." },
       { question: "Je barbershop blízko metra Dejvická?", answer: "Ano, od metra Dejvická (linka A) to k nám je cca 10 minut tramvají (zastávka Marjánka) nebo 15 minut pěšky." },
@@ -225,7 +225,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     localityDescription: [
       "AK BARBERS Prague 6 has reopened at a new address — Radimova 2522/4 (formerly Bělohorská 1393/44), in the heart of Břevnov. Our shop is easily accessible by tram — the Marjánka stop is just a few steps away. We're also close to Dejvická metro station (Line A), just a few minutes by tram or a short walk.",
       "Břevnov is a quiet, residential neighbourhood with a friendly atmosphere. Our branch is popular with locals as well as students and professionals from the nearby Dejvice and Hradčany areas. Come enjoy a professional haircut in a relaxed setting, away from the hustle of the city centre.",
-      "We're open Mon–Fri 10:00–19:00 and Saturday 9:00–12:00. Walk-ins welcome, online booking also available.",
+      "We're open Mon–Fri 10:00–19:00 and Saturday 10:00–14:00. Walk-ins welcome, online booking also available.",
     ],
     services: [
       { name: "Classic Haircut", price: "449 CZK", link: "/en/mens-haircut-prague-6" },
@@ -240,7 +240,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     faq: [
       { question: "Where exactly is AK BARBERS Prague 6?", answer: "We've reopened at a new address — Radimova 2522/4, Prague 6 – Břevnov (formerly Bělohorská 1393/44). Right by the Marjánka tram stop, close to Dejvická metro station." },
       { question: "Do I need a reservation?", answer: "No, we welcome walk-ins. You can also book online via Booqme if you prefer a guaranteed slot." },
-      { question: "What are the opening hours?", answer: "Mon–Fri 10:00–19:00, Sat 9:00–12:00. Closed on Sundays." },
+      { question: "What are the opening hours?", answer: "Mon–Fri 10:00–19:00, Sat 10:00–14:00. Closed on Sundays." },
       { question: "How much is a haircut in Prague 6?", answer: "Classic haircut is 449 CZK, Skin Fade 499 CZK. The full haircut + beard package is 749 CZK. Senior discount haircut is 249 CZK." },
       { question: "Do you do skin fades in Prague 6?", answer: "Yes, skin fade is one of our most popular services. Our barbers handle low, mid, and high fades with seamless transitions from 0mm." },
       { question: "Is the barbershop close to Dejvická metro?", answer: "Yes, from Dejvická metro (Line A) it's about 10 minutes by tram (Marjánka stop) or 15 minutes on foot." },
@@ -466,7 +466,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     localityDescription: [
       "AK BARBERS Plzeň sídlí na Gerské 2030/23 v městské části Plzeň 1-Bolevec. Pobočka je snadno dostupná tramvají — zastávka U Gery (tramvaj č. 4, autobusy 33 a 40) je přímo před dveřmi. Ze zastávky Nemocnice Lochotín to k nám je 5 minut chůze s přestupem na více linek. Parkovat můžete zdarma na parkovišti Albert přímo vedle nás nebo v parkovacím domě Gerská 2005/4 s 237 místy.",
       "Bolevec je příjemná, zelená čtvrť na severu Plzně, oblíbená rodinami i studenty Západočeské univerzity. V okolí najdete Bolevecké rybníky, oblíbenou rekreační oblast, a nákupní zónu s Albertem. AK BARBERS Plzeň je s hodnocením 4.9★ a více než 215 recenzemi nejlépe hodnoceným barbershopem v celém Plzeňském kraji — jsme Top #1 v Plzni podle Google recenzí.",
-      "Otevřeno máme Po–Pá 9:30–18:00 a So–Ne 9:00–14:00, tedy celý týden včetně víkendů. Fungujeme walk-in i s možností online rezervace přes Booqme. Přijďte a přesvědčte se sami, proč nás zákazníci hodnotí tak vysoko.",
+      "Otevřeno máme Po–Pá 9:00–18:00 a So–Ne 9:00–14:00, tedy celý týden včetně víkendů. Fungujeme walk-in i s možností online rezervace přes Booqme. Přijďte a přesvědčte se sami, proč nás zákazníci hodnotí tak vysoko.",
     ],
     services: [
       { name: "Klasické pánské stříhání", price: "449 Kč" },
@@ -481,7 +481,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     faq: [
       { question: "Kde přesně je AK BARBERS Plzeň?", answer: "Najdete nás na Gerské 2030/23, 323 00 Plzeň 1-Bolevec. Přímo u tramvajové zastávky U Gery, vedle supermarketu Albert." },
       { question: "Je potřeba se objednat?", answer: "Ne nutně — fungujeme walk-in. Pokud ale chcete garantovaný čas, můžete si zarezervovat termín online přes Booqme." },
-      { question: "Jaké jsou otevírací hodiny?", answer: "Po–Pá 9:30–18:00, So–Ne 9:00–14:00. Máme otevřeno celý týden včetně víkendů." },
+      { question: "Jaké jsou otevírací hodiny?", answer: "Po–Pá 9:00–18:00, So–Ne 9:00–14:00. Máme otevřeno celý týden včetně víkendů." },
       { question: "Kolik stojí střih v Plzni?", answer: "Klasické pánské stříhání stojí 449 Kč, Skin Fade 499 Kč. Kompletní balíček střih + vousy je za 799 Kč. Senior střih za zvýhodněných 299 Kč." },
       { question: "Kde zaparkuji?", answer: "Parkování je zdarma na parkovišti Albert přímo vedle pobočky. K dispozici je také parkovací dům Gerská 2005/4 s 237 místy (otevřeno 24/7)." },
       { question: "Proč je AK BARBERS Top #1 v Plzni?", answer: "S hodnocením 4.9★ a více než 215 recenzemi na Googlu jsme nejlépe hodnoceným barbershopem v Plzni. Naši barbeři jsou profesionálně vyškoleni v AK BARBERS Academy a dbáme na nejvyšší kvalitu služeb." },
@@ -1049,7 +1049,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       { question: "Jak dlouho trvá střih?", answer: "Přibližně 30–40 minut, v závislosti na zvoleném stylu." },
       { question: "Musím se objednat?", answer: "Ne, fungujeme walk-in. Online rezervace je dostupná přes Booqme." },
       { question: "Kde se nachází pobočka na Praze 6?", answer: "Nově na adrese Radimova 2522/4, Praha 6 – Břevnov (dříve Bělohorská), přímo u tramvajové zastávky Marjánka." },
-      { question: "Máte otevřeno i o víkendu?", answer: "V sobotu ano (9:00–12:00). V neděli máme zavřeno. Alternativně naše pobočka Praha 1 má otevřeno 7 dní v týdnu." },
+      { question: "Máte otevřeno i o víkendu?", answer: "V sobotu ano (10:00–14:00). V neděli máme zavřeno. Alternativně naše pobočka Praha 1 má otevřeno 7 dní v týdnu." },
     ],
     internalLinks: [
       { label: "Barber Praha 6 – všechny služby", href: "/barber-praha-6" },
@@ -1310,7 +1310,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       { question: "How long does a haircut take?", answer: "About 30–40 minutes depending on the style." },
       { question: "Do I need a reservation?", answer: "No, walk-ins are welcome. Online booking is also available via Booqme." },
       { question: "Where is the Prague 6 branch?", answer: "Now at a new address — Radimova 2522/4, Prague 6 – Břevnov (formerly Bělohorská), right by the Marjánka tram stop, near Dejvická metro." },
-      { question: "Are you open on weekends?", answer: "Saturday yes (9:00–12:00). Sunday we're closed. Our Prague 1 branch is open 7 days a week." },
+      { question: "Are you open on weekends?", answer: "Saturday yes (10:00–14:00). Sunday we're closed. Our Prague 1 branch is open 7 days a week." },
     ],
     internalLinks: [
       { label: "Barber Prague 6 – all services", href: "/en/barber-prague-6" },
@@ -1623,7 +1623,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       "Konzultace, střih a styling v ceně",
       "Prémiové vybavení a kosmetika",
       "Skvělá dostupnost — pár minut od Florence a centra",
-      "Walk-in i online rezervace, otevřeno celý týden",
+      "Walk-in i online rezervace, otevřeno Po–So",
     ],
     otherServices: [
       { name: "Skin Fade / dlouhé vlasy", price: "499 Kč", link: "/skin-fade-praha-3" },
@@ -1636,7 +1636,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       { question: "Jak dlouho trvá střih?", answer: "Přibližně 30–40 minut, v závislosti na zvoleném stylu a délce vlasů." },
       { question: "Musím se objednat?", answer: "Nemusíte — na Žižkově fungujeme walk-in, můžete přijít kdykoliv během otevírací doby. K dispozici je i online rezervace přes Booqme." },
       { question: "Kde se nachází pobočka na Praze 3?", answer: "Na adrese Husitská 55, Praha 3 – Žižkov, pár minut od metra a autobusového nádraží Florenc." },
-      { question: "Máte otevřeno i o víkendu?", answer: "Ano, Po–Pá 10:00–19:00 a So–Ne 10:00–17:00 — otevřeno celý týden." },
+      { question: "Máte otevřeno i o víkendu?", answer: "V sobotu ano, Po–Pá 10:00–19:00 a So 10:00–14:00. V neděli máme zavřeno." },
     ],
     internalLinks: [
       { label: "Barber Praha 3 – všechny služby", href: "/barber-praha-3" },
@@ -1687,7 +1687,7 @@ export const seoServicePages: Record<string, SeoServiceContent> = {
       "Konzultace, stínování a styling v ceně",
       "Prémiové strojky a kosmetika",
       "Skvělá dostupnost — pár minut od Florence a centra",
-      "Walk-in i online rezervace, otevřeno celý týden",
+      "Walk-in i online rezervace, otevřeno Po–So",
     ],
     otherServices: [
       { name: "Klasické pánské stříhání", price: "499 Kč", link: "/pansky-strih-praha-3" },

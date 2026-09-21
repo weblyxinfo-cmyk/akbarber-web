@@ -171,7 +171,7 @@ export const locations: Location[] = [
     phone: "+420 775 502 831",
     openingHours: [
       { days: "Po – Pá", hours: "10:00 – 19:00" },
-      { days: "So – Ne", hours: "10:00 – 17:00" },
+      { days: "So", hours: "10:00 – 14:00" },
     ],
     type: "walk-in + reservation",
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barber-praha",
@@ -228,7 +228,8 @@ export const locations: Location[] = [
     address: "Plzeňská 396, 267 01 Králův Dvůr",
     phone: "+420 775 502 831",
     openingHours: [
-      { days: "Po – Ne", hours: "9:00 – 19:30" },
+      { days: "Po – Pá", hours: "9:00 – 19:30" },
+      { days: "So – Ne", hours: "9:00 – 14:00" },
     ],
     type: "walk-in",
     eshopUrl: "https://booqme.cz/cs/eshop/ak-barbers-kraluv-dvur6",
@@ -256,7 +257,7 @@ export const locations: Location[] = [
     address: "Gerská 2030/23, 323 00 Plzeň 1-Bolevec",
     phone: "+420 775 502 831",
     openingHours: [
-      { days: "Po – Pá", hours: "9:30 – 18:00" },
+      { days: "Po – Pá", hours: "9:00 – 18:00" },
       { days: "So – Ne", hours: "9:00 – 14:00" },
     ],
     type: "walk-in",
