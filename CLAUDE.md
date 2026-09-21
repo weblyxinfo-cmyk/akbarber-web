@@ -53,23 +53,11 @@ Zdroj pravdy je vždy `src/lib/data.ts` — tabulka níže je jen přehled.
 | slany | Slaný | ne |
 | nitra | Nitra (SK) | ne — vlastní ceník v EUR |
 
-## ⚠️ Odložená práce — větev `nezaplaceno-2026-07-12`
-21 commitů z 12. 7. 2026 bylo **dočasně staženo z produkce** (revert `ddf50f7`) kvůli
-neuhrazené faktuře. Obsah: hero video Žižkov, EN verze Žižkova, brand texty
-(Adrian Križan, NOA Matcha), homepage statistiky, SEO úpravy.
-
-Práce je zachovaná ve větvi `nezaplaceno-2026-07-12` (na origin).
-
-**Vrácení po zaplacení:**
-```bash
-git revert ddf50f7 && git push && npx vercel --prod
-```
-
-Pozor: revert `ddf50f7` **záměrně nevrátil** tato faktická data — po obnovení
-zkontrolovat, že zůstala správně:
-- Žižkov: sleva -20 % odebraná (akce neběží)
-- Žižkov: neděle zavřeno (`data.ts` i `seo-content.ts`)
-- Jesenice: otevřeno jen So (ne So–Ne)
+## Obnovená práce z 12. 7. 2026
+Změny dočasně stažené revertem `ddf50f7` (neuhrazená faktura) byly po zaplacení
+21. 9. 2026 vráceny do produkce (hero video Žižkov, EN verze Žižkova, brand texty,
+statistiky, SEO). Faktická data ponechána: Žižkov bez slevy −20 % a v neděli zavřeno,
+Jesenice otevřeno jen So.
 
 ## Ceníkové skupiny (src/lib/data.ts)
 - **standardServices** (449/499/299/349+449/399/799 Kč, 6 služeb) — Beroun, Praha 6, Králův Dvůr, Plzeň, Hořovice, Černý Most
