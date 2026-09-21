@@ -209,11 +209,6 @@ export const locations: Location[] = [
     ],
     type: "walk-in",
     services: premiumServices,
-    temporarilyClosed: {
-      redirectToId: "revolucni",
-      redirectToName: "Praha 1 – Revoluční",
-      reason: "reconstruction",
-    },
     image: "/images/locations/photo-praha-1.jpg",
     currency: "CZK",
     googleMapsUrl: "https://share.google/ieWwYNLKRsKPQlx6a",
