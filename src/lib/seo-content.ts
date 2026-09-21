@@ -680,7 +680,7 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     locationId: "nitra",
     title: "Barber Nitra – OC Mlyny | AK BARBERS Top barbershop",
     description:
-      "Najlepší barbershop v Nitre, 4.8★ a 95+ recenzií. Walk-in aj rezervácia. Pánske strihanie od 17 €. OC MLYNY, Štefánikova trieda 35/61. Otvorené 7 dní.",
+      "Najlepší barbershop v Nitre, 4.8★ a 95+ recenzií. Walk-in aj rezervácia. Pánske strihanie od 19,50 €. OC MLYNY, Štefánikova trieda 35/61. Otvorené 7 dní.",
     keywords: [
       "barber nitra",
       "barbershop nitra",
@@ -696,13 +696,13 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
     localityDescription: [
       "AK BARBERS Nitra nájdete v obchodnom centre MLYNY na Štefánikovej triede 35/61, v samom centre Nitry. OC Mlyny je najväčšie nákupné centrum v meste, priamo napojené na MHD — zastávka CENTRUM, Mlyny obsluhuje linky 1, 2, 4, 6, 7, 8, 9, 10 a ďalšie. Z hlavnej autobusovej a vlakovej stanice je to k nám len 10 minút pešo. Parkovanie v OC Mlyny je prvú hodinu zadarmo v pracovné dni a 2 hodiny zadarmo cez víkend.",
       "Nitra je starobylé mesto s bohatou históriou — Nitriansky hrad, pešia zóna a mestský park vytvárajú príjemné prostredie pre život aj návštevu. AK BARBERS Nitra je súčasťou českej siete prémiových barbershopov a prináša do Nitry rovnakú kvalitu služieb, akú poznáte z Prahy, Plzne alebo Berouna. S hodnotením 4.8★ a viac ako 95 recenziami patríme medzi najlepšie hodnotené barbershopy v Nitrianskom kraji.",
-      "Otvorené máme Po–Ne 9:00–20:00, teda každý deň v týždni vrátane víkendov. Fungujeme walk-in aj s možnosťou online rezervácie cez Booqme. Ceny sú v eurách — klasický pánsky strih od 17 €.",
+      "Otvorené máme Po–Ne 9:00–20:00, teda každý deň v týždni vrátane víkendov. Fungujeme walk-in aj s možnosťou online rezervácie cez Booqme. Ceny sú v eurách — klasický pánsky strih od 19,50 €.",
     ],
     services: [
-      { name: "Klasický pánsky strih", price: "17 €" },
-      { name: "Strih + úprava brady", price: "27 €" },
-      { name: "Detský strih (1–15 rokov)", price: "12 / 15 €" },
-      { name: "Úprava brady", price: "14 €" },
+      { name: "Klasický pánsky strih", price: "19,50 €" },
+      { name: "Strih + úprava brady", price: "29,50 €" },
+      { name: "Detský strih (1–15 rokov)", price: "14,50 / 17,50 €" },
+      { name: "Úprava brady", price: "16,50 €" },
     ],
     aboutText:
       "V AK BARBERS pracujeme podľa prísnych štandardov kvality. Každý nový barber prechádza profesionálnym zaškolením v našej AK BARBERS Academy a až potom nastupuje do prevádzky. Precíznosť, čistota a dôraz na detail sú základom našej práce. Vďaka tomu držíme špičkovú úroveň služieb na každej pobočke — a naši zákazníci sa k nám radi vracajú.",
@@ -710,9 +710,9 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
       { question: "Kde sa nachádza AK BARBERS Nitra?", answer: "Nájdete nás v OC MLYNY, Štefánikova trieda 35/61, 949 01 Nitra. Priamo v centre mesta, s výbornou dostupnosťou MHD." },
       { question: "Musím sa objednať vopred?", answer: "Nie, fungujeme na princípe walk-in — príďte kedykoľvek počas otváracej doby. Ak preferujete istotu, môžete si rezervovať termín online cez Booqme." },
       { question: "Aká je otváracie doba?", answer: "Po–Ne 9:00–20:00. Máme otvorené každý deň v týždni vrátane víkendov." },
-      { question: "Koľko stojí pánsky strih v Nitre?", answer: "Klasický pánsky strih stojí 17 €. Kompletný balíček strih + úprava brady je za 27 €. Pre PZ, HaZZ, ZZS a ISIC máme zľavu 25 % — strih za 13 €." },
+      { question: "Koľko stojí pánsky strih v Nitre?", answer: "Klasický pánsky strih stojí 19,50 €. Kompletný balíček strih + úprava brady je za 29,50 €." },
       { question: "Kde zaparkujem?", answer: "Parkovanie v OC Mlyny: prvá hodina zadarmo v pracovné dni, 2 hodiny zadarmo cez víkendy. Každá ďalšia hodina od 1 €." },
-      { question: "Strihajú aj detí?", answer: "Áno, detský strih pre chlapcov od 1 do 15 rokov stojí 12 € (klasický) alebo 15 € (fade varianty)." },
+      { question: "Strihajú aj detí?", answer: "Áno, detský strih pre chlapcov od 1 do 15 rokov stojí 14,50 € (klasický) alebo 17,50 € (fade varianty)." },
       { question: "Môžem platiť kartou?", answer: "Áno, prijímame platbu v hotovosti aj platobnou kartou." },
       { question: "Je AK BARBERS česká sieť?", answer: "Áno, AK BARBERS je sieť prémiových barbershopov založená v Čechách. Pobočka v Nitre je naša prvá na Slovensku a ponúka rovnakú kvalitu služieb ako naše české pobočky." },
     ],

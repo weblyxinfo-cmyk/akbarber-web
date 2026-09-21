@@ -70,7 +70,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
       location.type === "walk-in"
         ? "Príďte bez objednania."
         : "Rezervujte si termín online."
-    } Pánske strihanie od 12 €, úprava brady, skin fade. Otvorené Po–Pi 9–18, So–Ne 9–14.`;
+    } Pánske strihanie od 14,50 €, úprava brady, skin fade. Otvorené Po–Ne 9–20.`;
   } else if (location.type === "coming-soon") {
     title = `AK BARBERS – ${location.name} | Nová pobočka`;
     description = `${location.name} – ${location.address}. Nová pobočka AK Barbers se připravuje.${location.openingDate ? ` Otevíráme ${location.openingDate}.` : ""} ${location.transport?.publicTransport?.[0] || ""}`;
@@ -183,13 +183,14 @@ export default async function LocationPage({ params, searchParams }: Props) {
 
   // Calculate price range from actual services (po případné slevě)
   const prices = location.services.map((s) => {
-    const match = applyDiscount(s.price, activeDiscount).match(/\d+/);
-    return match ? parseInt(match[0], 10) : 0;
+    const match = applyDiscount(s.price, activeDiscount).match(/\d+(?:,\d+)?/);
+    return match ? parseFloat(match[0].replace(",", ".")) : 0;
   }).filter((p) => p > 0);
   const minPrice = Math.min(...prices);
   const maxPrice = Math.max(...prices);
   const currency = isSlovak ? "€" : "Kč";
-  const priceRange = `${minPrice} ${currency} – ${maxPrice} ${currency}`;
+  const fmt = (n: number) => String(n).replace(".", ",");
+  const priceRange = `${fmt(minPrice)} ${currency} – ${fmt(maxPrice)} ${currency}`;
 
   // JSON-LD: BarberShop (LocalBusiness) schema
   const postalCode = location.address.match(/\d{3}\s?\d{2}/)?.[0] || "";
