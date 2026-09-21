@@ -237,14 +237,16 @@ export const locations: Location[] = [
       { days: "Po – Pá", hours: "10:00 – 19:00" },
       { days: "So", hours: "10:00 – 14:00" },
     ],
-    type: "coming-soon",
+    type: "walk-in + reservation",
+    // dočasně rezervace přes Booqme Žižkova (stejný tým) — nahradit vlastním odkazem Revoluční
+    bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-3",
     services: premiumServices,
     image: "/images/locations/photo-praha-1.jpg",
     currency: "CZK",
     googleMapsUrl: "",
     reviewRating: 5.0,
     reviewCount: "Nová pobočka",
-    rankText: "Nová pobočka v centru Prahy – připravuje se",
+    rankText: "Nová pobočka v centru Prahy",
     mapQuery: "Revoluční,+Praha+1",
     transport: {
       publicTransport: [
