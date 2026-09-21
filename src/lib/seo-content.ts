@@ -730,40 +730,47 @@ export const seoLocationPages: Record<string, SeoLocationContent> = {
   },
 
   // ------------------------------------------------------------------
-  // barber-jesenice (CZ) — coming soon
+  // barber-jesenice (CZ) — Jesenice u Prahy, uvnitř Albertu
   // ------------------------------------------------------------------
   "barber-jesenice": {
     lang: "cs",
     slug: "barber-jesenice",
     locationId: "jesenice",
-    title: "Barber Jesenice u Prahy | AK BARBERS – otevíráme 15. 4. 2026",
+    title: "Barber Jesenice u Prahy | AK BARBERS v Albertu, Budějovická 371",
     description:
-      "AK BARBERS otevírá novou pobočku v Jesenici u Prahy! Budějovická 371. Slavnostní otevření 15. 4. 2026. Profesionální pánské stříhání blízko Prahy.",
+      "Prémiový barbershop v Jesenici u Prahy, Budějovická 371 – uvnitř supermarketu Albert. Walk-in i online rezervace. Pánské stříhání od 499 Kč, úprava vousů. Otevřeno 7 dní v týdnu.",
     keywords: [
       "barber jesenice",
       "barbershop jesenice u prahy",
-      "nový barbershop jesenice",
       "pánské stříhání jesenice",
-      "barber jesenice otevření",
+      "barber praha západ",
+      "pánské holičství jesenice",
+      "barber vestec průhonice",
     ],
     ogLocale: "cs_CZ",
-    heroHeading: "Barber Jesenice u Prahy – již brzy!",
+    heroHeading: "Barber Jesenice u Prahy",
     localityDescription: [
-      "AK BARBERS připravuje novou pobočku v Jesenici u Prahy na adrese Budějovická 371 – najdete nás uvnitř supermarketu Albert, hned u pokladen. Slavnostní otevření je naplánováno na 15. dubna 2026. Jesenice je dynamicky rostoucí obec jižně od Prahy, kde dosud profesionální barbershop chyběl — a to se brzy změní.",
-      "Jesenice u Prahy je oblíbenou rezidenční lokalitou pro rodiny i profesionály dojíždějící do hlavního města. Výborná dopravní dostupnost zajišťuje spojení autobusy 332, 334, 335, 337 a 339, přičemž linky 335, 337 a 339 vás dovezou přímo na metro Budějovická (linka C) a linka 334 na Smíchovské nádraží (metro B). Parkování bude k dispozici zdarma na parkovišti Albert a v okolí.",
-      "Sledujte naše sociální sítě a web pro aktuální informace o otevření. Těšíme se na vás od 15. dubna 2026!",
+      "AK BARBERS Jesenice najdete na adrese Budějovická 371, Jesenice u Prahy – uvnitř supermarketu Albert, hned u pokladen. Střih tak spojíte s nákupem a parkujete zdarma přímo na parkovišti Albertu. Pobočka je ideální volbou pro obyvatele Jesenice, Vestce, Průhonic, Zdiměřic i okolních obcí jižně od Prahy.",
+      "Jesenice u Prahy je oblíbenou rezidenční lokalitou pro rodiny i profesionály dojíždějící do hlavního města. Dopravní dostupnost zajišťují autobusy 332, 334, 335, 337 a 339 ze zastávky Jesenice – linky 335, 337 a 339 vás dovezou na metro Budějovická (linka C), linka 334 na Smíchovské nádraží (linka B).",
+      "Otevřeno máme Po–Pá 10:00–19:00 a So–Ne 10:00–14:30, tedy celý týden včetně víkendů. Fungujeme walk-in i s možností online rezervace přes Booqme.",
     ],
-    services: [],
+    services: [
+      { name: "Klasické pánské stříhání", price: "499 Kč" },
+      { name: "Střih vlasů a úprava vousů", price: "889 Kč" },
+      { name: "Úprava vousů", price: "399 Kč" },
+      { name: "Dětský střih (1–15 let)", price: "349 / 449 Kč" },
+    ],
     aboutText:
-      "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce — a naši zákazníci se k nám rádi vrací.",
+      "V AK BARBERS pracujeme podle přísných standardů kvality. Každý nový barber prochází profesionálním zaškolením v naší AK BARBERS Academy a teprve poté nastupuje do provozu. Preciznost, čistota a důraz na detail jsou základem naší práce. Díky tomu držíme špičkovou úroveň služeb na každé pobočce a naši klienti se k nám rádi vracejí.",
     faq: [
-      { question: "Kdy otevírá AK BARBERS v Jesenici?", answer: "Slavnostní otevření je naplánováno na 15. dubna 2026. Sledujte naše sociální sítě pro aktuální informace." },
-      { question: "Kde bude pobočka v Jesenici?", answer: "Na adrese Budějovická 371, Jesenice u Prahy – uvnitř supermarketu Albert, hned u pokladen. Parkování zdarma přímo u vchodu." },
-      { question: "Jak se dostanu do Jesenice?", answer: "Autobusy 332, 334, 335, 337 a 339 ze zastávky Jesenice. Linky 335, 337, 339 jedou na metro Budějovická (C), linka 334 na Smíchovské nádraží (B)." },
-      { question: "Bude parkování zdarma?", answer: "Ano, parkování bude k dispozici zdarma na parkovišti Albert a v okolních ulicích." },
-      { question: "Bude potřeba rezervace?", answer: "Podrobnosti o formátu obsluhy (walk-in / rezervace) zveřejníme před otevřením na našem webu a sociálních sítích." },
-      { question: "Jaké budou ceny?", answer: "Ceník bude zveřejněn před otevřením. Orientačně odpovídá ceníku ostatních poboček sítě AK BARBERS." },
-      { question: "Mohu se přihlásit k odběru novinek?", answer: "Sledujte nás na Instagramu @ak.barbers.cz a Facebooku pro nejčerstvější informace o otevření pobočky v Jesenici." },
+      { question: "Kde se nachází AK BARBERS Jesenice?", answer: "Na adrese Budějovická 371, Jesenice u Prahy – uvnitř supermarketu Albert, hned u pokladen." },
+      { question: "Musím se objednat předem?", answer: "Ne, fungujeme na principu walk-in — přijďte kdykoliv během otevírací doby. Pokud preferujete jistotu, můžete si rezervovat termín online přes Booqme." },
+      { question: "Jaká je otevírací doba?", answer: "Po–Pá 10:00–19:00, So–Ne 10:00–14:30. Otevřeno máme celý týden včetně víkendů." },
+      { question: "Kolik stojí pánský střih v Jesenici?", answer: "Klasické pánské stříhání stojí 499 Kč. Kompletní balíček střih + úprava vousů je za 889 Kč." },
+      { question: "Kde zaparkuji?", answer: "Zdarma na parkovišti supermarketu Albert přímo u vchodu, případně v okolních ulicích." },
+      { question: "Jak se k vám dostanu MHD?", answer: "Autobusy 332, 334, 335, 337 a 339 ze zastávky Jesenice. Linky 335, 337, 339 jedou na metro Budějovická (C), linka 334 na Smíchovské nádraží (B)." },
+      { question: "Stříháte i děti?", answer: "Ano, dětský střih nabízíme pro chlapce od 1 do 15 let za 349 Kč (klasický střih) nebo 449 Kč (fade varianty)." },
+      { question: "Mohu platit kartou?", answer: "Ano, přijímáme platbu v hotovosti i platební kartou." },
     ],
     internalLinks: [
       { label: "AK BARBERS – Praha Máj", href: "/barber-praha-1" },
