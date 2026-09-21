@@ -53,7 +53,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
       description = `${location.name} is ${status.toLowerCase()}. In the meantime, we look forward to seeing you at AK BARBERS ${location.temporarilyClosed.redirectToName}.`;
     } else {
       const status = location.temporarilyClosed.reason === "reconstruction" ? "Rekonstrukce" : "Dočasně uzavřeno";
-      title = `${location.name} – ${status} | Těšíme se na vás na ${location.temporarilyClosed.redirectToName}`;
+      title = `${location.name} – ${status} | Navštivte pobočku ${location.temporarilyClosed.redirectToName}`;
       description = `${location.name} je ${location.temporarilyClosed.reason === "reconstruction" ? "v rekonstrukci" : "dočasně uzavřena"}. Mezitím se na vás těšíme na pobočce AK BARBERS ${location.temporarilyClosed.redirectToName}.`;
     }
   } else if (isEnglish) {
@@ -75,7 +75,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
         : "Rezervujte si termín online."
     } Pánske strihanie od 14,50 €, úprava brady, skin fade. Otvorené Po–Ne 9–20.`;
   } else if (location.type === "coming-soon") {
-    title = `AK BARBERS – ${location.name} | Nová pobočka`;
+    title = `${location.name} | Nová pobočka – připravuje se`;
     description = `${location.name} – ${location.address}. Nová pobočka AK Barbers se připravuje.${location.openingDate ? ` Otevíráme ${location.openingDate}.` : ""} ${location.transport?.publicTransport?.[0] || ""}`;
   } else {
     const transportHint = location.transport?.publicTransport?.[0]?.split("–")[0]?.trim() || "";

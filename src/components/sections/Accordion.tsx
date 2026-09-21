@@ -55,7 +55,7 @@ function LocationCard({ location }: { location: Location }) {
                 {location.temporarilyClosed.reason === "reconstruction" ? "Rekonstrukce" : "Dočasně uzavřeno"}
               </span>
               <span className="text-[12px] font-semibold text-gray">
-                Těšíme se na vás na {location.temporarilyClosed.redirectToName}
+                Navštivte pobočku {location.temporarilyClosed.redirectToName}
               </span>
             </>
           ) : (
