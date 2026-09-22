@@ -59,7 +59,7 @@ function LocationCard({ location }: { location: Location }) {
                   <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#5eead4]">
                     Mezitím nás najdete
                   </span>
-                  <span className="whitespace-nowrap text-[13px] font-bold text-white">
+                  <span className="text-[13px] font-bold text-white">
                     {location.temporarilyClosed.redirectToName}
                   </span>
                 </span>
