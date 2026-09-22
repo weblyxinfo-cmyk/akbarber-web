@@ -423,8 +423,8 @@ export const locations: Location[] = [
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-1-stare-mesto4",
     services: premiumServices,
     temporarilyClosed: {
-      redirectToId: "revolucni",
-      redirectToName: "Praha 1 – Revoluční",
+      redirectToId: "praha-1",
+      redirectToName: "Praha 1 – Máj House of Fun",
       reason: "reconstruction",
     },
     image: "/images/locations/photo-beroun.jpg",
