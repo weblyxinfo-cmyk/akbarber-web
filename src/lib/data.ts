@@ -237,7 +237,9 @@ export const locations: Location[] = [
       { days: "Po – Pá", hours: "10:00 – 19:00" },
       { days: "So", hours: "10:00 – 14:00" },
     ],
-    type: "walk-in + reservation",
+    // po otevření přepnout zpět na "walk-in + reservation" a smazat openingDate
+    type: "coming-soon",
+    openingDate: "10.10.2026",
     // dočasně rezervace přes Booqme Žižkova (stejný tým) — nahradit vlastním odkazem Revoluční
     bookingUrl: "https://booqme.cz/cs/rezervace/ak-barbers-praha-3",
     services: premiumServices,
