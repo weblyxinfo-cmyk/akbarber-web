@@ -86,11 +86,20 @@ export function LoyaltyPopup({ every, locationId, locationName, bookingUrl, lang
             {/* Karta je černá jako pop-up — leží proto na nasvícené ploše, má světlou hranu a stín */}
             <div className="bg-[radial-gradient(ellipse_at_50%_30%,#5c5c5c_0%,#262626_55%,#0b0b0b_100%)] px-7 pb-7 pt-12 max-md:px-5 max-md:pb-6 max-md:pt-11">
               <motion.div
-                className="relative overflow-hidden rounded-[7px] shadow-[0_18px_40px_rgba(0,0,0,0.85),0_0_0_1px_rgba(255,255,255,0.28)]"
+                className="relative"
                 initial={{ opacity: 0, y: 14, rotate: -2 }}
                 animate={{ opacity: 1, y: 0, rotate: -1.5 }}
                 transition={{ delay: 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               >
+                {/* Tyrkysové podsvícení pod kartou (stejná barva jako akcenty webu) */}
+                <motion.span
+                  aria-hidden
+                  className="pointer-events-none absolute -inset-x-3 -bottom-6 top-1/4 rounded-[40%] bg-[#2dd4bf] blur-[28px]"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0.8 }}
+                  transition={{ delay: 0.5, duration: 0.9 }}
+                />
+                <div className="relative overflow-hidden rounded-[7px] shadow-[0_14px_30px_rgba(0,0,0,0.7),0_0_0_1px_rgba(94,234,212,0.45)]">
                 <Image
                   src={`/images/vernostni-karta-${every}-card.jpg`}
                   alt={en ? `AK BARBERS loyalty card – every ${every}th haircut free` : sk ? `Vernostná karta AK BARBERS – každý ${every}. strih zdarma` : `Věrnostní karta AK BARBERS – každý ${every}. střih zdarma`}
@@ -107,6 +116,7 @@ export function LoyaltyPopup({ every, locationId, locationName, bookingUrl, lang
                   animate={{ left: "120%" }}
                   transition={{ delay: 0.7, duration: 1.1, ease: "easeInOut" }}
                 />
+                </div>
               </motion.div>
             </div>
 
