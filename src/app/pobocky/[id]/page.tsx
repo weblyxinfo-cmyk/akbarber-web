@@ -62,7 +62,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
       "praha-5": "AK BARBERS Prague 5 \u2014 Professional Barbershop Sm\u00edchov",
       "praha-6": "AK BARBERS Prague 6 \u2014 Professional Barbershop",
       "jesenice": "AK BARBERS Jesenice \u2014 Professional Barbershop near Prague",
-      revolucni: "AK BARBERS Prague 1 Revolu\u010dn\u00ed \u2014 New Barbershop Coming Soon",
+      revolucni: "AK BARBERS Prague 1 Revolu\u010dn\u00ed \u2014 New Barbershop in the Old Town",
     };
     title = enTitles[id] || `AK BARBERS ${location.city} \u2014 Professional Barbershop`;
     const minPrice = id === "praha-6" || id === "jesenice" ? "449" : "499";

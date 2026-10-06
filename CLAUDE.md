@@ -44,7 +44,7 @@ Zdroj pravdy je vždy `src/lib/data.ts` — tabulka níže je jen přehled.
 | praha-3 | Praha 3 – Žižkov | **CZ/EN** — REKONSTRUKCE (`temporarilyClosed` → revolucni) |
 | praha-6 | Praha 6 | **CZ/EN** |
 | praha-1 | Praha 1 – Máj | **CZ/EN** |
-| revolucni | Praha 1 – Revoluční | **CZ/EN** — coming-soon, ceník+doba jako Žižkov, Revoluční 763/15 |
+| revolucni | Praha 1 – Revoluční | **CZ/EN** — otevřeno od 5. 10. 2026, ceník+doba jako Žižkov, Revoluční 763/15 |
 | praha-5 | Praha 5 – Smíchov | **CZ/EN** — REKONSTRUKCE (→ praha-1 Máj) |
 | jesenice | Jesenice u Prahy | **CZ/EN** |
 | cerny-most | Praha 9 – Černý Most | ne |
