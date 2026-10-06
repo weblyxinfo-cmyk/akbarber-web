@@ -6,7 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import type { Lang } from "@/lib/translations";
 
 // Věrnostní karta "každý 5. / 10. střih zdarma" — zobrazuje se na detailu poboček
-// s `loyaltyCard: 5 | 10` v data.ts. Po zavření se daná varianta znovu neukazuje.
+// s `loyaltyCard: 5 | 10` v data.ts. Zavření se pamatuje pro každou pobočku zvlášť
+// (pobočky sdílí variantu karty, takže klíč podle varianty by pop-up schoval i jinde).
 const STORAGE_KEY = "ak-loyalty-card-dismissed";
 
 const ORDINAL_CS = { 5: "pátý", 10: "desátý" } as const;
@@ -14,15 +15,16 @@ const ORDINAL_EN = { 5: "fifth", 10: "tenth" } as const;
 
 interface LoyaltyPopupProps {
   every: 5 | 10;
+  locationId: string;
   locationName: string;
   bookingUrl?: string;
   lang: Lang;
 }
 
-export function LoyaltyPopup({ every, locationName, bookingUrl, lang }: LoyaltyPopupProps) {
+export function LoyaltyPopup({ every, locationId, locationName, bookingUrl, lang }: LoyaltyPopupProps) {
   const [visible, setVisible] = useState(false);
   const en = lang === "en";
-  const storageKey = `${STORAGE_KEY}-${every}`;
+  const storageKey = `${STORAGE_KEY}-${locationId}`;
   const stamps = Array.from({ length: every }, (_, i) => i + 1);
 
   useEffect(() => {
