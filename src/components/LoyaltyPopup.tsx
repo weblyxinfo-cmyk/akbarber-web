@@ -83,14 +83,32 @@ export function LoyaltyPopup({ every, locationId, locationName, bookingUrl, lang
               </svg>
             </button>
 
-            <Image
-              src={`/images/vernostni-karta-${every}.jpg`}
-              alt={en ? `AK BARBERS loyalty card – every ${every}th haircut free` : sk ? `Vernostná karta AK BARBERS – každý ${every}. strih zdarma` : `Věrnostní karta AK BARBERS – každý ${every}. střih zdarma`}
-              width={1659}
-              height={948}
-              className="block h-auto w-full"
-              priority
-            />
+            {/* Karta je černá jako pop-up — leží proto na nasvícené ploše, má světlou hranu a stín */}
+            <div className="bg-[radial-gradient(ellipse_at_50%_30%,#5c5c5c_0%,#262626_55%,#0b0b0b_100%)] px-7 pb-7 pt-12 max-md:px-5 max-md:pb-6 max-md:pt-11">
+              <motion.div
+                className="relative overflow-hidden rounded-[7px] shadow-[0_18px_40px_rgba(0,0,0,0.85),0_0_0_1px_rgba(255,255,255,0.28)]"
+                initial={{ opacity: 0, y: 14, rotate: -2 }}
+                animate={{ opacity: 1, y: 0, rotate: -1.5 }}
+                transition={{ delay: 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Image
+                  src={`/images/vernostni-karta-${every}-card.jpg`}
+                  alt={en ? `AK BARBERS loyalty card – every ${every}th haircut free` : sk ? `Vernostná karta AK BARBERS – každý ${every}. strih zdarma` : `Věrnostní karta AK BARBERS – každý ${every}. střih zdarma`}
+                  width={1612}
+                  height={every === 10 ? 700 : 690}
+                  className="block h-auto w-full brightness-[1.45] contrast-[1.08]"
+                  priority
+                />
+                {/* Jednorázový odlesk přes kartu */}
+                <motion.span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-y-0 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/15 to-transparent"
+                  initial={{ left: "-40%" }}
+                  animate={{ left: "120%" }}
+                  transition={{ delay: 0.7, duration: 1.1, ease: "easeInOut" }}
+                />
+              </motion.div>
+            </div>
 
             <div className="px-6 pb-6 pt-5 text-center max-md:px-5">
               <span className="inline-block rounded-full border border-white/25 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">
