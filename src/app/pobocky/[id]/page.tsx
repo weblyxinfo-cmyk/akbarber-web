@@ -797,7 +797,7 @@ export default async function LocationPage({ params, searchParams }: Props) {
       <Vouchers eshopUrl={location.eshopUrl} isSlovak={isSlovak} lang={lang} />
       <Contact lang={lang} />
       {location.loyaltyCard && !location.temporarilyClosed && (
-        <LoyaltyPopup every={location.loyaltyCard} locationId={location.id} locationName={location.name} bookingUrl={location.bookingUrl} lang={lang} />
+        <LoyaltyPopup every={location.loyaltyCard} locationId={location.id} locationName={location.name} bookingUrl={location.bookingUrl} lang={lang} isSlovak={isSlovak} />
       )}
     </>
   );

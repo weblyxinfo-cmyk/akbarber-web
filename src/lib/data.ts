@@ -390,6 +390,7 @@ export const locations: Location[] = [
     ],
     type: "walk-in",
     eshopUrl: "https://booqme.sk/sk/eshop/ak-barbers-nitra2",
+    loyaltyCard: 10,
     services: [
       { name: "Klasický pánsky strih", price: "19,50 €", description: "Strih, úprava kontúr britvou, fúkaná, styling. Vždy radi poradíme klientom a pomôžeme s výberom strihu." },
       { name: "Strih + Úprava brady", price: "29,50 €", description: "Strih, úprava kontúr britvou, fúkaná, styling, holenie / úprava fúzov britvou, ošetrenie pleti." },

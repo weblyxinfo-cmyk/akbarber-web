@@ -84,7 +84,7 @@ Jesenice (oprava 21. 9. dle klienta) otevřeno So–Ne 10–14:30.
 
 ## Věrnostní karta (pop-up)
 - `loyaltyCard: 5 | 10` v `data.ts` → na detailu pobočky vyskočí `src/components/LoyaltyPopup.tsx`
-- **5. střih zdarma:** Jesenice, Revoluční · **10. střih zdarma:** Slaný, Praha 1 (Máj)
+- **5. střih zdarma:** Jesenice, Revoluční · **10. střih zdarma:** Slaný, Praha 1 (Máj), Nitra (pop-up slovensky přes `isSlovak`)
 - Obrázky karet: `public/images/vernostni-karta-{5,10}.jpg`; zavření se pamatuje v `localStorage` pro každou pobočku zvlášť (`ak-loyalty-card-dismissed-{id}`)
 
 ## Fotky poboček
