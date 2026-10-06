@@ -82,6 +82,11 @@ Jesenice (oprava 21. 9. dle klienta) otevřeno So–Ne 10–14:30.
 - Header/Footer zůstávají česky (sdílené přes celý web)
 - `generateMetadata` vrací anglický title/description + `locale: "en_US"` pro `?lang=en`
 
+## Věrnostní karta (pop-up)
+- `loyaltyCard: 5 | 10` v `data.ts` → na detailu pobočky vyskočí `src/components/LoyaltyPopup.tsx`
+- **5. střih zdarma:** Jesenice, Revoluční · **10. střih zdarma:** Slaný, Praha 1 (Máj)
+- Obrázky karet: `public/images/vernostni-karta-{5,10}.jpg`; zavření se pamatuje v `localStorage` (`ak-loyalty-card-dismissed-{5,10}`)
+
 ## Fotky poboček
 - Uložené v `public/images/locations/photo-{id}.jpg`
 - Část poboček sdílí `photo-beroun.jpg` — aktuální přiřazení viz pole `image` v `data.ts`

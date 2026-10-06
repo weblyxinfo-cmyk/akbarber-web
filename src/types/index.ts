@@ -36,6 +36,8 @@ export interface Location {
     parking?: string;
   };
   openingDate?: string;
+  /** Věrnostní karta "každý 5. / 10. střih zdarma" — na detailu pobočky se zobrazí pop-up. */
+  loyaltyCard?: 5 | 10;
   geo?: { lat: number; lng: number };
   temporarilyClosed?: {
     redirectToId: string;

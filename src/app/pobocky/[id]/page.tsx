@@ -8,6 +8,7 @@ import { CareerAcademy } from "@/components/sections/CareerAcademy";
 import { Vouchers } from "@/components/sections/Vouchers";
 import { Contact } from "@/components/sections/Contact";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { LoyaltyPopup } from "@/components/LoyaltyPopup";
 import type { Lang } from "@/lib/translations";
 import {
   locationPageTranslations,
@@ -795,6 +796,9 @@ export default async function LocationPage({ params, searchParams }: Props) {
       <CareerAcademy lang={lang} />
       <Vouchers eshopUrl={location.eshopUrl} isSlovak={isSlovak} lang={lang} />
       <Contact lang={lang} />
+      {location.loyaltyCard && !location.temporarilyClosed && (
+        <LoyaltyPopup every={location.loyaltyCard} locationName={location.name} bookingUrl={location.bookingUrl} lang={lang} />
+      )}
     </>
   );
 }
